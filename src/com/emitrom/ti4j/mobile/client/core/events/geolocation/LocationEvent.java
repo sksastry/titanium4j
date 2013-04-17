@@ -16,6 +16,7 @@
 package com.emitrom.ti4j.mobile.client.core.events.geolocation;
 
 import com.emitrom.ti4j.mobile.client.core.events.TiEvent;
+import com.emitrom.ti4j.mobile.client.core.handlers.geolocation.GeolocationHandler;
 import com.emitrom.ti4j.mobile.client.geolocation.Coordinates;
 import com.emitrom.ti4j.mobile.client.geolocation.android.LocationProvider;
 import com.google.gwt.core.client.JavaScriptObject;

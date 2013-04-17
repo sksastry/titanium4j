@@ -13,8 +13,9 @@
    See the License for the specific language governing permissions and
    limitations under the License.
  **************************************************************************/
-package com.emitrom.ti4j.mobile.client.core.events.geolocation;
+package com.emitrom.ti4j.mobile.client.core.handlers.geolocation;
 
+import com.emitrom.ti4j.mobile.client.core.events.geolocation.LocationEvent;
 import com.google.gwt.event.shared.EventHandler;
 
 public interface GeolocationHandler extends EventHandler {
