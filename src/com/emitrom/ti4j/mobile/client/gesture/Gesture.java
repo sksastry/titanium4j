@@ -29,7 +29,7 @@ public class Gesture extends TiModule {
 
     private static Gesture instance = null;
 
-    public Gesture get() {
+    public static Gesture get() {
         if (instance == null) {
             instance = new Gesture();
         }
