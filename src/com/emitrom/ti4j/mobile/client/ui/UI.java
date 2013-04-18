@@ -369,6 +369,13 @@ public class UI extends TiModule {
 		return Ti.UI.createDashboardView();
     }-*/;
 
+    static native JavaScriptObject createDashboardView(int column, int row) /*-{
+		return Ti.UI.createDashboardView({
+			columnCount : column,
+			rowCount : row
+		});
+    }-*/;
+
     static native JavaScriptObject createEmailDialog() /*-{
 		return Ti.UI.createEmailDialog();
     }-*/;

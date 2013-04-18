@@ -116,7 +116,7 @@ public class ButtonBar extends View {
 
     public native void setStyle(int value) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso.style = values;
+		jso.style = value;
     }-*/;
 
     public native CallbackRegistration addClickHandler(ClickHandler handler) /*-{
