@@ -1,17 +1,17 @@
 /**************************************************************************
-   Platform.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+ * Platform.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.platform;
 
@@ -28,15 +28,15 @@ import com.google.gwt.core.client.GWT;
  */
 public class Platform extends TiModule {
 
-    public static final int BATTERY_STATE_CHARGING = BATTERY_STATE_CHARGING();
-    public static final int BATTERY_STATE_FULL = BATTERY_STATE_FULL();
-    public static final int BATTERY_STATE_UNKNOWN = BATTERY_STATE_UNKNOWN();
-    public static final int BATTERY_STATE_UNPLUGGED = BATTERY_STATE_UNPLUGGED();
-    public static final String OS_IPAD = "ipad";
-    public static final String OS_IPHONE = "iphone";
-    public static final String OS_ANDROID = "android";
-    public static final String IPHONE_OS = "iPhone OS";
-    public static final String MOBILE_WEB = "mobileweb";
+    public static final int PLATFORM_BATTERY_STATE_CHARGING = BATTERY_STATE_CHARGING();
+    public static final int PLATFORM_BATTERY_STATE_FULL = BATTERY_STATE_FULL();
+    public static final int PLATFORM_BATTERY_STATE_UNKNOWN = BATTERY_STATE_UNKNOWN();
+    public static final int PLATFORM_BATTERY_STATE_UNPLUGGED = BATTERY_STATE_UNPLUGGED();
+    public static final String PLATFORM_OS_IPAD = "ipad";
+    public static final String PLATFORM_OS_IPHONE = "iphone";
+    public static final String PLATFORM_OS_ANDROID = "android";
+    public static final String PLATFORM_IPHONE_OS = "iPhone OS";
+    public static final String PLATFORM_MOBILE_WEB = "mobileweb";
     private Unit unit;
 
     private static Platform instance = null;
@@ -345,15 +345,15 @@ public class Platform extends TiModule {
     }-*/;
 
     public boolean isIPad() {
-        return Platform.get().getOsname().equalsIgnoreCase(OS_IPAD);
+        return Platform.get().getOsname().equalsIgnoreCase(PLATFORM_OS_IPAD);
     }
 
     public boolean isIPhone() {
-        return Platform.get().getOsname().equalsIgnoreCase(OS_IPHONE);
+        return Platform.get().getOsname().equalsIgnoreCase(PLATFORM_OS_IPHONE);
     }
 
     public boolean isAndroid() {
-        return Platform.get().getOsname().equalsIgnoreCase(OS_ANDROID);
+        return Platform.get().getOsname().equalsIgnoreCase(PLATFORM_OS_ANDROID);
     }
 
     /**
@@ -361,7 +361,7 @@ public class Platform extends TiModule {
      * exception ?
      */
     public boolean isIOs3_2Plus() {
-        if (Platform.get().getName().equalsIgnoreCase(IPHONE_OS)) {
+        if (Platform.get().getName().equalsIgnoreCase(PLATFORM_IPHONE_OS)) {
             String[] version = Platform.get().getVersion().split(".");
             int major = Integer.parseInt(version[0]);
             int minor = Integer.parseInt(version[1]);
@@ -376,7 +376,7 @@ public class Platform extends TiModule {
      * Returns true if iphone/ipad and version is 4.0+
      */
     public boolean isIOS4Plus() {
-        if (Platform.get().getName().equalsIgnoreCase(IPHONE_OS)) {
+        if (Platform.get().getName().equalsIgnoreCase(PLATFORM_IPHONE_OS)) {
             String[] version = Platform.get().getVersion().split(".");
             int major = Integer.parseInt(version[0]);
             return (major >= 4);
@@ -416,7 +416,7 @@ public class Platform extends TiModule {
      */
 
     public boolean isMobileWeb() {
-        return Platform.get().getOsname().equalsIgnoreCase(MOBILE_WEB);
+        return Platform.get().getOsname().equalsIgnoreCase(PLATFORM_MOBILE_WEB);
     }
 
     @Override
@@ -428,19 +428,19 @@ public class Platform extends TiModule {
         addEventListener(BatteryEvent.BATTERY, handler);
     }
 
-    private static native final int BATTERY_STATE_CHARGING() /*-{
+    public static native final int BATTERY_STATE_CHARGING() /*-{
 		return Titanium.Platform.BATTERY_STATE_CHARGING;
     }-*/;
 
-    private static native final int BATTERY_STATE_FULL() /*-{
+    public static native final int BATTERY_STATE_FULL() /*-{
 		return Titanium.Platform.BATTERY_STATE_FULL;
     }-*/;
 
-    private static native final int BATTERY_STATE_UNKNOWN() /*-{
+    public static native final int BATTERY_STATE_UNKNOWN() /*-{
 		return Titanium.Platform.BATTERY_STATE_UNKNOWN;
     }-*/;
 
-    private static native final int BATTERY_STATE_UNPLUGGED() /*-{
+    public static native final int BATTERY_STATE_UNPLUGGED() /*-{
 		return Titanium.Platform.BATTERY_STATE_UNPLUGGED;
     }-*/;
 
