@@ -21,7 +21,10 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.emitrom.ti4j.core.client.ProxyObject;
+import com.emitrom.ti4j.mobile.client.core.handlers.CommitHandler;
+import com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.DashboardItemHandler;
+import com.emitrom.ti4j.mobile.client.core.handlers.ui.DeleteHandler;
 import com.emitrom.ti4j.mobile.client.ui.interfaces.Editable;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
@@ -142,22 +145,94 @@ public class DashboardView extends View implements Editable {
 		return jso.stopEditing();
     }-*/;
 
-    public native void addDeleteHandler(DashboardItemHandler handler)/*-{
+    public native CallbackRegistration addCommitHandler(CommitHandler handler)/*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso
-				.addEventListener(
-						@com.emitrom.ti4j.mobile.client.core.events.ui.dashboard.DashboardEvent::DELETE,
-						function(e) {
-							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.dashboard.DashboardEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
-							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.DashboardItemHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/ui/dashboard/DashboardEvent;)(eventObject);
-						});
+		var listener = function(e) {
+			var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.CommitEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+			handler.@com.emitrom.ti4j.mobile.client.core.handlers.CommitHandler::onCommit(Lcom/emitrom/ti4j/mobile/client/core/events/ui/CommitEvent;)(eventObject);
+		};
+		var name = @com.emitrom.ti4j.mobile.client.core.events.ui.CommitEvent::COMMIT;
+		var v = jso.addEventListener(name, listener);
+		var toReturn = @com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration::new(Lcom/emitrom/ti4j/mobile/client/ui/UIObject;Ljava/lang/String;Lcom/google/gwt/core/client/JavaScriptObject;)(this,name,listener);
+		return toReturn;
+
     }-*/;
+
+    public native CallbackRegistration addDeleteHandler(DeleteHandler handler)/*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var listener = function(e) {
+			var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.DeleteEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+			handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.DeleteHandler::onDelete(Lcom/emitrom/ti4j/mobile/client/core/events/ui/DeleteEvent;)(eventObjet);
+		};
+		var name = @com.emitrom.ti4j.mobile.client.core.events.ui.DeleteEvent::DELETE;
+		var v = jso.addEventListener(name, listener);
+		var toReturn = @com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration::new(Lcom/emitrom/ti4j/mobile/client/ui/UIObject;Ljava/lang/String;Lcom/google/gwt/core/client/JavaScriptObject;)(this,name,listener);
+		return toReturn;
+
+    }-*/;
+
+    // TODO move events to new API
 
     public native void addMoveHandler(DashboardItemHandler handler)/*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.dashboard.DashboardEvent::MOVE,
+						function(e) {
+							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.dashboard.DashboardEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.DashboardItemHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/ui/dashboard/DashboardEvent;)(eventObject);
+						});
+    }-*/;
+
+    public native void addDragEndHandler(DashboardItemHandler handler)/*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso
+				.addEventListener(
+						'dragEnd',
+						function(e) {
+							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.dashboard.DashboardEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.DashboardItemHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/ui/dashboard/DashboardEvent;)(eventObject);
+						});
+    }-*/;
+
+    public native void addDragStartHandler(DashboardItemHandler handler)/*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso
+				.addEventListener(
+						'dragStart',
+						function(e) {
+							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.dashboard.DashboardEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.DashboardItemHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/ui/dashboard/DashboardEvent;)(eventObject);
+						});
+    }-*/;
+
+    public native void addDragFinishHandler(DashboardItemHandler handler)/*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso
+				.addEventListener(
+						'dragend',
+						function(e) {
+							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.dashboard.DashboardEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.DashboardItemHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/ui/dashboard/DashboardEvent;)(eventObject);
+						});
+    }-*/;
+
+    public native void addEditHandler(DashboardItemHandler handler)/*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso
+				.addEventListener(
+						'edit',
+						function(e) {
+							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.dashboard.DashboardEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.DashboardItemHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/ui/dashboard/DashboardEvent;)(eventObject);
+						});
+    }-*/;
+
+    public native void addPageEndHandler(DashboardItemHandler handler)/*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso
+				.addEventListener(
+						'pagechanged',
 						function(e) {
 							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.dashboard.DashboardEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.DashboardItemHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/ui/dashboard/DashboardEvent;)(eventObject);

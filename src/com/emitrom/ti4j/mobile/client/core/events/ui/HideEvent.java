@@ -27,7 +27,7 @@ public class HideEvent extends UIEvent {
     /**
      * UiBinder implementations
      */
-    private static Type<HideHandler> TYPE = new Type<HideHandler>(CHANGE, null);
+    private static Type<HideHandler> TYPE = new Type<HideHandler>(HIDE, null);
 
     public static Type<HideHandler> getType() {
         return TYPE;

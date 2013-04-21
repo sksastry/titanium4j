@@ -17,6 +17,7 @@
 package com.emitrom.ti4j.mobile.client.ui;
 
 import com.emitrom.ti4j.core.client.ProxyObject;
+import com.emitrom.ti4j.mobile.client.blob.Blob;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.DashboardItemHandler;
 import com.emitrom.ti4j.mobile.client.ui.interfaces.HasImage;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -52,6 +53,16 @@ public class DashboardItem extends View implements HasImage {
 		jso.badge = value;
     }-*/;
 
+    public native String getLabel() /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		return jso.label;
+    }-*/;
+
+    public native void setLabel(String value) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.label = value;
+    }-*/;
+
     /**
      * @return A boolean to indicate if jso item can be deleted when it edit
      *         mode
@@ -79,6 +90,17 @@ public class DashboardItem extends View implements HasImage {
 		jso.image = value;
     }-*/;
 
+    public native void setImage(Blob value) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.image = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+    }-*/;
+
+    public native Blob getImageAsBlob() /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var obj = jso.image;
+		return @com.emitrom.ti4j.mobile.client.blob.Blob::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
+    }-*/;
+
     /**
      * @return The url to the image to display when the item is depressed
      *         (clicked)
@@ -88,9 +110,20 @@ public class DashboardItem extends View implements HasImage {
 		return jso.selectedImage;
     }-*/;
 
+    public native Blob getSelectedImageAsBlob() /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var obj = jso.selectedImage;
+		return @com.emitrom.ti4j.mobile.client.blob.Blob::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
+    }-*/;
+
     public native void setSelectedImage(String value) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.selectedImage = value;
+    }-*/;
+
+    public native void setSelectedImage(Blob value) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.selectedImage = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     public native void addClickHandler(DashboardItemHandler handler)/*-{
