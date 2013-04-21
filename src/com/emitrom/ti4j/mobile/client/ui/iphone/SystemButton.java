@@ -21,32 +21,32 @@ package com.emitrom.ti4j.mobile.client.ui.iphone;
  */
 public class SystemButton {
 
-    public static final int SYTEM_BUTTON_ACTION = ACTION();
-    public static final int SYTEM_BUTTON_ACTIVITY = ACTIVITY();
-    public static final int SYTEM_BUTTON_ADD = ADD();
-    public static final int SYTEM_BUTTON_BOOKMARKS = BOOKMARKS();
-    public static final int SYTEM_BUTTON_CAMERA = CAMERA();
-    public static final int SYTEM_BUTTON_CANCEL = CANCEL();
-    public static final int SYTEM_BUTTON_COMPOSE = COMPOSE();
-    public static final int SYTEM_BUTTON_CONTACT_ADD = CONTACT_ADD();
-    public static final int SYTEM_BUTTON_DISCLOSURE = DISCLOSURE();
-    public static final int SYTEM_BUTTON_DONE = DONE();
-    public static final int SYTEM_BUTTON_EDIT = EDIT();
-    public static final int SYTEM_BUTTON_FAST_FORWARD = FAST_FORWARD();
-    public static final int SYTEM_BUTTON_FIXED_SPACE = FIXED_SPACE();
-    public static final int SYTEM_BUTTON_FLEXIBLE_SPACE = FLEXIBLE_SPACE();
-    public static final int SYTEM_BUTTON_INFO_DARK = INFO_DARK();
-    public static final int SYTEM_BUTTON_INFO_LIGHT = INFO_LIGHT();
-    public static final int SYTEM_BUTTON_ORGANIZE = ORGANIZE();
-    public static final int SYTEM_BUTTON_PAUSE = PAUSE();
-    public static final int SYTEM_BUTTON_PLAY = PLAY();
-    public static final int SYTEM_BUTTON_REFRESH = REFRESH();
-    public static final int SYTEM_BUTTON_REPLY = REPLY();
-    public static final int SYTEM_BUTTON_SYTEM_BUTTON_REWIND = REWIND();
-    public static final int SYTEM_BUTTON_SAVE = SAVE();
-    public static final int SYTEM_BUTTON_SPINNER = SPINNER();
-    public static final int SYTEM_BUTTON_STOP = STOP();
-    public static final int SYTEM_BUTTON_TRASH = TRASH();
+    public static final int SYSTEM_BUTTON_ACTION = ACTION();
+    public static final int SYSTEM_BUTTON_ACTIVITY = ACTIVITY();
+    public static final int SYSTEM_BUTTON_ADD = ADD();
+    public static final int SYSTEM_BUTTON_BOOKMARKS = BOOKMARKS();
+    public static final int SYSTEM_BUTTON_CAMERA = CAMERA();
+    public static final int SYSTEM_BUTTON_CANCEL = CANCEL();
+    public static final int SYSTEM_BUTTON_COMPOSE = COMPOSE();
+    public static final int SYSTEM_BUTTON_CONTACT_ADD = CONTACT_ADD();
+    public static final int SYSTEM_BUTTON_DISCLOSURE = DISCLOSURE();
+    public static final int SYSTEM_BUTTON_DONE = DONE();
+    public static final int SYSTEM_BUTTON_EDIT = EDIT();
+    public static final int SYSTEM_BUTTON_FAST_FORWARD = FAST_FORWARD();
+    public static final int SYSTEM_BUTTON_FIXED_SPACE = FIXED_SPACE();
+    public static final int SYSTEM_BUTTON_FLEXIBLE_SPACE = FLEXIBLE_SPACE();
+    public static final int SYSTEM_BUTTON_INFO_DARK = INFO_DARK();
+    public static final int SYSTEM_BUTTON_INFO_LIGHT = INFO_LIGHT();
+    public static final int SYSTEM_BUTTON_ORGANIZE = ORGANIZE();
+    public static final int SYSTEM_BUTTON_PAUSE = PAUSE();
+    public static final int SYSTEM_BUTTON_PLAY = PLAY();
+    public static final int SYSTEM_BUTTON_REFRESH = REFRESH();
+    public static final int SYSTEM_BUTTON_REPLY = REPLY();
+    public static final int SYSTEM_BUTTON_SYSTEM_BUTTON_REWIND = REWIND();
+    public static final int SYSTEM_BUTTON_SAVE = SAVE();
+    public static final int SYSTEM_BUTTON_SPINNER = SPINNER();
+    public static final int SYSTEM_BUTTON_STOP = STOP();
+    public static final int SYSTEM_BUTTON_TRASH = TRASH();
 
     public SystemButton() {
     }

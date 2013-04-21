@@ -1,6 +1,5 @@
 /**************************************************************************
- * OrientationChangeEvent.java is part of Titanium4j Mobile 3.0. Copyright 2012
- * Emitrom LLC
+ * SwitchEvent.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom LLC
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -15,24 +14,43 @@
  * the License.
  **************************************************************************/
 
-package com.emitrom.ti4j.mobile.client.core.events;
+package com.emitrom.ti4j.mobile.client.core.events.ui;
 
+import com.emitrom.ti4j.mobile.client.core.handlers.ui.HideHandler;
 import com.google.gwt.core.client.JavaScriptObject;
+import com.google.gwt.event.dom.client.DomEvent.Type;
 
-public class OrientationChangeEvent extends TiEvent {
+public class HideEvent extends UIEvent {
 
-    public static final String ORIENTATION_CHANGE = "orientationchange";
+    public static String HIDE = "hide";
 
-    protected OrientationChangeEvent(JavaScriptObject obj) {
+    /**
+     * UiBinder implementations
+     */
+    private static Type<HideHandler> TYPE = new Type<HideHandler>(CHANGE, null);
+
+    public static Type<HideHandler> getType() {
+        return TYPE;
+    }
+
+    public static Type<HideHandler> getAssociatedType() {
+        return TYPE;
+    }
+
+    protected HideEvent() {
+
+    }
+
+    private HideEvent(JavaScriptObject obj) {
         jsObj = obj;
     }
 
     /**
-     * the orientation constant
+     * the index of the image that is now visible
      */
-    public final native int getOrientation() /*-{
+    public native boolean getValue() /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		return jso.orientation;
+		return jso.value;
     }-*/;
 
 }

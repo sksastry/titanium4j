@@ -42,9 +42,9 @@ public class API extends TiModule {
      * @param message
      *            , the message to log
      */
-    public native void info(String... message) /*-{
+    public native void info(String message) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso.info.apply(message);
+		jso.info(message);
     }-*/;
 
     /**
@@ -53,9 +53,9 @@ public class API extends TiModule {
      * @param message
      *            , the message to log
      */
-    public native void debug(String... message) /*-{
+    public native void debug(String message) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso.debug.apply(message);
+		jso.debug(message);
     }-*/;
 
     /**
@@ -64,9 +64,9 @@ public class API extends TiModule {
      * @param message
      *            , the message to log
      */
-    public native void error(String... message) /*-{
+    public native void error(String message) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso.error.apply(message);
+		jso.error(message);
     }-*/;
 
     /**
@@ -75,9 +75,9 @@ public class API extends TiModule {
      * @param message
      *            , the message to log
      */
-    public native void log(String level, String... message) /*-{
+    public native void log(String level, String message) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso.log.apply(level, message);
+		jso.log(level, message);
     }-*/;
 
     /**
@@ -86,19 +86,19 @@ public class API extends TiModule {
      * @param message
      *            , the message to log
      */
-    public native void warn(String... message) /*-{
+    public native void warn(String message) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso.warn.apply(message);
+		jso.warn(message);
     }-*/;
 
-    public native void trace(String... message) /*-{
+    public native void trace(String message) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso.trace.apply(message);
+		jso.trace(message);
     }-*/;
 
-    public native void timestamp(String... message) /*-{
+    public native void timestamp(String message) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso.timestamp.apply(message);
+		jso.timestamp(message);
     }-*/;
 
     @Override
