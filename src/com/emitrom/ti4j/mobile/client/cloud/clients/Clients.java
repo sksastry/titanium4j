@@ -51,10 +51,10 @@ public class Clients extends TiModule {
      * Locate a mobile device based on the IP address of the device.
      */
     public native void geolocate(Client client, CloudClientsResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.geolocate(
-						client.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						client.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.clients.CloudClientsResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.clients.CloudClientsResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/clients/CloudClientsResponse;)(response);
@@ -65,7 +65,7 @@ public class Clients extends TiModule {
      * Locate a mobile device based on the IP address of the device.
      */
     public native void geolocate(String ipAddress, CloudClientsResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.geolocate(
 						{

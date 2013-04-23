@@ -1,17 +1,17 @@
 /**************************************************************************
-   Database.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+ * Database.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.database;
 
@@ -41,20 +41,6 @@ public class Database extends TiModule {
         createPeer();
     }
 
-    public native DB createDB() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		var obj = jso.createDB();
-		var toReturn = @com.emitrom.ti4j.mobile.client.database.DB::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
-		return toReturn;
-    }-*/;
-
-    public native ResultSet createResultSet() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		var obj = jso.createResultSet();
-		var toReturn = @com.emitrom.ti4j.mobile.client.database.ResultSet::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
-		return toReturn;
-    }-*/;
-
     /**
      * Install a database from the application resources folder (at build time)
      * and return a reference to the opened database. it is safe to call this
@@ -69,7 +55,7 @@ public class Database extends TiModule {
      *            the name of the database
      */
     public static native DB install(String path, String name) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.install(path, name);
 		var toReturn = @com.emitrom.ti4j.mobile.client.database.DB::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -82,7 +68,7 @@ public class Database extends TiModule {
      *            the name of the database
      */
     public native DB open(String name) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.open(name);
 		var toReturn = @com.emitrom.ti4j.mobile.client.database.DB::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

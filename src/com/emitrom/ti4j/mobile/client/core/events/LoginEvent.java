@@ -27,7 +27,7 @@ public class LoginEvent extends TiEvent {
      * the user id returned by Facebook if the login was successful.
      */
     public final native int getUid() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.uid;
     }-*/;
 
@@ -35,7 +35,7 @@ public class LoginEvent extends TiEvent {
      * true if the login was successful
      */
     public final native boolean isSuccess() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.success;
     }-*/;
 
@@ -45,7 +45,7 @@ public class LoginEvent extends TiEvent {
      * information such as user name, locale and gender.
      */
     public final native <T> T getData() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.data;
     }-*/;
 
@@ -53,7 +53,7 @@ public class LoginEvent extends TiEvent {
      * error message if success was false
      */
     public final native String getError() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.error;
     }-*/;
 
@@ -61,7 +61,7 @@ public class LoginEvent extends TiEvent {
      * true if the user cancelled the request by closing the dialog
      */
     public final native boolean isCancelled() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.cancelled;
     }-*/;
 }

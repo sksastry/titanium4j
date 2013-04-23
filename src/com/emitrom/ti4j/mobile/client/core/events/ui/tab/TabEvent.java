@@ -36,7 +36,7 @@ public class TabEvent extends UIEvent {
      * the tab index
      */
     public native int getIndex() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.index;
     }-*/;
 
@@ -44,7 +44,7 @@ public class TabEvent extends UIEvent {
      * the previous tab index
      */
     public native int getPreviousIndex() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.previousIndex;
     }-*/;
 
@@ -52,7 +52,7 @@ public class TabEvent extends UIEvent {
      * the tab object
      */
     public native Tab getTab() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.tab;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.Tab::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -62,7 +62,7 @@ public class TabEvent extends UIEvent {
      * the previous tab object
      */
     public native Tab getPreviousTab() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.previousTab;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.Tab::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

@@ -27,7 +27,7 @@ public class WriteErrorEvent extends TiEvent {
      * the BSD socket error code
      */
     public final native int getCode() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.code;
     }-*/;
 
@@ -35,7 +35,7 @@ public class WriteErrorEvent extends TiEvent {
      * a description of the error
      */
     public final native String getError() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.error;
     }-*/;
 }

@@ -1,17 +1,17 @@
 /**************************************************************************
-   TCP.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+ * TCP.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.network.socket;
 
@@ -40,12 +40,12 @@ public class TCP extends IOStream {
      *         in the initialized state. supports both ipv4 and ipv6
      */
     public native String getHost() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.host;
     }-*/;
 
     public native void setHost(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.host = value;
     }-*/;
 
@@ -54,12 +54,12 @@ public class TCP extends IOStream {
      *         in the initialized state
      */
     public native int getPort() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.port;
     }-*/;
 
     public native void setPort(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.port = value;
     }-*/;
 
@@ -70,10 +70,12 @@ public class TCP extends IOStream {
      *         rejected.
      */
     public native double getListenQueueSize() /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.listenQueueSize;
     }-*/;
 
     public native void setListenQueueSize(double value) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.listenQueueSize = value;
     }-*/;
 
@@ -82,12 +84,12 @@ public class TCP extends IOStream {
      *         be modified when not in the initialized state
      */
     public native double getTimeout() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.timeout;
     }-*/;
 
     public native void setTimeout(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.timeout = value;
     }-*/;
 
@@ -98,7 +100,7 @@ public class TCP extends IOStream {
      */
 
     public native void setConnected(ConnectedCallback callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.connected = function(e) {
 			var obj = @com.emitrom.ti4j.mobile.client.network.socket.ConnectedCallbackArgs::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 			callback.@com.emitrom.ti4j.mobile.client.network.socket.ConnectedCallback::onConnect(Lcom/emitrom/ti4j/mobile/client/network/socket/ConnectedCallbackArgs;)(obj);
@@ -110,7 +112,7 @@ public class TCP extends IOStream {
      */
 
     public native void setError(ErrorCallback callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.error = function(e) {
 			var obj = @com.emitrom.ti4j.mobile.client.network.socket.ErrorCallbackArgs::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e)
 			callback.@com.emitrom.ti4j.mobile.client.network.socket.ErrorCallback::onError(Lcom/emitrom/ti4j/mobile/client/network/socket/ErrorCallbackArgs;)(obj);
@@ -122,7 +124,7 @@ public class TCP extends IOStream {
      */
 
     public native void setAccepted(AcceptedCallback callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.accepted = function(e) {
 			var obj = @com.emitrom.ti4j.mobile.client.network.socket.AcceptedCallbackArgs::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 			callback.@com.emitrom.ti4j.mobile.client.network.socket.AcceptedCallback::onAccepted(Lcom/emitrom/ti4j/mobile/client/network/socket/AcceptedCallbackArgs;)(obj);
@@ -133,7 +135,7 @@ public class TCP extends IOStream {
      * @return Current state of the socket
      */
     public native int getState() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.state;
     }-*/;
 
@@ -144,7 +146,7 @@ public class TCP extends IOStream {
      * attempts are asynchronous
      */
     public native void connect() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.connect();
     }-*/;
 
@@ -157,7 +159,7 @@ public class TCP extends IOStream {
      * listening or connected state
      */
     public native void listen() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.listen();
     }-*/;
 
@@ -173,13 +175,14 @@ public class TCP extends IOStream {
      * be update to use the newly specified options object. throws an exception
      * if the socket is not in a listening state
      * 
-     * @param params parameters that contain callbacks to be set on next
-     *            accepted socket
+     * @param params
+     *            parameters that contain callbacks to be set on next accepted
+     *            socket
      */
     public native void accept(AcceptParams params) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.accept(params.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.accept(params.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
 }

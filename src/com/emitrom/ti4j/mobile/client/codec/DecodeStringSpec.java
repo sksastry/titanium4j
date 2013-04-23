@@ -16,8 +16,8 @@
 package com.emitrom.ti4j.mobile.client.codec;
 
 import com.emitrom.ti4j.mobile.client.buffer.Buffer;
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.JsoHelper;
+import com.emitrom.ti4j.core.client.ProxyObject;
 
 /**
  * Specification for
@@ -33,27 +33,27 @@ public class DecodeStringSpec extends ProxyObject {
      * @return The buffer to decode
      */
     public native Buffer getSource() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.source;
 		var toReturn = @com.emitrom.ti4j.mobile.client.buffer.Buffer::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void setSource(Buffer value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.source = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.source = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
      * @return The position in `source` to start at
      */
     public native int getPosition() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.position;
     }-*/;
 
     public native void setPosition(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.position = value;
     }-*/;
 
@@ -61,12 +61,12 @@ public class DecodeStringSpec extends ProxyObject {
      * @return The number of bytes to decode.
      */
     public native int getLength() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.length;
     }-*/;
 
     public native void setLength(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.length = value;
     }-*/;
 
@@ -74,12 +74,12 @@ public class DecodeStringSpec extends ProxyObject {
      * @return The character set to use when encoding this string to bytes.
      */
     public native String getCharset() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.charset;
     }-*/;
 
     public native void setCharset(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.charset = value;
     }-*/;
 

@@ -34,7 +34,7 @@ public class SoundResumeEvent extends TiEvent {
      * boolean to indicate if the resume was from an interruption
      */
     public native boolean isInterruption() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.interruption;
     }-*/;
 }

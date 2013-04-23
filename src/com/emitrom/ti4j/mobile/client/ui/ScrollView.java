@@ -15,7 +15,7 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui;
 
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.Unit;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.ScaleHandler;
@@ -77,12 +77,12 @@ public class ScrollView extends View {
      *         subview touches in order to scroll instead. default of true
      */
     public native boolean canCancelEvents() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.canCancelEvents;
     }-*/;
 
     public native void setCanCancelEvents(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.canCancelEvents = value;
     }-*/;
 
@@ -90,7 +90,7 @@ public class ScrollView extends View {
      * @return The height of the scrollable area
      */
     public native <T> T getContentHeight() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.contentHeight;
     }-*/;
 
@@ -111,22 +111,22 @@ public class ScrollView extends View {
      *         content area
      */
     public native Point getContentOffset() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.contentOffset;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.Point::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void setContentOffset(Point value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.contentOffset = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.contentOffset = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
      * @return The width of the scrollable area
      */
     public native <T> T getContentWidth() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.contentWidth;
     }-*/;
 
@@ -146,12 +146,12 @@ public class ScrollView extends View {
      * @return Disable view bouncing. ios only. Available only on iOs
      */
     public native boolean disableBounce() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.disableBounce;
     }-*/;
 
     public native void setDisableBounce(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.disableBounce = value;
     }-*/;
 
@@ -160,12 +160,12 @@ public class ScrollView extends View {
      *         Available only on iOs
      */
     public native boolean horizontalBounce() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.horizontalBounce;
     }-*/;
 
     public native void setHorizontalBounce(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.horizontalBounce = value;
     }-*/;
 
@@ -173,12 +173,12 @@ public class ScrollView extends View {
      * @return The maximum scale of the content Available only on iOs
      */
     public native double getMaxZoomScale() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.maxZoomScale;
     }-*/;
 
     public native void setMaxZoomScale(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.maxZoomScale = value;
     }-*/;
 
@@ -186,12 +186,12 @@ public class ScrollView extends View {
      * @return The minimum scale of the content Available only on iOs
      */
     public native double getMinZoomScale() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.minZoomScale;
     }-*/;
 
     public native void setMinZoomScale(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.minZoomScale = value;
     }-*/;
 
@@ -201,12 +201,12 @@ public class ScrollView extends View {
      * @platforms android
      */
     public native String _getScrollType() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.scrollType;
     }-*/;
 
     public native void _setScrollType(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.scrollType = value;
     }-*/;
     
@@ -223,12 +223,12 @@ public class ScrollView extends View {
      *         visible
      */
     public native boolean showHorizontalScrollIndicator() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.showHorizontalScrollIndicator;
     }-*/;
 
     public native void setShowHorizontalScrollIndicator(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.showHorizontalScrollIndicator = value;
     }-*/;
 
@@ -237,7 +237,7 @@ public class ScrollView extends View {
      *         visible
      */
     public native boolean showVerticalScrollIndicator() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.showVerticalScrollIndicator;
     }-*/;
 
@@ -250,12 +250,12 @@ public class ScrollView extends View {
      *         only on iOs
      */
     public native boolean verticalBounce() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.verticalBounce;
     }-*/;
 
     public native void setVerticalBounce(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.verticalBounce = value;
     }-*/;
 
@@ -264,12 +264,12 @@ public class ScrollView extends View {
      *         iOs
      */
     public native double getZoomScale() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.zoomScale;
     }-*/;
 
     public native void setZoomScale(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.zoomScale = value;
     }-*/;
 
@@ -280,7 +280,7 @@ public class ScrollView extends View {
      * @param y the y point within the view
      */
     public native void scrollTo(double x, double y) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.scrollTo(x, y);
     }-*/;
 
@@ -294,7 +294,7 @@ public class ScrollView extends View {
      * @return				The callback registration object
      */
     public native CallbackRegistration addScrollHandler(ScrollViewScrollHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var listener = function(e) {
 							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.scrollview.ScrollViewEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.ScrollViewScrollHandler::onScroll(Lcom/emitrom/ti4j/mobile/client/core/events/ui/scrollview/ScrollViewEvent;)(eventObject);
@@ -312,7 +312,7 @@ public class ScrollView extends View {
     
     
     public native CallbackRegistration addScaleHandler(ScaleHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var listener = function(e) {
 							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.ScaleEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.ScaleHandler::onScale(Lcom/emitrom/ti4j/mobile/client/core/events/ui/ScaleEvent;)(eventObject);
@@ -327,7 +327,7 @@ public class ScrollView extends View {
     }-*/;
 
     public native CallbackRegistration addDragStartHandler(ScrollViewDragStartHandler handler) /*-{		
-    	var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+    	var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var listener = function(e) {
 							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.scrollview.ScrollViewDragStartEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.ScrollViewDragStartHandler::onDragStart(Lcom/emitrom/ti4j/mobile/client/core/events/ui/scrollview/ScrollViewDragStartEvent;)(eventObject);
@@ -343,7 +343,7 @@ public class ScrollView extends View {
     
 
     public native CallbackRegistration addDragEndHandler(ScrollViewDragEndHandler handler) /*-{		
-    	var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+    	var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var listener = function(e) {
 							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.scrollview.ScrollViewDragEndEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.ScrollViewDragEndHandler::onDragEnd(Lcom/emitrom/ti4j/mobile/client/core/events/ui/scrollview/ScrollViewDragEndEvent;)(eventObject);

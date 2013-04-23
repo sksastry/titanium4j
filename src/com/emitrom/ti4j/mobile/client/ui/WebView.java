@@ -16,7 +16,7 @@
 package com.emitrom.ti4j.mobile.client.ui;
 
 import com.emitrom.ti4j.mobile.client.blob.Blob;
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.WebViewHandler;
 import com.emitrom.ti4j.mobile.client.filesystem.File;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -55,30 +55,30 @@ public class WebView extends View {
      * @return A data blob or file that is used to load the web document
      */
     public native <T> T getData() /*-{
-		var jso = jso.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.data;
     }-*/;
 
     public native void setData(Blob value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.data = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.data = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     public native void setData(File value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.data = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.data = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
      * @return The html content of the web document
      */
     public native String getHtml() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.html;
     }-*/;
 
     public native void setHtml(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.html = value;
     }-*/;
 
@@ -86,12 +86,12 @@ public class WebView extends View {
      * @return Boolean indicating if the webview is loading content
      */
     public native boolean isLoading() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.loading;
     }-*/;
 
     public native void setLoading(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.loading = value;
     }-*/;
 
@@ -99,12 +99,12 @@ public class WebView extends View {
      * @return Whether the webview should scale it's contents or not
      */
     public native boolean scalesPageToFit() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.scalesPageToFit;
     }-*/;
 
     public native void setScalesPageToFit(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.scalesPageToFit = value;
     }-*/;
 
@@ -114,12 +114,12 @@ public class WebView extends View {
      *         etc)
      */
     public native String getUrl() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.url;
     }-*/;
 
     public native void setUrl(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.url = value;
     }-*/;
 
@@ -134,7 +134,7 @@ public class WebView extends View {
      * Returns true if the webview can go forward in history
      */
     public native boolean canGoForward() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.canGoForward();
     }-*/;
 
@@ -147,7 +147,7 @@ public class WebView extends View {
      *            the webview context.
      */
     public native String evalJS(String content) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.evalJS(content);
     }-*/;
 
@@ -162,7 +162,7 @@ public class WebView extends View {
      * Go forward one entry in history to the page before the current page
      */
     public native void goForward() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.goForward();
     }-*/;
 
@@ -170,7 +170,7 @@ public class WebView extends View {
      * Reload the current webpage
      */
     public native void reload() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.reload();
     }-*/;
 
@@ -178,7 +178,7 @@ public class WebView extends View {
      * Force the webview to repaint its contents
      */
     public native void repaint() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.repaint();
     }-*/;
 
@@ -192,7 +192,7 @@ public class WebView extends View {
      *            the password
      */
     public native void setBasicAuthentication(String username, String password) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.setBasicAuthentication(username, password);
     }-*/;
 
@@ -200,17 +200,17 @@ public class WebView extends View {
      * Stop loading a currently loading page
      */
     public native void stopLoading() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.stopLoading();
     }-*/;
 
     public native void setColor(Object value)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.color = value;
     }-*/;
 
     public native void addBeforeLoadHandler(WebViewHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.webview.WebViewEvent::BEFORE_LOAD,
@@ -221,7 +221,7 @@ public class WebView extends View {
     }-*/;
 
     public native void addErrorHandler(WebViewHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.webview.WebViewEvent::ERROR,
@@ -232,7 +232,7 @@ public class WebView extends View {
     }-*/;
 
     public native void addLoadHandler(WebViewHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.webview.WebViewEvent::LOAD,

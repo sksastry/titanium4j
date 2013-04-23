@@ -37,12 +37,12 @@ public class Notation extends EventDispatcher {
      *         was not specified, this is `null`.
      */
     public native String getPublicId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.publicId;
     }-*/;
 
     public native void setPublicId(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.publicId = value;
     }-*/;
 
@@ -51,12 +51,12 @@ public class Notation extends EventDispatcher {
      *         was not specified, this is `null`.
      */
     public native String getSystemId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.systemId;
     }-*/;
 
     public native void setSystemId(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.systemId = value;
     }-*/;
 

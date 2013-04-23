@@ -33,7 +33,7 @@ public class SoundCompleteEvent extends TiEvent {
      * true if the login was successful
      */
     public native boolean isSuccess() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.success;
     }-*/;
 

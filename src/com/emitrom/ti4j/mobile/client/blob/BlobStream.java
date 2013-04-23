@@ -16,7 +16,7 @@
 package com.emitrom.ti4j.mobile.client.blob;
 
 import com.emitrom.ti4j.mobile.client.buffer.Buffer;
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
+import com.emitrom.ti4j.core.client.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
@@ -37,7 +37,7 @@ public class BlobStream extends Blob {
      * Closes stream and throws exception on error
      */
     public native void close() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.close();
     }-*/;
 
@@ -47,7 +47,7 @@ public class BlobStream extends Blob {
      * @return
      */
     public native boolean isReadable() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.isReadable();
     }-*/;
 
@@ -57,7 +57,7 @@ public class BlobStream extends Blob {
      * @return
      */
     public native boolean isWritable() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.isWritable();
     }-*/;
 
@@ -68,9 +68,9 @@ public class BlobStream extends Blob {
      * @return
      */
     public native double read(Buffer buffer) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
-				.read(buffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.read(buffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -82,10 +82,10 @@ public class BlobStream extends Blob {
      * @return
      */
     public native double read(Buffer buffer, double offset) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.read(
-						buffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						buffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						offset);
     }-*/;
 
@@ -100,10 +100,10 @@ public class BlobStream extends Blob {
      * @return
      */
     public native double read(Buffer buffer, double offset, double length) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.read(
-						buffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						buffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						offset, length);
     }-*/;
 
@@ -114,9 +114,9 @@ public class BlobStream extends Blob {
      * @return
      */
     public native double write(Buffer buffer) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
-				.write(buffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.write(buffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -128,10 +128,10 @@ public class BlobStream extends Blob {
      * @return
      */
     public native double write(Buffer buffer, double offset) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.write(
-						buffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						buffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						offset);
     }-*/;
 
@@ -147,10 +147,10 @@ public class BlobStream extends Blob {
      * @return
      */
     public native double write(Buffer buffer, double offset, double length) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.write(
-						buffe.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						buffe.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						offset, length);
     }-*/;
 

@@ -17,7 +17,7 @@ package com.emitrom.ti4j.mobile.client.ui;
 
 import java.util.ArrayList;
 
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.TabGroupHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
@@ -44,19 +44,19 @@ public class TabGroup extends View {
      * @return The active tab
      */
     public native Tab getActiveTab() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.activeTab;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.Tab::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void setActiveTab(Tab value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.setActiveTab(value);
     }-*/;
 
     public native void setActiveTab(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.setActiveTab(value);
     }-*/;
 
@@ -66,12 +66,12 @@ public class TabGroup extends View {
      * 
      */
     public native boolean allowUserCustomization() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.allowUserCustomization;
     }-*/;
 
     public native void setAllowUserCustomization(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.allowUserCustomization = value;
     }-*/;
 
@@ -79,12 +79,12 @@ public class TabGroup extends View {
      * @return The default navigation bar color (typically for the "more" tab)
      */
     public native String getBarColor() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.barColor;
     }-*/;
 
     public native void setBarColor(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.barColor = value;
     }-*/;
 
@@ -93,12 +93,12 @@ public class TabGroup extends View {
      * @platforms iphone, ipad
      */
     public native String getEditButtonTitle() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.editButtonTitle;
     }-*/;
 
     public native void setEditButtonTitle(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.editButtonTitle = value;
     }-*/;
 
@@ -131,12 +131,12 @@ public class TabGroup extends View {
     }
 
     private native JsArray<JavaScriptObject> _getTabs() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.tabs;
     }-*/;
 
     private native void _setTabs(JsArray<JavaScriptObject> value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.tabs = value;
     }-*/;
 
@@ -148,7 +148,7 @@ public class TabGroup extends View {
     }-*/;
 
     public native void setWindowSoftInputMode(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.windowSoftInputMode = value;
     }-*/;
 
@@ -158,16 +158,16 @@ public class TabGroup extends View {
      * @param tab The tab to add
      */
     public native void addTab(Tab tab) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.addTab(tab.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.addTab(tab.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
      * Close the tab group and remove it from the ui
      */
     public native void close() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.close();
     }-*/;
 
@@ -175,7 +175,7 @@ public class TabGroup extends View {
      * Open the tab group and make it visible
      */
     public native void open() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.open();
     }-*/;
 
@@ -183,21 +183,21 @@ public class TabGroup extends View {
      * Open the tab group and make it visible
      */
     public native void open(Animation animation) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.open(animation.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.open(animation.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
      * Remove a tab from the tab group
      */
     public native void removeTab() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.removeTab();
     }-*/;
 
     public native void addBlurHandler(TabGroupHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.UIEvent::BLUR,
@@ -208,7 +208,7 @@ public class TabGroup extends View {
     }-*/;
 
     public native void addCloseHandler(TabGroupHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.UIEvent::CLOSE,
@@ -219,7 +219,7 @@ public class TabGroup extends View {
     }-*/;
 
     public native void addFocusHandler(TabGroupHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.tab.TabEvent::FOCUS,
@@ -230,7 +230,7 @@ public class TabGroup extends View {
     }-*/;
 
     public native void addOpenHandler(TabGroupHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.UIEvent::OPEN,

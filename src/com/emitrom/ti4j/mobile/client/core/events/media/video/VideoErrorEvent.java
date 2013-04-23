@@ -27,7 +27,7 @@ public class VideoErrorEvent extends VideoEvent {
      * duration
      */
     public native double getDuration() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.duration;
     }-*/;
 

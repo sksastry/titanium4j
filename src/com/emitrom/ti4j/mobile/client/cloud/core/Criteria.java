@@ -15,8 +15,8 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.cloud.core;
 
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.JsoHelper;
+import com.emitrom.ti4j.core.client.ProxyObject;
 
 /**
  * Constrains values for fields. where should be encoded JSON. Without it, query

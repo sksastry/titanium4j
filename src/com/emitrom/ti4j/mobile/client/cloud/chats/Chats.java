@@ -52,10 +52,10 @@ public class Chats extends TiModule {
      * @param handler
      */
     public native void create(ChatMessage message, CloudChatsResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.create(
-						message.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						message.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.chats.CloudChatsResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.chats.CloudChatsResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/chats/CloudChatsResponse;)(response);
@@ -72,10 +72,10 @@ public class Chats extends TiModule {
      * @param handler
      */
     public native void query(Query query, CloudChatsResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.query(
-						query.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						query.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.chats.CloudChatsResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.chats.CloudChatsResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/chats/CloudChatsResponse;)(response);
@@ -89,7 +89,7 @@ public class Chats extends TiModule {
      * @param handler
      */
     public native void getChatGroups(CloudChatGroupResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.getChatGroups(function(e) {
 					var response = @com.emitrom.ti4j.mobile.client.cloud.chats.CloudChatsGroupResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
@@ -104,10 +104,10 @@ public class Chats extends TiModule {
      * @param handler
      */
     public native void getChatGroups(ChatMessage message, CloudChatGroupResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.getChatGroups(
-						message.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						message.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.chats.CloudChatsGroupResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.chats.CloudChatGroupResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/chats/CloudChatsGroupResponse;)(eventObject);

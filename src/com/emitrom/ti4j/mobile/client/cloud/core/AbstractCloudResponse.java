@@ -15,7 +15,7 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.cloud.core;
 
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 
 /**
  * Base class for chat request objects
@@ -24,22 +24,22 @@ import com.emitrom.ti4j.mobile.client.core.ProxyObject;
 public abstract class AbstractCloudResponse extends ProxyObject {
 
     public native String getCreatedAt()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return peer.created_at;
     }-*/;
 
     public native String getUpdatedAt()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return peer.updated_at;
     }-*/;
 
     public native String getMessage()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return peer.message;
     }-*/;
 
     public native String Id()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return peer.id;
     }-*/;
 

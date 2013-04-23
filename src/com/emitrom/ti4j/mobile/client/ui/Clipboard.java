@@ -43,7 +43,7 @@ public class Clipboard extends TiModule {
      * @param type (optional) The mime-type of the data to clear.
      */
     public static native void clearData(String type) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.clearData(type);
     }-*/;
 
@@ -51,7 +51,7 @@ public class Clipboard extends TiModule {
      * Clear the text portion of the clipboard.
      */
     public native void clearText() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.clearText();
     }-*/;
 
@@ -62,7 +62,7 @@ public class Clipboard extends TiModule {
      * @param type The mime-type of the data to get.
      */
     public static native void getData(String type) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.getData(type);
     }-*/;
 
@@ -70,7 +70,7 @@ public class Clipboard extends TiModule {
      * Get the current text on the clipboard.
      */
     public native String getText() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.getText();
     }-*/;
 
@@ -81,7 +81,7 @@ public class Clipboard extends TiModule {
      * @param type (optional) The mime-type of the data to check.
      */
     public native boolean hasData(String type) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.hasData(type);
     }-*/;
 
@@ -89,7 +89,7 @@ public class Clipboard extends TiModule {
      * Return true if there is any content in the text portion of the clipboard.
      */
     public native boolean hasText() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.hasText();
     }-*/;
 
@@ -102,7 +102,7 @@ public class Clipboard extends TiModule {
      * @param data The new clipboard text.
      */
     public native void setData(String type, Object data) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.setData(type, data);
     }-*/;
 
@@ -113,7 +113,7 @@ public class Clipboard extends TiModule {
      * @param text The new clipboard text. If the text is an empty string
      */
     public native void setText(String text) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.setText(text);
     }-*/;
 

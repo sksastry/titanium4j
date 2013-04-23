@@ -15,7 +15,7 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui;
 
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.ClickHandler;
 import com.emitrom.ti4j.mobile.client.ui.interfaces.HasColor;
 import com.emitrom.ti4j.mobile.client.ui.interfaces.HasFont;
@@ -57,7 +57,7 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
      */
     @Override
     public native String getColor() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.color;
     }-*/;
 
@@ -69,7 +69,7 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
      */
     @Override
     public native void setColor(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.color = value;
     }-*/;
 
@@ -77,12 +77,12 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
      * @return Boolean that indicates if the button is enabled or not
      */
     public native boolean isEnabled() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.enabled;
     }-*/;
 
     public native void setEnabled(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.enabled = value;
     }-*/;
 
@@ -93,7 +93,7 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
      */
     @Override
     public native Font getFont() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.font;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.style.Font::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -108,8 +108,8 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
      */
     @Override
     public native void setFont(Font value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.font = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.font = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /*
@@ -119,7 +119,7 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
      */
     @Override
     public native String getImage() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.image;
     }-*/;
 
@@ -131,7 +131,7 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
      */
     @Override
     public native void setImage(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.image = value;
     }-*/;
 
@@ -142,7 +142,7 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
      */
     @Override
     public native String getSelectedColor() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.selectedColor;
     }-*/;
 
@@ -155,7 +155,7 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
      */
     @Override
     public native void setSelectedColor(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.selectedColor = value;
     }-*/;
 
@@ -166,7 +166,7 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
      */
     @Override
     public native int getStyle() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.style;
     }-*/;
 
@@ -177,7 +177,7 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
      */
     @Override
     public native void setStyle(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.style = value;
     }-*/;
 
@@ -188,7 +188,7 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
      */
     @Override
     public native String getTitle() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.title;
     }-*/;
 
@@ -200,7 +200,7 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
      */
     @Override
     public native void setTitle(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.title = value;
     }-*/;
 
@@ -209,12 +209,12 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
      * @return
      */
     public native int getSystemButton() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.systemButton;
     }-*/;
 
     public native void setSystemButton(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.systemButton = value;
     }-*/;
 
@@ -225,7 +225,7 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
      */
     @Override
     public native String getTitleId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.titleid;
     }-*/;
 
@@ -238,7 +238,7 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
      */
     @Override
     public native void setTitleId(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.titleid = value;
     }-*/;
 
@@ -255,12 +255,12 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
     }
 
     public native void setTextAlign(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.textAlign = value;
     }-*/;
 
     public native void setTextAlign(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.textAlign = value;
     }-*/;
 
@@ -279,17 +279,17 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
     }
 
     public native void setVerticalAlign(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.verticalAlign = value;
     }-*/;
 
     public native void setVerticalAlign(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.verticalAlign = value;
     }-*/;
 
     private native String _getTextAlign() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.textAlign;
     }-*/;
 

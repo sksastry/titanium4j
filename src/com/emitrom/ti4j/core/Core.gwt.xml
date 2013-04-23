@@ -1,0 +1,12 @@
+<!--
+This file is part of Titanium4j 
+
+Copyright (c) 2012 Emitrom LLC. All rights reserved.
+
+For licensing questions, please contact us at licensing@emitrom.com
+
+http://www.emitrom.com/license
+-->
+<module>   
+    <inherits name="com.google.gwt.core.Core"/>   
+</module>

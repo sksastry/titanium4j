@@ -15,7 +15,7 @@ public class ScrollViewDragEndEvent extends ScrollViewEvent {
     }
     
     public final native void stopDecelerating() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.decelerating = false;
     }-*/;
 }

@@ -108,12 +108,12 @@ public class HTTPClient extends EventDispatcher {
      * @return Boolean to indicate that the response was successful
      */
     public native boolean isConnected() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.connected;
     }-*/;
 
     public native void setConnected(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.connected = value;
     }-*/;
 
@@ -121,12 +121,12 @@ public class HTTPClient extends EventDispatcher {
      * @return The connection type, normally either `get` or `post`.
      */
     public native String getConnectionType() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.connectionType;
     }-*/;
 
     public native void setConnectionType(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.connectionType = value;
     }-*/;
 
@@ -135,12 +135,12 @@ public class HTTPClient extends EventDispatcher {
      *         ios only
      */
     public native String getFile() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.file;
     }-*/;
 
     public native void setFile(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.file = value;
     }-*/;
 
@@ -148,12 +148,12 @@ public class HTTPClient extends EventDispatcher {
      * @return The absolute url of the request
      */
     public native String getLocation() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.location;
     }-*/;
 
     public native void setLocation(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.location = value;
     }-*/;
 
@@ -162,7 +162,7 @@ public class HTTPClient extends EventDispatcher {
     }
 
     private native void setOndataStream(JavaScriptObject callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.ondatastream = callback;
     }-*/;
 
@@ -176,7 +176,7 @@ public class HTTPClient extends EventDispatcher {
     }
 
     private native void setOnError(JavaScriptObject callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.onError = callback;
     }-*/;
 
@@ -190,7 +190,7 @@ public class HTTPClient extends EventDispatcher {
     }
 
     private native void setOnLoad(JavaScriptObject callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.onload = callback;
     }-*/;
 
@@ -204,7 +204,7 @@ public class HTTPClient extends EventDispatcher {
     }
 
     private native void setOnReadyStateChange(JavaScriptObject value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.onreadystatechange = callback;
     }-*/;
 
@@ -219,7 +219,7 @@ public class HTTPClient extends EventDispatcher {
     }
 
     private native void setOnSendStream(JavaScriptObject value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.onsendstream = callback;
     }-*/;
 
@@ -227,12 +227,12 @@ public class HTTPClient extends EventDispatcher {
      * @return The readystate value
      */
     public native int getReadyState() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.readyState;
     }-*/;
 
     public native void setReadyState(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.readyState = value;
     }-*/;
 
@@ -240,7 +240,7 @@ public class HTTPClient extends EventDispatcher {
      * @return Readonly the response data as a blob object.
      */
     public native Blob getResponseData() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.responseData;
 		var toReturn = @com.emitrom.ti4j.mobile.client.blob.Blob::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -251,7 +251,7 @@ public class HTTPClient extends EventDispatcher {
      *         no data was returned
      */
     public native String getResponseText() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.responseText;
     }-*/;
 
@@ -261,7 +261,7 @@ public class HTTPClient extends EventDispatcher {
      *         xml or the content could not be parsed
      */
     public native Document getResponseXML() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.responseXML;
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Document::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -271,8 +271,8 @@ public class HTTPClient extends EventDispatcher {
      * @return Readonly the response http status code
      */
     public native int getStatus() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.status;
     }-*/;
 
@@ -280,12 +280,12 @@ public class HTTPClient extends EventDispatcher {
      * @return Timeout is milliseconds when the connection should be aborted
      */
     public native int getTimeout() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.timeout;
     }-*/;
 
     public native void setTimeout(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.timeout = value;
     }-*/;
 
@@ -295,12 +295,12 @@ public class HTTPClient extends EventDispatcher {
      *         testing and true if release for distribution mode.
      */
     public native boolean validatesSecureCertificate() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.validatesSecureCertificate;
     }-*/;
 
     public native void setValidatesSecureCertificate(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.validatesSecureCertificate = value;
     }-*/;
 
@@ -308,7 +308,7 @@ public class HTTPClient extends EventDispatcher {
      * Abort a pending request
      */
     public native void abort() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.abort();
     }-*/;
 
@@ -319,7 +319,7 @@ public class HTTPClient extends EventDispatcher {
      *            the header name
      */
     public native String getResponseHeader(String name) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.getResponseHeader(name);
     }-*/;
 
@@ -353,7 +353,7 @@ public class HTTPClient extends EventDispatcher {
      * Send the request (only async is currently supported)
      */
     public native void send() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.send();
     }-*/;
 
@@ -365,7 +365,7 @@ public class HTTPClient extends EventDispatcher {
      *            dictionary, string, File object or Blob.
      */
     public native void send(Object data) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.send(data);
     }-*/;
 
@@ -379,7 +379,7 @@ public class HTTPClient extends EventDispatcher {
      *            such as X-Requested-With
      */
     public native void setRequestHeader(String name, String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.setRequestHeader(name, value);
     }-*/;
 
@@ -392,7 +392,7 @@ public class HTTPClient extends EventDispatcher {
      *            the URL for the request
      */
     private native void open(String method, String url) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.open(method, url);
     }-*/;
 
@@ -407,7 +407,7 @@ public class HTTPClient extends EventDispatcher {
      *            optional property to indicate if asynchronous (default) or not
      */
     private native void open(String method, String url, boolean async) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.open(method, url, async);
     }-*/;
 

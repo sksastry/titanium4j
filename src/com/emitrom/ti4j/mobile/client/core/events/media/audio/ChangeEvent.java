@@ -34,7 +34,7 @@ public class ChangeEvent extends TiEvent {
      * current state of playback
      */
     public native int getState() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.state;
     }-*/;
 
@@ -42,7 +42,7 @@ public class ChangeEvent extends TiEvent {
      * textual description of the state of playback
      */
     public native String getDescription() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.description;
     }-*/;
 

@@ -15,8 +15,8 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.media;
 
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.JsoHelper;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.ui.Matrix2D;
 import com.emitrom.ti4j.mobile.client.ui.View;
 import com.google.gwt.core.client.JsArrayString;
@@ -60,7 +60,7 @@ public class MediaOptionsType extends ProxyObject {
     }
 
     public native void setCallback(MediaSelectionCallback callback)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.error = function(e) {
 			var errorObject = @com.emitrom.ti4j.mobile.client.core.events.media.MediaError::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 			callback.@com.emitrom.ti4j.mobile.client.media.MediaSelectionCallback::onError(Lcom/emitrom/ti4j/mobile/client/core/events/media/MediaError;)(errorObject);
@@ -97,42 +97,42 @@ public class MediaOptionsType extends ProxyObject {
     }
 
     public native void setMediaTypes(JsArrayString values)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.mediatypes = values;
     }-*/;
 
     public native void setOverlay(View value)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.overlay = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.overlay = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     public native void setPopoverView(View value)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.popoverView = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.popoverView = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     public native void setSaveToPhotoGallery(boolean value)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.saveToPhotoGallery = value;
     }-*/;
 
     public native void setShowControls(boolean value)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.showControls = value;
     }-*/;
 
     public native void setTransform(Matrix2D value)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.transform = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.transform = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     public native void setVideoMaximumDuration(boolean value)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.videoMaximumDuration = value;
     }-*/;
 
     public native void setVideoQuality(boolean value)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.videoQuality = value;
     }-*/;
 

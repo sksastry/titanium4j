@@ -15,7 +15,7 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.cloud.core;
 
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 
 /**
  * Base class for chat request objects
@@ -33,7 +33,7 @@ public abstract class AbstractCloudObject extends ProxyObject {
      * @param value
      */
     public native void setResponseJsonDepth(int value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.response_json_depth = value;
     }-*/;
 
@@ -43,8 +43,8 @@ public abstract class AbstractCloudObject extends ProxyObject {
      * @param value
      */
     public native void setCustomFields(ProxyObject value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		peer.custom_fields = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		peer.custom_fields = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
@@ -55,7 +55,7 @@ public abstract class AbstractCloudObject extends ProxyObject {
      * @param ids
      */
     public native void setMessage(String id)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.message = id;
     }-*/;
 
@@ -70,7 +70,7 @@ public abstract class AbstractCloudObject extends ProxyObject {
      * @param value
      */
     public native void setPhoto(String value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.photo = value;
     }-*/;
 
@@ -85,7 +85,7 @@ public abstract class AbstractCloudObject extends ProxyObject {
      * @param value
      */
     public native void setPhotoId(String value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.photo_id = value;
     }-*/;
 

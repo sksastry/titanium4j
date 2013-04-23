@@ -16,7 +16,7 @@
 package com.emitrom.ti4j.mobile.client.ui;
 
 import com.emitrom.ti4j.mobile.client.blob.Blob;
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.ImageActionHandler;
 import com.emitrom.ti4j.mobile.client.filesystem.File;
 import com.emitrom.ti4j.mobile.client.filesystem.FileSystem;
@@ -51,7 +51,7 @@ public class ImageView extends View {
      * @return Readonly boolean to indicate if the animation is animating
      */
     public native boolean isAnimating() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.animating;
     }-*/;
 
@@ -59,12 +59,12 @@ public class ImageView extends View {
      * @return Allow image to scale (android)
      */
     public native boolean canScale() /*-{
-		var jso = jso.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.canScale;
     }-*/;
 
     public native void setCanScale(boolean value) /*-{
-		var jso = jso.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.canScale = value;
     }-*/;
 
@@ -74,12 +74,12 @@ public class ImageView extends View {
      * 
      */
     public native int getDecodeRetries() /*-{
-		var jso = jso.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.decodeRetries;
     }-*/;
 
     public native void setDecodeRetries(int value) /*-{
-		var jso = jso.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.decodeRetries = value;
     }-*/;
 
@@ -87,12 +87,12 @@ public class ImageView extends View {
      * @return Url to the default image to display while loading a remote image
      */
     public native String getDefaultImage() /*-{
-		var jso = jso.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.defaultImage;
     }-*/;
 
     public native void setDefaultImage(String value) /*-{
-		var jso = jso.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.defaultImage = value;
     }-*/;
 
@@ -100,12 +100,12 @@ public class ImageView extends View {
      * @return Amount of time in milliseconds to animate one cycle
      */
     public native double getDuration() /*-{
-		var jso = jso.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.duration;
     }-*/;
 
     public native void setDuration(double value) /*-{
-		var jso = jso.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.duration = value;
     }-*/;
 
@@ -115,12 +115,12 @@ public class ImageView extends View {
      * 
      */
     public native boolean enableZoomControls() /*-{
-		var jso = jso.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.enableZoomControls;
     }-*/;
 
     public native void setEnableZoomControls(boolean value) /*-{
-		var jso = jso.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.enableZoomControls = value;
     }-*/;
 
@@ -130,12 +130,12 @@ public class ImageView extends View {
      * @platforms iphone, ipad
      */
     public native boolean hires() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.hires;
     }-*/;
 
     public native void setHires(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.hires = value;
     }-*/;
 
@@ -143,23 +143,23 @@ public class ImageView extends View {
      * @return Image to display either as string url, blob or file
      */
     public native <T> T getImage() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.image;
     }-*/;
 
     public native void setImage(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.image = value;
     }-*/;
 
     public native void setImage(Blob value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.image = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.image = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     public native void setImage(File value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.image = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.image = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
     
     /**
@@ -195,12 +195,12 @@ public class ImageView extends View {
      *         in an animation
      */
     public native <T> T getImages() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.images;
     }-*/;
 
     public native void setImages(JsArrayString value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.images = value;
     }-*/;
 
@@ -209,7 +209,7 @@ public class ImageView extends View {
      * @param value , must be Blob or File
      */
     public native void setImages(JsArray<?> value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.images = value;
     }-*/;
 
@@ -217,7 +217,7 @@ public class ImageView extends View {
      * @return Readonly boolean to indicate if the animation is paused
      */
     public native boolean isPaused() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.paused;
     }-*/;
 
@@ -226,12 +226,12 @@ public class ImageView extends View {
      *         while loading a remote image
      */
     public native boolean preventDefaultImage() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.preventDefaultImage;
     }-*/;
 
     public native void setPreventDefaultImage(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.preventDefaultImage = value;
     }-*/;
 
@@ -239,12 +239,12 @@ public class ImageView extends View {
      * @return Number of times to repeat the image animation
      */
     public native int getRepeatCount() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.repeatCount;
     }-*/;
 
     public native void setRepeatCount(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.repeatCount = value;
     }-*/;
 
@@ -253,12 +253,12 @@ public class ImageView extends View {
      *         (from last to first)
      */
     public native boolean reverse() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.reverse;
     }-*/;
 
     public native void setReverse(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.reverse = value;
     }-*/;
 
@@ -267,12 +267,12 @@ public class ImageView extends View {
      *         use image instead)
      */
     public native String getUrl() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.url;
     }-*/;
 
     public native void setUrl(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.url = value;
     }-*/;
 
@@ -280,7 +280,7 @@ public class ImageView extends View {
      * Pause a started animation.
      */
     public native void pause() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.pause();
     }-*/;
 
@@ -296,7 +296,7 @@ public class ImageView extends View {
      * Stop a started animation and reset the index to the first image
      */
     public native void stop() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.stop();
     }-*/;
 
@@ -304,13 +304,13 @@ public class ImageView extends View {
      * Return the image as a blob object
      */
     public native Blob toBlob() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var toReturn = @com.emitrom.ti4j.mobile.client.blob.Blob::new(Lcom/google/gwt/core/client/JavaScriptObject;)(jso.toBlob());
 		return toReturn;
     }-*/;
 
     public native void addChangeHandler(ImageActionHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.image.ImageEvent::CHANGE,
@@ -321,7 +321,7 @@ public class ImageView extends View {
     }-*/;
 
     public native void addLoadHandler(ImageActionHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.image.ImageEvent::LOAD,
@@ -332,7 +332,7 @@ public class ImageView extends View {
     }-*/;
 
     public native void addStartHandler(ImageActionHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.image.ImageEvent::START,
@@ -343,7 +343,7 @@ public class ImageView extends View {
     }-*/;
 
     public native void addStopHandler(ImageActionHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.StopEvent::STOP,
@@ -371,7 +371,7 @@ public class ImageView extends View {
      */
     @Override
     public native Blob toImage() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.toImage();
 		var toReturn = @com.emitrom.ti4j.mobile.client.blob.Blob::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

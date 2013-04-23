@@ -63,7 +63,7 @@ public class AndroidMedia extends TiModule {
     }
 
     private native void scanMediaFiles(JsArrayString paths, JsArrayString mimeTypes, JavaScriptObject callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.scanMediaFiles(paths, mimeTypes, callback);
     }-*/;
 
@@ -82,7 +82,7 @@ public class AndroidMedia extends TiModule {
      *            as-is.
      */
     public native void setSystemWallpaper(Object image, boolean scale) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.setSystemWallpaper(image, scale);
     }-*/;
 

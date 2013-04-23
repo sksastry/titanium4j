@@ -43,7 +43,7 @@ public class Service extends EventDispatcher {
      * Titanium.Android.Service was created with Titanium.Android.createService.
      */
     public native void start() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.start();
     }-*/;
 
@@ -51,7 +51,7 @@ public class Service extends EventDispatcher {
      * Stop jso running instance of the Service.
      */
     public native void stop() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.stop();
     }-*/;
 
@@ -61,7 +61,7 @@ public class Service extends EventDispatcher {
      * @return
      */
     public native Intent getIntent() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.intent;
 		var toReturn = @com.emitrom.ti4j.mobile.client.android.Intent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -75,12 +75,12 @@ public class Service extends EventDispatcher {
      * @return
      */
     public native int getServiceInstanceId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.serviceInstanceId;
     }-*/;
 
     public native void addResumeHandler(ResumeHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.activity.ActivityEvent::RESUME,
@@ -91,7 +91,7 @@ public class Service extends EventDispatcher {
     }-*/;
 
     public native void addStartHandler(StartHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.activity.ActivityEvent::START,
@@ -102,7 +102,7 @@ public class Service extends EventDispatcher {
     }-*/;
 
     public native void addStopHandler(StopHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.activity.ActivityEvent::STOP,

@@ -34,7 +34,7 @@ public class ProgressEvent extends TiEvent {
      * current progress value
      */
     public final native double getProgress() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.progress;
     }-*/;
 }

@@ -16,7 +16,7 @@
 package com.emitrom.ti4j.mobile.client.buffer;
 
 import com.emitrom.ti4j.mobile.client.blob.Blob;
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
+import com.emitrom.ti4j.core.client.JsoHelper;
 import com.emitrom.ti4j.mobile.client.core.events.EventDispatcher;
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -40,9 +40,9 @@ public class Buffer extends EventDispatcher {
      * @return The number of bytes appended.
      */
     public native double append(Buffer sourceBuffer) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
-				.append(sourceBuffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.append(sourceBuffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -55,10 +55,10 @@ public class Buffer extends EventDispatcher {
      * @return The number of bytes appended.
      */
     public native double append(Buffer sourceBuffer, int sourceOffset) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.append(
-						sourceBuffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						sourceBuffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						sourceOffset);
     }-*/;
 
@@ -72,15 +72,15 @@ public class Buffer extends EventDispatcher {
      * @return The number of bytes appended.
      */
     public native double append(Buffer sourceBuffer, int sourceOffset, int sourceLength) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.append(
-						sourceBuffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						sourceBuffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						sourceOffset, sourceLength);
     }-*/;
 
     public native void clear() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.clear();
     }-*/;
 
@@ -88,7 +88,7 @@ public class Buffer extends EventDispatcher {
      * Create new copy of the current buffer
      */
     public native Buffer clone() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.clone();
 		var toReturn = @com.emitrom.ti4j.mobile.client.buffer.Buffer::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -98,7 +98,7 @@ public class Buffer extends EventDispatcher {
      * Create new copy of the current buffer
      */
     public native Buffer clone(int offset) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.clone(offset);
 		var toReturn = @com.emitrom.ti4j.mobile.client.buffer.Buffer::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -108,95 +108,95 @@ public class Buffer extends EventDispatcher {
      * Create new copy of the current buffer
      */
     public native Buffer clone(int offset, int length) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.clone(offset, length);
 		var toReturn = @com.emitrom.ti4j.mobile.client.buffer.Buffer::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native double copy(Buffer sourceBuffer, int offset) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.copy(
-						sourceBuffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						sourceBuffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						offset);
     }-*/;
 
     public native double copy(Buffer sourceBuffer, int offset, int sourceOffset) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.copy(
-						sourceBuffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						sourceBuffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						offset, sourceOffset);
     }-*/;
 
     public native double copy(Buffer sourceBuffer, int offset, int sourceOffset, int sourceLength) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.copy(
-						sourceBuffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						sourceBuffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						offset, sourceOffset, sourceLength);
     }-*/;
 
     public native void fill(double fillByte) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.fill(fillByte);
     }-*/;
 
     public native void fill(double fillByte, int offset) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.fill(fillByte, offset);
     }-*/;
 
     public native void fill(double fillByte, int offset, int length) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.fill(fillByte, offset, length);
     }-*/;
 
     public native Buffer insert(Buffer sourceBuffer, int offset) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso
 				.insert(
-						sourceBuffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						sourceBuffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						length);
 		var toReturn = @com.emitrom.ti4j.mobile.client.buffer.Buffer::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native Buffer insert(Buffer sourceBuffer, int offset, int sourceOffset) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso
 				.insert(
-						sourceBuffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						sourceBuffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						length, sourceOffset);
 		var toReturn = @com.emitrom.ti4j.mobile.client.buffer.Buffer::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native Buffer insert(Buffer sourceBuffer, int offset, int sourceOffset, int sourceLength) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso
 				.insert(
-						sourceBuffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						sourceBuffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						length, sourceOffset, sourceLength);
 		var toReturn = @com.emitrom.ti4j.mobile.client.buffer.Buffer::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void release() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.release();
     }-*/;
 
     public native Blob toBlob() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.toBlob();
 		var toReturn = @com.emitrom.ti4j.mobile.client.blob.Blob::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native String stringValue() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.toString();
     }-*/;
 
@@ -205,12 +205,12 @@ public class Buffer extends EventDispatcher {
      *         by default.
      */
     public native double getByteOrder() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.byteOrder;
     }-*/;
 
     public native void setByteOrder(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.byteOrder = value;
     }-*/;
 
@@ -223,12 +223,12 @@ public class Buffer extends EventDispatcher {
      *         length should be used sparingly due to the associated overhead.
      */
     public native double getLength() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.length;
     }-*/;
 
     public native void setLength(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.length = value;
     }-*/;
 
@@ -239,12 +239,12 @@ public class Buffer extends EventDispatcher {
      *         default.
      */
     public native String getType() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.type;
     }-*/;
 
     public native void setType(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.type = value;
     }-*/;
 
@@ -253,17 +253,17 @@ public class Buffer extends EventDispatcher {
      *         set.
      */
     public native <T> T getValue() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.value;
     }-*/;
 
     public native void setValue(String newValue) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.value = newValue;
     }-*/;
 
     public native void setValue(double newValue) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.value = newValue;
     }-*/;
 

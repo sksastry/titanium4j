@@ -50,7 +50,7 @@ public class CallbackRegistration implements HandlerRegistration{
 	 */
 	public native void unregister() /*-{
 		var obj = this.@com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration::getUiObject()();
-		var objjso = obj.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var objjso = obj.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var action = this.@com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration::getActionString()();
 		var jso = this.@com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration::getJso()();
 		objjso.removeEventListener(action, jso);

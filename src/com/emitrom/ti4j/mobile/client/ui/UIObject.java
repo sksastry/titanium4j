@@ -34,7 +34,7 @@ public abstract class UIObject extends EventDispatcher {
      */
     public native CallbackRegistration addPostLayoutHandler(PostLayoutEventHandler handler) /*-{
     	
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var listener = function(e) {
 							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.TiEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.PostLayoutEventHandler::onPostLayout(Lcom/emitrom/ti4j/mobile/client/core/events/TiEvent;)(eventObject);

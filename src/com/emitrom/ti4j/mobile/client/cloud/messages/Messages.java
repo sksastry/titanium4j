@@ -39,10 +39,10 @@ public class Messages extends TiModule {
      * Requires user login.
      */
     public native void create(Message message, MessageResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.create(
-						message.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						message.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/messages/MessageResponse;)(response);
@@ -55,10 +55,10 @@ public class Messages extends TiModule {
      * Requires user login.
      */
     public native void remove(Message message, MessageResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.remove(
-						message.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						message.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/messages/MessageResponse;)(response);
@@ -70,10 +70,10 @@ public class Messages extends TiModule {
      * 
      */
     public native void reply(Message message, MessageResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.reply(
-						message.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						message.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/messages/MessageResponse;)(response);
@@ -84,10 +84,10 @@ public class Messages extends TiModule {
      * Retrieve information about a message.
      */
     public native void show(Message message, MessageResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.show(
-						message.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						message.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/messages/MessageResponse;)(response);
@@ -100,10 +100,10 @@ public class Messages extends TiModule {
      * Requires user login.
      */
     public native void removeThread(MessageThread messageThread, MessageResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.removeThread(
-						message.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						message.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/messages/MessageResponse;)(response);
@@ -114,10 +114,10 @@ public class Messages extends TiModule {
      * Retrieve a list of messages in the current user's inbox.
      */
     public native void showInBox(MessageResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.showInBox(
-						message.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						message.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/messages/MessageResponse;)(response);
@@ -128,10 +128,10 @@ public class Messages extends TiModule {
      * Retrieve a list of messages in the current user's inbox.
      */
     public native void showInBox(SearchConfig config, MessageResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.showInBox(
-						config.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						config.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/messages/MessageResponse;)(response);
@@ -142,10 +142,10 @@ public class Messages extends TiModule {
      * Retrieve a list of messages in the current user's inbox.
      */
     public native void showSent(MessageResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.showSent(
-						message.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						message.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/messages/MessageResponse;)(response);
@@ -156,10 +156,10 @@ public class Messages extends TiModule {
      * Retrieve a list of messages in the current user's inbox.
      */
     public native void showSent(SearchConfig config, MessageResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.showSent(
-						config.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						config.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/messages/MessageResponse;)(response);
@@ -170,10 +170,10 @@ public class Messages extends TiModule {
      * Retrieve a list of messages in the current user's inbox.
      */
     public native void showThread(ThreadSearchConfig config, MessageResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.showThread(
-						config.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						config.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/messages/MessageResponse;)(response);
@@ -184,10 +184,10 @@ public class Messages extends TiModule {
      * Retrieve a list of messages in the current user's inbox.
      */
     public native void showThreads(ThreadSearchConfig config, MessageResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.showThreads(
-						config.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						config.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.messages.MessageResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/messages/MessageResponse;)(response);

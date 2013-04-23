@@ -34,7 +34,7 @@ public class Node extends EventDispatcher {
      * @return The name of this node
      */
     public native String getNodeName() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.nodeName;
     }-*/;
 
@@ -42,7 +42,7 @@ public class Node extends EventDispatcher {
      * @return The content (value) of this node
      */
     public native String getNodeValue() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.nodeValue;
     }-*/;
 
@@ -50,7 +50,7 @@ public class Node extends EventDispatcher {
      * @return this node's type.
      */
     public native int getNodeType() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.nodeType;
     }-*/;
 
@@ -58,7 +58,7 @@ public class Node extends EventDispatcher {
      * @return this node's parent node
      */
     public native Node getParentNode() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.parentNode;
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Node::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -69,7 +69,7 @@ public class Node extends EventDispatcher {
      *         node's children
      */
     public native NodeList getChildNodes() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.childNodes;
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.NodeList::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -79,7 +79,7 @@ public class Node extends EventDispatcher {
      * @return this node's first child
      */
     public native Node getFirstChild() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.firstChild;
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Node::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -89,7 +89,7 @@ public class Node extends EventDispatcher {
      * @return this node's last child
      */
     public native Node getLastChild() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.lastChild;
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Node::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -99,7 +99,7 @@ public class Node extends EventDispatcher {
      * @return jso node's previous sibling
      */
     public native Node getPreviousSibling() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.previousSibling;
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Node::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -109,7 +109,7 @@ public class Node extends EventDispatcher {
      * @return this node's next sibling
      */
     public native Node getNextSibling() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.nextSibling;
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Node::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -119,7 +119,7 @@ public class Node extends EventDispatcher {
      * @return A map of this node's attributes
      */
     public native NamedNodeMap getAttributes() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.attributes;
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.NamedNodeMap::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
@@ -128,7 +128,7 @@ public class Node extends EventDispatcher {
      * @return this node's owning document
      */
     public native Document getOwnerDocument() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.ownerDocument;
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Document::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -138,7 +138,7 @@ public class Node extends EventDispatcher {
      * @return The namespace uri of this node
      */
     public native String getNamespaceURI() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.namespaceURI;
     }-*/;
 
@@ -146,7 +146,7 @@ public class Node extends EventDispatcher {
      * @return The namespace prefix of this node
      */
     public native String getPrefix() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.prefix;
     }-*/;
 
@@ -154,12 +154,12 @@ public class Node extends EventDispatcher {
      * @return The local part of the qualified name of this node
      */
     public native String getLocalName() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.localName;
     }-*/;
 
     public native void setLocalName(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.localName = value;
     }-*/;
 
@@ -171,9 +171,9 @@ public class Node extends EventDispatcher {
      * @return The appended node
      */
     public native Node appendChild(Node newChild) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso
-				.appendChild(newChild.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.appendChild(newChild.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Node::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
@@ -186,7 +186,7 @@ public class Node extends EventDispatcher {
      * @return The appended node
      */
     public native Node cloneNode(boolean deep) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.cloneNode(deep);
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Node::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -196,7 +196,7 @@ public class Node extends EventDispatcher {
      * Whether or not this node has attributes
      */
     public native boolean hasAttributes() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.hasAttributes();
     }-*/;
 
@@ -204,7 +204,7 @@ public class Node extends EventDispatcher {
      * Whether or not this node has child nodes
      */
     public native boolean hasChildNodes() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.hasChildNodes();
     }-*/;
 
@@ -216,11 +216,11 @@ public class Node extends EventDispatcher {
      * @return The inserted node
      */
     public native Node insertBefore(Node newChild, Node refChild) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.insertBefore(
-						newChild.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
-						refChild.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+						newChild.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
+						refChild.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -233,7 +233,7 @@ public class Node extends EventDispatcher {
      * @return Whether or not the feature is supported
      */
     public native boolean isSupported(String feature, String version) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.isSupported(feature, version);
     }-*/;
 
@@ -241,7 +241,7 @@ public class Node extends EventDispatcher {
      * Normalizes text and attribute nodes in jso node's child hierarchy
      */
     public native void normalize() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.normalize();
     }-*/;
 
@@ -253,9 +253,9 @@ public class Node extends EventDispatcher {
      * @return The node that was removed
      */
     public native Node removeChild(Node oldChild) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso
-				.removeChild(oldChild.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.removeChild(oldChild.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Node::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
@@ -269,11 +269,11 @@ public class Node extends EventDispatcher {
      *            The node being replaced
      */
     public native void replaceChild(Node newChild, Node oldChild) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.replaceChild(
-						newChild.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
-						oldChild.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+						newChild.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
+						oldChild.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
 }

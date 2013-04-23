@@ -35,7 +35,7 @@ public class FileStream extends File {
      * Closes stream and throws exception on error
      */
     public native void close() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.close();
     }-*/;
 
@@ -45,7 +45,7 @@ public class FileStream extends File {
      * @return
      */
     public native boolean isReadable() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.isReadable();
     }-*/;
 
@@ -55,7 +55,7 @@ public class FileStream extends File {
      * @return
      */
     public native boolean isWritable() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.isWritable();
     }-*/;
 
@@ -66,9 +66,9 @@ public class FileStream extends File {
      * @return
      */
     public native double read(Buffer buffer) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
-				.read(buffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.read(buffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -80,10 +80,10 @@ public class FileStream extends File {
      * @return
      */
     public native double read(Buffer buffer, double offset) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.read(
-						buffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						buffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						offset);
     }-*/;
 
@@ -98,10 +98,10 @@ public class FileStream extends File {
      * @return
      */
     public native double read(Buffer buffer, double offset, double length) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.read(
-						buffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						buffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						offset, length);
     }-*/;
 
@@ -112,9 +112,9 @@ public class FileStream extends File {
      * @return
      */
     public native double write(Buffer buffer) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
-				.write(buffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.write(buffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -126,10 +126,10 @@ public class FileStream extends File {
      * @return
      */
     public native double write(Buffer buffer, double offset) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.write(
-						buffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						buffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						offset);
     }-*/;
 
@@ -145,10 +145,10 @@ public class FileStream extends File {
      * @return
      */
     public native double write(Buffer buffer, double offset, double length) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.write(
-						buffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						buffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						offset, length);
     }-*/;
 

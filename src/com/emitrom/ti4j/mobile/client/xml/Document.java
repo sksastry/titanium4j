@@ -38,7 +38,7 @@ public class Document extends Node {
      *         document, such as via a document type definition (dtd).
      */
     public native DocumentType getDoctype() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.docType;
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.DocumentType::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -48,7 +48,7 @@ public class Document extends Node {
      * @return The root element in the document.
      */
     public native Element getDocumentElement() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.documentElement;
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Element::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -60,7 +60,7 @@ public class Document extends Node {
      *         handles this document
      */
     public native DOMImplementation getImplementation() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.implementation;
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.DOMImplementation::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -74,7 +74,7 @@ public class Document extends Node {
      * @return An attribute object, ready for putting on an element.
      */
     public native Attr createAttribute(String name) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createAttribute(name);
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Attr::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -89,7 +89,7 @@ public class Document extends Node {
      *            Name for the new attribute.
      */
     public native void createAttributeNS(String namespaceURI, String name) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.createAttributeNS(namespaceURI, name);
     }-*/;
 
@@ -102,7 +102,7 @@ public class Document extends Node {
      *         element.
      */
     public native <T> T createCDATASection(String data) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.createCDATASection(data);
     }-*/;
 
@@ -114,7 +114,7 @@ public class Document extends Node {
      * @return The comment, ready to be appended to the DOM tree.
      */
     public native <T> T createComment(String data) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.createComment(data);
     }-*/;
 
@@ -124,7 +124,7 @@ public class Document extends Node {
      * @return The empty Document fragment.
      */
     public native <T> T createDocumentFragment() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.createDocumentFragment();
     }-*/;
 
@@ -136,7 +136,7 @@ public class Document extends Node {
      * @return The newly created element.
      */
     public native Element createElement(String tagName) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createElement(tagName);
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Element::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -152,7 +152,7 @@ public class Document extends Node {
      * @return the new namespace-qualified element.
      */
     public native Element createElementNS(String namespaceURI, String name) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createElementNS(nameSpaceURI, name);
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Element::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -166,7 +166,7 @@ public class Document extends Node {
      * @return The created entity reference.
      */
     public native <T> T createEntityReference(String name) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.createEntityReference(name);
 		return toReturn;
 
@@ -182,7 +182,7 @@ public class Document extends Node {
      * @return The created processing instruction.
      */
     public native ProcessingInstruction createProcessingInstruction(String target, String data) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createProcessingInstruction(target, data);
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.ProcessingInstruction::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -196,7 +196,7 @@ public class Document extends Node {
      * @return The created text node.
      */
     public native Text createTextNode(String data) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createTextNode(data);
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Text::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -210,7 +210,7 @@ public class Document extends Node {
      * @return The Element matching the given ID, if any.
      */
     public native Element getElementById(String elementId) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.getElementById(elementId);
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Element::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -225,7 +225,7 @@ public class Document extends Node {
      *         name.
      */
     public native NodeList getElementsByTagName(String tagname) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.getElementsByTagName(tagName);
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.NodeList::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -243,7 +243,7 @@ public class Document extends Node {
      *         given namespace and have the given tag name.
      */
     public native NodeList getElementsByTagNameNS(String namespaceURI, String localname) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.getElementsByTagNameNS(namespaceURI, localname);
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.NodeList::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -262,10 +262,10 @@ public class Document extends Node {
      * @return the imported Node that belongs now to this document.
      */
     public native Node importNode(Node importedNode, boolean deep) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso
 				.importNode(
-						importedNode.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						importedNode.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						deep);
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Node::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

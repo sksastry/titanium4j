@@ -1,25 +1,26 @@
 /**************************************************************************
-   Titanium.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+ * Titanium.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client;
 
-import com.emitrom.ti4j.mobile.client.blob.Blob;
+import com.emitrom.ti4j.core.client.Function;
+import com.emitrom.ti4j.core.client.JsoHelper;
 import com.emitrom.ti4j.mobile.client.buffer.Buffer;
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
 import com.emitrom.ti4j.mobile.client.core.events.TiEvent;
 import com.emitrom.ti4j.mobile.client.core.events.TiEventListener;
+import com.emitrom.ti4j.mobile.client.core.handlers.ui.ClickHandler;
 import com.emitrom.ti4j.mobile.client.platform.Platform;
 import com.emitrom.ti4j.mobile.client.ui.AlertDialog;
 import com.google.gwt.core.client.GWT;
@@ -60,31 +61,10 @@ public class Titanium {
 		Titanium.addEventListener(event, listener);
     }-*/;
 
-    /**
-     * Creates and return an instance of <code>Titanium.Blob</code>
-     * 
-     * @return Titanium.Blob
-     */
-    public static native Blob createBlob() /*-{
-		var obj = Titanium.createBlob();
-		var toReturn = @com.emitrom.ti4j.mobile.client.blob.Blob::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
-		return toReturn;
-    }-*/;
-
-    /**
-     * Creates and return an instance of <code>Titanium.Blob</code>
-     * 
-     * @param parameters
-     *            , (optional) a dictionary object properties defined in
-     *            Titanium.Blob
-     * 
-     * @return Titanium.Blob
-     * 
-     */
-    public static native Blob createBlob(Object parameters) /*-{
-		var obj = Titanium.createBlob(parameters);
-		var toReturn = @com.emitrom.ti4j.mobile.client.blob.Blob::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
-		return toReturn;
+    public static native void addEventListener(String event, Function listener) /*-{
+		Titanium.addEventListener(event, function() {
+			listener.@com.emitrom.ti4j.core.client.Function::execute()();
+		});
     }-*/;
 
     /**
@@ -109,6 +89,33 @@ public class Titanium {
      * @return Titanium.Buffer
      */
     public static native Buffer createBuffer(Object params) /*-{
+		var obj = Titanium.createBuffer(params);
+		var toReturn = @com.emitrom.ti4j.mobile.client.buffer.Buffer::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
+		return toReturn;
+    }-*/;
+
+    /**
+     * Creates a new buffer based on the params
+     * 
+     * @param params
+     *            , Key value pairs. You can include: value, an optional initial
+     *            value which will be encoded and placed in the buffer. If value
+     *            is a Number, type must also be set. This is simply a
+     *            convenient way of calling Titanium.Codec.encodeString or
+     *            <code>Titanium.Codec.encodeNumber</code> and placing the
+     *            encoded value in the returned buffer. length: the length of
+     *            the buffer, with a default of 0 unless value is specified, in
+     *            which case the length of the encoded value. type, the type of
+     *            data encoding to use with value, with
+     *            Titanium.Codec.CHARSET_UTF8 being the default if value is a
+     *            String, else this argument is required in the case of value
+     *            being a number. byteOrder, the byte order of this buffer, with
+     *            the default being the OS native byte order is used by default
+     *            (see <code>Titanium.Codec.getNativeByteOrder</code>).
+     * 
+     * @return Titanium.Buffer
+     */
+    public static native Buffer createBuffer(JavaScriptObject params) /*-{
 		var obj = Titanium.createBuffer(params);
 		var toReturn = @com.emitrom.ti4j.mobile.client.buffer.Buffer::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -164,7 +171,7 @@ public class Titanium {
 		Titanium
 				.fireEvent(
 						name,
-						eventObject.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+						eventObject.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -205,6 +212,26 @@ public class Titanium {
      * method is asynchronous. However, only one alert dialog will be visible
      * and modal at a time.
      * 
+     * @param message
+     *            , the message to display
+     */
+    public static void alert(String message, ClickHandler clickHandler) {
+        AlertDialog alert = new AlertDialog();
+        if (Platform.get().isAndroid()) {
+            alert = new AlertDialog("OK");
+        }
+        alert.setMessage(message);
+        alert.addClickHandler(clickHandler);
+        alert.show();
+    };
+
+    /**
+     * Titanium has a built-in convenience function alert which can be used as a
+     * shortcut to <code>Titanium.UI.createAlertDialog</code> for creating a
+     * message box. Note that unlike a web browser-based version of alert, the
+     * method is asynchronous. However, only one alert dialog will be visible
+     * and modal at a time.
+     * 
      * @param title
      *            , the title of the message
      * @param message
@@ -220,16 +247,63 @@ public class Titanium {
         alert.show();
     }
 
+    /**
+     * Titanium has a built-in convenience function alert which can be used as a
+     * shortcut to <code>Titanium.UI.createAlertDialog</code> for creating a
+     * message box. Note that unlike a web browser-based version of alert, the
+     * method is asynchronous. However, only one alert dialog will be visible
+     * and modal at a time.
+     * 
+     * @param title
+     *            , the title of the message
+     * @param message
+     *            , the message to display
+     */
+    public static void alert(String title, String message, ClickHandler handler) {
+        AlertDialog alert = new AlertDialog();
+        if (Platform.get().isAndroid()) {
+            alert = new AlertDialog("OK");
+        }
+        alert.setTitle(title);
+        alert.setMessage(message);
+        alert.addClickHandler(handler);
+        alert.show();
+    }
+
     private static native void removeEventListener(String event, JavaScriptObject listener) /*-{
 		Titanium.removeEventListener(event, listener);
     }-*/;
 
-    private static native String getUserAgent() /*-{
+    /**
+     * User-agent string used by Titanium.
+     * 
+     * @return
+     */
+    public static native String getUserAgent() /*-{
 		return Titanium.userAgent;
     }-*/;
 
-    private static native String getVersion() /*-{
+    /**
+     * Version of Titanium that is executing.
+     * 
+     * @return
+     */
+    public static native String getVersion() /*-{
 		return Titanium.version;
+    }-*/;
+
+    /**
+     * Date of the Titanium build.
+     */
+    public static native String getBuildDate() /*-{
+		return Titanium.buildDate;
+    }-*/;
+
+    /**
+     * Git hash of the Titanium build.
+     */
+    public static native String getBuilHash() /*-{
+		return Titanium.buildHash;
     }-*/;
 
     /**

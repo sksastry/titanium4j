@@ -15,7 +15,7 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui;
 
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.SwitchChangeHandler;
 import com.emitrom.ti4j.mobile.client.ui.interfaces.HasTitle;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -42,12 +42,12 @@ public class Switch extends View implements HasTitle {
      * @return Boolean for the state of the switch
      */
     public native boolean isEnabled() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.enabled;
     }-*/;
 
     public native void setEnabled(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.enabled = value;
     }-*/;
 
@@ -59,12 +59,12 @@ public class Switch extends View implements HasTitle {
      * 
      */
     public native int getStyle() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.style;
     }-*/;
 
     public native void setStyle(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.style = value;
     }-*/;
 
@@ -76,12 +76,12 @@ public class Switch extends View implements HasTitle {
      * 
      */
     public native String getTitle() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.title;
     }-*/;
 
     public native void setTitle(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.title = value;
     }-*/;
 
@@ -96,7 +96,7 @@ public class Switch extends View implements HasTitle {
     }-*/;
 
     public native void setTitleOff(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.titleOff = value;
     }-*/;
 
@@ -107,12 +107,12 @@ public class Switch extends View implements HasTitle {
      * 
      */
     public native String getTitleOn() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.titleOn;
     }-*/;
 
     public native void setTitleOn(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.titleOn = value;
     }-*/;
 
@@ -121,17 +121,17 @@ public class Switch extends View implements HasTitle {
      *         false the switch if off
      */
     public native boolean getValue() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.value;
     }-*/;
 
     public native void setValue(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.value = value;
     }-*/;
 
     public native void addChangeHandler(SwitchChangeHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.SwitchEvent::CHANGE,

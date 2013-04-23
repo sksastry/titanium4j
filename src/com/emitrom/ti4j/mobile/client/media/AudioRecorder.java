@@ -37,12 +37,12 @@ public class AudioRecorder extends EventDispatcher {
      * @return Audio compression constant to be used for the recording
      */
     public native int getCompression() /*-{
-		var jso = jso.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.compression;
     }-*/;
 
     public native void setCompression(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.compression = value;
     }-*/;
 
@@ -50,12 +50,12 @@ public class AudioRecorder extends EventDispatcher {
      * @return Audio format constant for used for the recording
      */
     public native int getFormat() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.format;
     }-*/;
 
     public native void setFormat(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.format = value;
     }-*/;
 
@@ -63,7 +63,7 @@ public class AudioRecorder extends EventDispatcher {
      * @return Readonly property to indicate if paused
      */
     public native boolean isPaused() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.paused;
     }-*/;
 
@@ -71,7 +71,7 @@ public class AudioRecorder extends EventDispatcher {
      * @return Readonly property to indicate if recording
      */
     public native boolean isRecording() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.recording;
     }-*/;
 
@@ -79,7 +79,7 @@ public class AudioRecorder extends EventDispatcher {
      * @return Readonly property to indicate if stopped
      */
     public native boolean isStopped() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.stopped;
     }-*/;
 
@@ -87,7 +87,7 @@ public class AudioRecorder extends EventDispatcher {
      * Called to temporarily pause recording
      */
     public native void pause() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.pause();
     }-*/;
 
@@ -95,7 +95,7 @@ public class AudioRecorder extends EventDispatcher {
      * Called to resume audio recording
      */
     public native void resume() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.resume();
     }-*/;
 
@@ -103,7 +103,7 @@ public class AudioRecorder extends EventDispatcher {
      * Called to start recording audio
      */
     public native void start() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.start();
     }-*/;
 
@@ -111,7 +111,7 @@ public class AudioRecorder extends EventDispatcher {
      * Called to stop recording audio
      */
     public native void stop() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.stop();
     }-*/;
 

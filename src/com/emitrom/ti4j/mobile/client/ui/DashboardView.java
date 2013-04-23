@@ -1,24 +1,30 @@
 /**************************************************************************
-   DashboardView.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+ * DashboardView.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom
+ * LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
+import com.emitrom.ti4j.mobile.client.core.handlers.CommitHandler;
+import com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.DashboardItemHandler;
+import com.emitrom.ti4j.mobile.client.core.handlers.ui.DeleteHandler;
 import com.emitrom.ti4j.mobile.client.ui.interfaces.Editable;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
@@ -33,8 +39,15 @@ import com.google.gwt.core.client.JsArray;
  */
 public class DashboardView extends View implements Editable {
 
-    public DashboardView() {
+    private List<DashboardItem> items;
+
+    private DashboardView() {
         createPeer();
+    }
+
+    public DashboardView(int rowCount, int columnCount) {
+        create(rowCount, columnCount);
+        items = new ArrayList<DashboardItem>();
     }
 
     DashboardView(JavaScriptObject proxy) {
@@ -43,8 +56,8 @@ public class DashboardView extends View implements Editable {
 
     /**
      * @return An array of
-     *         {@link com.emitrom.ti4j.mobile.client.ui.DashboardItem}
-     *         objects to display in the view
+     *         {@link com.emitrom.ti4j.mobile.client.ui.DashboardItem} objects
+     *         to display in the view
      */
     public ArrayList<DashboardItem> getData() {
         ArrayList<DashboardItem> items = new ArrayList<DashboardItem>();
@@ -52,15 +65,17 @@ public class DashboardView extends View implements Editable {
         for (int i = 0; i < values.length(); i++) {
             items.add(new DashboardItem(values.get(i)));
         }
+        this.items = items;
         return items;
     }
 
     private native JsArray<JavaScriptObject> _getData() /*-{
-		var jso = jso.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.data;
     }-*/;
 
-    public void setData(ArrayList<DashboardItem> data) {
+    public void setData(List<DashboardItem> data) {
+        this.items = data;
         JsArray<JavaScriptObject> values = JsArray.createArray().cast();
         for (DashboardItem item : data) {
             values.push(item.getJsObj());
@@ -69,15 +84,19 @@ public class DashboardView extends View implements Editable {
     }
 
     public void setData(DashboardItem... data) {
-        JsArray<JavaScriptObject> values = JsArray.createArray().cast();
-        for (DashboardItem item : data) {
-            values.push(item.getJsObj());
-        }
-        _setData(values);
+        setData(Arrays.asList(data));
+    }
+
+    private void addItem(DashboardItem item) {
+        this.items.add(item);
+    }
+
+    private void layoutData() {
+        this.setData(this.items);
     }
 
     private native void _setData(JsArray<JavaScriptObject> value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.data = value;
     }-*/;
 
@@ -86,14 +105,23 @@ public class DashboardView extends View implements Editable {
      *         effect
      */
     public native boolean wobble() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.wobble;
     }-*/;
 
     public native void setWobble(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.wobble = value;
     }-*/;
+
+    @Override
+    public void add(View view) {
+        if (view instanceof DashboardItem) {
+            this.addItem((DashboardItem) view);
+            this.layoutData();
+        }
+
+    }
 
     /*
      * (non-Javadoc)
@@ -102,7 +130,7 @@ public class DashboardView extends View implements Editable {
      */
     @Override
     public native void startEditing() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.startEditing();
     }-*/;
 
@@ -113,23 +141,40 @@ public class DashboardView extends View implements Editable {
      */
     @Override
     public native void stopEditing() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.stopEditing();
     }-*/;
 
-    public native void addDeleteHandler(DashboardItemHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso
-				.addEventListener(
-						@com.emitrom.ti4j.mobile.client.core.events.ui.dashboard.DashboardEvent::DELETE,
-						function(e) {
-							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.dashboard.DashboardEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
-							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.DashboardItemHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/ui/dashboard/DashboardEvent;)(eventObject);
-						});
+    public native CallbackRegistration addCommitHandler(CommitHandler handler)/*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var listener = function(e) {
+			var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.CommitEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+			handler.@com.emitrom.ti4j.mobile.client.core.handlers.CommitHandler::onCommit(Lcom/emitrom/ti4j/mobile/client/core/events/ui/CommitEvent;)(eventObject);
+		};
+		var name = @com.emitrom.ti4j.mobile.client.core.events.ui.CommitEvent::COMMIT;
+		var v = jso.addEventListener(name, listener);
+		var toReturn = @com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration::new(Lcom/emitrom/ti4j/mobile/client/ui/UIObject;Ljava/lang/String;Lcom/google/gwt/core/client/JavaScriptObject;)(this,name,listener);
+		return toReturn;
+
     }-*/;
 
+    public native CallbackRegistration addDeleteHandler(DeleteHandler handler)/*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var listener = function(e) {
+			var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.DeleteEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+			handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.DeleteHandler::onDelete(Lcom/emitrom/ti4j/mobile/client/core/events/ui/DeleteEvent;)(eventObjet);
+		};
+		var name = @com.emitrom.ti4j.mobile.client.core.events.ui.DeleteEvent::DELETE;
+		var v = jso.addEventListener(name, listener);
+		var toReturn = @com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration::new(Lcom/emitrom/ti4j/mobile/client/ui/UIObject;Ljava/lang/String;Lcom/google/gwt/core/client/JavaScriptObject;)(this,name,listener);
+		return toReturn;
+
+    }-*/;
+
+    // TODO move events to new API
+
     public native void addMoveHandler(DashboardItemHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.dashboard.DashboardEvent::MOVE,
@@ -139,9 +184,68 @@ public class DashboardView extends View implements Editable {
 						});
     }-*/;
 
+    public native void addDragEndHandler(DashboardItemHandler handler)/*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso
+				.addEventListener(
+						'dragEnd',
+						function(e) {
+							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.dashboard.DashboardEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.DashboardItemHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/ui/dashboard/DashboardEvent;)(eventObject);
+						});
+    }-*/;
+
+    public native void addDragStartHandler(DashboardItemHandler handler)/*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso
+				.addEventListener(
+						'dragStart',
+						function(e) {
+							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.dashboard.DashboardEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.DashboardItemHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/ui/dashboard/DashboardEvent;)(eventObject);
+						});
+    }-*/;
+
+    public native void addDragFinishHandler(DashboardItemHandler handler)/*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso
+				.addEventListener(
+						'dragend',
+						function(e) {
+							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.dashboard.DashboardEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.DashboardItemHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/ui/dashboard/DashboardEvent;)(eventObject);
+						});
+    }-*/;
+
+    public native void addEditHandler(DashboardItemHandler handler)/*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso
+				.addEventListener(
+						'edit',
+						function(e) {
+							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.dashboard.DashboardEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.DashboardItemHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/ui/dashboard/DashboardEvent;)(eventObject);
+						});
+    }-*/;
+
+    public native void addPageEndHandler(DashboardItemHandler handler)/*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso
+				.addEventListener(
+						'pagechanged',
+						function(e) {
+							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.dashboard.DashboardEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.DashboardItemHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/ui/dashboard/DashboardEvent;)(eventObject);
+						});
+    }-*/;
+
     @Override
     public void createPeer() {
         jsObj = UI.createDashboardView();
+    }
+
+    private void create(int row, int col) {
+        jsObj = UI.createDashboardView(row, col);
     }
 
     public static DashboardView from(ProxyObject proxy) {

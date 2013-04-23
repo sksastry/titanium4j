@@ -15,8 +15,8 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.data;
 
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.JsoHelper;
+import com.emitrom.ti4j.core.client.ProxyObject;
 
 /**
  * Base class for data based class

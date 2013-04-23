@@ -29,7 +29,7 @@ public class AclsResponse extends AbstractHandlerResponse {
     }
 
     public native JsArrayMixed getPermission()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return peer.permission;
     }-*/;
 

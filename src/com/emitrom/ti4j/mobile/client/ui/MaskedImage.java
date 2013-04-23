@@ -15,7 +15,7 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui;
 
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
@@ -38,7 +38,7 @@ public class MaskedImage extends View {
      * @return the value of the image property.
      */
     public native String getImage() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.image;
     }-*/;
 
@@ -48,7 +48,7 @@ public class MaskedImage extends View {
      * @param value
      */
     public native void setImage(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.image = value;
     }-*/;
 
@@ -56,7 +56,7 @@ public class MaskedImage extends View {
      * @return the value of the mask property.
      */
     public native String getMask() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.mask;
     }-*/;
 
@@ -66,7 +66,7 @@ public class MaskedImage extends View {
      * @param value
      */
     public native void setMask(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.mask = value;
     }-*/;
 
@@ -74,7 +74,7 @@ public class MaskedImage extends View {
      * @return the value of the tint property.
      */
     public native String getTint() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.tint;
     }-*/;
 
@@ -84,7 +84,7 @@ public class MaskedImage extends View {
      * @param value
      */
     public native void setTint(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.tint = value;
     }-*/;
 
@@ -92,7 +92,7 @@ public class MaskedImage extends View {
      * @return the value of the mode property.
      */
     public native double getMode() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.mode;
     }-*/;
 
@@ -102,7 +102,7 @@ public class MaskedImage extends View {
      * @param value
      */
     public native void setMode(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.mode = value;
     }-*/;
 

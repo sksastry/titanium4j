@@ -17,7 +17,7 @@ package com.emitrom.ti4j.mobile.client.cloud.core;
 
 import java.util.Date;
 
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
+import com.emitrom.ti4j.core.client.JsoHelper;
 import com.google.gwt.core.client.JsArrayString;
 
 /**
@@ -57,7 +57,7 @@ public class Query extends AbstractCloudObject {
      * @param ids
      */
     public native void setParticipateIds(String ids)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.participate_ids = ids;
     }-*/;
 
@@ -67,7 +67,7 @@ public class Query extends AbstractCloudObject {
      * @param ids
      */
     public native void setPage(int value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.page = value;
     }-*/;
 
@@ -77,7 +77,7 @@ public class Query extends AbstractCloudObject {
      * @param value
      */
     public native void setPerPage(int value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.per_page = value;
     }-*/;
 
@@ -89,7 +89,7 @@ public class Query extends AbstractCloudObject {
      * @param value
      */
     public native void setLimit(int value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.limit = value;
     }-*/;
 
@@ -99,7 +99,7 @@ public class Query extends AbstractCloudObject {
      * @param value
      */
     public native void setSkip(int value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.skip = value;
     }-*/;
 
@@ -109,7 +109,7 @@ public class Query extends AbstractCloudObject {
      * @param value
      */
     public native void setOrder(String value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.order = value;
     }-*/;
 
@@ -119,7 +119,7 @@ public class Query extends AbstractCloudObject {
      * @param value
      */
     public native void setUserId(String value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.user_id = value;
     }-*/;
 
@@ -129,7 +129,7 @@ public class Query extends AbstractCloudObject {
      * @param value
      */
     public native void setCreatedAt(Date value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.created_at = value;
     }-*/;
 
@@ -139,7 +139,7 @@ public class Query extends AbstractCloudObject {
      * @param value
      */
     public native void setUpdatedAt(Date value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.updated_at = value;
     }-*/;
 
@@ -151,8 +151,8 @@ public class Query extends AbstractCloudObject {
      * @param value
      */
     public native void setWhere(Criteria value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		peer.where = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		peer.where = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
 }

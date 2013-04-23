@@ -41,12 +41,12 @@ public class ProcessingInstruction extends EventDispatcher {
      *         instruction.
      */
     public native String getData() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.data;
     }-*/;
 
     public native void setData(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.data = value;
     }-*/;
 
@@ -56,7 +56,7 @@ public class ProcessingInstruction extends EventDispatcher {
      *         the processing instruction.
      */
     public native String getTarget() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.target;
     }-*/;
 }

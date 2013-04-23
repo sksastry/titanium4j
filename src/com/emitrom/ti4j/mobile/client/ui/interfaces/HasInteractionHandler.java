@@ -32,10 +32,10 @@ import com.emitrom.ti4j.mobile.client.core.handlers.ui.TwoFingerTapHandler;
 public interface HasInteractionHandler {
 
     public CallbackRegistration addClickHandler(ClickHandler handler) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var listener = function(e) {
 							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.ClickEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
-							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.ClickHandler::onClick(Lcom/emitrom/ti4j/mobile/client/core/events/ui/ClickEvent;)(eventObject);
+							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.ClickHandler::onClick(Lcom/emitrom/ti4j/mobile/client/core/events/ui/DashboardItemClickEvent;)(eventObject);
 						};
 		var name = @com.emitrom.ti4j.mobile.client.core.events.ui.ClickEvent::EVENT_NAME;
 		var v = jso
@@ -48,7 +48,7 @@ public interface HasInteractionHandler {
 	}-*/;
 
     public CallbackRegistration addDoubleClickHandler(DoubleClickHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var listener = function(e) {
 							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.DoubleClickEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.DoubleClickHandler::onDoubleClick(Lcom/emitrom/ti4j/mobile/client/core/events/ui/DoubleClickEvent;)(eventObject);
@@ -64,7 +64,7 @@ public interface HasInteractionHandler {
 	}-*/;
 
     public CallbackRegistration addDoubleTapHandler(DoubleTapHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var listener = function(e) {
 							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.DoubleTapEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.DoubleTapHandler::onDoubleTap(Lcom/emitrom/ti4j/mobile/client/core/events/ui/DoubleTapEvent;)(eventObject);
@@ -80,7 +80,7 @@ public interface HasInteractionHandler {
 	}-*/;
 
     public CallbackRegistration addLongClickHandler(LongClickHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var listener = function(e) {
 							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.LongClickEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.LongClickHandler::onLongClick(Lcom/emitrom/ti4j/mobile/client/core/events/ui/LongClickEvent;)(eventObject);
@@ -96,7 +96,7 @@ public interface HasInteractionHandler {
 	}-*/;
 
     public CallbackRegistration addLongPressHandler(LongPressHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var listener = function(e) {
 							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.LongPressEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.LongPressHandler::onLongPress(Lcom/emitrom/ti4j/mobile/client/core/events/ui/LongPressEvent;)(eventObject);
@@ -113,7 +113,7 @@ public interface HasInteractionHandler {
 
 
     public CallbackRegistration addSingleTapHandler(SingleTapHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var listener = function(e) {
 							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.SingleTapEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.SingleTapHandler::onSingleTap(Lcom/emitrom/ti4j/mobile/client/core/events/ui/SingleTapEvent;)(eventObject);
@@ -129,7 +129,7 @@ public interface HasInteractionHandler {
 	}-*/;
 
     public CallbackRegistration addSwipeHandler(SwipeHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var listener = function(e) {
 							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.SwipeEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.SwipeHandler::onSwipe(Lcom/emitrom/ti4j/mobile/client/core/events/ui/SwipeEvent;)(eventObject);
@@ -145,7 +145,7 @@ public interface HasInteractionHandler {
 	}-*/;
 
     public CallbackRegistration addTouchCancelHandler(InteractionHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var listener = function(e) {
 							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.TouchCancelEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.TouchCancelHandler::onCancel(Lcom/emitrom/ti4j/mobile/client/core/events/ui/TouchCancelEvent;)(eventObject);
@@ -161,7 +161,7 @@ public interface HasInteractionHandler {
 
 
     public CallbackRegistration addTouchEndHandler(TouchEndHandler handler) /*-{
-			var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+			var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 			var listener = function(e) {
 								var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.TouchEndEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 								handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.TouchEndHandler::onTouchEnd(Lcom/emitrom/ti4j/mobile/client/core/events/ui/TouchEndEvent;)(eventObject);
@@ -177,7 +177,7 @@ public interface HasInteractionHandler {
 		}-*/;
 
     public CallbackRegistration addTouchMoveHandler(TouchMoveHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var listener = function(e) {
 							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.TouchMoveEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.TouchMoveHandler::onTouchMove(Lcom/emitrom/ti4j/mobile/client/core/events/ui/TouchMoveEvent;)(eventObject);
@@ -193,7 +193,7 @@ public interface HasInteractionHandler {
 	}-*/;
 
     public CallbackRegistration addTouchStartHandler(TouchStartHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var listener = function(e) {
 							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.TouchStartEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.TouchStartHandler::onTouchStart(Lcom/emitrom/ti4j/mobile/client/core/events/ui/TouchStartEvent;)(eventObject);
@@ -209,7 +209,7 @@ public interface HasInteractionHandler {
 	}-*/;
 
     public CallbackRegistration addTwoFingerTapHandler(TwoFingerTapHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var listener = function(e) {
 							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.TwoFingerTapEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.TwoFingerTapHandler::onTwoFingerTap(Lcom/emitrom/ti4j/mobile/client/core/events/ui/TwoFingerTapEvent;)(eventObject);

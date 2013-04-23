@@ -42,9 +42,9 @@ public class NavigationGroup extends View {
      * @param window window to close
      */
     public native void close(Window window) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.close(window.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.close(window.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -56,10 +56,10 @@ public class NavigationGroup extends View {
      * */
 
     public native void close(Window window, boolean animate) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.close(
-						window.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						window.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						{
 							animated : animate
 						});
@@ -74,9 +74,9 @@ public class NavigationGroup extends View {
      *            window should be opened animated (default) or not.
      */
     public native void open(Window window) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.open(window.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.open(window.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -87,10 +87,10 @@ public class NavigationGroup extends View {
      *            (default) or not.
      */
     public native void open(Window window, boolean animate) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.open(
-						window.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						window.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						{
 							animated : animate
 						});

@@ -15,7 +15,7 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.analytics;
 
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.TiFactory;
 import com.emitrom.ti4j.mobile.client.core.TiModule;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -50,7 +50,7 @@ public class Analytics extends TiModule {
      * @param name , the event name
      */
     public native void addEvent(String type, String name) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.addEvent(type, name);
     }-*/;
 
@@ -63,7 +63,7 @@ public class Analytics extends TiModule {
      *            serializable as JSON
      */
     public native void addEvent(String type, String name, JavaScriptObject data) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.addEvent(type, name, data);
     }-*/;
 
@@ -73,7 +73,7 @@ public class Analytics extends TiModule {
      * @param name , the event name
      */
     public native void featureEvent(String name) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.featureEvent(name);
     }-*/;
 
@@ -90,7 +90,7 @@ public class Analytics extends TiModule {
     }
 
     public native void featureEvent(String name, JavaScriptObject data) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.featureEvent(name, data);
     }-*/;
 
@@ -101,7 +101,7 @@ public class Analytics extends TiModule {
      * @param event , event object
      */
     public static native void fireEvent(String name, Object event) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.fireEvent(name, event);
     }-*/;
 
@@ -113,7 +113,7 @@ public class Analytics extends TiModule {
      * @param name , the event name
      */
     public static native void navEvent(String from, String to, String name) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.navEvent(from, to, name);
     }-*/;
 
@@ -127,7 +127,7 @@ public class Analytics extends TiModule {
      *            serializable as JSON
      */
     public static native void navEvent(String from, String to, String name, JavaScriptObject data) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.navEvent(from, to, name, data);
     }-*/;
 
@@ -137,7 +137,7 @@ public class Analytics extends TiModule {
      * @param name , the event name
      */
     public static native void settingsEvent(String name) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.settingsEvent(name);
     }-*/;
 
@@ -149,7 +149,7 @@ public class Analytics extends TiModule {
      *            serializable as JSON
      */
     public static native void settingsEvent(String name, JavaScriptObject data) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.settingsEvent(name, data);
     }-*/;
 
@@ -162,7 +162,7 @@ public class Analytics extends TiModule {
      * @param duration , the event duration
      */
     public native void timedEvent(String name, JsDate start, JsDate stop, double duration) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.timedEvent(name, start, stop, duration);
     }-*/;
 
@@ -177,7 +177,7 @@ public class Analytics extends TiModule {
      *            serializable as JSON
      */
     public native void timedEvent(String name, JsDate start, JsDate stop, double duration, JavaScriptObject data) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.timedEvent(name, start, stop, duration, data);
     }-*/;
 
@@ -189,7 +189,7 @@ public class Analytics extends TiModule {
      *            serializable as JSON
      */
     public native void userEvent(String name) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.userEvent(type, name);
     }-*/;
 
@@ -201,7 +201,7 @@ public class Analytics extends TiModule {
      *            serializable as JSON
      */
     public native void userEvent(String name, JavaScriptObject data) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.userEvent(type, name, data);
     }-*/;
 

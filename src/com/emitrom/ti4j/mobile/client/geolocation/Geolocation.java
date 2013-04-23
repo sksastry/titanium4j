@@ -1,17 +1,17 @@
 /**************************************************************************
-   Geolocation.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+ * Geolocation.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.geolocation;
 
@@ -19,9 +19,11 @@ import com.emitrom.ti4j.mobile.client.core.TiFactory;
 import com.emitrom.ti4j.mobile.client.core.TiModule;
 import com.emitrom.ti4j.mobile.client.core.events.CalibrationEvent;
 import com.emitrom.ti4j.mobile.client.core.events.TiEventListener;
-import com.emitrom.ti4j.mobile.client.core.events.geolocation.GeolocationHandler;
 import com.emitrom.ti4j.mobile.client.core.events.geolocation.HeadingEvent;
 import com.emitrom.ti4j.mobile.client.core.events.geolocation.LocationEvent;
+import com.emitrom.ti4j.mobile.client.core.handlers.EventHandler;
+import com.emitrom.ti4j.mobile.client.core.handlers.geolocation.GeoHeadingHandler;
+import com.emitrom.ti4j.mobile.client.core.handlers.geolocation.GeolocationHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
@@ -31,24 +33,24 @@ import com.google.gwt.core.client.JavaScriptObject;
  */
 public class Geolocation extends TiModule {
 
-    public static final int ACCURACY_BEST = ACCURACY_BEST();
-    public static final int ACCURACY_HUNDRED_METERS = ACCURACY_HUNDRED_METERS();
-    public static final int ACCURACY_KILOMETER = ACCURACY_KILOMETER();
-    public static final int ACCURACY_NEAREST_TEN_METERS = ACCURACY_NEAREST_TEN_METERS();
-    public static final int ACCURACY_THREE_KILOMETERS = ACCURACY_THREE_KILOMETERS();
-    public static final int AUTHORIZATION_AUTHORIZED = AUTHORIZATION_AUTHORIZED();
-    public static final int AUTHORIZATION_DENIED = AUTHORIZATION_DENIED();
-    public static final int AUTHORIZATION_RESTRICTED = AUTHORIZATION_RESTRICTED();
-    public static final int AUTHORIZATION_UNKNOWN = AUTHORIZATION_UNKNOWN();
-    public static final int ERROR_DENIED = ERROR_DENIED();
-    public static final int ERROR_HEADING_FAILURE = ERROR_HEADING_FAILURE();
-    public static final int ERROR_LOCATION_UNKNOWN = ERROR_LOCATION_UNKNOWN();
-    public static final int ERROR_NETWORK = ERROR_NETWORK();
-    public static final int ERROR_REGION_MONITORING_DELAYED = ERROR_REGION_MONITORING_DELAYED();
-    public static final int ERROR_REGION_MONITORING_DENIED = ERROR_REGION_MONITORING_DENIED();
-    public static final int ERROR_REGION_MONITORING_FAILURE = ERROR_REGION_MONITORING_FAILURE();
-    public static final String PROVIDER_GPS = PROVIDER_GPS();
-    public static final String PROVIDER_NETWORK = PROVIDER_NETWORK();
+    public static final int GEOLOCATION_ACCURACY_BEST = ACCURACY_BEST();
+    public static final int GEOLOCATION_ACCURACY_HUNDRED_METERS = ACCURACY_HUNDRED_METERS();
+    public static final int GEOLOCATION_ACCURACY_KILOMETER = ACCURACY_KILOMETER();
+    public static final int GEOLOCATION_ACCURACY_NEAREST_TEN_METERS = ACCURACY_NEAREST_TEN_METERS();
+    public static final int GEOLOCATION_ACCURACY_THREE_KILOMETERS = ACCURACY_THREE_KILOMETERS();
+    public static final int GEOLOCATION_AUTHORIZATION_AUTHORIZED = AUTHORIZATION_AUTHORIZED();
+    public static final int GEOLOCATION_AUTHORIZATION_DENIED = AUTHORIZATION_DENIED();
+    public static final int GEOLOCATION_AUTHORIZATION_RESTRICTED = AUTHORIZATION_RESTRICTED();
+    public static final int GEOLOCATION_AUTHORIZATION_UNKNOWN = AUTHORIZATION_UNKNOWN();
+    public static final int GEOLOCATION_ERROR_DENIED = ERROR_DENIED();
+    public static final int GEOLOCATION_ERROR_HEADING_FAILURE = ERROR_HEADING_FAILURE();
+    public static final int GEOLOCATION_ERROR_LOCATION_UNKNOWN = ERROR_LOCATION_UNKNOWN();
+    public static final int GEOLOCATION_ERROR_NETWORK = ERROR_NETWORK();
+    public static final int GEOLOCATION_ERROR_REGION_MONITORING_DELAYED = ERROR_REGION_MONITORING_DELAYED();
+    public static final int GEOLOCATION_ERROR_REGION_MONITORING_DENIED = ERROR_REGION_MONITORING_DENIED();
+    public static final int GEOLOCATION_ERROR_REGION_MONITORING_FAILURE = ERROR_REGION_MONITORING_FAILURE();
+    public static final String GEOLOCATION_PROVIDER_GPS = PROVIDER_GPS();
+    public static final String GEOLOCATION_PROVIDER_NETWORK = PROVIDER_NETWORK();
 
     private static Geolocation instance = null;
 
@@ -69,12 +71,12 @@ public class Geolocation extends TiModule {
      *         continuously generated.
      */
     public native double getDistanceFilter() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.distanceFilter;
     }-*/;
 
     public native void setDistanceFilter(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.distanceFilter = value;
     }-*/;
 
@@ -84,12 +86,12 @@ public class Geolocation extends TiModule {
      *         continuously generated.
      */
     public native double getHeadingFilter() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.headingFilter;
     }-*/;
 
     public native void setHeadingFilter(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.headingFilter = value;
     }-*/;
 
@@ -101,12 +103,12 @@ public class Geolocation extends TiModule {
      * @platforms iphone, ipad
      */
     public native int getLocationServicesAuthorization() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.locationServicesAuthorization;
     }-*/;
 
     public native void setLocationServicesAuthorization(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.locationServicesAuthorization = value;
     }-*/;
 
@@ -115,12 +117,12 @@ public class Geolocation extends TiModule {
      *         for the device (not the application).
      */
     public native boolean isLocationServicesEnabled() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.locationServicesEnabled;
     }-*/;
 
     public native void setLocationServicesEnabled(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.locationServicesEnabled = value;
     }-*/;
 
@@ -129,12 +131,12 @@ public class Geolocation extends TiModule {
      *         undefined when the preferred provider is auto-detected
      */
     public native String getPreferredProvider() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.preferredProvider;
     }-*/;
 
     public native void setPreferredProvider(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.preferredProvider = value;
     }-*/;
 
@@ -146,12 +148,12 @@ public class Geolocation extends TiModule {
      * @platforms iphone, ipad
      */
     public native String getPurpose() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.purpose;
     }-*/;
 
     public native void setPurpose(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.purpose = value;
     }-*/;
 
@@ -159,12 +161,12 @@ public class Geolocation extends TiModule {
      * @return Returns true if the calibration ui can show
      */
     public native boolean getShowCalibration() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.showCalibration;
     }-*/;
 
     public native void setShowCalibration(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.showCalibration = value;
     }-*/;
 
@@ -175,7 +177,7 @@ public class Geolocation extends TiModule {
      *            address to resolve.
      */
     public native void forwardGeocoder(String address, GeocoderCallback callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.forwardGeocoder(
 						address,
@@ -199,11 +201,11 @@ public class Geolocation extends TiModule {
      * Retrieve the current compass heading.
      */
     public native void getCurrentHeading(GeolocationHandler handler) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.getCurrentHeading(function(e) {
 					var locationEvent = @com.emitrom.ti4j.mobile.client.core.events.geolocation.LocationEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
-					handler.@com.emitrom.ti4j.mobile.client.core.events.geolocation.GeolocationHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/geolocation/LocationEvent;)(locationEvent);
+					handler.@com.emitrom.ti4j.mobile.client.core.handlers.geolocation.GeolocationHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/geolocation/LocationEvent;)(locationEvent);
 
 				});
     }-*/;
@@ -216,17 +218,17 @@ public class Geolocation extends TiModule {
      */
 
     public native void getCurrentPosition(GeolocationHandler handler) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.getCurrentPosition(function(e) {
 					var locationEvent = @com.emitrom.ti4j.mobile.client.core.events.geolocation.LocationEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
-					handler.@com.emitrom.ti4j.mobile.client.core.events.geolocation.GeolocationHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/geolocation/LocationEvent;)(locationEvent);
+					handler.@com.emitrom.ti4j.mobile.client.core.handlers.geolocation.GeolocationHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/geolocation/LocationEvent;)(locationEvent);
 
 				});
     }-*/;
 
     private native void getCurrentHeading(JavaScriptObject callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.getCurrentHeading(callback);
     }-*/;
 
@@ -242,7 +244,7 @@ public class Geolocation extends TiModule {
     }
 
     private native void getCurrentPosition(JavaScriptObject callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.getCurrentPosition(callback);
     }-*/;
 
@@ -255,7 +257,7 @@ public class Geolocation extends TiModule {
      *            longitude to search
      */
     public static native void reverseGeocoder(double latitude, double longitude, ReverseGeocoderCallback callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.reverseGeocoder(
 						latitude,
@@ -266,79 +268,116 @@ public class Geolocation extends TiModule {
 						});
     }-*/;
 
+    @Deprecated
     public void addCalibrationHandler(TiEventListener<CalibrationEvent> handler) {
         addEventListener(CalibrationEvent.CALIBRATION, handler);
     }
 
+    public void addCalibrationHandler(EventHandler handler) {
+        addEventHandler(CalibrationEvent.CALIBRATION, handler);
+    }
+
+    @Deprecated
     public void addHeadingHandler(TiEventListener<HeadingEvent> handler) {
         addEventListener(HeadingEvent.HEADING, handler);
     }
 
+    public native void addHeadingHandler(GeoHeadingHandler handler) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso
+				.addEventListener(
+						@com.emitrom.ti4j.mobile.client.core.events.geolocation.HeadingEvent::HEADING,
+						function(e) {
+							var obj = @com.emitrom.ti4j.mobile.client.core.events.geolocation.HeadingEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+							callback.@com.emitrom.ti4j.mobile.client.core.handlers.geolocation.GeoHeadingHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/geolocation/HeadingEvent;)(obj);
+						});
+    }-*/;
+
+    @Deprecated
     public void addLocationHandler(TiEventListener<LocationEvent> handler) {
         addEventListener(LocationEvent.LOCATION, handler);
     }
 
-    private static native final int ACCURACY_BEST() /*-{
+    public native void addLocationHandler(GeolocationHandler handler) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso
+				.addEventListener(
+						@com.emitrom.ti4j.mobile.client.core.events.geolocation.LocationEvent::LOCATION,
+						function(e) {
+							var obj = @com.emitrom.ti4j.mobile.client.core.events.geolocation.LocationEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+							callback.@com.emitrom.ti4j.mobile.client.core.handlers.geolocation.GeolocationHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/geolocation/LocationEvent;)(obj);
+						});
+    }-*/;
+
+    public void addLocationPaused(EventHandler handler) {
+        addEventHandler("locationpaused", handler);
+    }
+
+    public void addLocationResumeded(EventHandler handler) {
+        addEventHandler("locationresumed", handler);
+    }
+
+    public static native final int ACCURACY_BEST() /*-{
 		return Titanium.Geolocation.ACCURACY_BEST;
     }-*/;
 
-    private static native final int ACCURACY_HUNDRED_METERS() /*-{
+    public static native final int ACCURACY_HUNDRED_METERS() /*-{
 		return Titanium.Geolocation.ACCURACY_HUNDRED_METERS;
     }-*/;
 
-    private static native final int ACCURACY_KILOMETER() /*-{
+    public static native final int ACCURACY_KILOMETER() /*-{
 		return Titanium.Geolocation.ACCURACY_KILOMETER;
     }-*/;
 
-    private static native final int ACCURACY_NEAREST_TEN_METERS() /*-{
+    public static native final int ACCURACY_NEAREST_TEN_METERS() /*-{
 		return Titanium.Geolocation.ACCURACY_NEAREST_TEN_METERS;
     }-*/;
 
-    private static native final int ACCURACY_THREE_KILOMETERS() /*-{
+    public static native final int ACCURACY_THREE_KILOMETERS() /*-{
 		return Titanium.Geolocation.ACCURACY_THREE_KILOMETERS;
     }-*/;
 
-    private static native final int AUTHORIZATION_AUTHORIZED() /*-{
+    public static native final int AUTHORIZATION_AUTHORIZED() /*-{
 		return Titanium.Geolocation.AUTHORIZATION_AUTHORIZED;
     }-*/;
 
-    private static native final int AUTHORIZATION_DENIED() /*-{
+    public static native final int AUTHORIZATION_DENIED() /*-{
 		return Titanium.Geolocation.AUTHORIZATION_DENIED;
     }-*/;
 
-    private static native final int AUTHORIZATION_RESTRICTED() /*-{
+    public static native final int AUTHORIZATION_RESTRICTED() /*-{
 		return Titanium.Geolocation.AUTHORIZATION_RESTRICTED;
     }-*/;
 
-    private static native final int AUTHORIZATION_UNKNOWN() /*-{
+    public static native final int AUTHORIZATION_UNKNOWN() /*-{
 		return Titanium.Geolocation.AUTHORIZATION_UNKNOWN;
     }-*/;
 
-    private static native final int ERROR_DENIED() /*-{
+    public static native final int ERROR_DENIED() /*-{
 		return Titanium.Geolocation.ERROR_DENIED;
     }-*/;
 
-    private static native final int ERROR_HEADING_FAILURE() /*-{
+    public static native final int ERROR_HEADING_FAILURE() /*-{
 		return Titanium.Geolocation.ERROR_HEADING_FAILURE;
     }-*/;
 
-    private static native final int ERROR_LOCATION_UNKNOWN() /*-{
+    public static native final int ERROR_LOCATION_UNKNOWN() /*-{
 		return Titanium.Geolocation.ERROR_LOCATION_UNKNOWN;
     }-*/;
 
-    private static native final int ERROR_NETWORK() /*-{
+    public static native final int ERROR_NETWORK() /*-{
 		return Titanium.Geolocation.ERROR_NETWORK;
     }-*/;
 
-    private static native final int ERROR_REGION_MONITORING_DELAYED() /*-{
+    public static native final int ERROR_REGION_MONITORING_DELAYED() /*-{
 		return Titanium.Geolocation.ERROR_REGION_MONITORING_DELAYED;
     }-*/;
 
-    private static native final int ERROR_REGION_MONITORING_DENIED() /*-{
+    public static native final int ERROR_REGION_MONITORING_DENIED() /*-{
 		return Titanium.Geolocation.ERROR_REGION_MONITORING_DENIED;
     }-*/;
 
-    private static native final int ERROR_REGION_MONITORING_FAILURE() /*-{
+    public static native final int ERROR_REGION_MONITORING_FAILURE() /*-{
 		return Titanium.Geolocation.ERROR_REGION_MONITORING_FAILURE;
     }-*/;
 

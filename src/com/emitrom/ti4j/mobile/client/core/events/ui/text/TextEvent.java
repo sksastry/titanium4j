@@ -38,7 +38,7 @@ public class TextEvent extends UIEvent {
      * the value of the field upon blur
      */
     public native String getValue() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.value;
     }-*/;
 

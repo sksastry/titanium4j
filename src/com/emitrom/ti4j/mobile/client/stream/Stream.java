@@ -51,8 +51,8 @@ public class Stream extends TiModule {
 	 *            creation arguments
 	 */
 	public native IOStream createStream(StreamConfig config) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		var configObjet = config.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var configObjet = config.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createStream(configObject);
 		var toReturn = @com.emitrom.ti4j.mobile.client.stream.IOStream::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -68,11 +68,11 @@ public class Stream extends TiModule {
 	 */
 	public native void read(IOStream sourceStream, Buffer buffer,
 			ReadCallback readCallback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.read(
-						sourceStream.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
-						buffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						sourceStream.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
+						buffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var args = @com.emitrom.ti4j.mobile.client.stream.ReadArguments::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							readCallback.@com.emitrom.ti4j.mobile.client.stream.ReadCallback::onRead(Lcom/emitrom/ti4j/mobile/client/stream/ReadArguments;)(args);
@@ -93,11 +93,11 @@ public class Stream extends TiModule {
 	 */
 	public native void read(IOStream sourceStream, Buffer buffer,
 			double offset, double length, ReadCallback readCallback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.read(
-						sourceStream.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
-						buffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						sourceStream.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
+						buffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						offset,
 						length,
 						function(e) {
@@ -113,9 +113,9 @@ public class Stream extends TiModule {
 	 *            Stream to read from
 	 */
 	public static native void readAll(IOStream sourceStream) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.readAll(sourceStream.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.readAll(sourceStream.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
 	}-*/;
 
 	/**
@@ -126,12 +126,12 @@ public class Stream extends TiModule {
 	 */
 	public native void readAll(IOStream sourceStream, Buffer buffer,
 			ReadCallback callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 
 		jso
 				.readAll(
-						sourceStream.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
-						buffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						sourceStream.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
+						buffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var args = @com.emitrom.ti4j.mobile.client.stream.ReadArguments::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							readCallback.@com.emitrom.ti4j.mobile.client.stream.ReadCallback::onRead(Lcom/emitrom/ti4j/mobile/client/stream/ReadArguments;)(args);
@@ -150,12 +150,12 @@ public class Stream extends TiModule {
 	 */
 	public native void write(IOStream outputStream, Buffer buffer,
 			WriteCallback callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 
 		jso
 				.write(
-						outputStream.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
-						buffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						outputStream.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
+						buffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var args = @com.emitrom.ti4j.mobile.client.stream.WriteArguments::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							readCallback.@com.emitrom.ti4j.mobile.client.stream.ReadCallback::onRead(Lcom/emitrom/ti4j/mobile/client/stream/ReadArguments;)(args);
@@ -176,12 +176,12 @@ public class Stream extends TiModule {
 	 */
 	public native void write(IOStream outputStream, Buffer buffer,
 			double offset, double length, WriteCallback callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 
 		jso
 				.write(
-						outputStream.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
-						buffer.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						outputStream.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
+						buffer.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						offset,
 						length,
 						function(e) {
@@ -204,11 +204,11 @@ public class Stream extends TiModule {
 	 */
 	public native void writeStream(IOStream inputStream, IOStream outputStream,
 			double maxChunkSize) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.writeStream(
-						inputStream.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
-						outputStream.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						inputStream.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
+						outputStream.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						maxChunkSize);
 	}-*/;
 
@@ -226,11 +226,11 @@ public class Stream extends TiModule {
 	 */
 	public native void writeStream(IOStream inputStream, IOStream outputStream,
 			double maxChunkSize, WriteStreamCallback callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.writeStream(
-						outputStream.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
-						outputStream.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						outputStream.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
+						outputStream.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						maxChunkSize,
 						function(e) {
 							var args = @com.emitrom.ti4j.mobile.client.stream.WriteArguments::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
@@ -249,10 +249,10 @@ public class Stream extends TiModule {
 	 */
 	public native void pump(IOStream inputStream, PumpCallback callback,
 			double maxChunkSize) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.pump(
-						inputStream.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						inputStream.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var args = @com.emitrom.ti4j.mobile.client.stream.PumpArguments::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							callback.@com.emitrom.ti4j.mobile.client.stream.PumpCallback::onPump(Lcom/emitrom/ti4j/mobile/client/stream/PumpArguments;)(args);
@@ -272,10 +272,10 @@ public class Stream extends TiModule {
 	 */
 	public native void pump(IOStream inputStream, PumpCallback callback,
 			double maxChunkSize, boolean async) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.pump(
-						inputStream.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						inputStream.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var args = @com.emitrom.ti4j.mobile.client.stream.PumpArguments::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							callback.@com.emitrom.ti4j.mobile.client.stream.PumpCallback::onPump(Lcom/emitrom/ti4j/mobile/client/stream/PumpArguments;)(args);

@@ -15,7 +15,7 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.blob;
 
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
+import com.emitrom.ti4j.core.client.JsoHelper;
 import com.emitrom.ti4j.mobile.client.core.Size;
 import com.emitrom.ti4j.mobile.client.core.events.EventDispatcher;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -44,7 +44,7 @@ public class Blob extends EventDispatcher {
      * @return
      */
     public native <T extends JavaScriptObject> T imageAsThumbnail(int size) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.imageAsThumbnail(size);
     }-*/;
 
@@ -59,7 +59,7 @@ public class Blob extends EventDispatcher {
      * @return
      */
     public native <T extends JavaScriptObject> T imageAsThumbnail(int size, int borderSize) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.imageAsThumbnail(size, borderSize, cornerRadius);
     }-*/;
 
@@ -76,7 +76,7 @@ public class Blob extends EventDispatcher {
      * @return
      */
     public native <T extends JavaScriptObject> T imageAsThumbnail(int size, int borderSize, int cornerRadius) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.imageAsThumbnail(size, borderSize, cornerRadius);
     }-*/;
 
@@ -86,7 +86,7 @@ public class Blob extends EventDispatcher {
      * @return, String representation of the blob
      */
     public native String toStringValue() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.toString();
     }-*/;
     
@@ -96,7 +96,7 @@ public class Blob extends EventDispatcher {
      * @return	A Size object, with with and height as members
      */
     public native Size getImageFileDimensions() /*-{
-		var blob = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var blob = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		
 		if (blob.width && blob.height) {
 			var toReturn = @com.emitrom.ti4j.mobile.client.core.Size::new(DD)(blob.width, blob.height);
@@ -112,7 +112,7 @@ public class Blob extends EventDispatcher {
      * @return		0 if the file is not an image file, otherwise the width in pixels
      */
     public native int getWidth() /*-{
-    	var blob = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+    	var blob = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return (blob.width ? blob.width : 0);
     }-*/;
     
@@ -121,7 +121,7 @@ public class Blob extends EventDispatcher {
      * @return		0 if the file is not an image file, otherwise the height in pixels
      */
     public native int getHeight() /*-{	
-    	var blob = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+    	var blob = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return (blob.height ? blob.height : 0);
     }-*/;
     
@@ -135,7 +135,7 @@ public class Blob extends EventDispatcher {
      * @return			The cropped blob image
      */
     public native Blob imageAsCropped(int x, int y, int height, int width) /*-{
-    	var blob = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+    	var blob = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     	var dict = {};
     	dict.height = height;
     	dict.width = width;

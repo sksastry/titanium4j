@@ -64,7 +64,7 @@ public class Facebook extends TiModule {
      * @return Oauth token set after a successful 'authorize'.
      */
     public native String getAccessToken() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.accessToken;
     }-*/;
 
@@ -76,7 +76,7 @@ public class Facebook extends TiModule {
      * Clear the oauth 'accesstoken' and logout the user.
      */
     public native void logout() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.logout();
     }-*/;
 
@@ -85,12 +85,12 @@ public class Facebook extends TiModule {
      *         to work.
      */
     public native String getAppid() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.appid;
     }-*/;
 
     public native void setAppid(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.appid = value;
     }-*/;
 
@@ -98,12 +98,12 @@ public class Facebook extends TiModule {
      * @return Time at which the 'accesstoken' expires.
      */
     public native JsDate getExpirationDate() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.expirationDate;
     }-*/;
 
     public native void setExpirationDate(JsDate value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.expirationDate = value;
     }-*/;
 
@@ -116,12 +116,12 @@ public class Facebook extends TiModule {
      *         details of their single-sign-on schem.
      */
     public native boolean isForceDialogAuth() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.forceDialogAuth;
     }-*/;
 
     public native void setForceDialogAuth(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.forceDialogAuth = value;
     }-*/;
 
@@ -129,12 +129,12 @@ public class Facebook extends TiModule {
      * @return Returns true if the user has logged in
      */
     public native boolean isLoggedIn() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.loggedIn;
     }-*/;
 
     public native void setLoggedIn(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.loggedIn = value;
     }-*/;
 
@@ -143,12 +143,12 @@ public class Facebook extends TiModule {
      *         sure the permissions you want are set before calling 'authorize'.
      */
     public native <T> T getPermissions() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.permissions;
     }-*/;
 
     public native void setPermissions(Object value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.permissions = value;
     }-*/;
 
@@ -156,17 +156,17 @@ public class Facebook extends TiModule {
      * @return The unique user id returned from facebook.
      */
     public native String getUid() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.uid;
     }-*/;
 
     public native void setUid(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.uid = value;
     }-*/;
 
     public native LoginButton createLoginButton() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createLoginButton();
 		var toReturn = @com.emitrom.ti4j.mobile.client.facebook.LoginButton::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -191,7 +191,7 @@ public class Facebook extends TiModule {
      * @param callback , A callback for when call is completed.
      */
     public native void request(String method, JavaScriptObject data, RequestCallback callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.request(
 						method,
@@ -220,7 +220,7 @@ public class Facebook extends TiModule {
      */
     public static native void requestWithGraphPath(String path, JavaScriptObject params, String httpMethod,
                     GraphPathRequestCallback callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.requestWithGraphPath(
 						path,
@@ -244,7 +244,7 @@ public class Facebook extends TiModule {
      * @param callback , A callback for when call is completed.
      */
     public static native void dialog(String action, JavaScriptObject params, DialogCallback callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.dialog(
 						method,

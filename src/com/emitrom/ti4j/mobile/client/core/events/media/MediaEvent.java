@@ -33,7 +33,7 @@ public class MediaEvent extends TiEvent {
      * the event media type
      */
     public native int getMediaType() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.mediaType;
     }-*/;
 
@@ -41,7 +41,7 @@ public class MediaEvent extends TiEvent {
      * the event media
      */
     public native Blob getMedia() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.media;
 		return @com.emitrom.ti4j.mobile.client.blob.Blob::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;

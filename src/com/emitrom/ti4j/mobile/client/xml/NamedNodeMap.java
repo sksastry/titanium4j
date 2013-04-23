@@ -38,7 +38,7 @@ public class NamedNodeMap extends EventDispatcher {
      *         indices is 0-length-1, inclusive.
      */
     public native int getLength() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.length;
     }-*/;
 
@@ -50,7 +50,7 @@ public class NamedNodeMap extends EventDispatcher {
      *         map
      */
     public native Node getNamedItem(String name) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.getNamedItem(name);
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Node::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -66,9 +66,9 @@ public class NamedNodeMap extends EventDispatcher {
      * @return The node replaced, or null if no node was replaced.
      */
     public native Node setNamedItem(Node node) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso
-				.setNamedItem(node.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.setNamedItem(node.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Node::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
@@ -82,7 +82,7 @@ public class NamedNodeMap extends EventDispatcher {
      * @return The node removed from the map, or null if nothing removed.
      */
     public native Node removeNamedItem(String name) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.removeNamedItem(name);
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Node::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -96,7 +96,7 @@ public class NamedNodeMap extends EventDispatcher {
      * @return The node at the specified index, or null if the index is invalid
      */
     public native Node getItem(int index) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.item(index);
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Node::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -112,7 +112,7 @@ public class NamedNodeMap extends EventDispatcher {
      * @return The specified node, or null if there is no matching node.
      */
     public native Node getNamedItemNS(String namespaceURI, String localName) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.getNamedItemNS(namespaceURI, localName);
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Node::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -128,9 +128,9 @@ public class NamedNodeMap extends EventDispatcher {
      * @return Returns the node replaced, or `null`.
      */
     public native Node setNamedItemNS(Node node) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso
-				.setNamedItemNS(node.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.setNamedItemNS(node.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Node::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
 		return this.setNamedItemNS(node);
@@ -149,7 +149,7 @@ public class NamedNodeMap extends EventDispatcher {
      * @return The node removed from the map, or null if nothing removed.
      */
     public native Node removeNamedItemNS(String namespaceURI, String localName) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.removeNamedItemNS(namespaceURI, localName);
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Node::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

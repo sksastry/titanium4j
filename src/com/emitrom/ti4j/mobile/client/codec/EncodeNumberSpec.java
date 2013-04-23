@@ -16,8 +16,8 @@
 package com.emitrom.ti4j.mobile.client.codec;
 
 import com.emitrom.ti4j.mobile.client.buffer.Buffer;
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.JsoHelper;
+import com.emitrom.ti4j.core.client.ProxyObject;
 
 /**
  * Specification for
@@ -33,12 +33,12 @@ public class EncodeNumberSpec extends ProxyObject {
      * @return The source number to encode
      */
     public native double getSource() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.source;
     }-*/;
 
     public native void setSource(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.source = value;
     }-*/;
 
@@ -46,15 +46,15 @@ public class EncodeNumberSpec extends ProxyObject {
      * @return The buffer to decode
      */
     public native Buffer getDest() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.dest;
 		var toReturn = @com.emitrom.ti4j.mobile.client.buffer.Buffer::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void setDest(Buffer value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.dest = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.dest = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
@@ -70,7 +70,7 @@ public class EncodeNumberSpec extends ProxyObject {
      *         {@link com.emitrom.ti4j.mobile.client.codec.CODEC.TYPE_DOUBLE}
      */
     public native String getType() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.type;
     }-*/;
 
@@ -82,12 +82,12 @@ public class EncodeNumberSpec extends ProxyObject {
      * @return The position in dest to set the encoded data
      */
     public native int getPosition() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.position;
     }-*/;
 
     public native void setPosition(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.position = value;
     }-*/;
 
@@ -95,12 +95,12 @@ public class EncodeNumberSpec extends ProxyObject {
      * @return The byte order to encode with
      */
     public native int getByteOrder() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.byteOrder;
     }-*/;
 
     public native void setByteOrder(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.byteOrder = value;
     }-*/;
 }

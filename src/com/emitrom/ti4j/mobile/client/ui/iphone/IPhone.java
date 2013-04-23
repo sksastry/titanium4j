@@ -52,12 +52,12 @@ public class IPhone extends TiModule {
      *         springboard
      */
     public native String getAppBadge() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.appBadge;
     }-*/;
 
     public static native void setAppBadge(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.appBadge = value;
     }-*/;
 
@@ -66,12 +66,12 @@ public class IPhone extends TiModule {
      *         enabled
      */
     public native boolean appSupportsShakeToEdit() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.appSupportsShakeToEdit;
     }-*/;
 
     public native void setAppSupportsShakeToEdit(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.appSupportsShakeToEdit = value;
     }-*/;
 
@@ -79,12 +79,12 @@ public class IPhone extends TiModule {
      * @return Control the status bar visibility
      */
     public static native boolean isStatusBarHidden() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.statusBarHidden;
     }-*/;
 
     public native void setStatusBarHidden(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.statusBarHidden = value;
     }-*/;
 
@@ -92,17 +92,17 @@ public class IPhone extends TiModule {
      * @return Constant that controls the status bar color style
      */
     public native int getStatusBarStyle() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.statusBarStyle;
     }-*/;
 
     public native void setStatusBarStyle(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.statusBarStyle = value;
     }-*/;
 
     public native JavaScriptObject createNavigationGroup() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.createNavigationGroup();
     }-*/;
 
@@ -113,7 +113,7 @@ public class IPhone extends TiModule {
      * @param animationStyle the animation style
      */
     public native void hideStatusBar(boolean animated, int animationStyle) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.hideStatusBar(animated, animationStyle);
     }-*/;
 
@@ -124,7 +124,7 @@ public class IPhone extends TiModule {
      * @param animationStyle the animation style
      */
     public native void showStatusBar(boolean animated, int animationStyle) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.showStatusBar(animated, animationStyle);
     }-*/;
 

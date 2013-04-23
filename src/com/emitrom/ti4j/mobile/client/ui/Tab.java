@@ -15,7 +15,7 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui;
 
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.ui.interfaces.HasTitle;
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -45,12 +45,12 @@ public class Tab extends View implements HasTitle {
      *         badge is value
      */
     public native String getBadge() /*-{
-		var jso = jso.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.badge;
     }-*/;
 
     public native void setBadge(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.badge = value;
     }-*/;
 
@@ -58,12 +58,12 @@ public class Tab extends View implements HasTitle {
      * @return The icon url for the tab group for jso tab
      */
     public native String getIcon() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.icon;
     }-*/;
 
     public native void setIcon(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.icon = value;
     }-*/;
 
@@ -71,12 +71,12 @@ public class Tab extends View implements HasTitle {
      * @return The title for the tab group for jso tab
      */
     public native String getTitle() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.title;
     }-*/;
 
     public native void setTitle(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.title = value;
     }-*/;
 
@@ -84,12 +84,12 @@ public class Tab extends View implements HasTitle {
      * @return The key in the locale file to use for the title property
      */
     public native String getTitleId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.titleid;
     }-*/;
 
     public native void setTitleId(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.titleid = value;
     }-*/;
 
@@ -98,15 +98,15 @@ public class Tab extends View implements HasTitle {
      *         level tab window.
      */
     public native View getWindow() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.window;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.View::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void setWindow(View value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.window = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.window = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
@@ -114,9 +114,9 @@ public class Tab extends View implements HasTitle {
      *            The view to open in the tab
      */
     public native void open(View view) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		jso
-				.open(view.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.open(view.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -124,10 +124,10 @@ public class Tab extends View implements HasTitle {
      *            The view to open in the tab with an animation
      */
     public native void open(View view, boolean animated) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.open(
-						view.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						view.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						{
 							animate : animated
 						});

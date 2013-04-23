@@ -39,12 +39,12 @@ public class CharacterData extends Node {
      *         throws an exception during setting if jso node is readonly.
      */
     public native String getData() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.data;
     }-*/;
 
     public native void setData(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.data = value;
     }-*/;
 
@@ -55,7 +55,7 @@ public class CharacterData extends Node {
      *         be empty.
      */
     public native double getLength() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.length;
     }-*/;
 
@@ -67,7 +67,7 @@ public class CharacterData extends Node {
      * @param arg The string to append.
      */
     public native void appendData(String arg) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.appendData(arg);
     }-*/;
 
@@ -83,7 +83,7 @@ public class CharacterData extends Node {
      *            end of the data are deleted.
      */
     public native void deleteData(double offset, double count) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.deleteData(offset, count);
     }-*/;
 
@@ -96,7 +96,7 @@ public class CharacterData extends Node {
      * @param arg The string to insert.
      */
     public native void insertData(double offset, String arg) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.insertData(offset, arg);
     }-*/;
 
@@ -114,7 +114,7 @@ public class CharacterData extends Node {
      * @param arg The string with which the range must be replaced.
      */
     public native void replaceData(double offset, double count, String arg) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.replaceData(offset, count, arg);
     }-*/;
 
@@ -129,7 +129,7 @@ public class CharacterData extends Node {
      *         returned.
      */
     public native String substringData(double offset, double count) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.substringData(offset, count);
     }-*/;
 

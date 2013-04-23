@@ -43,9 +43,9 @@ public class NavigationGroup extends View {
      *            , window to close
      */
     public native void close(Window window)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.close(window.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.close(window.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -58,9 +58,9 @@ public class NavigationGroup extends View {
      *            being closed.
      */
     public native void close(Window window, boolean animateClosing)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.close(window.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.close(window.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -70,9 +70,9 @@ public class NavigationGroup extends View {
      *            , window to close
      */
     public native void open(Window window)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.open(window.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.open(window.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -85,16 +85,16 @@ public class NavigationGroup extends View {
      *            being opened.
      */
     public native void open(Window window, boolean animateClosing)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.open(window.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.open(window.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
      * Gets the value of the navBarAtTop property.
      */
     public native boolean isNavBarAtTop()/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.getNavBarAtTop();
     }-*/;
 
@@ -104,7 +104,7 @@ public class NavigationGroup extends View {
      * @return
      */
     public native Window getWindow()/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = peer.getWindow();
 		return @com.emitrom.ti4j.mobile.client.ui.Window::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
@@ -113,7 +113,7 @@ public class NavigationGroup extends View {
      * Sets the value of the navBarAtTop property.
      */
     public native boolean setNavBarAtTop(boolean value)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.setNavBarAtTop(value);
     }-*/;
 

@@ -36,7 +36,7 @@ public class NodeList extends EventDispatcher {
      * @return The length of the node list.
      */
     public native int getLength() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.length;
     }-*/;
 
@@ -49,7 +49,7 @@ public class NodeList extends EventDispatcher {
      * @return The node at the index, or `null` if the index is out of bounds.
      */
     public native Element getItem(int index) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.item(index);
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Element::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

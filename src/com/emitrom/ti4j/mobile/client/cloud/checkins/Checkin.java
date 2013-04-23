@@ -16,7 +16,7 @@
 package com.emitrom.ti4j.mobile.client.cloud.checkins;
 
 import com.emitrom.ti4j.mobile.client.cloud.core.AbstractCloudObject;
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
+import com.emitrom.ti4j.core.client.JsoHelper;
 
 public class Checkin extends AbstractCloudObject {
 
@@ -29,7 +29,7 @@ public class Checkin extends AbstractCloudObject {
      * 
      */
     public native void setPlaceId(String value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.place_id = value;
     }-*/;
 
@@ -38,7 +38,7 @@ public class Checkin extends AbstractCloudObject {
      * 
      */
     public native void setEventId(String value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.event_id = value;
     }-*/;
 
@@ -48,7 +48,7 @@ public class Checkin extends AbstractCloudObject {
      * @param value
      */
     public native void setTags(String value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.tags = value;
     }-*/;
 
@@ -57,7 +57,7 @@ public class Checkin extends AbstractCloudObject {
      * 
      */
     public native void setCheckinId(String value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.checkin_id = value;
     }-*/;
 

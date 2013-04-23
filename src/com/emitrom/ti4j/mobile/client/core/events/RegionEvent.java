@@ -49,7 +49,7 @@ public class RegionEvent extends TiEvent {
      * the y point of the event, in receiving view coordinates
      */
     public final native Object getY() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.y;
     }-*/;
 
@@ -57,7 +57,7 @@ public class RegionEvent extends TiEvent {
      * the new longitude
      */
     public final native double getLongitude() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.longitude;
     }-*/;
 
@@ -65,7 +65,7 @@ public class RegionEvent extends TiEvent {
      * the new latitude delta
      */
     public final native double getLatitudeDelta() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.latitudeDelta;
     }-*/;
 
@@ -73,7 +73,7 @@ public class RegionEvent extends TiEvent {
      * the new longitude delta
      */
     public final native double getLongitudeDelta() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.longitudeDelta;
     }-*/;
 
@@ -81,7 +81,7 @@ public class RegionEvent extends TiEvent {
      * the new latitude
      */
     public final native double getLatitude() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.latitude;
     }-*/;
 
@@ -89,7 +89,7 @@ public class RegionEvent extends TiEvent {
      * the x point of the event in receiving view coordiantes
      */
     public final native double getX() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.x;
     }-*/;
 
@@ -98,7 +98,7 @@ public class RegionEvent extends TiEvent {
      * screen coordinates
      */
     public final native Point getGlobalPoint() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.globalPoint;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.Point::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

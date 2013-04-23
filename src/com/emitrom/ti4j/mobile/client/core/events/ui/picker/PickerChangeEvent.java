@@ -38,7 +38,7 @@ public class PickerChangeEvent extends UIEvent {
      * the selected column index
      */
     public final native int getColumnIndex() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.columnIndex;
     }-*/;
 
@@ -46,7 +46,7 @@ public class PickerChangeEvent extends UIEvent {
      * the selected row index
      */
     public final native int getRowIndex() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.rowIndex;
     }-*/;
 
@@ -54,7 +54,7 @@ public class PickerChangeEvent extends UIEvent {
      * the column object
      */
     public final native PickerColumn getColumn() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.pickerColumn;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.PickerColumn::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -64,7 +64,7 @@ public class PickerChangeEvent extends UIEvent {
      * (date/time pickers only) the selected date/time value.
      */
     public final native JsDate getValue() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.value;
     }-*/;
 
@@ -72,7 +72,7 @@ public class PickerChangeEvent extends UIEvent {
      * the row object
      */
     public final native PickerRow getRow() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.row;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.PickerRow::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -83,7 +83,7 @@ public class PickerChangeEvent extends UIEvent {
      * in the picker.
      */
     public final native <T> T getSelectedValue() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.selectedValue;
     }-*/;
 

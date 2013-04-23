@@ -32,7 +32,7 @@ public class VideoCompleteEvent extends VideoEvent {
      * Titanium.Media.VIDEO_FINISH_REASON_USER_EXITED.
      */
     public native int getReason() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.reason;
     }-*/;
 

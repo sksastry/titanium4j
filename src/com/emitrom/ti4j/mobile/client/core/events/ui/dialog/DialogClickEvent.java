@@ -34,7 +34,7 @@ public class DialogClickEvent extends InteractionEvent {
      * not an item. (AndroidMedia)
      */
     public final native boolean isButton() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.button;
     }-*/;
 
@@ -42,7 +42,7 @@ public class DialogClickEvent extends InteractionEvent {
      * the index of the destructive button
      */
     public final native int getDestructive() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.destructive;
     }-*/;
 

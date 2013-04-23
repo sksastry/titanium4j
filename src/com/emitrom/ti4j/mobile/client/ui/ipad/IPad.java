@@ -56,8 +56,8 @@ public class IPad extends TiModule {
     }-*/;
 
     static native JavaScriptObject createSplitWindow(View detail, View master) /*-{
-		var detailView = detail.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		var masterView = master.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var detailView = detail.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var masterView = master.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return Titanium.UI.iPad.createSplitWindow({
 			detailView : detailView,
 			masterView : masterView

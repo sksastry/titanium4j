@@ -16,7 +16,7 @@
 package com.emitrom.ti4j.mobile.client.media;
 
 import com.emitrom.ti4j.mobile.client.blob.Blob;
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
@@ -35,7 +35,7 @@ public class ScreenShotCallbackArguments extends ProxyObject {
    * 
    */
     public native Blob getMedia() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.media;
 		var toReturn = @com.emitrom.ti4j.mobile.client.blob.Blob::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

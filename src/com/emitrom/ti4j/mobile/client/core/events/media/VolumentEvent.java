@@ -15,7 +15,7 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.core.events.media;
 
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
+import com.emitrom.ti4j.core.client.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
 
 public class VolumentEvent extends PlayEvent {
@@ -35,7 +35,7 @@ public class VolumentEvent extends PlayEvent {
      * float of the new volume in dB
      */
     public native double getVolume() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.volume;
     }-*/;
 

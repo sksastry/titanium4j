@@ -44,10 +44,10 @@ public class Emails extends TiModule {
      * Send an email to a list of email adresses.
      */
     public native void send(Email email, BaseCloudResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.send(
-						email.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						email.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.core.BaseCloudResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.core.BaseCloudResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/core/BaseCloudResponse;)(response);

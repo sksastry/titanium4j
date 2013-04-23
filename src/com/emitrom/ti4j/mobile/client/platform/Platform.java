@@ -1,17 +1,17 @@
 /**************************************************************************
-   Platform.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+ * Platform.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.platform;
 
@@ -28,15 +28,15 @@ import com.google.gwt.core.client.GWT;
  */
 public class Platform extends TiModule {
 
-    public static final int BATTERY_STATE_CHARGING = BATTERY_STATE_CHARGING();
-    public static final int BATTERY_STATE_FULL = BATTERY_STATE_FULL();
-    public static final int BATTERY_STATE_UNKNOWN = BATTERY_STATE_UNKNOWN();
-    public static final int BATTERY_STATE_UNPLUGGED = BATTERY_STATE_UNPLUGGED();
-    public static final String OS_IPAD = "ipad";
-    public static final String OS_IPHONE = "iphone";
-    public static final String OS_ANDROID = "android";
-    public static final String IPHONE_OS = "iPhone OS";
-    public static final String MOBILE_WEB = "mobileweb";
+    public static final int PLATFORM_BATTERY_STATE_CHARGING = BATTERY_STATE_CHARGING();
+    public static final int PLATFORM_BATTERY_STATE_FULL = BATTERY_STATE_FULL();
+    public static final int PLATFORM_BATTERY_STATE_UNKNOWN = BATTERY_STATE_UNKNOWN();
+    public static final int PLATFORM_BATTERY_STATE_UNPLUGGED = BATTERY_STATE_UNPLUGGED();
+    public static final String PLATFORM_OS_IPAD = "ipad";
+    public static final String PLATFORM_OS_IPHONE = "iphone";
+    public static final String PLATFORM_OS_ANDROID = "android";
+    public static final String PLATFORM_IPHONE_OS = "iPhone OS";
+    public static final String PLATFORM_MOBILE_WEB = "mobileweb";
     private Unit unit;
 
     private static Platform instance = null;
@@ -57,12 +57,12 @@ public class Platform extends TiModule {
      *         network)
      */
     public native String getAddress() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.address;
     }-*/;
 
     public native void setAddress(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.address = value;
     }-*/;
 
@@ -70,12 +70,12 @@ public class Platform extends TiModule {
      * @return The processor architecture that the device reports
      */
     public native String getArchitecture() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.architecture;
     }-*/;
 
     public native void setArchitecture(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.architecture = value;
     }-*/;
 
@@ -83,12 +83,12 @@ public class Platform extends TiModule {
      * @return Return the amount of memory available on the device in bytes
      */
     public native double getAvailableMemory() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.availableMemory;
     }-*/;
 
     public native void setAvailableMemory(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.availableMemory = value;
     }-*/;
 
@@ -98,12 +98,12 @@ public class Platform extends TiModule {
      *         level only changes at 5% intervals.
      */
     public native double getBatteryLevel() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.batteryLevel;
     }-*/;
 
     public native void setBatteryLevel(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.batteryLevel = value;
     }-*/;
 
@@ -111,12 +111,12 @@ public class Platform extends TiModule {
      * @return Boolean to indicate if battery monitoring is enabled
      */
     public native boolean getBatteryMonitoring() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.batteryMonitoring;
     }-*/;
 
     public native void setBatteryMonitoring(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.batteryMonitoring = value;
     }-*/;
 
@@ -125,12 +125,12 @@ public class Platform extends TiModule {
      *         is only accessible if `batterymonitoring` is enabled
      */
     public native int getBatteryState() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.batteryState;
     }-*/;
 
     public native void setBatteryState(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.batteryState = value;
     }-*/;
 
@@ -138,27 +138,27 @@ public class Platform extends TiModule {
      * @return Return the displaycaps object for platform
      */
     public native DisplayCaps getDisplayCaps() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.displayCaps;
 		var toReturn = @com.emitrom.ti4j.mobile.client.platform.DisplayCaps::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void setDisplayCaps(DisplayCaps value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.displayCaps = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.displayCaps = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
      * @return The unique id of the device
      */
     public static native String getId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.id;
     }-*/;
 
     public native void setId(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.id = value;
     }-*/;
 
@@ -166,12 +166,12 @@ public class Platform extends TiModule {
      * @return The primary language of the device that the user has enabled
      */
     public native String getLocale() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.locale;
     }-*/;
 
     public native void setLocale(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.locale = value;
     }-*/;
 
@@ -179,12 +179,12 @@ public class Platform extends TiModule {
      * @return This property will return a unique identifier for the device
      */
     public native String getMacaddress() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.macaddress;
     }-*/;
 
     public native void setMacaddress(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.macaddress = value;
     }-*/;
 
@@ -192,12 +192,12 @@ public class Platform extends TiModule {
      * @return The model of the phone that the device reports
      */
     public native String getModel() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.model;
     }-*/;
 
     public native void setModel(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.model = value;
     }-*/;
 
@@ -205,7 +205,7 @@ public class Platform extends TiModule {
      * @return The name of the platform returned by the device
      */
     public native String getName() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.name;
     }-*/;
 
@@ -218,12 +218,12 @@ public class Platform extends TiModule {
      *         network)
      */
     public native String getNetmask() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.netmask;
     }-*/;
 
     public native void setNetmask(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.netmask = value;
     }-*/;
 
@@ -233,12 +233,12 @@ public class Platform extends TiModule {
      *         return 'android'.
      */
     public native String getOsname() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.osname;
     }-*/;
 
     public native void setOsname(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.osname = value;
     }-*/;
 
@@ -246,12 +246,12 @@ public class Platform extends TiModule {
      * @return The os architecture, such as 32 bit
      */
     public native String getOstype() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.ostype;
     }-*/;
 
     public native void setOstype(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.ostype = value;
     }-*/;
 
@@ -259,12 +259,12 @@ public class Platform extends TiModule {
      * @return The number of processors the device reports
      */
     public native int getProcessorCount() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.processorCount;
     }-*/;
 
     public native void setProcessorCount(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.processorCount = value;
     }-*/;
 
@@ -272,12 +272,12 @@ public class Platform extends TiModule {
      * @return The username of the device, if set
      */
     public native String getUsername() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.username;
     }-*/;
 
     public native void setUsername(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.username = value;
     }-*/;
 
@@ -285,17 +285,17 @@ public class Platform extends TiModule {
      * @return The version of the platform returned by the device
      */
     public native String getVersion() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.version;
     }-*/;
 
     public native void setVersion(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.version = value;
     }-*/;
 
     public native DisplayCaps createDisplayCaps() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createDisplayCaps();
 		var toReturn = @com.emitrom.ti4j.mobile.client.platform.DisplayCaps::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -309,7 +309,7 @@ public class Platform extends TiModule {
      *            the url to check
      */
     public native boolean canOpenURL(String url) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.canOpenURL(url);
     }-*/;
 
@@ -317,7 +317,7 @@ public class Platform extends TiModule {
      * Create a globally unique identifier
      */
     public native String createUUID() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.createUUID();
     }-*/;
 
@@ -328,7 +328,7 @@ public class Platform extends TiModule {
      *            the url to open
      */
     public native void openURL(String url) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.openURL(url);
     }-*/;
 
@@ -340,20 +340,20 @@ public class Platform extends TiModule {
      * Whether device settings are set to show times in 24-hour format.
      */
     public native boolean is24HourTimeFormat() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.is24HourTimeFormat();
     }-*/;
 
     public boolean isIPad() {
-        return Platform.get().getOsname().equalsIgnoreCase(OS_IPAD);
+        return Platform.get().getOsname().equalsIgnoreCase(PLATFORM_OS_IPAD);
     }
 
     public boolean isIPhone() {
-        return Platform.get().getOsname().equalsIgnoreCase(OS_IPHONE);
+        return Platform.get().getOsname().equalsIgnoreCase(PLATFORM_OS_IPHONE);
     }
 
     public boolean isAndroid() {
-        return Platform.get().getOsname().equalsIgnoreCase(OS_ANDROID);
+        return Platform.get().getOsname().equalsIgnoreCase(PLATFORM_OS_ANDROID);
     }
 
     /**
@@ -361,7 +361,7 @@ public class Platform extends TiModule {
      * exception ?
      */
     public boolean isIOs3_2Plus() {
-        if (Platform.get().getName().equalsIgnoreCase(IPHONE_OS)) {
+        if (Platform.get().getName().equalsIgnoreCase(PLATFORM_IPHONE_OS)) {
             String[] version = Platform.get().getVersion().split(".");
             int major = Integer.parseInt(version[0]);
             int minor = Integer.parseInt(version[1]);
@@ -376,7 +376,7 @@ public class Platform extends TiModule {
      * Returns true if iphone/ipad and version is 4.0+
      */
     public boolean isIOS4Plus() {
-        if (Platform.get().getName().equalsIgnoreCase(IPHONE_OS)) {
+        if (Platform.get().getName().equalsIgnoreCase(PLATFORM_IPHONE_OS)) {
             String[] version = Platform.get().getVersion().split(".");
             int major = Integer.parseInt(version[0]);
             return (major >= 4);
@@ -416,7 +416,7 @@ public class Platform extends TiModule {
      */
 
     public boolean isMobileWeb() {
-        return Platform.get().getOsname().equalsIgnoreCase(MOBILE_WEB);
+        return Platform.get().getOsname().equalsIgnoreCase(PLATFORM_MOBILE_WEB);
     }
 
     @Override
@@ -428,19 +428,19 @@ public class Platform extends TiModule {
         addEventListener(BatteryEvent.BATTERY, handler);
     }
 
-    private static native final int BATTERY_STATE_CHARGING() /*-{
+    public static native final int BATTERY_STATE_CHARGING() /*-{
 		return Titanium.Platform.BATTERY_STATE_CHARGING;
     }-*/;
 
-    private static native final int BATTERY_STATE_FULL() /*-{
+    public static native final int BATTERY_STATE_FULL() /*-{
 		return Titanium.Platform.BATTERY_STATE_FULL;
     }-*/;
 
-    private static native final int BATTERY_STATE_UNKNOWN() /*-{
+    public static native final int BATTERY_STATE_UNKNOWN() /*-{
 		return Titanium.Platform.BATTERY_STATE_UNKNOWN;
     }-*/;
 
-    private static native final int BATTERY_STATE_UNPLUGGED() /*-{
+    public static native final int BATTERY_STATE_UNPLUGGED() /*-{
 		return Titanium.Platform.BATTERY_STATE_UNPLUGGED;
     }-*/;
 

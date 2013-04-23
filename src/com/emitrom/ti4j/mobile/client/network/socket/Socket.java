@@ -1,28 +1,27 @@
 /**************************************************************************
-   Socket.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+ * Socket.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.network.socket;
 
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
+import com.emitrom.ti4j.core.client.JsoHelper;
 import com.emitrom.ti4j.mobile.client.core.TiFactory;
 import com.emitrom.ti4j.mobile.client.core.TiModule;
-import com.emitrom.ti4j.mobile.client.network.Network;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * Socket module
+ * Socket module, used for creating sockets.
  */
 public class Socket extends TiModule {
 
@@ -55,11 +54,27 @@ public class Socket extends TiModule {
      * based on whether the socket will be a connecting socket or a listening
      * socket.
      * 
-     * @param params creation parameters
      * @return New TCP socket.
      */
-    public native TCP createTCP(Object params) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+    public native TCP createTCP() /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var obj = jso.createTCP();
+		var toReturn = @com.emitrom.ti4j.mobile.client.network.socket.TCP::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
+		return toReturn;
+    }-*/;
+
+    /**
+     * Returns new tcp socket object, takes object containing properties list
+     * defined in 'titanium.network.socket.tcp'. some properties are only needed
+     * based on whether the socket will be a connecting socket or a listening
+     * socket.
+     * 
+     * @param params
+     *            creation parameters
+     * @return New TCP socket.
+     */
+    public native TCP createTCP(JavaScriptObject params) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createTCP(params);
 		var toReturn = @com.emitrom.ti4j.mobile.client.network.socket.TCP::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -77,7 +92,6 @@ public class Socket extends TiModule {
         JavaScriptObject jso = JavaScriptObject.createObject();
         JsoHelper.setAttribute(jso, "host", host);
         JsoHelper.setAttribute(jso, "port", port);
-        JsoHelper.setAttribute(jso, "mode", Network.READ_WRITE_MODE);
         return createTCP(jso);
     }
 

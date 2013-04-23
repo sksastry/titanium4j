@@ -45,12 +45,12 @@ public class Locale extends TiModule {
      *         device.
      */
     public native String getCurrentCountry() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.currentCountry;
     }-*/;
 
     public native void setCurrentCountry(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.currentCountry = value;
     }-*/;
 
@@ -59,12 +59,12 @@ public class Locale extends TiModule {
      *         settings (readonly)
      */
     public native String getCurrentLanguage() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.currentLanguage;
     }-*/;
 
     public native void setCurrentLanguage(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.currentLanguage = value;
     }-*/;
 
@@ -74,12 +74,12 @@ public class Locale extends TiModule {
      * @platforms android
      */
     public native String getCurrentLocale() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.currentLocale;
     }-*/;
 
     public native void setCurrentLocale(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.currentLocale = value;
     }-*/;
 
@@ -89,7 +89,7 @@ public class Locale extends TiModule {
      * @param number the phone number to format
      */
     public static native String formatTelephoneNumber(String number) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.formatTelephoneNumber(number);
     }-*/;
 
@@ -100,7 +100,7 @@ public class Locale extends TiModule {
      *            getCurrencyCode('en-US') -> 'USD'
      */
     public native String getCurrencyCode(String locale) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.getCurrencyCode(locale);
     }-*/;
 
@@ -112,7 +112,7 @@ public class Locale extends TiModule {
      *            getCurrencySymbol('USD') -> '$'
      */
     public native String getCurrencySymbol(String currencyCode) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.getCurrencySymbol(currencyCode);
     }-*/;
 
@@ -124,7 +124,7 @@ public class Locale extends TiModule {
      *            getLocaleCurrencySymbol('en-US') -> '$'
      */
     public native String getLocaleCurrencySymbol(String locale) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.getLocaleCurrencySymbol(locale);
     }-*/;
 
@@ -134,7 +134,7 @@ public class Locale extends TiModule {
      * @param key the key to use when mapping into the localization file
      */
     public native String getString(String key) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.getString(key);
     }-*/;
 
@@ -145,7 +145,7 @@ public class Locale extends TiModule {
      * @param hint the text to use if no key found in the localization file
      */
     public native String getString(String key, String hint) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.getString(key, hint);
     }-*/;
 

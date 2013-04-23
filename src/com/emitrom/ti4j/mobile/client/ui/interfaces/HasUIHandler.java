@@ -20,7 +20,7 @@ import com.emitrom.ti4j.mobile.client.core.handlers.ui.UIEventHandler;
 public interface HasUIHandler {
 
     public void addEventHandler(String event, UIEventHandler handler)/*-{
-                                                                     var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+                                                                     var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
                                                                      jso
                                                                      .addEventListener(
                                                                      event,

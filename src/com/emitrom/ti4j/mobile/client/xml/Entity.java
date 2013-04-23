@@ -39,7 +39,7 @@ public class Entity extends Node {
      *         for parsed entities, this is null.
      */
     public native String getNotationName() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.notationName;
     }-*/;
 
@@ -48,7 +48,7 @@ public class Entity extends Node {
      *         if the public identifier was not specified, this is null.
      */
     public native String getPublicId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.publicId;
     }-*/;
 
@@ -57,7 +57,7 @@ public class Entity extends Node {
      *         if the system identifier was not specified, this is null.
      */
     public native String getSystemId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.systemId;
     }-*/;
 

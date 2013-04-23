@@ -15,8 +15,8 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.network.socket;
 
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.JsoHelper;
+import com.emitrom.ti4j.core.client.ProxyObject;
 
 public class AcceptParams extends ProxyObject {
 
@@ -32,12 +32,12 @@ public class AcceptParams extends ProxyObject {
      *         be modified when not in the initialized state
      */
     public native double getTimeout() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return this.timeout;
     }-*/;
 
     public native void setTimeout(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.timeout = value;
     }-*/;
 
@@ -45,7 +45,7 @@ public class AcceptParams extends ProxyObject {
      * @return The callback to be fired after the socket enters the error state
      */
     public native void setError(ErrorCallback callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.error = function(e) {
 			var obj = @com.emitrom.ti4j.mobile.client.network.socket.ErrorCallbackArgs::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 			callback.@com.emitrom.ti4j.mobile.client.network.socket.ErrorCallback::onError(Lcom/emitrom/ti4j/mobile/client/network/socket/ErrorCallbackArgs;)(obj);

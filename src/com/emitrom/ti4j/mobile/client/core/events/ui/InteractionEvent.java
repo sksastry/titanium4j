@@ -35,7 +35,7 @@ public class InteractionEvent extends TiEvent {
      * boolean to indicate if the cancel button was pressed
      */
     public final native boolean isCancel() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.cancel;
     }-*/;
 
@@ -43,7 +43,7 @@ public class InteractionEvent extends TiEvent {
      * the button index that was pressed
      */
     public final native int getIndex() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.index;
     }-*/;
 

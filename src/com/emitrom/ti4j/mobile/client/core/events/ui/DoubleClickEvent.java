@@ -29,22 +29,22 @@ public class DoubleClickEvent extends InteractionEvent {
 	}
 
 	public native double getX() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.x;
 	}-*/; 
 	
 	public native double getY() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.y;
 	}-*/;
 	
 	private native double _getGlobalX() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.globalPoint.x;
 	}-*/;
 	
 	private native double _getGlobalY() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.globalPoint.y;
 	}-*/;
 	
@@ -53,12 +53,12 @@ public class DoubleClickEvent extends InteractionEvent {
 	}
 	
 	public native boolean bubbles() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.bubbles;
 	}-*/;
 	
 	public native boolean bubbleCanceled() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.cancelBubble;
 	}-*/;
 	

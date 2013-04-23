@@ -96,7 +96,7 @@ public class CloudPush extends TiModule {
      * @param value
      */
     public native void setEnabled(boolean value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.enabled = value;
     }-*/;
 
@@ -104,7 +104,7 @@ public class CloudPush extends TiModule {
      * Whether or not this device will receive push notifications.
      */
     public native boolean isEnabled()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return peer.enabled;
     }-*/;
 
@@ -120,7 +120,7 @@ public class CloudPush extends TiModule {
      * @param value
      */
     public native void setFocusAppOnPush(boolean value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.focusAppOnPush = value;
     }-*/;
 
@@ -129,7 +129,7 @@ public class CloudPush extends TiModule {
      * new push is received.
      */
     public native boolean focusAppOnPush()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return peer.focusAppOnPush;
     }-*/;
 
@@ -144,7 +144,7 @@ public class CloudPush extends TiModule {
      * @param value
      */
     public native void setShowAppOnTrayClick(boolean value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.showAppOnTrayClick = value;
     }-*/;
 
@@ -153,7 +153,7 @@ public class CloudPush extends TiModule {
      * to the foreground.
      */
     public native boolean showAppOnTrayClick()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return peer.showAppOnTrayClick;
     }-*/;
 
@@ -173,7 +173,7 @@ public class CloudPush extends TiModule {
      * @param value
      */
     public native void setShowTrayNotification(boolean value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.showTrayNotification = value;
     }-*/;
 
@@ -181,7 +181,7 @@ public class CloudPush extends TiModule {
      * Whether or not to show a tray notification when a new push is received.
      */
     public native boolean showTrayNotification()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return peer.showTrayNotification;
     }-*/;
 
@@ -194,7 +194,7 @@ public class CloudPush extends TiModule {
      * @param value
      */
     public native void setShowTrayNotificationsWhenFocused(boolean value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.showTrayNotificationsWhenFocused = value;
     }-*/;
 
@@ -203,14 +203,14 @@ public class CloudPush extends TiModule {
      * foreground.
      */
     public native boolean showTrayNotificationsWhenFocused()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return peer.showTrayNotificationsWhenFocused;
     }-*/;
 
     public native void retrieveDeviceToken(CloudPushNotificationConfig config)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
-				.retrieveDeviceToken(config.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.retrieveDeviceToken(config.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -237,7 +237,7 @@ public class CloudPush extends TiModule {
      * @param handler
      */
     public native void addCallbackHandler(CloudPushCallbackHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.cloudpush.CloudPush::CALLBACK,
@@ -276,7 +276,7 @@ public class CloudPush extends TiModule {
     }
 
     private native void addAppHandler(String event, CloudPushAppHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						event,

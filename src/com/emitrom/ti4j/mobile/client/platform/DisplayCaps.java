@@ -41,12 +41,12 @@ public class DisplayCaps extends EventDispatcher {
 	 * @return Returns the density property of the display device.
 	 */
 	public native String getDensity() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.density;
 	}-*/;
 
 	public native void setDensity(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.density = value;
 	}-*/;
 
@@ -54,12 +54,12 @@ public class DisplayCaps extends EventDispatcher {
 	 * @return The dpi of the display device.
 	 */
 	public native int getDpi() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.dpi;
 	}-*/;
 
 	public native void setDpi(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.dpi = value;
 	}-*/;
 
@@ -67,12 +67,12 @@ public class DisplayCaps extends EventDispatcher {
 	 * @return The height of the device screen
 	 */
 	public native double getPlatformHeight() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.platformHeight;
 	}-*/;
 
 	public native void setPlatformHeight(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.platformHeight = value;
 	}-*/;
 
@@ -80,17 +80,17 @@ public class DisplayCaps extends EventDispatcher {
 	 * @return The width of the device screen
 	 */
 	public native double getPlatformWidth() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.platformWidth;
 	}-*/;
 
 	public native void setPlatformWidth(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.platformWidth = value;
 	}-*/;
 	
 	public native double getLogicalDensityFactor() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		if (jso.logicalDensityFactor) {
 			return jso.logicalDensityFactor;
 		} else {

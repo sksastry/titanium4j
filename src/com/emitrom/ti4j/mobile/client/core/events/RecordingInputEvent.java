@@ -47,7 +47,7 @@ public class RecordingInputEvent extends TiEvent {
      * bool indicating availability of recording device
      */
     public final native boolean isAvailable() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.available;
     }-*/;
 }

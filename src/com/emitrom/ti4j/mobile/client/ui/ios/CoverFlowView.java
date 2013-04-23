@@ -16,7 +16,7 @@
 package com.emitrom.ti4j.mobile.client.ui.ios;
 
 import com.emitrom.ti4j.mobile.client.blob.Blob;
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.CoverFlowIndexChangeHandler;
 import com.emitrom.ti4j.mobile.client.filesystem.File;
 import com.emitrom.ti4j.mobile.client.ui.View;
@@ -38,48 +38,48 @@ public class CoverFlowView extends View {
     }
 
     public native JsArrayString getImages() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.images;
     }-*/;
 
     public native void setImages(JsArrayString value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.images = value;
     }-*/;
 
     public native int getSelected() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.selected;
     }-*/;
 
     public native void setSelected(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.selected = value;
     }-*/;
 
     public native void setImage(int index, Object image) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.setImage(index, image);
     }-*/;
 
     public native void setImage(int index, Blob image) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.setImage(
 						index,
-						image.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+						image.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     public native void setImage(int index, File image) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.setImage(
 						index,
-						image.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+						image.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     public native void addChangeHandler(CoverFlowIndexChangeHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.ChangeEvent::CHANGE,

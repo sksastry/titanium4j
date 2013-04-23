@@ -42,7 +42,7 @@ public class AndroidGeoLocation extends TiModule {
      * this module.
      */
     public native void setManualMode(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.setManualMode(value);
     }-*/;
 
@@ -53,9 +53,9 @@ public class AndroidGeoLocation extends TiModule {
      * the application.
      */
     public native void addLocationRule(LocationRule value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.addLocationRule(value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.addLocationRule(value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -63,7 +63,7 @@ public class AndroidGeoLocation extends TiModule {
      * Titanium.Geolocation.Android.LocationProvider.
      */
     public native LocationProvider createLocationProvider() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createLocationProvider();
 		return @com.emitrom.ti4j.mobile.client.geolocation.android.LocationProvider::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
@@ -72,18 +72,18 @@ public class AndroidGeoLocation extends TiModule {
      * Disables and removes the specified location provider.
      */
     public native void removeLocationProvider(LocationProvider locationProvider) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.removeLocationProvider(locationProvider.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.removeLocationProvider(locationProvider.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
      * Disables and removes the specified location rule.
      */
     public native void removeLocationRule(LocationRule locationRule) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.removeLocationRule(locationRule.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.removeLocationRule(locationRule.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -91,7 +91,7 @@ public class AndroidGeoLocation extends TiModule {
      * Titanium.Geolocation.Android.LocationRule.
      */
     public native LocationRule createLocationRule() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createLocationProvider();
 		return @com.emitrom.ti4j.mobile.client.geolocation.android.LocationRule::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
@@ -101,7 +101,7 @@ public class AndroidGeoLocation extends TiModule {
      * this module.
      */
     public native boolean isManualMode() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.getManualMode();
     }-*/;
 

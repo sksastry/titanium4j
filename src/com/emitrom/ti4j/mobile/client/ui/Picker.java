@@ -17,7 +17,7 @@ package com.emitrom.ti4j.mobile.client.ui;
 
 import java.util.ArrayList;
 
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.PickerChangeHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
@@ -88,12 +88,12 @@ public class Picker extends View {
      *         countdown timer.)
      */
     public native double getCountDownDuration() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.countDownDuration;
     }-*/;
 
     public native void setCountDownDuration(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		jso.countDownDuration = value;
     }-*/;
 
@@ -109,12 +109,12 @@ public class Picker extends View {
      *         spinner-style time picker, the default is true.
      */
     public native boolean isFormat24() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.format24;
     }-*/;
 
     public native void setFormat24(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		jso.format24 = value;
     }-*/;
 
@@ -122,12 +122,12 @@ public class Picker extends View {
      * @return The locale used for displaying date/time pickers values
      */
     public native String getLocale() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.locale;
     }-*/;
 
     public native void setLocale(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		jso.locale = value;
     }-*/;
 
@@ -135,12 +135,12 @@ public class Picker extends View {
      * @return The minimum date/time for value for date pickers
      */
     public native JsDate getMinDate() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.minDate;
     }-*/;
 
     public native void setMinDate(JsDate value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		jso.minDate = value;
     }-*/;
 
@@ -148,12 +148,12 @@ public class Picker extends View {
      * @return The maximum date/time for value for date pickers
      */
     public native JsDate getMaxDate() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.maxDate;
     }-*/;
 
     public native void setMaxDate(JsDate value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		jso.maxDate = value;
     }-*/;
 
@@ -165,12 +165,12 @@ public class Picker extends View {
      *         supported on android.)
      */
     public native int getMinuteInterval() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.minuteInterval;
     }-*/;
 
     public native void setMinuteInterval(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		jso.minuteInterval = value;
     }-*/;
 
@@ -180,12 +180,12 @@ public class Picker extends View {
      *         bar.
      */
     public native boolean hasSelectionIndicator() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.selectionIndicator;
     }-*/;
 
     public native void setSelectionIndicator(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		jso.selectionIndicator = value;
     }-*/;
 
@@ -193,12 +193,12 @@ public class Picker extends View {
      * @return The type constant for the picker.
      */
     public native int getType() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.type;
     }-*/;
 
     public native void setType(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		jso.type = value;
     }-*/;
 
@@ -214,12 +214,12 @@ public class Picker extends View {
      * @platforms android
      */
     public native boolean useSpinner() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.useSpinner;
     }-*/;
 
     public native void useSpinner(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		jso.useSpinner = value;
     }-*/;
 
@@ -227,12 +227,12 @@ public class Picker extends View {
      * @return The date/time value for date pickers
      */
     public native JsDate getValue() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.value;
     }-*/;
 
     public native void setValue(JsDate dateValue) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		jso.value = dateValue;
     }-*/;
 
@@ -245,12 +245,12 @@ public class Picker extends View {
      *         to be sure the selected row is in the middle.)
      */
     public native int getVisibleItems() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.visibleItems;
     }-*/;
 
     public native void setVisibleItems(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		jso.visibleItems = value;
     }-*/;
 
@@ -261,7 +261,7 @@ public class Picker extends View {
      */
     public native void add(PickerRow row) /*-{
 		jso
-				.add(row.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.add(row.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -270,9 +270,9 @@ public class Picker extends View {
      * @param data add an array of rows, a single row or a column to the picker
      */
     public native void add(PickerColumn column) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.add(column.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.add(column.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -282,7 +282,7 @@ public class Picker extends View {
      *            found
      */
     public native PickerRow getSelectedRow(int index) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.getSelectecRow(index);
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.PickerRow::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -294,9 +294,9 @@ public class Picker extends View {
      * @param column new column to load
      */
     public native void reloadColumn(PickerColumn column) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
-				.reloadColumn(column.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.reloadColumn(column.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -308,12 +308,12 @@ public class Picker extends View {
      *            (default) (optional)
      */
     public native void setSelectedRow(int column, int row, boolean animated) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.setSelectedRow(column, row, animated);
     }-*/;
 
     public native void addChangeHandler(PickerChangeHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.picker.PickerChangeEvent::CHANGE,

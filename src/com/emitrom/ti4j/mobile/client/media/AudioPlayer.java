@@ -51,12 +51,12 @@ public class AudioPlayer extends EventDispatcher {
      *         activity is paused (android only as of 1.3.0)
      */
     public native boolean allowBackground() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.allowBackground;
     }-*/;
 
     public native void setAllowBackground(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.allowBackground = value;
     }-*/;
 
@@ -64,12 +64,12 @@ public class AudioPlayer extends EventDispatcher {
      * @return Bit rate of the current playback stream
      */
     public native double getBitRate() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.bitRate;
     }-*/;
 
     public native void setBitRate(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.bitRate = value;
     }-*/;
 
@@ -77,12 +77,12 @@ public class AudioPlayer extends EventDispatcher {
      * @return Returns boolean indicating if the playback is idle
      */
     public native boolean isIdle() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.idle;
     }-*/;
 
     public native void setIdle(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.idle = value;
     }-*/;
 
@@ -90,12 +90,12 @@ public class AudioPlayer extends EventDispatcher {
      * @return Returns boolean indicating if the playback is paused
      */
     public native boolean isPaused() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.paused;
     }-*/;
 
     public native void setPaused(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.paused = value;
     }-*/;
 
@@ -103,12 +103,12 @@ public class AudioPlayer extends EventDispatcher {
      * @return Returns boolean indicating if the playback is streaming audio
      */
     public native boolean isPlaying() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.playing;
     }-*/;
 
     public native void setPlaying(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.playing = value;
     }-*/;
 
@@ -117,12 +117,12 @@ public class AudioPlayer extends EventDispatcher {
      *         samplerate has not yet been detected
      */
     public native double getProgress() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.progress;
     }-*/;
 
     public native void setProgress(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.progress = value;
     }-*/;
 
@@ -130,12 +130,12 @@ public class AudioPlayer extends EventDispatcher {
      * @return Returns int for the current state of playback
      */
     public native int getState() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.state;
     }-*/;
 
     public native void setState(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.state = value;
     }-*/;
 
@@ -143,12 +143,12 @@ public class AudioPlayer extends EventDispatcher {
      * @return Returns the url for the current playback
      */
     public native String getUrl() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.url;
     }-*/;
 
     public native void setUrl(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.url = value;
     }-*/;
 
@@ -157,12 +157,12 @@ public class AudioPlayer extends EventDispatcher {
      *         data from the network
      */
     public native boolean isWaiting() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.waiting;
     }-*/;
 
     public native void setWaiting(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.waiting = value;
     }-*/;
 
@@ -171,12 +171,12 @@ public class AudioPlayer extends EventDispatcher {
      * @platforms iphone, ipad
      */
     public native double getBufferSize() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.bufferSize;
     }-*/;
 
     public native void setBufferSize(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.bufferSize = value;
     }-*/;
 
@@ -184,7 +184,7 @@ public class AudioPlayer extends EventDispatcher {
      * Pause playback
      */
     public native void pause() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.pause();
     }-*/;
 
@@ -192,7 +192,7 @@ public class AudioPlayer extends EventDispatcher {
      * Start playback
      */
     public native void start() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.start();
     }-*/;
 
@@ -200,7 +200,7 @@ public class AudioPlayer extends EventDispatcher {
      * Convert a state into a textual description suitable for display
      */
     public native String stateDescription() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.stateDescription();
     }-*/;
 
@@ -208,12 +208,12 @@ public class AudioPlayer extends EventDispatcher {
      * Stop playback
      */
     public native void stop() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.stop();
     }-*/;
 
     public native void addChangeHandler(AudioChangeHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.media.audio.ChangeEvent::CHANGE,
@@ -224,7 +224,7 @@ public class AudioPlayer extends EventDispatcher {
     }-*/;
 
     public native void addProgressHandler(ProgressHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.media.ProgressEvent::PROGRESS,

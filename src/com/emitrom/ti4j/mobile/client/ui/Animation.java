@@ -15,7 +15,7 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui;
 
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.events.EventDispatcher;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.AnimationCompleteHandler;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.AnimationStartHandler;
@@ -40,12 +40,12 @@ public class Animation extends EventDispatcher {
      *         reverse upon completion
      */
     public native boolean isAutoReverse() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.autoreverse;
     }-*/;
 
     public native void setAutoReverse(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.autoreverse = value;
     }-*/;
 
@@ -53,12 +53,12 @@ public class Animation extends EventDispatcher {
      * @return Value of the backgroundcolor property to change during animation
      */
     public native String getBackgroundColor() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.backgroundColor;
     }-*/;
 
     public native void setBackgroundColor(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.backgroundColor = value;
     }-*/;
 
@@ -70,12 +70,12 @@ public class Animation extends EventDispatcher {
      * @return Value of the bottom property to change during animation
      */
     public native double getBottom() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.bottom;
     }-*/;
 
     public native void setBottom(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.bottom = value;
     }-*/;
 
@@ -83,12 +83,12 @@ public class Animation extends EventDispatcher {
      * @return Value of the center property to change during animation
      */
     public native Object getCenter() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.center;
     }-*/;
 
     public native void setCenter(Object value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.center = value;
     }-*/;
 
@@ -96,12 +96,12 @@ public class Animation extends EventDispatcher {
      * @return Value of the color property to change during animation
      */
     public native String getColor() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.color;
     }-*/;
 
     public native void setColor(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.color = value;
     }-*/;
 
@@ -109,12 +109,12 @@ public class Animation extends EventDispatcher {
      * @return The curve of the animation
      */
     public native int getCurve() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.curve;
     }-*/;
 
     public native void setCurve(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.curve = value;
     }-*/;
 
@@ -123,12 +123,12 @@ public class Animation extends EventDispatcher {
      *         animation
      */
     public native double getDelay() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.delay;
     }-*/;
 
     public native void setDelay(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.delay = value;
     }-*/;
 
@@ -136,12 +136,12 @@ public class Animation extends EventDispatcher {
      * @return The duration of time in milliseconds to perform the animation
      */
     public native double getDuration() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.duration;
     }-*/;
 
     public native void setDuration(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.duration = value;
     }-*/;
 
@@ -149,7 +149,7 @@ public class Animation extends EventDispatcher {
      * @return Value of the height property to change during animation
      */
     public native double getHeight() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.height;
     }-*/;
 
@@ -157,7 +157,7 @@ public class Animation extends EventDispatcher {
     	setHeight("" + value);
     }
     public native void setHeight(String value) /*-{
-	var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+	var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 	jso.height = value;
 	}-*/;
 
@@ -166,12 +166,12 @@ public class Animation extends EventDispatcher {
      * @return Value of the left property to change during animation
      */
     public native double getLeft() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.left;
     }-*/;
 
     public native void setLeft(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.left = value;
     }-*/;
 
@@ -179,12 +179,12 @@ public class Animation extends EventDispatcher {
      * @return Value of the opacity property to change during animation
      */
     public native double getOpacity() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.opacity;
     }-*/;
 
     public native void setOpacity(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.opacity = value;
     }-*/;
 
@@ -192,12 +192,12 @@ public class Animation extends EventDispatcher {
      * @return Value of the opaque property to change during animation
      */
     public native boolean isOpaque() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.opaque;
     }-*/;
 
     public native void setOpaque(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.opaque = value;
     }-*/;
 
@@ -205,12 +205,12 @@ public class Animation extends EventDispatcher {
      * @return The number of times the animation should be performed
      */
     public native int getRepeat() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.repeat;
     }-*/;
 
     public native void setRepeat(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.repeat = value;
     }-*/;
 
@@ -218,12 +218,12 @@ public class Animation extends EventDispatcher {
      * @return Value of the right property to change during animation
      */
     public native double getRight() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.right;
     }-*/;
 
     public native void setRight(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.right = value;
     }-*/;
 
@@ -231,12 +231,12 @@ public class Animation extends EventDispatcher {
      * @return Value of the top property to change during animation
      */
     public native double getTop() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.top;
     }-*/;
 
     public native void setTop(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.top = value;
     }-*/;
 
@@ -244,12 +244,12 @@ public class Animation extends EventDispatcher {
      * @return Value of the transform property to change during animation
      */
     public native Object getTransform() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.transform;
     }-*/;
 
     public native void setTransform(Object value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.transform = value;
     }-*/;
 
@@ -258,12 +258,12 @@ public class Animation extends EventDispatcher {
      *         transition to use
      */
     public native int getTransition() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.transition;
     }-*/;
 
     public native void setTransition(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.transition = value;
     }-*/;
 
@@ -271,12 +271,12 @@ public class Animation extends EventDispatcher {
      * @return Value of the visible property to change during animation
      */
     public native boolean isVisible() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.visible;
     }-*/;
 
     public native void setVisible(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.visible = value;
     }-*/;
 
@@ -284,12 +284,12 @@ public class Animation extends EventDispatcher {
      * @return Value of the width property to change during animation
      */
     public native double getWidth() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.width;
     }-*/;
 
     public native void setWidth(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.width = value;
     }-*/;
 
@@ -297,17 +297,17 @@ public class Animation extends EventDispatcher {
      * @return Value of the zindex property to change during animation
      */
     public native int getZIndex() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.zIndex;
     }-*/;
 
     public native void setZIndex(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.zIndex = value;
     }-*/;
 
     public native void addCompleteHandler(AnimationCompleteHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.CompleteEvent::COMPLETE,
@@ -318,7 +318,7 @@ public class Animation extends EventDispatcher {
     }-*/;
 
     public native void addStartHandler(AnimationStartHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.UIEvent::START,

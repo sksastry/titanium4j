@@ -16,7 +16,7 @@
 package com.emitrom.ti4j.mobile.client.cloud.keyvalues;
 
 import com.emitrom.ti4j.mobile.client.cloud.core.AbstractCloudResponse;
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
+import com.emitrom.ti4j.core.client.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**

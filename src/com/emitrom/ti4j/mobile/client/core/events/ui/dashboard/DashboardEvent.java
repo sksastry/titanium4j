@@ -50,7 +50,7 @@ public class DashboardEvent extends UIEvent {
 	}
 
 	private final native JsArray<JavaScriptObject> _getItems() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.items;
 	}-*/;
 
@@ -58,7 +58,7 @@ public class DashboardEvent extends UIEvent {
 	 * The com.emitrom.ti4j.mobile.client.ui.DashboardItem that was moved
 	 */
 	public final native DashboardItem getItem() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.item;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.DashboardItem::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -69,7 +69,7 @@ public class DashboardEvent extends UIEvent {
 	 * view the click was
 	 */
 	public final native Point getLocation() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.location;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.Point::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

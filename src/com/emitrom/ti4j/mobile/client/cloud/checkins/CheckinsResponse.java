@@ -31,19 +31,19 @@ public class CheckinsResponse extends AbstractCloudResponse {
     }
 
     public native Place getPlace()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = peer.place;
 		return @com.emitrom.ti4j.mobile.client.cloud.core.Place::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
 
     public native User getUser()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = peer.user;
 		return @com.emitrom.ti4j.mobile.client.cloud.core.User::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
 
     public native Photo getPhoto()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = peer.photo;
 		return @com.emitrom.ti4j.mobile.client.cloud.core.Photo::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;

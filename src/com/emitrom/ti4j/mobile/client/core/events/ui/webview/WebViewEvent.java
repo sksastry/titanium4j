@@ -36,7 +36,7 @@ public class WebViewEvent extends UIEvent {
      * the url of the web document
      */
     public final native String getUrl() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.url;
     }-*/;
 
@@ -44,7 +44,7 @@ public class WebViewEvent extends UIEvent {
      * the error message
      */
     public final native String getMessage() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.message;
     }-*/;
 }

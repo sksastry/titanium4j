@@ -43,7 +43,7 @@ public class Text extends CharacterData {
      * @return The new node, of the same type as this node
      */
     public native Text splitText(double offset) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.splitText(offset);
     }-*/;
 

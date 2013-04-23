@@ -15,7 +15,7 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui.ios;
 
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.events.EventDispatcher;
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -43,12 +43,12 @@ public class Matrix3D extends EventDispatcher {
      * @return The entry at position [1,1] in the matrix.
      */
     public native double getM11() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.m11;
     }-*/;
 
     public native void setM11(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.m11 = value;
     }-*/;
 
@@ -56,12 +56,12 @@ public class Matrix3D extends EventDispatcher {
      * @return The entry at position [1,2] in the matrix.
      */
     public native double getM12() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.m12;
     }-*/;
 
     public native void setM12(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.m12 = value;
     }-*/;
 
@@ -69,12 +69,12 @@ public class Matrix3D extends EventDispatcher {
      * @return The entry at position [1,3] in the matrix.
      */
     public native double getM13() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.m13;
     }-*/;
 
     public native void setM13(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.m13 = value;
     }-*/;
 
@@ -82,12 +82,12 @@ public class Matrix3D extends EventDispatcher {
      * @return The entry at position [1,4] in the matrix.
      */
     public native double getM14() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.m14;
     }-*/;
 
     public native void setM14(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.m14 = value;
     }-*/;
 
@@ -95,12 +95,12 @@ public class Matrix3D extends EventDispatcher {
      * @return The entry at position [2,1] in the matrix.
      */
     public native double getM21() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.m21;
     }-*/;
 
     public native void setM21(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.m21 = value;
     }-*/;
 
@@ -108,12 +108,12 @@ public class Matrix3D extends EventDispatcher {
      * @return The entry at position [2,2] in the matrix.
      */
     public native double getM22() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.m22;
     }-*/;
 
     public native void setM22(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.m22 = value;
     }-*/;
 
@@ -121,12 +121,12 @@ public class Matrix3D extends EventDispatcher {
      * @return The entry at position [2,3] in the matrix.
      */
     public native double getM23() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.m23;
     }-*/;
 
     public native void setM23(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.m23 = value;
     }-*/;
 
@@ -134,12 +134,12 @@ public class Matrix3D extends EventDispatcher {
      * @return The entry at position [2,4] in the matrix.
      */
     public native double getM24() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.m24;
     }-*/;
 
     public native void setM24(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.m24 = value;
     }-*/;
 
@@ -147,12 +147,12 @@ public class Matrix3D extends EventDispatcher {
      * @return The entry at position [3,1] in the matrix.
      */
     public native double getM31() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.m31;
     }-*/;
 
     public native void setM31(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.m31 = value;
     }-*/;
 
@@ -160,12 +160,12 @@ public class Matrix3D extends EventDispatcher {
      * @return The entry at position [3,2] in the matrix.
      */
     public native double getM32() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.m32;
     }-*/;
 
     public native void setM32(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.m32 = value;
     }-*/;
 
@@ -173,12 +173,12 @@ public class Matrix3D extends EventDispatcher {
      * @return The entry at position [3,3] in the matrix.
      */
     public native double getM33() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.m33;
     }-*/;
 
     public native void setM33(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.m33 = value;
     }-*/;
 
@@ -186,12 +186,12 @@ public class Matrix3D extends EventDispatcher {
      * @return The entry at position [3,4] in the matrix.
      */
     public native double getM34() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.m34;
     }-*/;
 
     public native void setM34(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.m34 = value;
     }-*/;
 
@@ -203,7 +203,7 @@ public class Matrix3D extends EventDispatcher {
     }-*/;
 
     public native void setM41(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.m41 = value;
     }-*/;
 
@@ -211,12 +211,12 @@ public class Matrix3D extends EventDispatcher {
      * @return The entry at position [4,2] in the matrix.
      */
     public native double getM42() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.m42;
     }-*/;
 
     public native void setM42(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.m42 = value;
     }-*/;
 
@@ -224,12 +224,12 @@ public class Matrix3D extends EventDispatcher {
      * @return The entry at position [4,3] in the matrix.
      */
     public native double getM43() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.m43;
     }-*/;
 
     public native void setM43(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.m43 = value;
     }-*/;
 
@@ -237,12 +237,12 @@ public class Matrix3D extends EventDispatcher {
      * @return The entry at position [4,4] in the matrix.
      */
     public native double getM44() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.m44;
     }-*/;
 
     public native void setM44(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.m44 = value;
     }-*/;
 
@@ -250,7 +250,7 @@ public class Matrix3D extends EventDispatcher {
      * Returns a matrix constructed by inverting an existing matrix
      */
     public native Matrix3D invert() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.invert();
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.ios.Matrix3D::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -272,9 +272,9 @@ public class Matrix3D extends EventDispatcher {
      *            matrix t2 by matrix t1.
      */
     public native Matrix3D multiply(Matrix3D t2) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso
-				.multiply(t2.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.multiply(t2.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.ios.Matrix3D::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
@@ -294,7 +294,7 @@ public class Matrix3D extends EventDispatcher {
      *            The z part of the vector about which to rotate
      */
     public native Matrix3D rotate(double angle, double x, double y, double z) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.rotate(angle, x, y, z);
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.ios.Matrix3D::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -311,7 +311,7 @@ public class Matrix3D extends EventDispatcher {
      *            The value by which to scale z values of the matrix
      */
     public native Matrix3D scale(double sx, double sy, double sz) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.scale(sx, sy, sz);
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.ios.Matrix3D::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -328,7 +328,7 @@ public class Matrix3D extends EventDispatcher {
      *            The value by which to move z values with the matrix
      */
     public native Matrix3D translate(double tx, double ty, double tz) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.translate(tx, ty, tz);
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.ios.Matrix3D::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

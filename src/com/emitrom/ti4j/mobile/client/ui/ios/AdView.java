@@ -42,12 +42,12 @@ public class AdView extends View {
      * revenue for your application.
      */
     public native void cancelAction() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.cancelAction();
     }-*/;
 
     public native void addChangeHandler(ChangeHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.UIEvent::CHANGE,
@@ -58,7 +58,7 @@ public class AdView extends View {
     }-*/;
 
     public native void addErrorHandler(ErrorHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ErrorEvent::ERROR,
@@ -69,7 +69,7 @@ public class AdView extends View {
     }-*/;
 
     public native void addLoadHandler(LoadHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.loading.LoadEvent::LOAD,

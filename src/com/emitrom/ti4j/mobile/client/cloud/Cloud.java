@@ -60,7 +60,7 @@ public class Cloud extends TiModule {
      * @return
      */
     public native boolean isDebug()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return peer.debug;
     }-*/;
 
@@ -68,7 +68,7 @@ public class Cloud extends TiModule {
      * set if debug logging should be output to the console.
      */
     public native void setDebug(boolean value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.debug = value;
     }-*/;
 
@@ -78,7 +78,7 @@ public class Cloud extends TiModule {
      * Defaults to: True
      */
     public native boolean useSecure()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return peer.useSecure;
     }-*/;
 
@@ -86,7 +86,7 @@ public class Cloud extends TiModule {
      * set if debug logging should be output to the console.
      */
     public native void setUseSecure(boolean value)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.useSecure = value;
     }-*/;
 
@@ -100,7 +100,7 @@ public class Cloud extends TiModule {
      * When you are done tracking the transmission, set this to null.
      */
     public native void setOnDataStream(CloudStreamHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.ondatastream = function(e) {
 			var obj = @com.emitrom.ti4j.mobile.client.core.events.cloud.CloudStreamProgressEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 			handler.@com.emitrom.ti4j.mobile.client.core.handlers.cloud.CloudStreamHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/cloud/CloudStreamProgressEvent;)(obj);
@@ -118,7 +118,7 @@ public class Cloud extends TiModule {
      * When you are done tracking the transmission, set this to null.
      */
     public native void setOnSendStream(CloudStreamHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.onsendstream = function(e) {
 			var obj = @com.emitrom.ti4j.mobile.client.core.events.cloud.CloudStreamProgressEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 			handler.@com.emitrom.ti4j.mobile.client.core.handlers.cloud.CloudStreamHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/cloud/CloudStreamProgressEvent;)(obj);

@@ -15,7 +15,7 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui;
 
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
@@ -38,7 +38,7 @@ public class Notification extends View {
      * @return the value of the duration property.
      */
     public native double getDurartion() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.duration;
     }-*/;
 
@@ -48,7 +48,7 @@ public class Notification extends View {
      * @param value
      */
     public native void setDuration(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.duration = value;
     }-*/;
 
@@ -56,7 +56,7 @@ public class Notification extends View {
      * @return the value of the horizontalMargin property.
      */
     public native double getHorizontalMargin() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.horizontalMargin;
     }-*/;
 
@@ -73,7 +73,7 @@ public class Notification extends View {
      * @return the value of the message property.
      */
     public native String getMessage() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.message;
     }-*/;
 
@@ -83,7 +83,7 @@ public class Notification extends View {
      * @param value
      */
     public native void setMessage(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.message = value;
     }-*/;
 
@@ -91,7 +91,7 @@ public class Notification extends View {
      * @return the value of the verticalMargin property.
      */
     public native double getVerticalMargin() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.verticalMargin;
     }-*/;
 
@@ -108,7 +108,7 @@ public class Notification extends View {
      * @return the value of the xOffset property.
      */
     public native double getXOffset() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.xOffest;
     }-*/;
 
@@ -125,7 +125,7 @@ public class Notification extends View {
      * @return the value of the yOffset property.
      */
     public native double getYOffset() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.yOffest;
     }-*/;
 
@@ -142,7 +142,7 @@ public class Notification extends View {
      * show the notification
      */
     public native void show() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.show();
     }-*/;
 

@@ -32,7 +32,7 @@ public class TextSelectedEvent extends UIEvent {
      * length.
      */
     public final native TextRange getRange() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.contentSize;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.TextRange::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

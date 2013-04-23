@@ -15,7 +15,7 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui;
 
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.events.EventDispatcher;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.DialogClickHandler;
@@ -42,15 +42,15 @@ public class OptionDialog extends EventDispatcher {
      * @platforms android
      */
     public native View getAndroidView() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.androidView;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.View::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void setAndroidView(View value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.androidView = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.androidView = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
@@ -59,12 +59,12 @@ public class OptionDialog extends EventDispatcher {
      *         cancel button, it must be the last button for use on ipad.
      */
     public native int getCancel() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.cancel;
     }-*/;
 
     public native void setCancel(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.cancel = value;
     }-*/;
 
@@ -72,12 +72,12 @@ public class OptionDialog extends EventDispatcher {
      * @return The destructive button (indicated by a visual clue in the ui)
      */
     public native int getDestructive() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.destructive;
     }-*/;
 
     public native void setDestructive(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.destructive = value;
     }-*/;
 
@@ -85,7 +85,7 @@ public class OptionDialog extends EventDispatcher {
      * @return Array of button names as strings
      */
     public native JsArrayString getOptions() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.options;
     }-*/;
 
@@ -98,7 +98,7 @@ public class OptionDialog extends EventDispatcher {
     }
 
     public native void setOptions(JsArrayString value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.options = value;
     }-*/;
 
@@ -108,12 +108,12 @@ public class OptionDialog extends EventDispatcher {
      * @platforms android
      */
     public native int getSelectedIndex() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.selectedIndex;
     }-*/;
 
     public native void setSelectedIndex(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.selectedIndex = value;
     }-*/;
 
@@ -121,12 +121,12 @@ public class OptionDialog extends EventDispatcher {
      * @return The title of the dialog
      */
     public native String getTitle() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.title;
     }-*/;
 
     public native void setTitle(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.title = value;
     }-*/;
 
@@ -134,12 +134,12 @@ public class OptionDialog extends EventDispatcher {
      * @return The key in the locale file to use for the title property
      */
     public native String getTitleId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.titleid;
     }-*/;
 
     public native void setTitleId(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.titleid = value;
     }-*/;
 
@@ -147,12 +147,12 @@ public class OptionDialog extends EventDispatcher {
      * Cause the dialog to become visible
      */
     public native void show() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.show();
     }-*/;
 
     public native CallbackRegistration addClickHandler(DialogClickHandler handler) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var listener = function(e) {
 							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.dialog.DialogClickEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.DialogClickHandler::onClick(Lcom/emitrom/ti4j/mobile/client/core/events/ui/dialog/DialogClickEvent;)(eventObject);

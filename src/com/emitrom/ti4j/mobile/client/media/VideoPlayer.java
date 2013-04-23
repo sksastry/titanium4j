@@ -50,12 +50,12 @@ public class VideoPlayer extends EventDispatcher {
      *         4.3+ only.
      */
     public native boolean allowsAirPlay() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.allowsAirPlay;
     }-*/;
 
     public native void setAllowsAirPlay(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.allowsAirPlay = value;
     }-*/;
 
@@ -65,12 +65,12 @@ public class VideoPlayer extends EventDispatcher {
      *         conditions. defaults to true.
      */
     public native boolean isAutoplay() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.autoplay;
     }-*/;
 
     public native void setAutoplay(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.autoplay = value;
     }-*/;
 
@@ -78,12 +78,12 @@ public class VideoPlayer extends EventDispatcher {
      * @return Deprecated. use url property instead.
      */
     public native String getContentURL() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.contentURL;
     }-*/;
 
     public native void setContentURL(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.contentURL = value;
     }-*/;
 
@@ -91,12 +91,12 @@ public class VideoPlayer extends EventDispatcher {
      * @return The duration of the movie, or 0.0 if not known.
      */
     public native double getDuration() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.duration;
     }-*/;
 
     public native void setDuration(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.duration = value;
     }-*/;
 
@@ -105,12 +105,12 @@ public class VideoPlayer extends EventDispatcher {
      *         natural end time of the movie.
      */
     public native double getEndPlaybackTime() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.endPlaybackTime;
     }-*/;
 
     public native void setEndPlaybackTime(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.endPlaybackTime = value;
     }-*/;
 
@@ -121,12 +121,12 @@ public class VideoPlayer extends EventDispatcher {
      *         visible will have no effect.
      */
     public native boolean isFullscreen() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.fullscreen;
     }-*/;
 
     public native void setFullscreen(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.fullscreen = value;
     }-*/;
 
@@ -135,12 +135,12 @@ public class VideoPlayer extends EventDispatcher {
      *         natural start time of the movie.
      */
     public native double getInitialPlaybackTime() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.initialPlaybackTime;
     }-*/;
 
     public native void setInitialPlaybackTime(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.initialPlaybackTime = value;
     }-*/;
 
@@ -148,12 +148,12 @@ public class VideoPlayer extends EventDispatcher {
      * @return Returns the network load state of the movie player.
      */
     public native int getLoadState() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.loadState;
     }-*/;
 
     public native void setLoadState(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.loadState = value;
     }-*/;
 
@@ -161,18 +161,18 @@ public class VideoPlayer extends EventDispatcher {
      * @return The media object, either a file or blob.
      */
     public native <T extends JavaScriptObject> T getMedia() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.media;
     }-*/;
 
     public native void setMedia(File value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.media = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.media = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     public native void setMedia(Blob value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.media = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.media = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
@@ -180,12 +180,12 @@ public class VideoPlayer extends EventDispatcher {
      *         {@link org.urish.gwtit.titanium.media.video_control_default}
      */
     public native int getMediaControlStyle() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.mediaControlStyle;
     }-*/;
 
     public native void setMediaControlStyle(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.mediaControlStyle = value;
     }-*/;
 
@@ -193,12 +193,12 @@ public class VideoPlayer extends EventDispatcher {
      * @return The types of media in the movie
      */
     public native int getMediaTypes() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.mediaTypes;
     }-*/;
 
     public native void setMediaTypes(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.mediaTypes = value;
     }-*/;
 
@@ -208,12 +208,12 @@ public class VideoPlayer extends EventDispatcher {
      * 
      */
     public native int getMovieControlMode() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.movieControlMode;
     }-*/;
 
     public native void setMovieControlMode(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.movieControlMode = value;
     }-*/;
 
@@ -223,15 +223,15 @@ public class VideoPlayer extends EventDispatcher {
      *         not known or applicable.
      */
     public native Size getNaturalSize() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.naturalSize;
 		var toReturn = @com.emitrom.ti4j.mobile.client.core.Size::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void setNaturalSize(Size value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.naturalSize = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.naturalSize = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
@@ -239,12 +239,12 @@ public class VideoPlayer extends EventDispatcher {
      *         downloaded network content.
      */
     public native double getPlayableDuration() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.playableDuration;
     }-*/;
 
     public native void setPlayableDuration(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.playableDuration = value;
     }-*/;
 
@@ -252,12 +252,12 @@ public class VideoPlayer extends EventDispatcher {
      * @return Returns the current playback state of the music player
      */
     public native int getPlaybackState() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.playbackState;
     }-*/;
 
     public native void setPlaybackState(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.playbackState = value;
     }-*/;
 
@@ -265,12 +265,12 @@ public class VideoPlayer extends EventDispatcher {
      * @return Boolean to indicate if the player has started playing.
      */
     public native boolean isPlaying() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.playing;
     }-*/;
 
     public native void setPlaying(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.playing = value;
     }-*/;
 
@@ -279,12 +279,12 @@ public class VideoPlayer extends EventDispatcher {
      *         playback.
      */
     public native int getRepeatMode() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.repeatMode;
     }-*/;
 
     public native void setRepeatMode(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.repeatMode = value;
     }-*/;
 
@@ -292,12 +292,12 @@ public class VideoPlayer extends EventDispatcher {
      * @return Determines how the content scales to fit the view.
      */
     public native int getScalingMode() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.scalingMode;
     }-*/;
 
     public native void setScalingMode(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.scalingMode = value;
     }-*/;
 
@@ -305,12 +305,12 @@ public class VideoPlayer extends EventDispatcher {
      * @return The playback type of the movie.
      */
     public native int getSourceType() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.sourceType;
     }-*/;
 
     public native void setSourceType(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.sourceType = value;
     }-*/;
 
@@ -318,12 +318,12 @@ public class VideoPlayer extends EventDispatcher {
      * @return Url of the media.
      */
     public native String getUrl() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.url;
     }-*/;
 
     public native void setUrl(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.url = value;
     }-*/;
 
@@ -335,12 +335,12 @@ public class VideoPlayer extends EventDispatcher {
      *         is stopped and started again.
      */
     public native boolean useApplicationAudioSession() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.useApplicationAudioSession;
     }-*/;
 
     public native void setUseApplicationAudioSession(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.useApplicationAudioSession = value;
     }-*/;
 
@@ -348,7 +348,7 @@ public class VideoPlayer extends EventDispatcher {
      * Cancels all pending asynchronous thumbnail requests.
      */
     public native void cancelAllThumbnailImageRequests() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.cancelAllThumbnailImageRequests();
     }-*/;
 
@@ -356,7 +356,7 @@ public class VideoPlayer extends EventDispatcher {
      * Pause playing the video. on ios only available under 3.2 and later
      */
     public native void pause() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.pause();
     }-*/;
 
@@ -364,7 +364,7 @@ public class VideoPlayer extends EventDispatcher {
      * Start playing the video
      */
     public native void play() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.play();
     }-*/;
 
@@ -374,7 +374,7 @@ public class VideoPlayer extends EventDispatcher {
      * is used to help converse memory.
      */
     public native void release() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.release();
     }-*/;
 
@@ -387,7 +387,7 @@ public class VideoPlayer extends EventDispatcher {
      * @param option .
      */
     public native void requestThumbnailImagesAtTimes(JsArrayNumber times, int option) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.requestThumbnailImagesAtTimes(times, option);
     }-*/;
 
@@ -397,16 +397,16 @@ public class VideoPlayer extends EventDispatcher {
      * @param view view to set
      */
     public native void setBackgroundView(HasWidgets view) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
-				.setBackgroundView(view.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.setBackgroundView(view.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
      * Stop playing the video
      */
     public native void stop() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.stop();
     }-*/;
 
@@ -417,14 +417,14 @@ public class VideoPlayer extends EventDispatcher {
      * @param option
      */
     public native Blob thumbnailImageAtTime(double time, int option) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.thumbnailImageAtTime(time, option);
 		var toReturn = @com.emitrom.ti4j.mobile.client.blob.Blob::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void addCompleteHandler(VideoCompleteHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.media.video.VideoEvent::COMPLETE,

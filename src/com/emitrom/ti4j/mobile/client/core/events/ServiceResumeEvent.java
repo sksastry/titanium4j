@@ -30,7 +30,7 @@ public class ServiceResumeEvent extends ResumeEvent {
      * @return
      */
     public final native int getIteration() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.iteration;
     }-*/;
 }

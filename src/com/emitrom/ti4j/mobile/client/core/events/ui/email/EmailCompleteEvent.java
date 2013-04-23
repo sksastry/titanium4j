@@ -38,7 +38,7 @@ public class EmailCompleteEvent extends TiEvent {
      * message. SAVED and CANCELLED are not supported on AndroidMedia.)
      */
     public final native int getResult() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.result;
     }-*/;
 
@@ -46,7 +46,7 @@ public class EmailCompleteEvent extends TiEvent {
      * boolean to indicate if the email was successfully sent
      */
     public final native boolean isSuccess() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.success;
     }-*/;
 
@@ -54,7 +54,7 @@ public class EmailCompleteEvent extends TiEvent {
      * string message of the error or null if successfully sent
      */
     public final native String getError() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.error;
     }-*/;
 

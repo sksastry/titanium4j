@@ -29,13 +29,13 @@ public class ChatResponse extends AbstractCloudResponse {
     }
 
     public native User getFrom()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var user = peer.from;
 		return @com.emitrom.ti4j.mobile.client.cloud.core.User::new(Lcom/google/gwt/core/client/JavaScriptObject;)(user);
     }-*/;
 
     public native ChatGroup getChatGroup()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var group = peer.chat_group;
 		return @com.emitrom.ti4j.mobile.client.cloud.chats.ChatGroup::new(Lcom/google/gwt/core/client/JavaScriptObject;)(group);
     }-*/;

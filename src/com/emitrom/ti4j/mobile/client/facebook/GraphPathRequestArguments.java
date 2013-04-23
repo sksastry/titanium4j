@@ -15,8 +15,8 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.facebook;
 
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.JsoHelper;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.google.gwt.core.client.JavaScriptObject;
 
 public class GraphPathRequestArguments extends ProxyObject {
@@ -30,12 +30,12 @@ public class GraphPathRequestArguments extends ProxyObject {
     }
 
     public native boolean isSuccess() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.success;
     }-*/;
 
     public native String getError() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.error;
     }-*/;
 
@@ -43,7 +43,7 @@ public class GraphPathRequestArguments extends ProxyObject {
      * @return The graph call path you specified
      */
     public native String getPath() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.path;
     }-*/;
 
@@ -51,7 +51,7 @@ public class GraphPathRequestArguments extends ProxyObject {
      * @return The data returned by facebook
      */
     public native String getResult() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.result;
     }-*/;
 

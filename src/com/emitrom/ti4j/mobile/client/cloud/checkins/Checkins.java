@@ -43,10 +43,10 @@ public class Checkins extends TiModule {
      * Check in to a place or event
      */
     public native void create(Checkin request, CloudCheckinsResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.create(
-						request.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						request.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.checkins.CloudCheckinsResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.checkins.CloudCheckinsResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/checkins/CloudCheckinsResponse;)(response);
@@ -58,10 +58,10 @@ public class Checkins extends TiModule {
      * 
      */
     public native void query(Query query, CloudCheckinsResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.query(
-						query.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						query.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.chats.CloudChatsResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.chats.CloudChatsResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/chats/CloudChatsResponse;)(response);
@@ -74,10 +74,10 @@ public class Checkins extends TiModule {
      * Note that the checkin id must be set through setCheckinIds
      */
     public native void remove(Checkin request, CloudCheckinsResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.remove(
-						request.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						request.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.checkins.CloudCheckinsResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.checkins.CloudCheckinsResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/checkins/CloudCheckinsResponse;)(response);
@@ -90,10 +90,10 @@ public class Checkins extends TiModule {
      * Note that the checkin id must be set through setCheckinIds
      */
     public native void show(Checkin request, CloudCheckinsResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.show(
-						request.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						request.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.checkins.CloudCheckinsResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.checkins.CloudCheckinsResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/checkins/CloudCheckinsResponse;)(response);

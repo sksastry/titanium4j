@@ -48,7 +48,7 @@ public class CloudStreamProgressEvent extends TiEvent {
      * @return
      */
     public native double getProgress()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return peer.progress;
     }-*/;
 
@@ -58,7 +58,7 @@ public class CloudStreamProgressEvent extends TiEvent {
      * @return
      */
     public native String getUrl()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return peer.url;
     }-*/;
 

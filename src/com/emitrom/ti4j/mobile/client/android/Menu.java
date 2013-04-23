@@ -1,23 +1,22 @@
 /**************************************************************************
-   Menu.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+ * Menu.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.android;
 
 import java.util.ArrayList;
 
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
 import com.emitrom.ti4j.mobile.client.core.events.EventDispatcher;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
@@ -27,11 +26,7 @@ import com.google.gwt.core.client.JsArray;
  */
 public class Menu extends EventDispatcher {
 
-    public Menu() {
-        jsObj = JsoHelper.createObject();
-    }
-
-    public Menu(JavaScriptObject obj) {
+    protected Menu(JavaScriptObject obj) {
         jsObj = obj;
 
     }
@@ -39,30 +34,34 @@ public class Menu extends EventDispatcher {
     /**
      * creates a Titanium.Android.MenuItem from the passed creation options.
      * 
-     * @param config , creation option
+     * @param config
+     *            , creation option
      * @return
      */
     public native MenuItem add(MenuItemConfig config) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		return this
-				.add(config.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var obj = jso
+				.add(config.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
+		return @com.emitrom.ti4j.mobile.client.android.MenuItem::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
 
     /**
      * creates a Titanium.Android.MenuItem from the passed creation options.
      * 
-     * @param itemTitle , title of the menuItem,
-     * @param id , the id of the menuItem
+     * @param itemTitle
+     *            , title of the menuItem,
+     * @param id
+     *            , the id of the menuItem
      * 
      * @return Titanium.Android.MenuItem
      */
     public native MenuItem add(String itemTitle, int id) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var menuItem = jso.add({
 			title : itemTitle,
 			itemId : id
 		});
-		var toReturn = @com.emitrom.ti4j.mobile.client.android.Menu::new(Lcom/google/gwt/core/client/JavaScriptObject;)(menuItem);
+		var toReturn = @com.emitrom.ti4j.mobile.client.android.MenuItem::new(Lcom/google/gwt/core/client/JavaScriptObject;)(menuItem);
 		return toReturn;
     }-*/;
 
@@ -71,7 +70,7 @@ public class Menu extends EventDispatcher {
      * retained to Titanium.Android.MenuItem previously created.
      */
     public native void clear() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.clear();
     }-*/;
 
@@ -79,7 +78,7 @@ public class Menu extends EventDispatcher {
      * close the menu if visible
      */
     public native void close() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.close();
     }-*/;
 
@@ -90,7 +89,7 @@ public class Menu extends EventDispatcher {
      * @return
      */
     public native MenuItem findItem(int item) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.findItem(item);
 		var toReturn = @com.emitrom.ti4j.mobile.client.android.MenuItem::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -107,7 +106,7 @@ public class Menu extends EventDispatcher {
     }
 
     private native MenuItem findItem(JavaScriptObject item) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.findItem(item);
 		var toReturn = @com.emitrom.ti4j.mobile.client.android.MenuItem::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -116,11 +115,12 @@ public class Menu extends EventDispatcher {
     /**
      * Return the Titanium.Android.MenuItem at a specific index
      * 
-     * @param index , item at index where index < size()
+     * @param index
+     *            , item at index where index < size()
      * @return
      */
     public native MenuItem getItem(int index) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.getItem(index);
     }-*/;
 
@@ -130,49 +130,55 @@ public class Menu extends EventDispatcher {
      * @return
      */
     public native boolean hasVisibleItems() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.hasVisibleItems();
     }-*/;
 
     /**
      * Remove all Titanium.Android.MenuItem with the specified groupId
      * 
-     * @param groupId , groupId of items to remove.
+     * @param groupId
+     *            , groupId of items to remove.
      */
     public native void removeGroup(int groupId) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.removeGroup(groupId);
     }-*/;
 
     /**
      * Remove a specific Titanium.Android.MenuItem by the specified itemId
      * 
-     * @param itemId , itemId of item to remove.
+     * @param itemId
+     *            , itemId of item to remove.
      */
     public native void removeItem(int itemId) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.removeItem(itemId);
     }-*/;
 
     /**
      * enable or disable a group of Titanium.Android.MenuItem by groupId
      * 
-     * @param groupId , groupId to enable or disable
-     * @param enabled , true to enable, false to disable.
+     * @param groupId
+     *            , groupId to enable or disable
+     * @param enabled
+     *            , true to enable, false to disable.
      */
     public native void setGroupEnabled(int groupId, boolean enabled) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.setGroupEnabled(groupId, enabled);
     }-*/;
 
     /**
      * show or hide a group of Titanium.Android.MenuItem by groupId
      * 
-     * @param groupId , groupId to enable or disable
-     * @param enabled , true to enable, false to disable.
+     * @param groupId
+     *            , groupId to enable or disable
+     * @param enabled
+     *            , true to enable, false to disable.
      */
     public native void setGroupVisible(int groupId, boolean enabled) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.setGroupVisible(groupId, enabled);
     }-*/;
 
@@ -182,7 +188,7 @@ public class Menu extends EventDispatcher {
      * @return
      */
     public native int size() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.size();
     }-*/;
 
@@ -196,7 +202,7 @@ public class Menu extends EventDispatcher {
     }
 
     private native JsArray<JavaScriptObject> _getItems() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.items;
     }-*/;
 
@@ -209,7 +215,7 @@ public class Menu extends EventDispatcher {
     }
 
     private native void _setItems(JsArray<JavaScriptObject> value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.items = value;
     }-*/;
 

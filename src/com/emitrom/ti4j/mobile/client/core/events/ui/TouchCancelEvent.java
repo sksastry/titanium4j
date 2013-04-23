@@ -28,12 +28,12 @@ public class TouchCancelEvent extends InteractionEvent {
 	}
 	
 	public native boolean bubbles() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.bubbles;
 	}-*/;
 	
 	public native boolean bubbleCanceled() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.cancelBubble;
 	}-*/;
 

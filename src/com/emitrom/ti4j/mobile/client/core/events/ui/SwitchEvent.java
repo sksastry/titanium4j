@@ -48,7 +48,7 @@ public class SwitchEvent extends UIEvent {
      * the index of the image that is now visible
      */
     public native boolean getValue() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.value;
     }-*/;
 

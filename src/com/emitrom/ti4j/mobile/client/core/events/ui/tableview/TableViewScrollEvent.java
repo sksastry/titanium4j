@@ -38,7 +38,7 @@ public class TableViewScrollEvent extends UIEvent {
      * the row index of the topmost visible row in the view (AndroidMedia only)
      */
     public final native int getFirstVisibleItem() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.firstVisibleItem;
     }-*/;
 
@@ -46,7 +46,7 @@ public class TableViewScrollEvent extends UIEvent {
      * the number of rows currently visible in the view (AndroidMedia only)
      */
     public final native int getVisibleItemCount() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.visibleItemCount;
     }-*/;
 
@@ -55,7 +55,7 @@ public class TableViewScrollEvent extends UIEvent {
      * only)
      */
     public final native Point getContentOffset() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.contentOffset;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.Point::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -65,7 +65,7 @@ public class TableViewScrollEvent extends UIEvent {
      * the total number of rows in the view (AndroidMedia only)
      */
     public final native int getTotalItemCount() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.totalItemCount;
     }-*/;
 
@@ -75,7 +75,7 @@ public class TableViewScrollEvent extends UIEvent {
      * only)
      */
     public final native Size getContentSize() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.contentSize;
 		var toReturn = @com.emitrom.ti4j.mobile.client.core.Size::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -86,7 +86,7 @@ public class TableViewScrollEvent extends UIEvent {
      * visible table view
      */
     public final native Size getSize() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.size;
 		var toReturn = @com.emitrom.ti4j.mobile.client.core.Size::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

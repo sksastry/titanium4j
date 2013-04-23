@@ -16,7 +16,7 @@
 package com.emitrom.ti4j.mobile.client.cloud.chats;
 
 import com.emitrom.ti4j.mobile.client.cloud.core.AbstractCloudObject;
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
+import com.emitrom.ti4j.core.client.JsoHelper;
 import com.google.gwt.core.client.JsArrayString;
 
 /**
@@ -56,7 +56,7 @@ public class ChatMessage extends AbstractCloudObject {
      * @param ids
      */
     public native void setToIds(String ids)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.to_ids = ids;
     }-*/;
 
@@ -68,7 +68,7 @@ public class ChatMessage extends AbstractCloudObject {
      * @param ids
      */
     public native void setChatGroupId(String id)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.chat_group_id = id;
     }-*/;
 

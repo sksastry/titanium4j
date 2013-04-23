@@ -18,7 +18,7 @@ package com.emitrom.ti4j.mobile.client.core.events;
 
 import java.util.ArrayList;
 
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
+import com.emitrom.ti4j.core.client.JsoHelper;
 import com.emitrom.ti4j.mobile.client.network.BonjourService;
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -48,7 +48,7 @@ public class UpdatedServicesEvent extends TiEvent {
     }
 
     public native JavaScriptObject _getServices() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.services;
     }-*/;
 

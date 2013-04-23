@@ -16,6 +16,7 @@
 package com.emitrom.ti4j.mobile.client.core.events.geolocation;
 
 import com.emitrom.ti4j.mobile.client.core.events.TiEvent;
+import com.emitrom.ti4j.mobile.client.core.handlers.geolocation.GeolocationHandler;
 import com.emitrom.ti4j.mobile.client.geolocation.Coordinates;
 import com.emitrom.ti4j.mobile.client.geolocation.android.LocationProvider;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -50,7 +51,7 @@ public class LocationEvent extends TiEvent {
      * if success is false, the error code if available (iOS only)
      */
     public final native double getCode() /*-{
-		var jso = jso.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.code;
     }-*/;
 
@@ -59,7 +60,7 @@ public class LocationEvent extends TiEvent {
      * error occurred
      */
     public final native boolean isSuccess() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.success;
     }-*/;
 
@@ -68,7 +69,7 @@ public class LocationEvent extends TiEvent {
      * sub-properties: `name`, `accuracy`, `power`, and `provider`.
      */
     public final native LocationProvider getProvider() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		var obj = jso.provider;
 		var toReturn = @com.emitrom.ti4j.mobile.client.geolocation.android.LocationProvider::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -80,7 +81,7 @@ public class LocationEvent extends TiEvent {
      * `heading`, `speed`, `timestamp`.
      */
     public final native Coordinates getCoords() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		var obj = jso.coords;
 		var toReturn = @com.emitrom.ti4j.mobile.client.geolocation.Coordinates::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -90,7 +91,7 @@ public class LocationEvent extends TiEvent {
      * if success is false, returns a string of the error description
      */
     public final native String getError() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.error;
     }-*/;
 

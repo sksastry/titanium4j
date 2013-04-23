@@ -33,7 +33,7 @@ public class ErrorEvent extends TiEvent {
      * error message
      */
     public native String getMessage() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.message;
     }-*/;
 

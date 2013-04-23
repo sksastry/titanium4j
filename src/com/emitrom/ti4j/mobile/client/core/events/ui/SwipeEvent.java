@@ -33,12 +33,12 @@ public class SwipeEvent extends InteractionEvent {
 	}
 	
 	public final native double getX() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.x;
 	}-*/;
 	
 	public final native double getY() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.y;
 	}-*/;
 	
@@ -47,7 +47,7 @@ public class SwipeEvent extends InteractionEvent {
 	}
 	
 	public final native String _getDirection() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.direction;
 	}-*/;
 	
@@ -57,12 +57,12 @@ public class SwipeEvent extends InteractionEvent {
 	}
 
 	public native boolean bubbles() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.bubbles;
 	}-*/;
 	
 	public native boolean bubbleCanceled() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.cancelBubble;
 	}-*/;
 

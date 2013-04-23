@@ -17,8 +17,8 @@ package com.emitrom.ti4j.mobile.client.stream;
 
 import com.emitrom.ti4j.mobile.client.blob.Blob;
 import com.emitrom.ti4j.mobile.client.buffer.Buffer;
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.JsoHelper;
+import com.emitrom.ti4j.core.client.ProxyObject;
 
 public class StreamConfig extends ProxyObject {
 
@@ -27,20 +27,20 @@ public class StreamConfig extends ProxyObject {
 	}
 
 	public native void setSource(Blob value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.source = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.source = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 	}-*/;
 
 	public native void setSource(Buffer value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.source = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.source = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 	}-*/;
 
 	/**
 	 * @return Object to create stream around
 	 */
 	public native Buffer getSource() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.source;
 		var toReturn = @com.emitrom.ti4j.mobile.client.buffer.Buffer::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -53,12 +53,12 @@ public class StreamConfig extends ProxyObject {
 	 *         com.emitrom.ti4j.mobile.client.stream.STEAM.MODE_APPEND
 	 */
 	public native int getMode() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.mode;
 	}-*/;
 
 	public native void setMode(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.mode = value;
 	}-*/;
 

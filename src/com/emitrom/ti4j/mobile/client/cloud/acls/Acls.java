@@ -38,10 +38,10 @@ public class Acls extends TiModule {
      * Adds one user to an ACL object.Requires user login.
      */
     public native void addUser(AclsEntity entry, AclsResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.addUser(
-						entry.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						entry.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.acls.AclsResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.acls.AclsResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/acls/AclsResponse;)(response);
@@ -52,10 +52,10 @@ public class Acls extends TiModule {
      * Checks a user's permission in an ACL object. Requires user login.
      */
     public native void checkUser(AclsEntity entry, AclsResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.checkUser(
-						entry.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						entry.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.acls.AclsResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.acls.AclsResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/acls/AclsResponse;)(response);
@@ -68,10 +68,10 @@ public class Acls extends TiModule {
      * Requires user login.
      */
     public native void create(AclsEntity entry, AclsResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.create(
-						entry.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						entry.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.acls.AclsResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.acls.AclsResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/acls/AclsResponse;)(response);
@@ -84,10 +84,10 @@ public class Acls extends TiModule {
      * Requires user login.
      */
     public native void remove(AclsEntity entry, AclsResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.remove(
-						entry.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						entry.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.acls.AclsResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.acls.AclsResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/acls/AclsResponse;)(response);
@@ -100,10 +100,10 @@ public class Acls extends TiModule {
      * Requires user login.
      */
     public native void removeUser(AclsEntity entry, AclsResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.removeUser(
-						entry.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						entry.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.acls.AclsResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.acls.AclsResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/acls/AclsResponse;)(response);
@@ -116,10 +116,10 @@ public class Acls extends TiModule {
      * Requires user login.
      */
     public native void show(AclsEntity entry, AclsResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.show(
-						entry.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						entry.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.acls.AclsResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.acls.AclsResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/acls/AclsResponse;)(response);
@@ -132,10 +132,10 @@ public class Acls extends TiModule {
      * Requires user login.
      */
     public native void update(AclsEntity entry, AclsResponseHandler handler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer
 				.update(
-						entry.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						entry.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						function(e) {
 							var response = @com.emitrom.ti4j.mobile.client.cloud.acls.AclsResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 							handler.@com.emitrom.ti4j.mobile.client.cloud.acls.AclsResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/client/cloud/acls/AclsResponse;)(response);

@@ -37,7 +37,7 @@ public class SliderEvent extends UIEvent {
      * the new value of the slider
      */
     public final native String getValue() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.value;
     }-*/;
 
@@ -46,7 +46,7 @@ public class SliderEvent extends UIEvent {
      * Available with custom thumb image. (AndroidMedia)
      */
     public final native Size getThumbSize() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		var obj = jso.thumbSize;
 		var toReturn = @com.emitrom.ti4j.mobile.client.core.Size::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -57,7 +57,7 @@ public class SliderEvent extends UIEvent {
      * control Available with custom thumb image. (AndroidMedia)
      */
     public final native Point getThumbOffset() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		var obj = jso.thumbOffset;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.Point::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

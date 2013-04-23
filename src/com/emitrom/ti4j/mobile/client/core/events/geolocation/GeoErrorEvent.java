@@ -48,7 +48,7 @@ public class GeoErrorEvent extends ErrorEvent {
      * the y point of the event, in receiving view coordinates
      */
     public native double getY() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.y;
     }-*/;
 
@@ -57,7 +57,7 @@ public class GeoErrorEvent extends ErrorEvent {
      * screen coordinates
      */
     public native Point getGlobalPoint() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		var obj = jso.globalPoint;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.Point::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -67,7 +67,7 @@ public class GeoErrorEvent extends ErrorEvent {
      * the x point of the event in receiving view coordiantes
      */
     public native double getX() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.x;
     }-*/;
 

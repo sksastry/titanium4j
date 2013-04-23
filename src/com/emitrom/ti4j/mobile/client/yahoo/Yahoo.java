@@ -45,7 +45,7 @@ public class Yahoo extends TiModule {
 	}
 
 	private native void yql(String yql, JavaScriptObject callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.yql(yql, callback);
 	}-*/;
 

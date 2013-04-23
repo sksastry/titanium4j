@@ -29,7 +29,7 @@ public class BatteryEvent extends TiEvent {
      * the new battery state
      */
     public final native int getState() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.state;
     }-*/;
 
@@ -37,7 +37,7 @@ public class BatteryEvent extends TiEvent {
      * the new battery level
      */
     public final native int getLevel() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.level;
     }-*/;
 

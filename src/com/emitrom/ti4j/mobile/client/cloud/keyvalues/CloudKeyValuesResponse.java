@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.emitrom.ti4j.mobile.client.cloud.core.AbstractCloudResponse;
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
+import com.emitrom.ti4j.core.client.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
 
 public class CloudKeyValuesResponse extends AbstractCloudResponse {
@@ -48,7 +48,7 @@ public class CloudKeyValuesResponse extends AbstractCloudResponse {
      Array of chat response objects, if any
      */
     private native JavaScriptObject _getKeyValues()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return peer.keyvalues;
     }-*/;
 

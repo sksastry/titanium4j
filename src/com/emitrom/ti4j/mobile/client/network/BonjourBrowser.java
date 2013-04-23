@@ -50,12 +50,12 @@ public class BonjourBrowser extends EventDispatcher {
      * @return The domain the browser is searching in
      */
     public native String getDomain() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.domain;
     }-*/;
 
     public native void setDomain(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.domain = value;
     }-*/;
 
@@ -63,12 +63,12 @@ public class BonjourBrowser extends EventDispatcher {
      * @return Whether or not the browser is currently searching
      */
     public native boolean getIsSearching() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.isSearching;
     }-*/;
 
     public native void setIsSearching(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.isSearching = value;
     }-*/;
 
@@ -76,12 +76,12 @@ public class BonjourBrowser extends EventDispatcher {
      * @return The type of the service the browser searches for
      */
     public native String getServiceType() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.serviceType;
     }-*/;
 
     public native void setServiceType(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.serviceType = value;
     }-*/;
 
@@ -90,7 +90,7 @@ public class BonjourBrowser extends EventDispatcher {
      * specified during creation
      */
     public native void search() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.search();
     }-*/;
 
@@ -98,7 +98,7 @@ public class BonjourBrowser extends EventDispatcher {
      * Halt an ongoing search
      */
     public native void stopSearch() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.stopSearch();
     }-*/;
 

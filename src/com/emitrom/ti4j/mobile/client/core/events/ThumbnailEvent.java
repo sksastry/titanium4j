@@ -31,7 +31,7 @@ public class ThumbnailEvent extends TiEvent {
      * boolean to indicate success or failure
      */
     public final native boolean isSuccess() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.success;
     }-*/;
 
@@ -39,7 +39,7 @@ public class ThumbnailEvent extends TiEvent {
      * blob of the thumbnail image
      */
     public final native Blob getImage() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		var obj = jso.image;
 		var toReturn = @com.emitrom.ti4j.mobile.client.blob.Blob::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -49,7 +49,7 @@ public class ThumbnailEvent extends TiEvent {
      * time
      */
     public final native double getTime() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.time;
     }-*/;
 
@@ -57,7 +57,7 @@ public class ThumbnailEvent extends TiEvent {
      * if success is 'false', error message as string for reason
      */
     public final native String getError() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.error;
     }-*/;
 
@@ -65,7 +65,7 @@ public class ThumbnailEvent extends TiEvent {
      * the y point of the event, in receiving view coordinates
      */
     public final native double getY() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.y;
     }-*/;
 
@@ -73,7 +73,7 @@ public class ThumbnailEvent extends TiEvent {
      * the x point of the event in receiving view coordiantes
      */
     public final native double getX() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		return jso.x;
     }-*/;
 
@@ -82,7 +82,7 @@ public class ThumbnailEvent extends TiEvent {
      * screen coordinates
      */
     public final native Point getGlobalPoint() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()()
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		var obj = jso.globalPoint;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.Point::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;

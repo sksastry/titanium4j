@@ -18,7 +18,7 @@ package com.emitrom.ti4j.mobile.client.ui;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.ScrollableViewScrollHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
@@ -47,12 +47,12 @@ public class ScrollableView extends View {
      *         to faster performance, but more memory usage. ios only.
      */
     public native int getCacheSize() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.cacheSize;
     }-*/;
 
     public native void setCacheSize(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.cacheSize = value;
     }-*/;
 
@@ -60,12 +60,12 @@ public class ScrollableView extends View {
      * @return The current page visible in the view
      */
     public native int getCurrentPage() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.currentPage;
     }-*/;
 
     public native void setCurrentPage(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.currentPage = value;
     }-*/;
 
@@ -73,12 +73,12 @@ public class ScrollableView extends View {
      * @return Disable view bouncing. ios only. Available on iOs only
      */
     public native boolean disableBounce() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.disableBounce;
     }-*/;
 
     public native void setDisableBounce(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.disableBounce = value;
     }-*/;
 
@@ -86,12 +86,12 @@ public class ScrollableView extends View {
      * @return The maximum zoom scale for the view Available on iOs only
      */
     public native double getMaxZoomScale() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.maxZoomScale;
     }-*/;
 
     public native void setMaxZoomScale(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.maxZoomScale = value;
     }-*/;
 
@@ -99,12 +99,12 @@ public class ScrollableView extends View {
      * @return The minimum zoom scale for the view Available on iOs only
      */
     public native double getMinZoomScale() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.minZoomScale;
     }-*/;
 
     public native void setMinZoomScale(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.minZoomScale = value;
     }-*/;
 
@@ -112,12 +112,12 @@ public class ScrollableView extends View {
      * @return The color of the paging control. defaults to black.
      */
     public native String getPagingControlColor() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.pagingControlColor;
     }-*/;
 
     public native void setPagingControlColor(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.pagingControlColor = value;
     }-*/;
 
@@ -126,12 +126,12 @@ public class ScrollableView extends View {
      *         to 20
      */
     public native double getPagingControlHeight() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.pagingControlHeight;
     }-*/;
 
     public native void setPagingControlHeight(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.pagingControlHeight = value;
     }-*/;
 
@@ -139,12 +139,12 @@ public class ScrollableView extends View {
      * @return Boolean to indicate whether the paging control ui is visible
      */
     public native boolean showPagingControl() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.showPagingControl;
     }-*/;
 
     public native void setShowPagingControl(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.showPagingControl = value;
     }-*/;
 
@@ -161,7 +161,7 @@ public class ScrollableView extends View {
     }
 
     private native JsArray<JavaScriptObject> _getViews() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.views;
     }-*/;
 
@@ -182,7 +182,7 @@ public class ScrollableView extends View {
     }
 
     private native void _setViews(JavaScriptObject value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.views = value;
     }-*/;
 
@@ -193,9 +193,9 @@ public class ScrollableView extends View {
      *            the view to add
      */
     public native void addView(View view) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.addView(view.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.addView(view.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -205,9 +205,9 @@ public class ScrollableView extends View {
      *            the view to remove
      */
     public native void removeView(View view) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.removeView(view.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.removeView(view.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -218,13 +218,13 @@ public class ScrollableView extends View {
      *            as the currentPage
      */
     public native void scrollToView(View view) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.scrollToView(view.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.scrollToView(view.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     public native void addScrollHandler(ScrollableViewScrollHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.scrollview.ScrollableViewEvent::SCROLL,

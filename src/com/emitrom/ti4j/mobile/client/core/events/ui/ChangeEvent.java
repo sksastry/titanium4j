@@ -49,7 +49,7 @@ public class ChangeEvent extends UIEvent {
      * the index of the image that is now visible
      */
     public native int getIndex() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.index;
     }-*/;
 
@@ -57,7 +57,7 @@ public class ChangeEvent extends UIEvent {
      * the previous index of the image that was visible
      */
     public native int getPrevious() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.previous;
     }-*/;
 

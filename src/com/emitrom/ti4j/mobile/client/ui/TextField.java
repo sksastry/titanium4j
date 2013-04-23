@@ -17,7 +17,7 @@ package com.emitrom.ti4j.mobile.client.ui;
 
 import java.util.ArrayList;
 
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.Unit;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.TextHandler;
 import com.emitrom.ti4j.mobile.client.ui.style.Font;
@@ -62,12 +62,12 @@ public class TextField extends View implements HasText {
      * 
      */
     public native int getAutocapitalization() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.autocapitalization;
     }-*/;
 
     public native void setAutocapitalization(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.autocapitalization = value;
     }-*/;
 
@@ -75,12 +75,12 @@ public class TextField extends View implements HasText {
      * @return The border style constant for the field
      */
     public native int getBorderStyle() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.borderStyle;
     }-*/;
 
     public native void setBorderStyle(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.borderStyle = value;
     }-*/;
 
@@ -88,12 +88,12 @@ public class TextField extends View implements HasText {
      * @return The mode constant for how to handle displaying the clear button
      */
     public native int getClearButtonMode() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.clearButtonMode;
     }-*/;
 
     public native void setClearButtonMode(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.clearButtonMode = value;
     }-*/;
 
@@ -102,12 +102,12 @@ public class TextField extends View implements HasText {
      *         editing
      */
     public native boolean clearOnEdit() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.clearOnEdit;
     }-*/;
 
     public native void setClearOnEdit(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.clearOnEdit = value;
     }-*/;
 
@@ -115,12 +115,12 @@ public class TextField extends View implements HasText {
      * @return Boolean indicating if the field is editable
      */
     public native boolean isEditable() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.editable;
     }-*/;
 
     public native void setEditable(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.editable = value;
     }-*/;
 
@@ -128,12 +128,12 @@ public class TextField extends View implements HasText {
      * @return Boolean indicating the enabled state of the field
      */
     public native boolean isEnabled() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.enabled;
     }-*/;
 
     public native void setEnabled(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.enabled = value;
     }-*/;
 
@@ -141,12 +141,12 @@ public class TextField extends View implements HasText {
      * @return The hint text to display when the field is unfocused
      */
     public native String getHintText() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.hintText;
     }-*/;
 
     public native void setHintText(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.hintText = value;
     }-*/;
 
@@ -164,7 +164,7 @@ public class TextField extends View implements HasText {
     }
 
     private native JsArray<JavaScriptObject> _getKeyboardToolbar() /*-{
-		var jso = jso.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.keyboardToolbar;
     }-*/;
 
@@ -185,7 +185,7 @@ public class TextField extends View implements HasText {
     }
 
     private native void _setKeyboardToolbar(JsArray<JavaScriptObject> value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.keyboardToolbar = value;
     }-*/;
 
@@ -193,12 +193,12 @@ public class TextField extends View implements HasText {
      * @return The color of the keyboard toolbar
      */
     public native String getKeyboardToolbarColor() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.keyboardToolbarColor;
     }-*/;
 
     public native void setKeyboardToolbarColor(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.keyboardToolbarColor = value;
     }-*/;
 
@@ -206,12 +206,12 @@ public class TextField extends View implements HasText {
      * @return The height of the keyboard toolbar
      */
     public native double getKeyboardToolbarHeight() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.keyboardToolbarHeight;
     }-*/;
 
     public native void setKeyboardToolbarHeight(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.keyboardToolbarHeight = value;
     }-*/;
 
@@ -219,27 +219,27 @@ public class TextField extends View implements HasText {
      * @return The left button view
      */
     public native Button getLeftButton() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.leftButton;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.Button::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void setLeftButton(Button value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.leftButton = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.leftButton = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
      * @return The mode of the left button view
      */
     public native int getLeftButtonMode() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.leftButtonMode;
     }-*/;
 
     public native void setLeftButtonMode(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.leftButtonMode = value;
     }-*/;
 
@@ -248,12 +248,12 @@ public class TextField extends View implements HasText {
      *         the field
      */
     public native double getLeftButtonPadding() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.leftButtonPadding;
     }-*/;
 
     public native void setLeftButtonPadding(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.leftButtonPadding = value;
     }-*/;
 
@@ -262,12 +262,12 @@ public class TextField extends View implements HasText {
      *         contents. enables font scaling to fit
      */
     public native int getMinimumFontSize() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.minimumFontSize;
     }-*/;
 
     public native void setMinimumFontSize(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.minimumFontSize = value;
     }-*/;
 
@@ -275,7 +275,7 @@ public class TextField extends View implements HasText {
      * @return The left padding of the text field
      */
     public native <T> T getPaddingLeft() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.paddingLeft;
     }-*/;
 
@@ -315,7 +315,7 @@ public class TextField extends View implements HasText {
      * @return The right padding of the text field
      */
     public native <T> T getPaddingRight() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.paddingRight;
     }-*/;
 
@@ -430,25 +430,25 @@ public class TextField extends View implements HasText {
      * @return The right button view
      */
     public native Button getRightButton() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.rightButton;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.Button::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void setRightButton(Button value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.rightButton = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.rightButton = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     public native void setSoftKeyboardOnFocus(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.softKeyboardOnFocus = value;
     }-*/;
 
     public native void setTextAlign(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.textAlign = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.textAlign = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     public void setTextAlign(Position position) {
@@ -456,20 +456,20 @@ public class TextField extends View implements HasText {
     }
 
     public native void setFont(Font value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.font = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.font = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
      * @return The mode of the right button view
      */
     public native int getRightButtonMode() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.rightButtonMode;
     }-*/;
 
     public native void setRightButtonMode(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.rightButtonMode = value;
     }-*/;
 
@@ -478,12 +478,12 @@ public class TextField extends View implements HasText {
      *         the field
      */
     public native double getRightButtonPadding() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.rightButtonPadding;
     }-*/;
 
     public native void setRightButtonPadding(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.rightButtonPadding = value;
     }-*/;
 
@@ -492,12 +492,12 @@ public class TextField extends View implements HasText {
      *         entry
      */
     public native boolean suppressReturn() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.suppressReturn;
     }-*/;
 
     public native void setSuppressReturn(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.suppressReturn = value;
     }-*/;
 
@@ -505,12 +505,12 @@ public class TextField extends View implements HasText {
      * @return Value of the field
      */
     public native String getValue() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.value;
     }-*/;
 
     public native void setValue(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.value = value;
     }-*/;
 
@@ -521,7 +521,7 @@ public class TextField extends View implements HasText {
      *            , value of the keyboard type
      */
     public native void setKeyboardType(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.keyboardType = value;
     }-*/;
 
@@ -530,7 +530,7 @@ public class TextField extends View implements HasText {
      * @return the value of the keyboard type
      */
     public native int getKeyboardType() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.keyboardType;
     }-*/;
 
@@ -541,7 +541,7 @@ public class TextField extends View implements HasText {
      *            , value of the returnkey type
      */
     public native void setReturnKeyType(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.returnKeyType = value;
     }-*/;
 
@@ -550,7 +550,7 @@ public class TextField extends View implements HasText {
      * @return the value of the appearance
      */
     public native int getAppearance() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.appearance;
     }-*/;
 
@@ -561,7 +561,7 @@ public class TextField extends View implements HasText {
      *            , value of the returnkey type
      */
     public native void setAppearance(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.appearance = value;
     }-*/;
 
@@ -571,7 +571,7 @@ public class TextField extends View implements HasText {
      * @param value
      */
     public native void setEnableReturnKey(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.enableReturnKey = value;
     }-*/;
 
@@ -581,7 +581,7 @@ public class TextField extends View implements HasText {
      * @param value
      */
     public native boolean enableReturnKey() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.enableReturnKey;
     }-*/;
 
@@ -590,7 +590,7 @@ public class TextField extends View implements HasText {
      * @return the value of the returnkey type
      */
     public native int getReturnKeyType() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.returnKeyType;
     }-*/;
 
@@ -627,7 +627,7 @@ public class TextField extends View implements HasText {
      * @return The constant or string value for the fields vertical alignment.
      */
     public native <T> T getVerticalAlign() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.verticalAlign;
     }-*/;
 
@@ -635,7 +635,7 @@ public class TextField extends View implements HasText {
      * Force the field to lose focus
      */
     public native void blur() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.blur();
     }-*/;
 
@@ -643,7 +643,7 @@ public class TextField extends View implements HasText {
      * Force the field to gain focus
      */
     public native void focus() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.focus();
     }-*/;
 
@@ -651,12 +651,12 @@ public class TextField extends View implements HasText {
      * Return boolean (true) if the field has text
      */
     public native void hasText() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.hasText();
     }-*/;
 
     public native void addBlurHandler(TextHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.text.TextEvent::BLUR,
@@ -667,7 +667,7 @@ public class TextField extends View implements HasText {
     }-*/;
 
     public native void addChangeHandler(TextHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.text.TextEvent::CHANGE,
@@ -678,7 +678,7 @@ public class TextField extends View implements HasText {
     }-*/;
 
     public native void addFocusHandler(TextHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.text.TextEvent::FOCUS,
@@ -689,7 +689,7 @@ public class TextField extends View implements HasText {
     }-*/;
 
     public native void addReturnHandler(TextHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.text.TextEvent::RETURN,
@@ -704,7 +704,7 @@ public class TextField extends View implements HasText {
      * @param masked		True if the text should be masked
      */
     public native void setPasswordMask(boolean masked) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.passwordMask = masked;
     }-*/;
     
@@ -713,7 +713,7 @@ public class TextField extends View implements HasText {
      * @return				True if the text is masked.
      */
     public native boolean getPasswordMask() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return (jso.passwordMask ? jso.passwordMask : false);
     }-*/;
     

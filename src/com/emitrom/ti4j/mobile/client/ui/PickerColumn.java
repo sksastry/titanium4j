@@ -17,7 +17,7 @@ package com.emitrom.ti4j.mobile.client.ui;
 
 import java.util.ArrayList;
 
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 
@@ -38,7 +38,7 @@ public class PickerColumn extends View {
      * @return Number of rows in the column (readonly)
      */
     public native int getRowCount() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.rowCount;
     }-*/;
 
@@ -64,9 +64,9 @@ public class PickerColumn extends View {
      * @param row The row to add.
      */
     public native void addRow(PickerRow row) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
-				.addRow(row.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.addRow(row.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -75,9 +75,9 @@ public class PickerColumn extends View {
      * @param row The row to remove.
      */
     public native void removeRow(PickerRow row) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
-				.removeRow(row.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.removeRow(row.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     @Override

@@ -15,8 +15,8 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.geolocation.android;
 
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.JsoHelper;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
@@ -38,7 +38,7 @@ public class LocationProvider extends ProxyObject {
      * minUpdateDistance meters since the previous update.
      */
     public native double getMinUpdateDistance() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.minUpdateDistance;
     }-*/;
 
@@ -48,7 +48,7 @@ public class LocationProvider extends ProxyObject {
      * 
      */
     public native double getMinUpdateTime() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.minUpdateTime;
     }-*/;
 
@@ -57,7 +57,7 @@ public class LocationProvider extends ProxyObject {
      * PROVIDER_PASSIVE.
      */
     public native String getName() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.name;
     }-*/;
 
@@ -65,7 +65,7 @@ public class LocationProvider extends ProxyObject {
      * Sets the value of the minUpdateDistance property.
      */
     public native void setMinUpdateDistance(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.minUpdateDistance = value;
     }-*/;
 
@@ -73,7 +73,7 @@ public class LocationProvider extends ProxyObject {
      * Sets the value of the minUpdateTime property.
      */
     public native void setMinUpdateTime(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.minUpdateTime = value;
     }-*/;
 
@@ -81,7 +81,7 @@ public class LocationProvider extends ProxyObject {
      * Sets the value of the name property.
      */
     public native void setName(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.name = value;
     }-*/;
 }

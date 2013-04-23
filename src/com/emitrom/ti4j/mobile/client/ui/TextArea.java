@@ -17,7 +17,7 @@ package com.emitrom.ti4j.mobile.client.ui;
 
 import java.util.ArrayList;
 
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.Unit;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.TextHandler;
 import com.emitrom.ti4j.mobile.client.ui.style.Font;
@@ -47,12 +47,12 @@ public class TextArea extends View {
      *         links. iOs only.
      */
     public native int getAutoLink() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.autoLink;
     }-*/;
 
     public native void setAutoLink(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.autoLink = value;
     }-*/;
 
@@ -60,7 +60,7 @@ public class TextArea extends View {
      * @return The left padding of the text field
      */
     public native <T> T getPaddingLeft() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.paddingLeft;
     }-*/;
 
@@ -96,7 +96,7 @@ public class TextArea extends View {
      * @return The right padding of the text field
      */
     public native <T> T getPaddingRight() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.paddingRight;
     }-*/;
 
@@ -197,27 +197,27 @@ public class TextArea extends View {
      * @return The left button view
      */
     public native Button getLeftButton() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.leftButton;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.Button::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void setLeftButton(Button value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.leftButton = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.leftButton = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
      * @return The mode of the left button view
      */
     public native int getLeftButtonMode() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.leftButtonMode;
     }-*/;
 
     public native void setLeftButtonMode(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.leftButtonMode = value;
     }-*/;
 
@@ -225,15 +225,15 @@ public class TextArea extends View {
      * @return The right button view
      */
     public native Button getRightButton() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.rightButton;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.Button::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void setRightButton(Button value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.rightButton = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.rightButton = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
@@ -241,18 +241,18 @@ public class TextArea extends View {
      *         editing
      */
     public native boolean clearOnEdit() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.clearOnEdit;
     }-*/;
 
     public native void setClearOnEdit(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.clearOnEdit = value;
     }-*/;
 
     public native void setTextAlign(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.textAlign = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.textAlign = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     public void setTextAlign(Position position) {
@@ -260,8 +260,8 @@ public class TextArea extends View {
     }
 
     public native void setFont(Font value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.font = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.font = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
@@ -270,7 +270,7 @@ public class TextArea extends View {
      * @param value, value of the keyboard type
      */
     public native void setKeyboardType(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.keyboardType = value;
     }-*/;
 
@@ -279,7 +279,7 @@ public class TextArea extends View {
      * @return the value of the keyboard type
      */
     public native int getKeyboardType() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.keyboardType;
     }-*/;
 
@@ -289,7 +289,7 @@ public class TextArea extends View {
      * @param value, value of the returnkey type
      */
     public native void setReturnKeyType(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.returnKeyType = value;
     }-*/;
 
@@ -298,7 +298,7 @@ public class TextArea extends View {
      * @return the value of the appearance
      */
     public native int getAppearance() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.appearance;
     }-*/;
 
@@ -308,7 +308,7 @@ public class TextArea extends View {
      * @param value, value of the returnkey type
      */
     public native void setAppearance(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.appearance = value;
     }-*/;
 
@@ -318,7 +318,7 @@ public class TextArea extends View {
      * @param value
      */
     public native void setEnableReturnKey(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.enableReturnKey = value;
     }-*/;
 
@@ -328,7 +328,7 @@ public class TextArea extends View {
      * @param value
      */
     public native boolean enableReturnKey() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.enableReturnKey;
     }-*/;
 
@@ -337,7 +337,7 @@ public class TextArea extends View {
      * @return the value of the returnkey type
      */
     public native int getReturnKeyType() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.returnKeyType;
     }-*/;
 
@@ -355,12 +355,12 @@ public class TextArea extends View {
      * 
      */
     public native int getAutocapitalization() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.autocapitalization;
     }-*/;
 
     public native void setAutocapitalization(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.autocapitalization = value;
     }-*/;
 
@@ -368,12 +368,12 @@ public class TextArea extends View {
      * @return Boolean indicating if the field is editable
      */
     public native boolean isEditable() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.editable;
     }-*/;
 
     public native void setEditable(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.editable = value;
     }-*/;
 
@@ -381,12 +381,12 @@ public class TextArea extends View {
      * @return Boolean indicating the enabled state of the field
      */
     public native boolean isEnabled() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.enabled;
     }-*/;
 
     public native void setEnabled(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.enabled = value;
     }-*/;
 
@@ -404,7 +404,7 @@ public class TextArea extends View {
     }
 
     private native JsArray<JavaScriptObject> _getKeyboardToolbar() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.keyboardToolbar;
     }-*/;
 
@@ -425,7 +425,7 @@ public class TextArea extends View {
     }
 
     private native void _setKeyboardToolbar(JsArray<JavaScriptObject> value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.keyboardToolbar = value;
     }-*/;
 
@@ -433,12 +433,12 @@ public class TextArea extends View {
      * @return The color of the keyboard toolbar
      */
     public native String getKeyboardToolbarColor() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.keyboardToolbarColor;
     }-*/;
 
     public native void setKeyboardToolbarColor(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.keyboardToolbarColor = value;
     }-*/;
 
@@ -446,12 +446,12 @@ public class TextArea extends View {
      * @return The height of the keyboard toolbar
      */
     public native double getKeyboardToolbarHeight() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.keyboardToolbarHeight;
     }-*/;
 
     public native void setKeyboardToolbarHeight(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.keyboardToolbarHeight = value;
     }-*/;
 
@@ -460,17 +460,17 @@ public class TextArea extends View {
      *         entry
      */
     public native boolean suppressReturn() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.suppressReturn;
     }-*/;
 
     public native void setSuppressReturn(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.suppressReturn = value;
     }-*/;
 
     public native void setSoftKeyboardOnFocus(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.softKeyboardOnFocus = value;
     }-*/;
 
@@ -478,12 +478,12 @@ public class TextArea extends View {
      * @return Value of the field
      */
     public native String getValue() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.value;
     }-*/;
 
     public native void setValue(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.value = value;
     }-*/;
 
@@ -492,12 +492,12 @@ public class TextArea extends View {
      * @platforms iphone, ipad
      */
     public native boolean isScrollable() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.scrollable;
     }-*/;
 
     public native void setScrollable(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.scrollable = value;
     }-*/;
 
@@ -505,7 +505,7 @@ public class TextArea extends View {
      * Force the field to lose focus
      */
     public native void blur() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		so.blur();
     }-*/;
 
@@ -513,7 +513,7 @@ public class TextArea extends View {
      * Force the field to gain focus
      */
     public native void focus() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.focus();
     }-*/;
 
@@ -521,12 +521,12 @@ public class TextArea extends View {
      * Return boolean (true) if the field has text
      */
     public native boolean hasText() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.hasText();
     }-*/;
 
     public native void addBlurHandler(TextHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.text.TextEvent::BLUR,
@@ -537,7 +537,7 @@ public class TextArea extends View {
     }-*/;
 
     public native void addChangeHandler(TextHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.text.TextEvent::CHANGE,
@@ -548,7 +548,7 @@ public class TextArea extends View {
     }-*/;
 
     public native void addFocusHandler(TextHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.text.TextEvent::FOCUS,
@@ -559,7 +559,7 @@ public class TextArea extends View {
     }-*/;
 
     public native void addReturnHandler(TextHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.text.TextEvent::RETURN,

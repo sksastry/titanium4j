@@ -51,12 +51,12 @@ public class MapView extends View {
      * @return Boolean is mapping actions should be animated
      */
     public native boolean isAnimate() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.animate;
     }-*/;
 
     public native void setAnimate(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.animate = value;
     }-*/;
 
@@ -73,7 +73,7 @@ public class MapView extends View {
     }
 
     private native JsArray<JavaScriptObject> _getAnnotations() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.annotations;
     }-*/;
 
@@ -94,7 +94,7 @@ public class MapView extends View {
     }
 
     private native void _setAnnotations(JsArray<JavaScriptObject> value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.annotations = value;
     }-*/;
 
@@ -102,12 +102,12 @@ public class MapView extends View {
      * @return The map type constant.
      */
     public native int getMapType() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.mapType;
     }-*/;
 
     public native void setMapType(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.mapType = value;
     }-*/;
 
@@ -117,15 +117,15 @@ public class MapView extends View {
      *         `longitudedelta`, `latitude`, `longitude`.
      */
     public native Region getRegion() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.region;
 		var toReturn = @com.emitrom.ti4j.mobile.client.map.Region::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void setRegion(Region value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.region = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.region = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
@@ -133,12 +133,12 @@ public class MapView extends View {
      *         into the region in the visible view
      */
     public native boolean isRegionFit() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.regionFit;
     }-*/;
 
     public native void setRegionFit(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.regionFit = value;
     }-*/;
 
@@ -147,12 +147,12 @@ public class MapView extends View {
      *         device location as a pin on the map
      */
     public native boolean showUserLocation() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.userLocation;
     }-*/;
 
     public native void setUserLocation(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.userLocation = value;
     }-*/;
 
@@ -163,9 +163,9 @@ public class MapView extends View {
      *            a {@link org.urish.gwtit.titanium.map.Annotation} instance.
      */
     public native void addAnnotation(Annotation annotation) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.addAnnotation(annotation.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.addAnnotation(annotation.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -204,7 +204,7 @@ public class MapView extends View {
      *            for the line color and `width` for the line width.
      */
     public native void addRoute(Object route) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.addRoute(route);
     }-*/;
 
@@ -215,16 +215,16 @@ public class MapView extends View {
      *            {@link org.urish.gwtit.titanium.map.Annotation} reference.
      */
     public native void deselectAnnotation(Annotation annotation) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.deselectAnnotation(annotation.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.deselectAnnotation(annotation.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
      * Removes all annotations added to the map
      */
     public native void removeAllAnnotations() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.removeAllAnnotations();
     }-*/;
 
@@ -236,7 +236,7 @@ public class MapView extends View {
      */
     public native void removeAnnotation(Annotation annotation) /*-{
 		jso
-				.removeAnnotation(annotation.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.removeAnnotation(annotation.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -263,7 +263,7 @@ public class MapView extends View {
     }
 
     private native void _removeAnnotations(JsArray<JavaScriptObject> annotation) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.removeAnnotations(annotation);
     }-*/;
 
@@ -273,7 +273,7 @@ public class MapView extends View {
      * @param route same route object used during addRoute
      */
     public native void removeRoute(Object route) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.removeRoute(route);
     }-*/;
 
@@ -284,9 +284,9 @@ public class MapView extends View {
      *            {@link org.urish.gwtit.titanium.map.Annotation} reference.
      */
     public native void selectAnnotation(Annotation annotation) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.selectAnnotation(annotation.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.selectAnnotation(annotation.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -297,7 +297,7 @@ public class MapView extends View {
      *            `longitudeDelta`, `latitude`, `longitude`.
      */
     public native void setLocation(Object location) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.setLocation(location);
     }-*/;
 
@@ -307,12 +307,12 @@ public class MapView extends View {
      * @param level zoom level (can be positive or negative)
      */
     public native void zoom(double level) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.zoom(level);
     }-*/;
 
     public native void addLoadCompleteHandler(LoadCompleteHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.loading.LoadEvent::COMPLETE,
@@ -323,7 +323,7 @@ public class MapView extends View {
     }-*/;
 
     public native void addErrorHandler(GeoErrorHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ErrorEvent::ERROR,
@@ -334,7 +334,7 @@ public class MapView extends View {
     }-*/;
 
     public native void addLoadingHandler(LoadHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.loading.LoadEvent::LOADING,
@@ -345,7 +345,7 @@ public class MapView extends View {
     }-*/;
 
     public native void addRegionChangedHandler(RegionChangeHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.RegionEvent::REGION_CHANGED,

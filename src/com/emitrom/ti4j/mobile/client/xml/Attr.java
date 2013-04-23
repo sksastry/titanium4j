@@ -36,7 +36,7 @@ public class Attr extends Node {
      * @return Attribute name
      */
     public native String getName() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.name;
     }-*/;
 
@@ -45,7 +45,7 @@ public class Attr extends Node {
      *         which the attribute belongs.
      */
     public native Element getOwnerElement() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.ownerElement;
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Element::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -56,7 +56,7 @@ public class Attr extends Node {
      *         instance document, false otherwise.
      */
     public native boolean isSpecified() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.specified;
     }-*/;
 
@@ -64,12 +64,12 @@ public class Attr extends Node {
      * @return The attribute value as a string.
      */
     public native String getValue() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.value;
     }-*/;
 
     public native void setValue(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.value = value;
     }-*/;
 

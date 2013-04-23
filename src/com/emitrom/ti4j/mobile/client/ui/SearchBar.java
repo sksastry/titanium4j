@@ -15,7 +15,7 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui;
 
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.SearchBarHandler;
 import com.emitrom.ti4j.mobile.client.ui.style.Color;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -48,12 +48,12 @@ public class SearchBar extends View {
      *         to indicate how the field should be capitalized during typing.
      */
     public native int getAutocapitalization() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.autocapitalization;
     }-*/;
 
     public native void setAutocapitalization(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.autocapitalization = value;
     }-*/;
 
@@ -62,7 +62,7 @@ public class SearchBar extends View {
      *         autocorrected as typed
      */
     public native boolean isAutocorrect() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.autocorrect;
     }-*/;
 
@@ -74,12 +74,12 @@ public class SearchBar extends View {
      * @return The bar color of the search bar view
      */
     public native String getBarColor() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.barColor;
     }-*/;
 
     public native void setBarColor(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.barColor = value;
     }-*/;
 
@@ -100,7 +100,7 @@ public class SearchBar extends View {
     }-*/;
 
     public native void setHintText(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.hintText = value;
     }-*/;
 
@@ -108,12 +108,12 @@ public class SearchBar extends View {
      * @return The key in the locale file to use for the hinttext property
      */
     public native String getHintTextId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.hinttextid;
     }-*/;
 
     public native void setHintTextId(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.hinttextid = value;
     }-*/;
 
@@ -121,12 +121,12 @@ public class SearchBar extends View {
      * @return The keyboard type constant to use when the field is focused
      */
     public native int getKeyboardType() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.keyboardType;
     }-*/;
 
     public native void setKeyboardType(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.keyboardType = value;
     }-*/;
 
@@ -134,12 +134,12 @@ public class SearchBar extends View {
      * @return A single line of text displayed at the top of the search bar
      */
     public native String getPrompt() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.prompt;
     }-*/;
 
     public native void setPrompt(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.prompt = value;
     }-*/;
 
@@ -147,12 +147,12 @@ public class SearchBar extends View {
      * @return The key in the locale file to use for the prompt property
      */
     public native String getPromptId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.promptid;
     }-*/;
 
     public native void setPromptId(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.promptid = value;
     }-*/;
 
@@ -160,12 +160,12 @@ public class SearchBar extends View {
      * @return Boolean indicates whether the cancel button is displayed
      */
     public native boolean showCancel() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.showCancel;
     }-*/;
 
     public native void setShowCancel(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.showCancel = value;
     }-*/;
 
@@ -173,12 +173,12 @@ public class SearchBar extends View {
      * @return The value of the search bar
      */
     public native String getValue() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.value;
     }-*/;
 
     public native void setValue(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.value = value;
     }-*/;
 
@@ -186,7 +186,7 @@ public class SearchBar extends View {
      * Called to force the search bar to lose focus
      */
     public native void blur() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.blur();
     }-*/;
 
@@ -194,12 +194,12 @@ public class SearchBar extends View {
      * Called to force the search bar to focus
      */
     public native void focus() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.focus();
     }-*/;
 
     public native void addBlurHandler(SearchBarHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.UIEvent::BLUR,
@@ -210,7 +210,7 @@ public class SearchBar extends View {
     }-*/;
 
     public native void addChangeHandler(SearchBarHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.UIEvent::CHANGE,
@@ -221,7 +221,7 @@ public class SearchBar extends View {
     }-*/;
 
     public native void addFocusHandler(SearchBarHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.UIEvent::FOCUS,
@@ -232,7 +232,7 @@ public class SearchBar extends View {
     }-*/;
 
     public native void addReturnHandler(SearchBarHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.UIEvent::RETURN,
@@ -243,7 +243,7 @@ public class SearchBar extends View {
     }-*/;
 
     public native void addCancelHandler(SearchBarHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ui.UIEvent::CANCEL,

@@ -49,7 +49,7 @@ public class CompleteEvent extends TiEvent {
      * the y point of the event, in receiving view coordinates
      */
     public final native double getY() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.y;
     }-*/;
 
@@ -58,7 +58,7 @@ public class CompleteEvent extends TiEvent {
      * screen coordinates
      */
     public final native Point getGlobalPoint() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.globalPoint;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.Point::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -68,7 +68,7 @@ public class CompleteEvent extends TiEvent {
      * the x point of the event in receiving view coordiantes
      */
     public final native double getX() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.x;
     }-*/;
 

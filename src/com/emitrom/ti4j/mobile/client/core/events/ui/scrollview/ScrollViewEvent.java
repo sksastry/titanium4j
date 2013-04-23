@@ -35,7 +35,7 @@ public class ScrollViewEvent extends UIEvent {
      * boolean to indicate if the scroll is based on a dragging gesture
      */
     public final native boolean isDragging() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.dragging;
     }-*/;
 
@@ -44,7 +44,7 @@ public class ScrollViewEvent extends UIEvent {
      * *iOS + web
      */
     public final native boolean isDecelerating() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return (jso.decelerating ? jso.decelerating : true);
     }-*/;
     

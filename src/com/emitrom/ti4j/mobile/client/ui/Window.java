@@ -1,17 +1,17 @@
 /**************************************************************************
-   Window.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+ * Window.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui;
 
@@ -47,12 +47,12 @@ public class Window extends View {
      *         valid when the window is a child of a tab. Availaboe on iOs only
      */
     public native String getBackButtonTitle() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.backButtonTitle;
     }-*/;
 
     public native void setBackButtonTitle(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.backButtonTitle = value;
     }-*/;
 
@@ -62,12 +62,12 @@ public class Window extends View {
      *         Availaboe on iOs only
      */
     public native String getBackButtonTitleImage() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.backButtonTitleImage;
     }-*/;
 
     public native void setBackButtonTitleImage(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.backButtonTitleImage = value;
     }-*/;
 
@@ -76,12 +76,12 @@ public class Window extends View {
      *         available in iphone. Availaboe on iOs only
      */
     public native String getBarColor() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.barColor;
     }-*/;
 
     public native void setBarColor(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.barColor = value;
     }-*/;
 
@@ -90,12 +90,12 @@ public class Window extends View {
      *         only available in iphone. Availaboe on iOs only
      */
     public native String getBarImage() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.barImage;
     }-*/;
 
     public native void setBarImage(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.barImage = value;
     }-*/;
 
@@ -107,12 +107,12 @@ public class Window extends View {
      * @platforms android
      */
     public native boolean exitOnClose() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.exitOnClose;
     }-*/;
 
     public native void setExitOnClose(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.exitOnClose = value;
     }-*/;
 
@@ -120,12 +120,12 @@ public class Window extends View {
      * @return Boolean indicates if the window is fullscreen (no device chrome)
      */
     public native boolean isFullscreen() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.fullscreen;
     }-*/;
 
     public native void setFullscreen(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.fullscreen = value;
     }-*/;
 
@@ -134,15 +134,15 @@ public class Window extends View {
      *         Availaboe on iOs only
      */
     public native View getLeftNavButton() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.leftNavButton;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.View::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void setLeftNavButton(View value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.leftNavButton = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.leftNavButton = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
@@ -156,12 +156,12 @@ public class Window extends View {
      *         navBarBidden' and 'modal' do work fine together, however.
      */
     public native boolean isModal() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.modal;
     }-*/;
 
     public native void setModal(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.modal = value;
     }-*/;
 
@@ -170,12 +170,12 @@ public class Window extends View {
      *         (false, default).
      */
     public native boolean isNavBarHidden() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.navBarHidden;
     }-*/;
 
     public native void setNavBarHidden(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.navBarHidden = value;
     }-*/;
 
@@ -190,8 +190,8 @@ public class Window extends View {
      *         represents the top of the device being at the 270 degree position
      *         but other devices may (based on camera position for example)
      *         treat jso position as
-     *         {@link com.emitrom.ti4j.mobile.client.ui.UI.LANDSCAPE_RIGHT} .
-     *         In general, applications for android that need to be aware of
+     *         {@link com.emitrom.ti4j.mobile.client.ui.UI.LANDSCAPE_RIGHT} . In
+     *         general, applications for android that need to be aware of
      *         orientation should try and limit their orientation logic to
      *         handling either portrait or landscape rather than worrying about
      *         the reverse modes. jso approach will allow the orientation modes
@@ -202,15 +202,13 @@ public class Window extends View {
      * 
      *         1) ( {@link com.emitrom.ti4j.mobile.client.ui.UI.PORTRAIT} or
      *         {@link com.emitrom.ti4j.mobile.client.ui.UI.UPSIDE_PORTRAIT} )
-     *         and (
-     *         {@link com.emitrom.ti4j.mobile.client.ui.UI.LANDSCAPE_LEFT} or
-     *         {@link com.emitrom.ti4j.mobile.client.ui.UI.LANDSCAPE_RIGHT} )
+     *         and ( {@link com.emitrom.ti4j.mobile.client.ui.UI.LANDSCAPE_LEFT}
+     *         or {@link com.emitrom.ti4j.mobile.client.ui.UI.LANDSCAPE_RIGHT} )
      *         - enables full sensor which lets the operating system control the
      *         orientation of the screen based on the sensor inside the device.<br/>
      *         2)
      *         {@linkcom.ekambi.gwt.appcelerator.mobile.client.ui.UI.UPSIDE_PORTRAIT}
-     *         or
-     *         {@link com.emitrom.ti4j.mobile.client.ui.UI.UPSIDE_PORTRAIT} -
+     *         or {@link com.emitrom.ti4j.mobile.client.ui.UI.UPSIDE_PORTRAIT} -
      *         enables sensor portrait mode on android 2.3 and above. sensor
      *         portrait mode on android means the screen will shift between both
      *         portrait modes according to the sensor inside the device. if the
@@ -218,8 +216,7 @@ public class Window extends View {
      *         locked.
      * 
      * <br/>
-     *         3) {@link com.emitrom.ti4j.mobile.client.ui.UI.LANDSCAPE_LEFT}
-     *         or
+     *         3) {@link com.emitrom.ti4j.mobile.client.ui.UI.LANDSCAPE_LEFT} or
      *         {@link com.emitrom.ti4j.mobile.client.ui.UI.LANDSCAPE_RIGHT} -
      *         enables sensor landscape mode on android 2.3 and above. sensor
      *         landscape mode on android means the screen will shift between
@@ -228,14 +225,14 @@ public class Window extends View {
      *         mode is locked.
      * 
      * <br/>
-     *         4) {@link com.emitrom.ti4j.mobile.client.ui.UI.PORTRAIT} -
-     *         locks screen orientation to portrait mode 5)
+     *         4) {@link com.emitrom.ti4j.mobile.client.ui.UI.PORTRAIT} - locks
+     *         screen orientation to portrait mode 5)
      *         {@link com.emitrom.ti4j.mobile.client.ui.UI.LANDSCAPE} - locks
      *         screen orientation to landscape mode 6) empty array - resets the
      *         orientation to default sensor control
      */
     public native JsArrayInteger getOrientationModes() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.orientationModes;
     }-*/;
 
@@ -248,7 +245,7 @@ public class Window extends View {
     }
 
     public native void setOrientationModes(JsArrayInteger value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.orientationModes = value;
     }-*/;
 
@@ -258,12 +255,12 @@ public class Window extends View {
      *         {@link com.emitrom.ti4j.mobile.client.ui.UI}.
      */
     public native int getOrientation() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.orientation;
     }-*/;
 
     public native void setOrientation(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.orientation = value;
     }-*/;
 
@@ -272,14 +269,14 @@ public class Window extends View {
      *         Availaboe on iOs only
      */
     public native View getRightNavButton() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.rightNavButton;
 		return @com.emitrom.ti4j.mobile.client.ui.View::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
 
     public native void setRightNavButton(View value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.rightNavButton = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.rightNavButton = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
@@ -287,12 +284,12 @@ public class Window extends View {
      *         valid when the window is a child of a tab.
      */
     public native boolean isTabBarHidden() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.tabBarHidden;
     }-*/;
 
     public native void setTabBarHidden(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.tabBarHidden = value;
     }-*/;
 
@@ -300,12 +297,12 @@ public class Window extends View {
      * @return Title of the window.
      */
     public native String getTitle() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.title;
     }-*/;
 
     public native void setTitle(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.title = value;
     }-*/;
 
@@ -314,15 +311,15 @@ public class Window extends View {
      *         Available on iOs only
      */
     public native View getTitleControl() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.titleControl;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.View::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void setTitleControl(View value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.titleControl = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.titleControl = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
@@ -330,12 +327,12 @@ public class Window extends View {
      *         iphone. Availaboe on iOs only
      */
     public native String getTitleImage() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.titleImage;
     }-*/;
 
     public native void setTitleImage(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.titleImage = value;
     }-*/;
 
@@ -343,12 +340,12 @@ public class Window extends View {
      * @return Title prompt for the window. only available in iphone.
      */
     public native String getTitlePrompt() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.titlePrompt;
     }-*/;
 
     public native void setTitlePrompt(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.titlePrompt = value;
     }-*/;
 
@@ -360,7 +357,7 @@ public class Window extends View {
     }-*/;
 
     public native void setTitleId(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.titleid = value;
     }-*/;
 
@@ -368,12 +365,12 @@ public class Window extends View {
      * @return The key in the locale file to use for the titleprompt property
      */
     public native String getTitlePromptId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.titlepromptid;
     }-*/;
 
     public native void setTitlePromptId(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.titlepromptid = value;
     }-*/;
 
@@ -392,7 +389,7 @@ public class Window extends View {
     }
 
     private native JsArray<JavaScriptObject> _getToolbar() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.toolbar;
     }-*/;
 
@@ -421,7 +418,7 @@ public class Window extends View {
     }
 
     private native void _setToolbar(JsArray<JavaScriptObject> value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.toolbar = value;
     }-*/;
 
@@ -430,12 +427,12 @@ public class Window extends View {
      *         in iphone. Availaboe on iOs only
      */
     public native boolean isTranslucent() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.translucent;
     }-*/;
 
     public native void setTranslucent(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.translucent = value;
     }-*/;
 
@@ -456,12 +453,12 @@ public class Window extends View {
      *         its own thread and global variable space.
      */
     public native String getUrl() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.url;
     }-*/;
 
     public native void setUrl(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.url = value;
     }-*/;
 
@@ -469,12 +466,12 @@ public class Window extends View {
      * @return android
      */
     public native int getWindowSoftInputMode() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.windowSoftInputMode;
     }-*/;
 
     public native void setWindowSoftInputMode(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.windowSoftInputMode = value;
     }-*/;
 
@@ -482,7 +479,7 @@ public class Window extends View {
      * Close the window
      */
     public native void close() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.close();
     }-*/;
 
@@ -490,7 +487,7 @@ public class Window extends View {
      * Close the window
      */
     public native void close(boolean animated) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.close({
 			animate : animated
 		});
@@ -503,16 +500,16 @@ public class Window extends View {
      *            close the window with optional animation or display properties
      */
     public native void close(Animation options) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.close(options.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.close(options.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
      * Open the window
      */
     public native void open() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.open();
     }-*/;
 
@@ -520,7 +517,7 @@ public class Window extends View {
      * Open the window
      */
     public native void open(boolean animated) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.open({
 			animate : animated
 		});
@@ -533,9 +530,9 @@ public class Window extends View {
      *            open the window with optional animation or display properties
      */
     public native void open(Animation options) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.open(options.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.open(options.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -585,43 +582,43 @@ public class Window extends View {
         grid(spacing, "#dedede");
     }
 
-    public void addAndroidBackHander(UIEventHandler handler) {
+    public void addAndroidBackHandler(UIEventHandler handler) {
         this.addEventHandler(UIEvent.ANDROID_BACK, handler);
     }
 
-    public void addAndroidCameraHander(UIEventHandler handler) {
+    public void addAndroidCameraHandler(UIEventHandler handler) {
         this.addEventHandler(UIEvent.ANDROID_CAMERA, handler);
     }
 
-    public void addAndroidFocusHander(UIEventHandler handler) {
+    public void addAndroidFocusHandler(UIEventHandler handler) {
         this.addEventHandler(UIEvent.ANDROID_FOCUS, handler);
     }
 
-    public void addAndroidSearchHander(UIEventHandler handler) {
+    public void addAndroidSearchHandler(UIEventHandler handler) {
         this.addEventHandler(UIEvent.ANDROID_SEARCH, handler);
     }
 
-    public void addAndroidVolumeDownHander(UIEventHandler handler) {
+    public void addAndroidVolumeDownHandler(UIEventHandler handler) {
         this.addEventHandler(UIEvent.ANDROID_VOL_DOWN, handler);
     }
 
-    public void addAndroidVolumeUpHander(UIEventHandler handler) {
+    public void addAndroidVolumeUpHandler(UIEventHandler handler) {
         this.addEventHandler(UIEvent.ANDROID_VOL_UP, handler);
     }
 
-    public void addAndroidBlurHander(UIEventHandler handler) {
+    public void addAndroidBlurHandler(UIEventHandler handler) {
         this.addEventHandler(UIEvent.BLUR, handler);
     }
 
-    public void addCloseHander(UIEventHandler handler) {
+    public void addCloseHandler(UIEventHandler handler) {
         this.addEventHandler(UIEvent.CLOSE, handler);
     }
 
-    public void addFocusHander(UIEventHandler handler) {
+    public void addFocusHandler(UIEventHandler handler) {
         this.addEventHandler(UIEvent.FOCUS, handler);
     }
 
-    public void addOpenHander(UIEventHandler handler) {
+    public void addOpenHandler(UIEventHandler handler) {
         this.addEventHandler(UIEvent.OPEN, handler);
     }
 

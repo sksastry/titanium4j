@@ -38,12 +38,12 @@ public class Item extends EventDispatcher {
      * @return The artist for the album of the item
      */
     public native String getAlbumArtist() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.albumArtist;
     }-*/;
 
     public native void setAlbumArtist(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.albumArtist = value;
     }-*/;
 
@@ -51,12 +51,12 @@ public class Item extends EventDispatcher {
      * @return The album title of the item
      */
     public native String getAlbumTitle() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.albumTitle;
     }-*/;
 
     public native void setAlbumTitle(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.albumTitle = value;
     }-*/;
 
@@ -64,12 +64,12 @@ public class Item extends EventDispatcher {
      * @return The number of tracks for the album of the item
      */
     public native int getAlbumTrackCount() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.albumTrackCount;
     }-*/;
 
     public native void setAlbumTrackCount(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.albumTrackCount = value;
     }-*/;
 
@@ -77,12 +77,12 @@ public class Item extends EventDispatcher {
      * @return The track number of the item
      */
     public native int getAlbumTrackNumber() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.albumTrackNumber;
     }-*/;
 
     public native void setAlbumTrackNumber(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.albumTrackNumber = value;
     }-*/;
 
@@ -90,12 +90,12 @@ public class Item extends EventDispatcher {
      * @return The artist of the item
      */
     public native String getArtist() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.artist;
     }-*/;
 
     public native void setArtist(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.artist = value;
     }-*/;
 
@@ -104,27 +104,27 @@ public class Item extends EventDispatcher {
      *         null if none
      */
     public native Blob getArtwork() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.artwork;
 		var toReturn = @com.emitrom.ti4j.mobile.client.blob.Blob::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void setArtwork(Blob value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.artwork = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.artwork = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
      * @return The composer of the item
      */
     public native String getComposer() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.composer;
     }-*/;
 
     public native void setComposer(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.composer = value;
     }-*/;
 
@@ -132,12 +132,12 @@ public class Item extends EventDispatcher {
      * @return The total number of discs of the item
      */
     public native int getDiscCount() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.discCount;
     }-*/;
 
     public native void setDiscCount(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.discCount = value;
     }-*/;
 
@@ -145,12 +145,12 @@ public class Item extends EventDispatcher {
      * @return The disc number of the item
      */
     public native int getDiscNumber() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.discNumber;
     }-*/;
 
     public native void setDiscNumber(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.discNumber = value;
     }-*/;
 
@@ -158,12 +158,12 @@ public class Item extends EventDispatcher {
      * @return The genre of the item
      */
     public native String getGenre() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.genre;
     }-*/;
 
     public native void setGenre(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.genre = value;
     }-*/;
 
@@ -171,12 +171,12 @@ public class Item extends EventDispatcher {
      * @return True if the item is part of a compilation album
      */
     public native boolean isCompilation() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.isCompilation;
     }-*/;
 
     public native void setIsCompilation(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.isCompilation = value;
     }-*/;
 
@@ -184,12 +184,12 @@ public class Item extends EventDispatcher {
      * @return The lyrics of the item
      */
     public native String getLyrics() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.lyrics;
     }-*/;
 
     public native void setLyrics(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.lyrics = value;
     }-*/;
 
@@ -197,12 +197,12 @@ public class Item extends EventDispatcher {
      * @return The type of the item
      */
     public native int getMediaType() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.mediaType;
     }-*/;
 
     public native void setMediaType(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.mediaType = value;
     }-*/;
 
@@ -210,12 +210,12 @@ public class Item extends EventDispatcher {
      * @return The number of times the item has been played
      */
     public native int getPlayCount() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.playCount;
     }-*/;
 
     public native void setPlayCount(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.playCount = value;
     }-*/;
 
@@ -223,12 +223,12 @@ public class Item extends EventDispatcher {
      * @return The length (in seconds) of the item
      */
     public native double getPlaybackDuration() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.playbackDuration;
     }-*/;
 
     public native void setPlaybackDuration(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.playbackDuration = value;
     }-*/;
 
@@ -236,12 +236,12 @@ public class Item extends EventDispatcher {
      * @return The title of a podcast item.
      */
     public native String getPodcastTitle() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.podcastTitle;
     }-*/;
 
     public native void setPodcastTitle(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.podcastTitle = value;
     }-*/;
 
@@ -249,12 +249,12 @@ public class Item extends EventDispatcher {
      * @return The rating of the item
      */
     public native int getRating() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.rating;
     }-*/;
 
     public native void setRating(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.rating = value;
     }-*/;
 
@@ -262,12 +262,12 @@ public class Item extends EventDispatcher {
      * @return The number of times the item has been skipped
      */
     public native int getSkipCount() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.skipCount;
     }-*/;
 
     public native void setSkipCount(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.skipCount = value;
     }-*/;
 
@@ -275,12 +275,12 @@ public class Item extends EventDispatcher {
      * @return The title of the item
      */
     public native String getTitle() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.title;
     }-*/;
 
     public native void setTitle(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.title = value;
     }-*/;
 }

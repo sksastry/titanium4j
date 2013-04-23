@@ -17,7 +17,7 @@ package com.emitrom.ti4j.mobile.client.geolocation;
 
 import java.util.ArrayList;
 
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 
@@ -41,7 +41,7 @@ public class ReverseGeocoderResult extends ProxyObject {
     }
 
     private final native JsArray<JavaScriptObject> _getPlaces() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.places;
     }-*/;
 }

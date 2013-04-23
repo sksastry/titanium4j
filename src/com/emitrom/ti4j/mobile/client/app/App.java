@@ -1,34 +1,44 @@
 /**************************************************************************
-   App.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+ * App.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.app;
 
 import com.emitrom.ti4j.mobile.client.core.TiFactory;
 import com.emitrom.ti4j.mobile.client.core.TiModule;
 import com.emitrom.ti4j.mobile.client.core.handlers.EventHandler;
+import com.emitrom.ti4j.mobile.client.platform.Platform;
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The top level App module. The App module is mainly used for accessing
- * information about the application at runtime.
- * 
+ * information about the application at runtime and for sending or listening for
+ * system events.
+ * <p>
  * The App module exposes a number of properties set in the tiapp.xml file.
+ * <p>
  * Three of these properties, the application name, ID, and URL, must be
  * specified when the application is created.
+ * <p>
+ * While most values may be changed by editing the tiapp.xml file after creating
+ * the project, the GUID is automatically generated and should not be changed.
  * 
  */
 public class App extends TiModule {
+
+    public static final String APP_EVENT_ACCESSIBILITY_ANNOUNCEMENT = EVENT_ACCESSIBILITY_ANNOUNCEMENT();
+    public static final String APP_EVENT_ACCESSIBILITY_CHANGED = EVENT_ACCESSIBILITY_CHANGED();
 
     private static final App INSTANCE = new App();
 
@@ -46,10 +56,18 @@ public class App extends TiModule {
     }
 
     /**
+     * Indicates whether Accessibility is enabled by the system.
+     */
+    public native boolean isAccessibilityEnabled() /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		return jso.accessibilityEnabled;
+    }-*/;
+
+    /**
      * Indicates whether Analytics is enabled, determined by tiapp.xml.
      */
     public native boolean isAnalyticsEnabled() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.analytics;
     }-*/;
 
@@ -57,7 +75,7 @@ public class App extends TiModule {
      * Application copyright statement, determined by tiapp.xml.
      */
     public native String getCopyright() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.copyright;
     }-*/;
 
@@ -66,7 +84,7 @@ public class App extends TiModule {
      * development or production.
      */
     public native String getDeployType() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.deployType;
     }-*/;
 
@@ -74,15 +92,39 @@ public class App extends TiModule {
      * Application description, determined by tiapp.xml.
      */
     public native String getDescription() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.description;
+    }-*/;
+
+    /**
+     * 
+     * Prevents network activity indicator from being displayed.
+     * <p>
+     * Setting this property to true disables display of the network activity
+     * indicator when network activity is in progress. If the network activity
+     * indicator is currently visible, it is hidden immediately.
+     * <p>
+     * <b>NOTE: In general, the user should always be made aware of network
+     * activity. The network activity indicator should only be disabled for very
+     * brief network activity (a few seconds).</b>
+     * <p>
+     * Default: false
+     */
+    public native void setDisableNetWorkActivitiyIndicator(boolean value) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.disableNetWorkActivitiyIndicator = value;
+    }-*/;
+
+    public native boolean isNetworkActivityIndicatorDisabled() /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		return jso.disableNetWorkActivitiyIndicator;
     }-*/;
 
     /**
      * Application globally-unique ID, determined by tiapp.xml.
      */
     public native String getGuId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.guid;
     }-*/;
 
@@ -90,7 +132,7 @@ public class App extends TiModule {
      * Application ID, from tiapp.xml.
      */
     public native String getId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.id;
     }-*/;
 
@@ -98,7 +140,7 @@ public class App extends TiModule {
      * @iosOnly Determines whether the screen is locked when the device is idle.
      */
     public native boolean isIdelTimerDisabled() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.idleTimerDisabled;
     }-*/;
 
@@ -106,7 +148,7 @@ public class App extends TiModule {
      * @iosOnly Determines whether the screen is locked when the device is idle.
      */
     public native void setIdelTimerDisabled(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.idleTimerDisabled = value;
     }-*/;
 
@@ -114,7 +156,7 @@ public class App extends TiModule {
      * @iosOnly The install ID for this application.
      */
     public native String getInstallId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.installId;
     }-*/;
 
@@ -122,15 +164,23 @@ public class App extends TiModule {
      * Application name, determined by tiapp.xml.
      */
     public native String getName() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.name;
+    }-*/;
+
+    /**
+     * Indicates whether or not the soft keyboard is visible.
+     */
+    public native boolean keyboardVisible() /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		return jso.keyboardVisible;
     }-*/;
 
     /**
      * @iosOnly Determines whether proximity detection is enabled.
      */
     public native boolean isProxymityDectionEnabled() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.proximityDetection;
     }-*/;
 
@@ -139,7 +189,7 @@ public class App extends TiModule {
      *          Set to true to receive proximity events.
      */
     public native void setProximityDetection(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.proximityDetection = true;
     }-*/;
 
@@ -152,7 +202,7 @@ public class App extends TiModule {
      *          property is undefined.
      */
     public native boolean hasProximityState() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.proximityState;
     }-*/;
 
@@ -160,7 +210,7 @@ public class App extends TiModule {
      * Application publisher, from tiapp.xml.
      */
     public native String getPublisher() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.publisher;
     }-*/;
 
@@ -169,7 +219,7 @@ public class App extends TiModule {
      * application.
      */
     public native String getSessionId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.sessionId;
     }-*/;
 
@@ -177,7 +227,7 @@ public class App extends TiModule {
      * Application URL, from tiapp.xml.
      */
     public native String getUrl() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.url;
     }-*/;
 
@@ -185,14 +235,45 @@ public class App extends TiModule {
      * Application version, from tiapp.xml.
      */
     public native String getVersion() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.version;
     }-*/;
 
     /**
-     * @isOnly
-     * @param handler
+     * 
+     Fire a system-level event such as APP_EVENT_ACCESSIBILITY_ANNOUNCEMENT.
      */
+    public native void fireSystemEvent(String eventName, JavaScriptObject param) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.fireSystemEvent(eventName, param);
+    }-*/;
+
+    /**
+     * Get the IOs App module. Return null on other platforms
+     */
+    public IOs getIOs() {
+        if (Platform.get().isIOs3_2Plus()) {
+            return IOs.get();
+        }
+        return null;
+    }
+
+    public Properties getProperties() {
+        return Properties.get();
+    }
+
+    public static native final String EVENT_ACCESSIBILITY_ANNOUNCEMENT() /*-{
+		return Titanium.App.EVENT_ACCESSIBILITY_ANNOUNCEMENT;
+    }-*/;
+
+    public static native final String EVENT_ACCESSIBILITY_CHANGED() /*-{
+		return Titanium.App.EVENT_ACCESSIBILITY_CHANGED;
+    }-*/;
+
+    public void addAcceccibilityChangedHandler(EventHandler handler) {
+        addEventHandler("accessibilitychanged", handler);
+    }
+
     public void addKeyBoardFrameChangedHandler(EventHandler handler) {
         addEventHandler("keyboardFrameChanged", handler);
     }
@@ -215,6 +296,10 @@ public class App extends TiModule {
 
     public void addResumedHandler(EventHandler handler) {
         addEventHandler("resumer", handler);
+    }
+
+    public void addSignificantTimeChangeHandler(EventHandler handler) {
+        addEventHandler("significanttimechange", handler);
     }
 
 }

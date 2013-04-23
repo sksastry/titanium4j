@@ -1,17 +1,17 @@
 /**************************************************************************
-   ResultSet.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+ * ResultSet.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.database;
 
@@ -35,26 +35,24 @@ public class ResultSet extends EventDispatcher {
      * @return The number of rows in the result set
      */
     public native int getRowCount() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.rowCount;
     }-*/;
 
-    public native void setRowCount(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.rowCount = value;
+    /**
+     * @return The number of columns in this result set.
+     */
+    public native int getFieldCount() /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		return jso.fieldCount;
     }-*/;
 
     /**
      * @return Returns true if the current row is still valid
      */
     public native boolean getValidRow() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.validRow;
-    }-*/;
-
-    public native void setValidRow(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.validRow = value;
     }-*/;
 
     /**
@@ -62,25 +60,28 @@ public class ResultSet extends EventDispatcher {
      * must no longer be used
      */
     public native void close() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.close();
     }-*/;
 
     /**
      * Retrieve a row value by field index
      * 
-     * @param index column index (which is zero based)
+     * @param index
+     *            column index (which is zero based)
      */
     public native <T> T field(int index) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.field(index);
     }-*/;
 
     /**
      * Retrieve a row value by field index
      * 
-     * @param index column index (which is zero based)
-     * @param type One of (
+     * @param index
+     *            column index (which is zero based)
+     * @param type
+     *            One of (
      *            {@link com.emitrom.ti4j.mobile.client.database.Database.FIELD_TYPE_STRING}
      *            {@link com.emitrom.ti4j.mobile.client.database.Database.FIELD_TYPE_INT}
      *            {@link com.emitrom.ti4j.mobile.client.database.Database.FIELD_TYPE_FLOAT}
@@ -88,25 +89,28 @@ public class ResultSet extends EventDispatcher {
      *            )
      */
     public native <T> T field(int index, int type) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.field(index, type);
     }-*/;
 
     /**
      * Retrieve a row value by field name
      * 
-     * @param name column name from SQL query
+     * @param name
+     *            column name from SQL query
      */
     public native <T> T fieldByName(String name) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.fieldByName(name);
     }-*/;
 
     /**
      * Retrieve a row value by field name
      * 
-     * @param name column name from SQL query
-     * @param type One of (
+     * @param name
+     *            column name from SQL query
+     * @param type
+     *            One of (
      *            {@link com.emitrom.ti4j.mobile.client.database.Database.FIELD_TYPE_STRING}
      *            {@link com.emitrom.ti4j.mobile.client.database.Database.FIELD_TYPE_INT}
      *            {@link com.emitrom.ti4j.mobile.client.database.Database.FIELD_TYPE_FLOAT}
@@ -114,7 +118,7 @@ public class ResultSet extends EventDispatcher {
      *            )
      */
     public native <T> T fieldByName(String name, int type) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.fieldByName(name, type);
     }-*/;
 
@@ -122,17 +126,18 @@ public class ResultSet extends EventDispatcher {
      * Return the number of columns in the result set
      */
     public native int fieldCount() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.fieldCount();
     }-*/;
 
     /**
      * Return the field name for field index
      * 
-     * @param index field name column index (which is zero based)
+     * @param index
+     *            field name column index (which is zero based)
      */
     public native String fieldName(int index) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.fieldName(index);
     }-*/;
 
@@ -140,7 +145,7 @@ public class ResultSet extends EventDispatcher {
      * Return true if the row is a valid row
      */
     public native boolean isValidRow() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.isValidRow();
     }-*/;
 
@@ -151,7 +156,7 @@ public class ResultSet extends EventDispatcher {
      *         true.
      */
     public native boolean next() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.next();
     }-*/;
 

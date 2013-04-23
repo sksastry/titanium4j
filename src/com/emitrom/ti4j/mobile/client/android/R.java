@@ -54,7 +54,7 @@ public class R extends TiModule {
      * @return
      */
     public native <T> T getAnim(String param) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.anim[param];
     }-*/;
 
@@ -67,7 +67,7 @@ public class R extends TiModule {
      * @return
      */
     public native <T> T getArray(String param) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.array[param];
     }-*/;
 
@@ -80,7 +80,7 @@ public class R extends TiModule {
      * @return
      */
     public native <T> T getAttr(String param) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.attr[param];
     }-*/;
 
@@ -93,7 +93,7 @@ public class R extends TiModule {
      * @return
      */
     public native <T> T getColor(String param) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.color[param];
     }-*/;
 
@@ -106,7 +106,7 @@ public class R extends TiModule {
      * @return
      */
     public native <T> T getDimen(String param) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.dimen[param];
     }-*/;
 
@@ -119,7 +119,7 @@ public class R extends TiModule {
      * @return
      */
     public native <T> T getDrawable(String param) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.drawable[param];
     }-*/;
 
@@ -132,7 +132,7 @@ public class R extends TiModule {
      * @return
      */
     public native <T> T getId(String param) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.id[param];
     }-*/;
 
@@ -145,7 +145,7 @@ public class R extends TiModule {
      * @return
      */
     public native <T> T getInteger(String param) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.integer[param];
     }-*/;
 
@@ -158,7 +158,7 @@ public class R extends TiModule {
      * @return
      */
     public native String getString(String param) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.string[param];
     }-*/;
 
@@ -171,7 +171,7 @@ public class R extends TiModule {
      * @return
      */
     public native <T> T getStyle(String param) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.style[param];
     }-*/;
 
@@ -184,7 +184,7 @@ public class R extends TiModule {
      * @return
      */
     public native <T> T getStyleable(String param) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.styleable[param];
     }-*/;
 

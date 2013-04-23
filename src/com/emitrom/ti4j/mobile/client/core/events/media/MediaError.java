@@ -32,7 +32,7 @@ public class MediaError extends TiEvent {
      * the event media type
      */
     public native int getCode() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.code;
     }-*/;
 

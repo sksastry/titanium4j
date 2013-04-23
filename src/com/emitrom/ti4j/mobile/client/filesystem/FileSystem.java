@@ -48,7 +48,7 @@ public class FileSystem extends TiModule {
      *         backed up.
      */
     public native String getApplicationDataDirectory() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.applicationDataDirectory;
     }-*/;
 
@@ -56,7 +56,7 @@ public class FileSystem extends TiModule {
      * @return Readonly constant where your application is located
      */
     public native String getApplicationDirectory() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.applicationDirectory;
     }-*/;
 
@@ -64,7 +64,7 @@ public class FileSystem extends TiModule {
      * @return Readonly platform specific line ending constant
      */
     public native String getLineEnding() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.lineEnding;
     }-*/;
 
@@ -72,7 +72,7 @@ public class FileSystem extends TiModule {
      * @return Readonly constant where your application resources are located
      */
     public native String getResourcesDirectory() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.resourcesDirectory;
     }-*/;
 
@@ -80,7 +80,7 @@ public class FileSystem extends TiModule {
      * @return Readonly path separator constant
      */
     public native String getSeparator() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.separator;
     }-*/;
 
@@ -89,19 +89,19 @@ public class FileSystem extends TiModule {
      *         files
      */
     public native String getTempDirectory() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.tempDirectory;
     }-*/;
 
     public static native File createFile() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createFile();
 		var toReturn = @com.emitrom.ti4j.mobile.client.filesystem.File::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native FileStream createFileStream() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createFileStream();
 		var toReturn = @com.emitrom.ti4j.mobile.client.filesystem.FileStream::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -112,7 +112,7 @@ public class FileSystem extends TiModule {
      * {@link com.emitrom.ti4j.mobile.client.filesystem.File}
      */
     public native File createTempDirectory() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createTempDirectory();
 		var toReturn = @com.emitrom.ti4j.mobile.client.filesystem.File::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -123,7 +123,7 @@ public class FileSystem extends TiModule {
      * {@link com.emitrom.ti4j.mobile.client.filesystem.File}
      */
     public native File createTempFile() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createTempFile();
 		var toReturn = @com.emitrom.ti4j.mobile.client.filesystem.File::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -140,14 +140,14 @@ public class FileSystem extends TiModule {
      *            application resource folder.
      */
     public native File getFile(String path) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.getFile(path);
 		var toReturn = @com.emitrom.ti4j.mobile.client.filesystem.File::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public static native boolean isExternalStoragePresent() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.isExternalStoragePresent();
     }-*/;
 

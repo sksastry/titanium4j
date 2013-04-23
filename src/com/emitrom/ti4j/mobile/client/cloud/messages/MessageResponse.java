@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.emitrom.ti4j.mobile.client.cloud.core.AbstractHandlerResponse;
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
+import com.emitrom.ti4j.core.client.JsoHelper;
 import com.google.gwt.core.client.JavaScriptObject;
 
 public class MessageResponse extends AbstractHandlerResponse {
@@ -38,7 +38,7 @@ public class MessageResponse extends AbstractHandlerResponse {
     }
 
     private native JavaScriptObject _getMessages()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return peer.messages;
     }-*/;
 

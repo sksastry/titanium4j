@@ -50,12 +50,12 @@ public class Sound extends EventDispatcher {
      *         Availabble in AndroidMedia only
      */
     public native boolean getAllowBackground() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.allowBackground;
     }-*/;
 
     public native void setAllowBackground(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.allowBackground = value;
     }-*/;
 
@@ -63,12 +63,12 @@ public class Sound extends EventDispatcher {
      * @return The duration of the audio.
      */
     public native double getDuration() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.duration;
     }-*/;
 
     public native void setDuration(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.duration = value;
     }-*/;
 
@@ -76,12 +76,12 @@ public class Sound extends EventDispatcher {
      * @return Boolean to indicate if the audio should loop upon completion
      */
     public native boolean getLooping() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.looping;
     }-*/;
 
     public native void setLooping(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.looping = value;
     }-*/;
 
@@ -89,12 +89,12 @@ public class Sound extends EventDispatcher {
      * @return Boolean to indicate if the audio is paused
      */
     public native boolean getPaused() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.paused;
     }-*/;
 
     public native void setPaused(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.paused = value;
     }-*/;
 
@@ -102,12 +102,12 @@ public class Sound extends EventDispatcher {
      * @return Boolean to indicate if the audio is playing
      */
     public native boolean getPlaying() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.playing;
     }-*/;
 
     public native void setPlaying(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.playing = value;
     }-*/;
 
@@ -115,12 +115,12 @@ public class Sound extends EventDispatcher {
      * @return The time position of the audio.
      */
     public native double getTime() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.time;
     }-*/;
 
     public native void setTime(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.time = value;
     }-*/;
 
@@ -128,12 +128,12 @@ public class Sound extends EventDispatcher {
      * @return Url to the audio
      */
     public native String getUrl() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.url;
     }-*/;
 
     public native void setUrl(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.url = value;
     }-*/;
 
@@ -142,12 +142,12 @@ public class Sound extends EventDispatcher {
      *         the device audio.
      */
     public native double getVolume() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.volume;
     }-*/;
 
     public native void setVolume(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.volume = value;
     }-*/;
 
@@ -155,7 +155,7 @@ public class Sound extends EventDispatcher {
      * Returns true if the audio will loop
      */
     public native boolean isLooping() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.isLooping();
     }-*/;
 
@@ -163,7 +163,7 @@ public class Sound extends EventDispatcher {
      * Returns true if the audio is paused
      */
     public native boolean isPaused() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.isPaused();
     }-*/;
 
@@ -171,7 +171,7 @@ public class Sound extends EventDispatcher {
      * Returns true if the audio is playing
      */
     public native boolean isPlaying() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.isPlaying();
     }-*/;
 
@@ -179,7 +179,7 @@ public class Sound extends EventDispatcher {
      * Temporarily pause the audio. to resume, invoke `play`.
      */
     public native void pause() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.pause();
     }-*/;
 
@@ -187,7 +187,7 @@ public class Sound extends EventDispatcher {
      * Starting playing the source. if paused, will resume.
      */
     public native void play() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.play();
     }-*/;
 
@@ -198,7 +198,7 @@ public class Sound extends EventDispatcher {
      * memory.
      */
     public native void release() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.release();
     }-*/;
 
@@ -206,7 +206,7 @@ public class Sound extends EventDispatcher {
      * Reset the audio to the beginning.
      */
     public native void reset() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.reset();
     }-*/;
 
@@ -214,12 +214,12 @@ public class Sound extends EventDispatcher {
      * Stop playing the audio and reset it to the beginning.
      */
     public native void stop() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.stop();
     }-*/;
 
     public native void addCompleteHandler(SoundCompleteHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.media.audio.SoundCompleteEvent::COMPLETE,
@@ -230,7 +230,7 @@ public class Sound extends EventDispatcher {
     }-*/;
 
     public native void addErrorHandler(ErrorHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.ErrorEvent::ERROR,
@@ -241,7 +241,7 @@ public class Sound extends EventDispatcher {
     }-*/;
 
     public native void addResumeHandler(SoundResumeHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.media.audio.SoundResumeEvent::RESUME,

@@ -19,8 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.emitrom.ti4j.mobile.client.cloud.core.User;
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.JsoHelper;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
@@ -33,17 +33,17 @@ public class ChatGroup extends ProxyObject {
     }
 
     public native String Id()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return peer.id;
     }-*/;
 
     public native String getCreatedAt()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return peer.created_at;
     }-*/;
 
     public native String getUpdatedAt()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return peer.updated_at;
     }-*/;
 
@@ -59,7 +59,7 @@ public class ChatGroup extends ProxyObject {
     }
 
     private native JavaScriptObject _getParticicapteUsers()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return peer.participate_users;
     }-*/;
 

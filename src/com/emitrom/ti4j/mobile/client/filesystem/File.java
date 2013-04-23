@@ -37,7 +37,7 @@ public class File extends EventDispatcher {
      * 
      */
     public native boolean append(String contents) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.append(contents);
     }-*/;
 
@@ -45,9 +45,9 @@ public class File extends EventDispatcher {
      * Appends data to the file identified by this file object.
      */
     public native boolean append(Blob contents) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
-				.append(contents.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.append(contents.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -55,9 +55,9 @@ public class File extends EventDispatcher {
      * 
      */
     public native boolean append(File contents) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
-				.append(contents.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.append(contents.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -65,7 +65,7 @@ public class File extends EventDispatcher {
      * 
      */
     public native void copy(String destinationPath) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.copy(destinationPath);
     }-*/;
 
@@ -73,7 +73,7 @@ public class File extends EventDispatcher {
      * @return Readonly returns the fully resolved native path
      */
     public native String getNativePath() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.nativePath;
     }-*/;
 
@@ -81,7 +81,7 @@ public class File extends EventDispatcher {
      * Create a directory at the path for the file object
      */
     public native boolean createDirectory() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.createDirectory();
     }-*/;
 
@@ -89,7 +89,7 @@ public class File extends EventDispatcher {
      * Create a file path at the path for the file object
      */
     public native boolean createFile() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.createFile();
     }-*/;
 
@@ -97,7 +97,7 @@ public class File extends EventDispatcher {
      * Return the created timestamp for the file
      */
     public native int createTimestamp() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.createTimestamp();
     }-*/;
 
@@ -109,7 +109,7 @@ public class File extends EventDispatcher {
      *            false
      */
     public native boolean deleteDirectory(boolean recursive) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.deleteDirectory(recursive);
     }-*/;
 
@@ -117,7 +117,7 @@ public class File extends EventDispatcher {
      * Delete the file
      */
     public native boolean deleteFile() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.deleteFile();
     }-*/;
 
@@ -127,7 +127,7 @@ public class File extends EventDispatcher {
      * @return Returns true if file is executable.
      */
     public native boolean isExecutable() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.executable;
     }-*/;
 
@@ -135,7 +135,7 @@ public class File extends EventDispatcher {
      * Returns true if the file or directory exists on the device
      */
     public native boolean exists() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.exists();
     }-*/;
 
@@ -143,7 +143,7 @@ public class File extends EventDispatcher {
      * Returns true if the file or directory exists on the device
      */
     public native FileStream open(int mode) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.open(mode);
 		return @com.emitrom.ti4j.mobile.client.filesystem.FileStream::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
@@ -152,7 +152,7 @@ public class File extends EventDispatcher {
      * Return the file extension
      */
     public native String getExtension() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.extension();
     }-*/;
 
@@ -160,7 +160,7 @@ public class File extends EventDispatcher {
      * Returns true if this file object represents an ordinary file.
      */
     public native boolean isFile() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.isFile();
     }-*/;
 
@@ -168,7 +168,7 @@ public class File extends EventDispatcher {
      * Return an array of paths in the directory of the file object
      */
     public native JsArrayString getDirectoryListing() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.getDirectoryListing();
     }-*/;
 
@@ -176,7 +176,7 @@ public class File extends EventDispatcher {
      * Return the file parent
      */
     public native File getParent() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.parent;
 		return @com.emitrom.ti4j.mobile.client.filesystem.File::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
@@ -185,7 +185,7 @@ public class File extends EventDispatcher {
      * Returns true if the file is hidden
      */
     public native boolean isHidden() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.hidden;
     }-*/;
 
@@ -193,7 +193,7 @@ public class File extends EventDispatcher {
      * Return the last modification timestamp for the file
      */
     public native int getModificationTimestamp() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.modificationTimestamp();
     }-*/;
 
@@ -204,7 +204,7 @@ public class File extends EventDispatcher {
      *            new location
      */
     public native boolean move(String newpath) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.move(newpath);
     }-*/;
 
@@ -212,7 +212,7 @@ public class File extends EventDispatcher {
      * The name of the file
      */
     public native String getName() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.name;
     }-*/;
 
@@ -220,7 +220,7 @@ public class File extends EventDispatcher {
      * Return the contents of file as blob
      */
     public native Blob read() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.read();
 		return @com.emitrom.ti4j.mobile.client.blob.Blob::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
@@ -229,7 +229,7 @@ public class File extends EventDispatcher {
      * Returns true if the file is readonly
      */
     public native boolean isReadonly() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.readonly;
     }-*/;
 
@@ -247,7 +247,7 @@ public class File extends EventDispatcher {
      * identified by this object from being backed up to iTunes.
      */
     public native boolean isRemoteBackup() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.remoteBackup;
     }-*/;
 
@@ -265,7 +265,7 @@ public class File extends EventDispatcher {
      * identified by this object from being backed up to iTunes.
      */
     public native void setRemoteBackup(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.remoteBackup = value
     }-*/;
 
@@ -275,7 +275,7 @@ public class File extends EventDispatcher {
      * @return
      */
     public native boolean isReadOnly() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.readOnly;
     }-*/;
 
@@ -285,7 +285,7 @@ public class File extends EventDispatcher {
      * @return
      */
     public native double getSize() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.size;
     }-*/;
 
@@ -302,7 +302,7 @@ public class File extends EventDispatcher {
      * @return
      */
     public native String resolve() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.resolve();
     }-*/;
 
@@ -313,7 +313,7 @@ public class File extends EventDispatcher {
      *            new name
      */
     public native boolean rename(String newName) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.rename(newName);
     }-*/;
 
@@ -321,7 +321,7 @@ public class File extends EventDispatcher {
      * Make the file hidden
      */
     public native void setHidden(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.setHidden = value;
     }-*/;
 
@@ -329,7 +329,7 @@ public class File extends EventDispatcher {
      * Make the file readonly
      */
     public native void setReadonly() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.setReadonly();
     }-*/;
 
@@ -337,7 +337,7 @@ public class File extends EventDispatcher {
      * Return boolean to indicate if the path has space available for storage
      */
     public native boolean getSpaceAvailable() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.spaceAvailable();
     }-*/;
 
@@ -345,7 +345,7 @@ public class File extends EventDispatcher {
      * Returns true if the file points to a symbolic link
      */
     public native boolean isSymbolicLink() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.symbolicLink;
     }-*/;
 
@@ -354,7 +354,7 @@ public class File extends EventDispatcher {
      * 
      */
     public native boolean write(String contents) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.write(contents);
     }-*/;
 
@@ -362,9 +362,9 @@ public class File extends EventDispatcher {
      * Write the contents to file.
      */
     public native boolean write(Blob contents) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
-				.write(contents.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.write(contents.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -372,9 +372,9 @@ public class File extends EventDispatcher {
      * 
      */
     public native boolean write(File contents) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
-				.write(contents.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.write(contents.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -388,10 +388,10 @@ public class File extends EventDispatcher {
      *            (optional) append the string to the end of the file.
      */
     public native boolean write(Blob contents, boolean append) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.write(
-						contents.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						contents.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						append);
     }-*/;
 
@@ -406,7 +406,7 @@ public class File extends EventDispatcher {
      *            (optional) append the string to the end of the file.
      */
     public native boolean write(String contents, boolean append) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.write(contents, append);
     }-*/;
 
@@ -421,10 +421,10 @@ public class File extends EventDispatcher {
      *            (optional) append the string to the end of the file.
      */
     public native boolean write(File contents, boolean append) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.write(
-						contents.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()(),
+						contents.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
 						append);
     }-*/;
 
@@ -432,7 +432,7 @@ public class File extends EventDispatcher {
      * Returns true if the file is writeable
      */
     public native boolean isWritable() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.writable;
     }-*/;
 }

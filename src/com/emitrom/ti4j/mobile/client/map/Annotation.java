@@ -15,7 +15,7 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.map;
 
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
+import com.emitrom.ti4j.core.client.JsoHelper;
 import com.emitrom.ti4j.mobile.client.core.events.EventDispatcher;
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -33,12 +33,12 @@ public class Annotation extends EventDispatcher {
      * @return Boolean to indicate whether the pin should animate when dropped
      */
     public native boolean isAnimate() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.animate;
     }-*/;
 
     public native void setAnimate(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.animate = value;
     }-*/;
 
@@ -46,22 +46,22 @@ public class Annotation extends EventDispatcher {
      * @return Image for the pin instead of default image.
      */
     public native String getImage() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.image;
     }-*/;
 
     public native void setImage(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.image = value;
     }-*/;
 
     public native void setLeftButton(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.leftButton = value;
     }-*/;
 
     public native void setLeftButton(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.leftButton = value;
     }-*/;
 
@@ -70,7 +70,7 @@ public class Annotation extends EventDispatcher {
      *         type constant or url
      */
     public native Object getLeftButton() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.leftButton;
     }-*/;
 
@@ -78,12 +78,12 @@ public class Annotation extends EventDispatcher {
      * @return A left view that is displayed on the annotation
      */
     public native Object getLeftView() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.leftView;
     }-*/;
 
     public native void setLeftView(Object value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.leftView = value;
     }-*/;
 
@@ -94,12 +94,12 @@ public class Annotation extends EventDispatcher {
      * @platforms android
      */
     public native String getPinImage() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.pinImage;
     }-*/;
 
     public native void setPinImage(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.pinImage = value;
     }-*/;
 
@@ -107,22 +107,22 @@ public class Annotation extends EventDispatcher {
      * @return The pin color.
      */
     public native int getPincolor() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.pincolor;
     }-*/;
 
     public native void setPincolor(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.pincolor = value;
     }-*/;
 
     public native void setRightButton(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.rightButton = value;
     }-*/;
 
     public native void setRightButton(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.rightButton = value;
     }-*/;
 
@@ -131,7 +131,7 @@ public class Annotation extends EventDispatcher {
      *         type constant or url
      */
     public native Object getRightButton() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.rightButton;
     }-*/;
 
@@ -139,12 +139,12 @@ public class Annotation extends EventDispatcher {
      * @return A right view that is displayed on the annotation
      */
     public native Object getRightView() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.rightView;
     }-*/;
 
     public native void setRightView(Object value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.rightView = value;
     }-*/;
 
@@ -152,12 +152,12 @@ public class Annotation extends EventDispatcher {
      * @return The secondary title of the annotation view
      */
     public native String getSubtitle() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.subtitle;
     }-*/;
 
     public native void setSubtitle(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.subtitle = value;
     }-*/;
 
@@ -165,12 +165,12 @@ public class Annotation extends EventDispatcher {
      * @return The key in the locale file to use for the subtitle property
      */
     public native String getSubtitleId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.subtitleid;
     }-*/;
 
     public native void setSubtitleId(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.subtitleid = value;
     }-*/;
 
@@ -182,7 +182,7 @@ public class Annotation extends EventDispatcher {
     }-*/;
 
     public native void setTitle(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.title = value;
     }-*/;
 
@@ -190,12 +190,12 @@ public class Annotation extends EventDispatcher {
      * @return The key in the locale file to use for the title property
      */
     public native String getTitleId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.titleid;
     }-*/;
 
     public native void setTitleId(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.titleid = value;
     }-*/;
 }

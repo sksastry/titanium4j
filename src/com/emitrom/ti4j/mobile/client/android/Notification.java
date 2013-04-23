@@ -1,27 +1,27 @@
 /**************************************************************************
-   Notification.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+ * Notification.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom
+ * LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.android;
 
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
 import com.emitrom.ti4j.mobile.client.core.events.EventDispatcher;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsDate;
 
 /**
- * The Titanium binding of an AndroidMedia Notification.
+ * The Titanium binding of an Androida Notification.
  * 
  * If you pass contentTitle and/or contentText into
  * Titanium.Android.createNotification, then setLatestEventInfo will
@@ -29,29 +29,25 @@ import com.google.gwt.core.client.JsDate;
  * separately unless you want to). You can also use a custom layout.xml wrapped
  * in a Titanium.Android.RemoteViews object in the contentView property, which
  * gives more fine grained control and customization to how the notification
- * actually behaves. Also see AndroidMedia's developer guide for Notifications
+ * actually behaves. Also see Androida's developer guide for Notifications
  */
 public class Notification extends EventDispatcher {
 
-    public Notification() {
-        jsObj = JsoHelper.createObject();
-    }
-
-    public Notification(JavaScriptObject obj) {
+    protected Notification(JavaScriptObject obj) {
         jsObj = obj;
     }
 
     /**
      * Sets the latest event info using the builtin Notification View for jso
-     * notification. See AndroidMedia's documentation for setLatestEventInfo
+     * notification. See Androida's documentation for setLatestEventInfo
      */
     public final native void setLatestEventInfo() /*-{
-		var jso = jso.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.setLatestEventInfo();
     }-*/;
 
     public final native int getAudioStreamType() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.audioStreamType;
     }-*/;
 
@@ -61,12 +57,14 @@ public class Notification extends EventDispatcher {
      * @param value
      */
     public final native void setAudioStreamType(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.audioStreamType = value;
     }-*/;
 
     public final native PendingIntent getContentIntent() /*-{
-		return jso.contentIntent;
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var obj = jso.contentIntent;
+		return @com.emitrom.ti4j.mobile.client.android.PendingIntent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
 
     /**
@@ -76,11 +74,13 @@ public class Notification extends EventDispatcher {
      * @param value
      */
     public final native void setContentIntent(PendingIntent value) /*-{
-		jso.contentIntent = value;
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.contentIntent = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		;
     }-*/;
 
     public final native String getContentText() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.contentText;
     }-*/;
 
@@ -90,7 +90,7 @@ public class Notification extends EventDispatcher {
      * @param value
      */
     public final native void setContentText(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.contentText = value;
     }-*/;
 
@@ -100,12 +100,12 @@ public class Notification extends EventDispatcher {
      * @param value
      */
     public final native void setContentTitle(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.contentTitle = value;
     }-*/;
 
     public final native int getDefaults() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.defaults;
     }-*/;
 
@@ -115,12 +115,12 @@ public class Notification extends EventDispatcher {
      * @param value
      */
     public final native void setDefaults(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.defaults = value;
     }-*/;
 
     public final native PendingIntent getDeleteIntent() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.deleteIntent;
     }-*/;
 
@@ -131,57 +131,57 @@ public class Notification extends EventDispatcher {
      * @param value
      */
     public final native void setDeleteIntent(PendingIntent value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.deleteIntent = value;
     }-*/;
 
     public final native int getFlags() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.flags;
     }-*/;
 
     /**
-     * Set of flags for the notification, defaults to AndroidMedia.FLAG_AUTO_CANCEL.
-     * Possible values: AndroidMedia.FLAG_AUTO_CANCEL,AndroidMedia.FLAG_INSISTENT,
-     * AndroidMedia.FLAG_NO_CLEAR,FLAG_ONGOING_EVENT,
-     * AndroidMedia.FLAG_ONLY_ALERT_ONCE,AndroidMedia.FLAG_SHOW_LIGHTS
+     * Set of flags for the notification, defaults to Androida.FLAG_AUTO_CANCEL.
+     * Possible values: Androida.FLAG_AUTO_CANCEL,Androida.FLAG_INSISTENT,
+     * Androida.FLAG_NO_CLEAR,FLAG_ONGOING_EVENT,
+     * Androida.FLAG_ONLY_ALERT_ONCE,Androida.FLAG_SHOW_LIGHTS
      * 
      * @param value
      */
     public final native void setFlags(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.flags = value;
     }-*/;
 
     public final native <T> T getIcon() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.icon;
     }-*/;
 
     /**
      * A resource id to an icon (the URL must be an image located in
-     * Resources/android/images/ or an AndroidMedia content URI)
+     * Resources/android/images/ or an Androida content URI)
      * 
      * @param value
      */
     public final native void setIcon(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.icon = value;
     }-*/;
 
     /**
      * A URL to an icon (the URL must be an image located in
-     * Resources/android/images/ or an AndroidMedia content URI)
+     * Resources/android/images/ or an Androida content URI)
      * 
      * @param value
      */
     public final native void setIcon(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.icon = value;
     }-*/;
 
     public final native int getLedARGB() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.ledARGB;
     }-*/;
 
@@ -191,12 +191,12 @@ public class Notification extends EventDispatcher {
      * @param value
      */
     public final native void setLedARGB(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.ledARGB = value;
     }-*/;
 
     public final native int getLedOffMS() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.ledOffMS;
     }-*/;
 
@@ -207,12 +207,12 @@ public class Notification extends EventDispatcher {
      * @param value
      */
     public final native void setLedOffMS(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.ledOffMS = value;
     }-*/;
 
     public final native int getLedOnMS() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.ledOnMS;
     }-*/;
 
@@ -222,12 +222,12 @@ public class Notification extends EventDispatcher {
      * @param value
      */
     public final native void setLedOnMS(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.ledOnMS = value;
     }-*/;
 
     public final native int getNumber() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.number;
     }-*/;
 
@@ -237,27 +237,27 @@ public class Notification extends EventDispatcher {
      * @param value
      */
     public final native void setNumber(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.number = value;
     }-*/;
 
     public final native String getSound() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.sound;
     }-*/;
 
     /**
-     * Set a URL to the sound to play (supports AndroidMedia + Titanium URLs)
+     * Set a URL to the sound to play (supports Android + Titanium URLs)
      * 
      * @param value
      */
     public final native void setSound(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.sound = value;
     }-*/;
 
     public final native String getTickerText() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.tickerText;
     }-*/;
 
@@ -268,12 +268,12 @@ public class Notification extends EventDispatcher {
      * @param value
      */
     public final native void setTickerText(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.tickerText = value;
     }-*/;
 
     public final native JsDate getWhen() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.when;
     }-*/;
 
@@ -283,7 +283,7 @@ public class Notification extends EventDispatcher {
      * @param value
      */
     public final native void setWhen(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.when = value;
     }-*/;
 
@@ -293,7 +293,7 @@ public class Notification extends EventDispatcher {
      * @param value
      */
     public final native void setWhen(JsDate value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.when = value;
     }-*/;
 

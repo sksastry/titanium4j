@@ -42,7 +42,7 @@ public class DocumentType extends Node {
      *         duplicates are discarded.
      */
     public native NamedNodeMap getEntities() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.entities;
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.NamedNodeMap::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -52,7 +52,7 @@ public class DocumentType extends Node {
      * @return The internal subset as a string.
      */
     public native String getInternalSubset() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.internalSubset;
     }-*/;
 
@@ -61,7 +61,7 @@ public class DocumentType extends Node {
      *         `doctype` keyword.
      */
     public native String getName() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.name;
     }-*/;
 
@@ -72,7 +72,7 @@ public class DocumentType extends Node {
      *         {@link notation} interface.
      */
     public native NamedNodeMap getNotations() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.notations;
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.NamedNodeMap::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -82,7 +82,7 @@ public class DocumentType extends Node {
      * @return The public identifier of the external subset.
      */
     public native String getPublicId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.publicId;
     }-*/;
 
@@ -90,7 +90,7 @@ public class DocumentType extends Node {
      * @return The system identifier of the external subset.
      */
     public native String getSystemId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.systemId;
     }-*/;
 

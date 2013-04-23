@@ -44,7 +44,7 @@ public class MobileWebGeolocation extends TiModule {
      * milliseconds.
      */
     public native double getForwardGeocoderTimeout() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.getForwardGeocoderTimeout();
     }-*/;
 
@@ -54,7 +54,7 @@ public class MobileWebGeolocation extends TiModule {
      * milliseconds.
      */
     public native void setForwardGeocoderTimeout(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.setForwardGeocoderTimeout(value);
     }-*/;
 
@@ -63,7 +63,7 @@ public class MobileWebGeolocation extends TiModule {
      * 
      */
     public native double getLocationTimeout() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.getLocationTimeout();
     }-*/;
 
@@ -72,7 +72,7 @@ public class MobileWebGeolocation extends TiModule {
      * The time within which location requests must succeed, in milliseconds.
      */
     public native void setLocationTimeout(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.setLocationTimeout(value);
     }-*/;
 
@@ -82,7 +82,7 @@ public class MobileWebGeolocation extends TiModule {
      * 
      */
     public native double setMaximumHeadingAge() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.getMaximumHeadingAge();
     }-*/;
 
@@ -92,7 +92,7 @@ public class MobileWebGeolocation extends TiModule {
      * milliseconds.
      */
     public native void getMaximumHeadingAge(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.getMaximumHeadingAge(value);
     }-*/;
 
@@ -102,7 +102,7 @@ public class MobileWebGeolocation extends TiModule {
      * 
      */
     public native double getMaximumLocationAge() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.getMaximumLocationAge();
     }-*/;
 
@@ -112,7 +112,7 @@ public class MobileWebGeolocation extends TiModule {
      * milliseconds.
      */
     public native void setMaximumLocationAge(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.setMaximumLocationAge(value);
     }-*/;
 
@@ -122,7 +122,7 @@ public class MobileWebGeolocation extends TiModule {
      * 
      */
     public native double getReverseGeocoderTimeout() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.getReverseGeocoderTimeout();
     }-*/;
 
@@ -132,7 +132,7 @@ public class MobileWebGeolocation extends TiModule {
      * milliseconds.
      */
     public native void setReverseGeocoderTimeout(double value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.setReverseGeocoderTimeout(value);
     }-*/;
 

@@ -43,12 +43,12 @@ public class TabbedBar extends View implements HasStyle {
      * @return The selected index
      */
     public native int getIndex() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.index;
     }-*/;
 
     public native void setIndex(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.index = value;
     }-*/;
 
@@ -62,7 +62,7 @@ public class TabbedBar extends View implements HasStyle {
     }
 
     private native JsArray<JavaScriptObject> _getLabels() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.labels;
     }-*/;
 
@@ -83,7 +83,7 @@ public class TabbedBar extends View implements HasStyle {
     }
 
     private native void _setLabels(JsArray<JavaScriptObject> value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.labels = value;
     }-*/;
 
@@ -91,12 +91,12 @@ public class TabbedBar extends View implements HasStyle {
      * @return The style of the tabbed bar
      */
     public native int getStyle() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.style;
     }-*/;
 
     public native void setStyle(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.style = value;
     }-*/;
 

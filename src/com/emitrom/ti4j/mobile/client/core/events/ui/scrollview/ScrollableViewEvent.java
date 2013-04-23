@@ -36,7 +36,7 @@ public class ScrollableViewEvent extends UIEvent {
      * the current page index
      */
     public final native int getCurrentPage() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.currentPage;
     }-*/;
 
@@ -44,14 +44,14 @@ public class ScrollableViewEvent extends UIEvent {
      * the current page view
      */
     public final native View getView() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.view;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.View::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
     
     public final native double getCurrentPageAsFloat() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.currentPageAsFloat;
     }-*/;
 

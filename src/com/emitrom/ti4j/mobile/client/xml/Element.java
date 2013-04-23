@@ -39,7 +39,7 @@ public class Element extends Node {
      * @return The name of the element, as defined by its tag.
      */
     public native String getTagName() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.tagName;
     }-*/;
 
@@ -47,7 +47,7 @@ public class Element extends Node {
      * @return Retrieves all child text nodes as one string
      */
     public native String getText() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.text;
     }-*/;
 
@@ -60,7 +60,7 @@ public class Element extends Node {
      *         default value.
      */
     public native String getAttribute(String name) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.getAttribute(name);
     }-*/;
 
@@ -75,7 +75,7 @@ public class Element extends Node {
      *            and needs to be escaped.
      */
     public native void setAttribute(String name, String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.setAttribute(name, value);
     }-*/;
 
@@ -87,7 +87,7 @@ public class Element extends Node {
      * @param name The name of the attribute to remove.
      */
     public native void removeAttribute(String name) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.removeAttribute(name);
     }-*/;
 
@@ -100,7 +100,7 @@ public class Element extends Node {
      *         null if there is no such attribute.
      */
     public native Attr getAttributeNode(String name) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.getAttributeNode(name);
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Attr::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -116,9 +116,9 @@ public class Element extends Node {
      * @return The attribute that was replaced, or `null` otherwise.
      */
     public native Attr setAttributeNode(Attr newAttr) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso
-				.setAttributeNode(newAttr.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.setAttributeNode(newAttr.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Attr::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
@@ -133,9 +133,9 @@ public class Element extends Node {
      * @param oldAttr The attribute to remove.
      */
     public native void removeAttributeNode(Attr oldAttr) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.removeAttributeNode(oldAttr.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.removeAttributeNode(oldAttr.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -145,7 +145,7 @@ public class Element extends Node {
      * @param name The name of the element. The value `*` matches all tags.
      */
     public native NodeList getElementsByTagName(String name) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.getElementsByTagName(name);
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.NodeList::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -162,7 +162,7 @@ public class Element extends Node {
      *         default value.
      */
     public native String getAttributeNS(String namespaceURI, String localName) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.getAttributeNS(namespaceURI, localName);
     }-*/;
 
@@ -187,7 +187,7 @@ public class Element extends Node {
      *            text, and needs to be escaped.
      */
     public native void setAttributeNS(String namespaceURI, String qualifiedName, String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.setAttributeNS(namespaceURI, qualifiedName, value);
     }-*/;
 
@@ -201,7 +201,7 @@ public class Element extends Node {
      * @param localName The local name of the attribute to remove.
      */
     public native void removeAttributeNS(String namespaceURI, String localName) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.removeAttributeNS(namespaceURI, localName);
     }-*/;
 
@@ -214,7 +214,7 @@ public class Element extends Node {
      * @return The {@link Attr} value, or null if there is no such attribute.
      */
     public native Attr getAttributeNodeNS(String namespaceURI, String localName) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.getAttributeNodeNS(namespaceURI, localName);
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Attr::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -230,9 +230,9 @@ public class Element extends Node {
      * @return The attribute that was replaced, or `null` otherwise.
      */
     public native Attr setAttributeNodeNS(Attr newAttr) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso
-				.setAttributeNodeNS(newAttr.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.setAttributeNodeNS(newAttr.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.Attr::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
@@ -248,7 +248,7 @@ public class Element extends Node {
      *            local names.
      */
     public native NodeList getElementsByTagNameNS(String namespaceURI, String localName) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.getElementsByTagNameNS(namespaceURI, localName);
 		var toReturn = @com.emitrom.ti4j.mobile.client.xml.NodeList::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -261,7 +261,7 @@ public class Element extends Node {
      * @param name The name of the attribute to search for.
      */
     public native boolean hasAttribute(String name) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.hasAttribute(name);
     }-*/;
 
@@ -273,7 +273,7 @@ public class Element extends Node {
      * @param localName The local name of the attribute to search for.
      */
     public native boolean hasAttributeNS(String namespaceURI, String localName) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.hasAttributeNS(namespaceURI, localName);
     }-*/;
 

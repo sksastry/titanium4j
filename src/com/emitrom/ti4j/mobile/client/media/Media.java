@@ -156,27 +156,27 @@ public class Media extends TiModule {
      *         representing the app-specific music player. iphone/ipad only
      */
     public native MusicPlayer getAppMusicPlayer() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.appMusicPlayer;
 		var toReturn = @com.emitrom.ti4j.mobile.client.media.ios.MusicPlayer::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void setAppMusicPlayer(Object value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.appMusicPlayer = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.appMusicPlayer = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
      * @return Returns the line type constant for the current line type
      */
     public native int getAudioLineType() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.audioLineType;
     }-*/;
 
     public native void setAudioLineType(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.audioLineType = value;
     }-*/;
 
@@ -184,12 +184,12 @@ public class Media extends TiModule {
      * @return Returns true if the device is playing audio
      */
     public native boolean isAudioPlaying() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.audioPlaying;
     }-*/;
 
     public native void setAudioPlaying(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.audioPlaying = value;
     }-*/;
 
@@ -200,12 +200,12 @@ public class Media extends TiModule {
      *         may be active).
      */
     public native int getAudioSessionMode() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.audioSessionMode;
     }-*/;
 
     public native void setAudioSessionMode(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.audioSessionMode = value;
     }-*/;
 
@@ -213,12 +213,12 @@ public class Media extends TiModule {
      * @return Return an array of media type constants supported for the camera
      */
     public native <T> T getAvailableCameraMediaTypes() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.availableCameraMediaTypes;
     }-*/;
 
     public native void setAvailableCameraMediaTypes(Object value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.availableCameraMediaTypes = value;
     }-*/;
 
@@ -227,12 +227,12 @@ public class Media extends TiModule {
      *         the photo gallery
      */
     public native <T> T getAvailablePhotoGalleryMediaTypes() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.availablePhotoGalleryMediaTypes;
     }-*/;
 
     public native void setAvailablePhotoGalleryMediaTypes(Object value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.availablePhotoGalleryMediaTypes = value;
     }-*/;
 
@@ -240,12 +240,12 @@ public class Media extends TiModule {
      * @return Return an array of media type constants supported for the photo
      */
     public native <T> T getAvailablePhotoMediaTypes() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.availablePhotoMediaTypes;
     }-*/;
 
     public native void setAvailablePhotoMediaTypes(Object value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.availablePhotoMediaTypes = value;
     }-*/;
 
@@ -254,12 +254,12 @@ public class Media extends TiModule {
      *         microphone monitoring is disabled
      */
     public native int getAverageMicrophonePower() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.averageMicrophonePower;
     }-*/;
 
     public native void setAverageMicrophonePower(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.averageMicrophonePower = value;
     }-*/;
 
@@ -267,12 +267,12 @@ public class Media extends TiModule {
      * @return Returns true if the device has recording input device available
      */
     public native boolean canRecord() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.canRecord;
     }-*/;
 
     public native void setCanRecord(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.canRecord = value;
     }-*/;
 
@@ -280,12 +280,12 @@ public class Media extends TiModule {
      * @return Returns true if the device has camera support
      */
     public native boolean isCameraSupported() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.isCameraSupported;
     }-*/;
 
     public native void setIsCameraSupported(boolean value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.isCameraSupported = value;
     }-*/;
 
@@ -294,12 +294,12 @@ public class Media extends TiModule {
      *         microphone monitoring is disabled
      */
     public native int getPeakMicrophonePower() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return Titanium.Media.peakMicrophonePower;
     }-*/;
 
     public native void setPeakMicrophonePower(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.peakMicrophonePower = value;
     }-*/;
 
@@ -309,74 +309,74 @@ public class Media extends TiModule {
      *         representing the system-wide music player. iphone/ipad only
      */
     public native MusicPlayer getSystemMusicPlayer() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.systemMusicPlayer;
 		var toReturn = @com.emitrom.ti4j.mobile.client.media.ios.MusicPlayer::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native void setSystemMusicPlayer(MusicPlayer value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.systemMusicPlayer = value.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.systemMusicPlayer = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
     /**
      * @return The current volume of the playback device
      */
     public native int getVolume() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.volume;
     }-*/;
 
     public native void setVolume(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.volume = value;
     }-*/;
 
     public native AudioPlayer createAudioPlayer() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createAudioPlayer();
 		var toReturn = @com.emitrom.ti4j.mobile.client.media.AudioPlayer::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native AudioRecorder createAudioRecorder() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createAudioRecorder();
 		var toReturn = @com.emitrom.ti4j.mobile.client.media.AudioRecorder::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native Item createItem() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createItem();
 		var toReturn = @com.emitrom.ti4j.mobile.client.media.Item::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native MusicPlayer createMusicPlayer() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createItem();
 		var toReturn = @com.emitrom.ti4j.mobile.client.media.ios.MusicPlayer::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native Sound createSound() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createSound();
 		var toReturn = @com.emitrom.ti4j.mobile.client.media.Sound::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native VideoPlayer createVideoPlayer() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createVideoPlayer();
 		var toReturn = @com.emitrom.ti4j.mobile.client.media.VideoPlayer::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
 
     public native AndroidMedia createAndroid() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.createVideoPlayer();
 		var toReturn = @com.emitrom.ti4j.mobile.client.media.android.AndroidMedia::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
@@ -386,7 +386,7 @@ public class Media extends TiModule {
      * Play a device beep notification
      */
     public native void beep() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.beep();
     }-*/;
 
@@ -396,7 +396,7 @@ public class Media extends TiModule {
      * media capture device be hidden.
      */
     public native void hideCamera() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.hideCamera();
     }-*/;
 
@@ -406,7 +406,7 @@ public class Media extends TiModule {
      * ipad only.
      */
     public native void hideMusicLibrary() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.hideMusicLibrary();
     }-*/;
 
@@ -420,7 +420,7 @@ public class Media extends TiModule {
      *            the type of media to check
      */
     public native boolean isMediaTypeSupported(String media, String type) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.isMediaTypeSupported(media, type);
     }-*/;
 
@@ -452,13 +452,13 @@ public class Media extends TiModule {
      *            TODO: implement options object
      */
     public native void openPhotoGallery(MediaOptionsType options) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.openPhotoGallery(options.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.openPhotoGallery(options.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     public native void openPhotoGallery(MediaSelectionCallback callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.openPhotoGallery({
 					error : function(e) {
@@ -489,7 +489,7 @@ public class Media extends TiModule {
      *            error
      */
     public native void saveToPhotoGallery(Object media, Object callbacks) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.saveToPhotoGallery(media, callbacks);
     }-*/;
 
@@ -519,9 +519,9 @@ public class Media extends TiModule {
      *            camera UI transform.
      */
     public native void showCamera(MediaOptionsType options) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
-				.showCamera(options.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.showCamera(options.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
@@ -550,7 +550,7 @@ public class Media extends TiModule {
      *            camera UI transform.
      */
     public native void showCamera(MediaSelectionCallback callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.showCamera({
 					error : function(e) {
@@ -588,7 +588,7 @@ public class Media extends TiModule {
      *            media selection is allowed
      */
     public native void showMusicLibrary(Object options) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.showMusicLibrary(options);
     }-*/;
 
@@ -611,16 +611,16 @@ public class Media extends TiModule {
     }
 
     private native JsArray<JavaScriptObject> _queryMusicLibrary(MediaQueryType query) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
-				.queryMusicLibrary(query.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()());
+				.queryMusicLibrary(query.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
      * Start the monitoring of microphone sound level
      */
     public native void startMicrophoneMonitor() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.startMicrophoneMonitor();
     }-*/;
 
@@ -628,7 +628,7 @@ public class Media extends TiModule {
      * Stop the monitoring of microphone sound level
      */
     public native void stopMicrophoneMonitor() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.stopMicrophoneMonitor();
     }-*/;
 
@@ -639,7 +639,7 @@ public class Media extends TiModule {
      * the `success` callback.
      */
     public native void takePicture() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.takePicture();
     }-*/;
 
@@ -647,7 +647,7 @@ public class Media extends TiModule {
      * Take a screen shot of the visible ui on the device
      */
     public native void takeScreenshot(ScrenShotCallback callback) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso
 				.takeScreenshot(function(e) {
 					var scObject = @com.emitrom.ti4j.mobile.client.media.ScreenShotCallbackArguments::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
@@ -659,7 +659,7 @@ public class Media extends TiModule {
      * Play a device vibration
      */
     public native void vibrate() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.vibrate();
     }-*/;
 
@@ -669,7 +669,7 @@ public class Media extends TiModule {
      * @Android only
      */
     public native void vibrate(int duration) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var pattern = [];
 		pattern.push(0);
 		pattern.push(duration);
@@ -698,7 +698,7 @@ public class Media extends TiModule {
     }
 
     private native void _vibrate(JsArrayInteger pattern) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.vibrate(pattern);
     }-*/;
 
@@ -721,7 +721,7 @@ public class Media extends TiModule {
     }
 
     public native void addRecordinginputHandler(RecordingInputHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.RecordingInputEvent::RECORDING_INPUT,
@@ -732,7 +732,7 @@ public class Media extends TiModule {
     }-*/;
 
     public native void addLineChangeHandler(LineChangeHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.LineChangeEvent::LINE_CHANGE,
@@ -743,7 +743,7 @@ public class Media extends TiModule {
     }-*/;
 
     public native void addVolumeHandler(VolumeHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso
 				.addEventListener(
 						@com.emitrom.ti4j.mobile.client.core.events.media.VolumentEvent::VOLUME,

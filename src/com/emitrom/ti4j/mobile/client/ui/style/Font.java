@@ -16,8 +16,8 @@
 
 package com.emitrom.ti4j.mobile.client.ui.style;
 
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.JsoHelper;
+import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.Unit;
 import com.emitrom.ti4j.mobile.client.ui.UI;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -71,12 +71,12 @@ public class Font extends ProxyObject {
     }
 
     public native void setFontFamily(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.fontFamily = value;
     }-*/;
 
     public native String getFontFamily() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.fontFamily;
     }-*/;
 
@@ -85,7 +85,7 @@ public class Font extends ProxyObject {
     }
 
     private native void setFontWeight(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.fontWeight = value;
     }-*/;
 
@@ -94,7 +94,7 @@ public class Font extends ProxyObject {
     }
 
     private native String _getFontWeight() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.fontWeight;
     }-*/;
 
@@ -103,7 +103,7 @@ public class Font extends ProxyObject {
     }
 
     private native String _getFontStyle() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.fontStyle;
     }-*/;
 
@@ -112,7 +112,7 @@ public class Font extends ProxyObject {
     }
 
     public native int getFontSize() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.fontSize;
     }-*/;
 
@@ -124,7 +124,7 @@ public class Font extends ProxyObject {
     }
 
     private native void _setFontSize(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.fontSize = value;
     }-*/;
 
@@ -133,12 +133,12 @@ public class Font extends ProxyObject {
     }
 
     private native void _setFontSize(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.fontSize = value;
     }-*/;
 
     private native void setFontStyle(String value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.fontStyle = value;
     }-*/;
 

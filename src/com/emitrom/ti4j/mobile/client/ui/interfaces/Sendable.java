@@ -23,12 +23,12 @@ public interface Sendable {
      * @return Array of email bcc: recipients
      */
     public JsArrayString getBccRecipients() /*-{
-                                            var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+                                            var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
                                             return jso.bccRecipients;
                                             }-*/;
 
     public void setBccRecipients(JsArrayString value) /*-{
-                                                      var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+                                                      var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
                                                       jso.bccRecipients = value;
                                                       }-*/;
 
@@ -36,12 +36,12 @@ public interface Sendable {
      * @return Array of email cc: recipients
      */
     public JsArrayString getCcRecipients() /*-{
-                                           var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+                                           var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
                                            return jso.ccRecipients;
                                            }-*/;
 
     public void setCcRecipients(JsArrayString value) /*-{
-                                                     var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+                                                     var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
                                                      jso.ccRecipients = value;
                                                      }-*/;
 
@@ -51,12 +51,12 @@ public interface Sendable {
      *         should not use html messages in 1.6: after that is okay.)
      */
     public boolean isHtml() /*-{
-                            var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+                            var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
                             return jso.html;
                             }-*/;
 
     public void setHtml(boolean value) /*-{
-                                       var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+                                       var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
                                        jso.html = value;
                                        }-*/;
 
@@ -64,12 +64,12 @@ public interface Sendable {
      * @return The email message body
      */
     public String getMessageBody() /*-{
-                                   var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+                                   var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
                                    return jso.messageBody;
                                    }-*/;
 
     public void setMessageBody(String value) /*-{
-                                             var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+                                             var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
                                              jso.messageBody = value;
                                              }-*/;
 
@@ -77,12 +77,12 @@ public interface Sendable {
      * @return The subject line for the email
      */
     public String getSubject() /*-{
-                               var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+                               var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
                                return jso.subject;
                                }-*/;
 
     public void setSubject(String value) /*-{
-                                         var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+                                         var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
                                          jso.subject = value;
                                          }-*/;
 
@@ -90,12 +90,12 @@ public interface Sendable {
      * @return Array of email recipients
      */
     public JsArrayString getToRecipients() /*-{
-                                           var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+                                           var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
                                            return jso.toRecipients;
                                            }-*/;
 
     public void setToRecipients(JsArrayString value) /*-{
-                                                     var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+                                                     var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
                                                      jso.toRecipients = value;
                                                      }-*/;
 
@@ -103,7 +103,7 @@ public interface Sendable {
      * Return whether or not sending email is supported
      */
     public void isSupported() /*-{
-                              var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+                              var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
                               return jso.isSupported();
                               }-*/;
 
@@ -115,12 +115,12 @@ public interface Sendable {
      *            animated on open.
      */
     public void open(Object properties) /*-{
-                                        var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+                                        var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
                                         return jso.open(properties);
                                         }-*/;
 
     public void open() /*-{
-                       var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+                       var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
                        return jso.open();
                        }-*/;
 

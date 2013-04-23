@@ -15,8 +15,8 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.cloudpush;
 
-import com.emitrom.ti4j.mobile.client.core.JsoHelper;
-import com.emitrom.ti4j.mobile.client.core.ProxyObject;
+import com.emitrom.ti4j.core.client.JsoHelper;
+import com.emitrom.ti4j.core.client.ProxyObject;
 
 /**
  * Simple object for specifying token retrieval options to
@@ -34,7 +34,7 @@ public class CloudPushNotificationConfig extends ProxyObject {
      * @param errorHandler
      */
     public native void setErrorHandler(CloudPushNotificationErrorHandler errorHandler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.error = function(e) {
 			var eventObject = @com.emitrom.ti4j.mobile.client.core.events.cloudpush.CloudPushNotificationErrorEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 			errorHandler.@com.emitrom.ti4j.mobile.client.cloudpush.CloudPushNotificationErrorHandler::onError(Lcom/emitrom/ti4j/mobile/client/core/events/cloudpush/CloudPushNotificationErrorEvent;)(eventObject);
@@ -47,7 +47,7 @@ public class CloudPushNotificationConfig extends ProxyObject {
      * @param errorHandler
      */
     public native void setSuccessHandler(CloudPushNotificationSuccessHandler successHandler)/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		peer.error = function(e) {
 			var eventObject = @com.emitrom.ti4j.mobile.client.core.events.cloudpush.CloudPushNotificationSuccessEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 			successHandler.@com.emitrom.ti4j.mobile.client.cloudpush.CloudPushNotificationSuccessHandler::onSuccess(Lcom/emitrom/ti4j/mobile/client/core/events/cloudpush/CloudPushNotificationSuccessEvent;)(eventObject);

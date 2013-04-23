@@ -1,17 +1,17 @@
 /**************************************************************************
-   Alert.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+ * Alert.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.android.calendar;
 
@@ -20,7 +20,7 @@ import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsDate;
 
 /**
- * An object which represents a single alert for an event in an AndroidMedia
+ * An object which represents a single alert for an event in an Android
  * calendar.
  */
 public class Alert extends EventDispatcher {
@@ -33,110 +33,64 @@ public class Alert extends EventDispatcher {
         this.jsObj = obj;
     }
 
+    /**
+     * Date/time at which this alert alarm is set to trigger.
+     */
     public native JsDate getAlarmTime() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.alarmTime;
     }-*/;
 
     /**
-     * The date/time at which the alert's alarm is triggered.
-     * 
-     * @param value
+     * The date/time at which the corresponding event begins.
      */
-    public native void setAlarmTime(JsDate value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.alarmTime = value;
-    }-*/;
-
     public native JsDate getBegin() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.begin;
     }-*/;
 
     /**
-     * The date/time at which the corresponding event begins.
-     * 
-     * @param value
+     * The date/time at which the corresponding event ends.
      */
-    public native void setBeginn(JsDate value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.beginn = value;
-    }-*/;
-
     public native JsDate getEnd() /*-{
-		return this.end;
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		return jso.end;
     }-*/;
 
     /**
-     * The date/time at which the corresponding event ends.
-     * 
-     * @param value
+     * Identifier of the event for which this alert is set.
      */
-    public native void setEnd(JsDate value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.end = value;
-    }-*/;
-
     public native int getEventId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.eventId;
     }-*/;
 
     /**
-     * The id of the alert.
-     * 
-     * @param id
+     * Identifier of this alert.
      */
-    public native void setEventId(int id) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.eventId = id;
-    }-*/;
-
     public native int getId() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.id;
     }-*/;
 
     /**
-     * The id of the alert.
-     * 
-     * @param id
+     * RecurrenceRule notice period in minutes, that determines how long prior to the
+     * event this alert should trigger.
      */
-    public native void setId(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.id = value;
-    }-*/;
-
     public native int getMinutes() /*-{
-		return this.minutes;
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		return jso.minutes;
     }-*/;
 
     /**
-     * The minutes before the event when the alert should trigger.
-     * 
-     * @param value
+     * The current state of the alert.
+     * <p>
+     * One of STATE_DISMISSED, STATE_FIRED, or STATE_SCHEDULED.
      */
-    public native void setMinutes(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.minutes = value;
-    }-*/;
 
     public native int getStates() /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.states;
-    }-*/;
-
-    /**
-     * The current state of the alert. Possible values are the STATE_ constants
-     * in
-     * <code>com.emitrom.ti4j.mobile.client.android.calendar.Calendar</code>
-     * .
-     * 
-     * @param value
-     */
-    public native void setState(int value) /*-{
-		var jso = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
-		jso.state = value;
     }-*/;
 
 }

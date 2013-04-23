@@ -25,12 +25,12 @@ public class CloudClientsResponse extends AbstractHandlerResponse {
     }
 
     public native String getIpAddress()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return peer.ip_address;
     }-*/;
 
     public native Location getLocation()/*-{
-		var peer = this.@com.emitrom.ti4j.mobile.client.core.ProxyObject::getJsObj()();
+		var peer = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = peer.location;
 		return @com.emitrom.ti4j.mobile.client.cloud.clients.Location::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
