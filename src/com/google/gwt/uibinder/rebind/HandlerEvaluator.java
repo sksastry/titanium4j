@@ -40,7 +40,7 @@ import com.google.gwt.uibinder.rebind.model.OwnerClass;
  *     @UiField Label label;
  *
  *     @UiBinder({"label", "link"})
- *     public void doClick(ClickEvent e) {
+ *     public void doClick(DashboardItemClickEvent e) {
  *       // do something
  *     }
  *   }
@@ -51,7 +51,7 @@ import com.google.gwt.uibinder.rebind.model.OwnerClass;
  * <pre>
  *    ClickHandler handler0 = new ClickHandler() {
  *      @Override
- *      public void onClick(ClickEvent event) {
+ *      public void onClick(DashboardItemClickEvent event) {
  *        owner.doClick(event);
  *      }
  *   });
@@ -191,7 +191,7 @@ class HandlerEvaluator {
           handlerType.getName());
     }
 
-    // Checks if the method has an Event as parameter. Ex: ClickEvent in
+    // Checks if the method has an Event as parameter. Ex: DashboardItemClickEvent in
     // onClick, BlurEvent in onBlur ...
     JParameter[] parameters = methods[0].getParameters();
     if (parameters.length != 1 || parameters[0].getType() != eventType) {

@@ -3,9 +3,9 @@ package com.emitrom.ti4j.mobile.client.ui;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.emitrom.ti4j.core.client.BaseModel;
 import com.emitrom.ti4j.core.client.JsoHelper;
 import com.emitrom.ti4j.core.client.ProxyObject;
-import com.emitrom.ti4j.mobile.client.data.BaseModel;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 

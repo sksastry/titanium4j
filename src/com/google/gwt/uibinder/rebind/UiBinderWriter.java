@@ -1197,7 +1197,7 @@ public class UiBinderWriter implements Statements {
    */
   private String findEventTypeName(JMethod jMethod)
       throws UnableToCompleteException {
-    // Get the event class name (i.e. ClickEvent)
+    // Get the event class name (i.e. DashboardItemClickEvent)
     String eventTypeName = jMethod.getParameterTypes()[0].getQualifiedSourceName();
 
     Class<?> domType;
@@ -1210,7 +1210,7 @@ public class UiBinderWriter implements Statements {
       return null;
     }
 
-    // Reflectively obtain the type (i.e. ClickEvent.getType())
+    // Reflectively obtain the type (i.e. DashboardItemClickEvent.getType())
     try {
       return ((Type<?>) domType.getMethod("getType", (Class[]) null).invoke(null,
           (Object[]) null)).getName();
@@ -2039,7 +2039,7 @@ public class UiBinderWriter implements Statements {
       w.write("case %s:", j);
       w.indent();
 
-      //   getEventTarget().onClickRoot((ClickEvent) somethingUnlikelyToCollideWithParamNames,
+      //   getEventTarget().onClickRoot((DashboardItemClickEvent) somethingUnlikelyToCollideWithParamNames,
       //       getRoot(), a, b);
       StringBuffer sb = new StringBuffer();
       JParameter[] sourceParameters = sourceMethod.getParameters();
@@ -2178,7 +2178,7 @@ public class UiBinderWriter implements Statements {
     w.write("initDispatchTable(%s_keys, %s_values);", SAFE_VAR_PREFIX, SAFE_VAR_PREFIX);
 
     // This ensures the DomEvent#TYPE fields are properly initialized and registered
-    // ClickEvent.getType();
+    // DashboardItemClickEvent.getType();
     HashSet<String> eventTypes = new HashSet<String>();
     for (JMethod uiMethod : uiHandlerMethods) {
       eventTypes.add(uiMethod.getParameterTypes()[0].getQualifiedSourceName());
