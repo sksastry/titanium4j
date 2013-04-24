@@ -17,6 +17,7 @@ package com.emitrom.ti4j.mobile.client.ui;
 
 import java.util.ArrayList;
 
+import com.emitrom.ti4j.core.client.Color;
 import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.Unit;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.TextHandler;
@@ -735,5 +736,23 @@ public class TextField extends View implements HasText {
 	public void setText(String text) {
 		setValue(text);
 	}
+	
+
+    /**
+     * @return The color of the input text
+     */
+    public native String getColor() /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		return jso.color;
+    }-*/;
+
+    public void setColor(Color color) {
+        setColor(color.getValue());
+    }
+
+    public native void setColor(String value) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.color = value;
+    }-*/;
 
 }
