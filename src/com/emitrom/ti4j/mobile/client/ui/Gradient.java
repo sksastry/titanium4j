@@ -133,4 +133,21 @@ public class Gradient extends JavaScriptObject {
 	public final native void setBackfillEnd(boolean value) /*-{
 		this.backfillEnd = value;
 	}-*/;
+	
+
+	/**
+	 * If set to true to continue filling with the final color beyond the startpoint.
+	 * @return
+	 */
+	public final native boolean isBackfillStart() /*-{
+		return this.backfillStart;
+	}-*/;
+
+	/**
+	 * If set to true to continue filling with the final color beyond the startpoint.
+	 * @return
+	 */
+	public final native void setBackfillStart(boolean value) /*-{
+		this.backfillStart = value;
+	}-*/;
 }
