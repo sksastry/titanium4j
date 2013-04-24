@@ -93,4 +93,44 @@ public class Gradient extends JavaScriptObject {
 		}
 		setColors(c);
 	}
+	
+	/**
+	 * For a radial gradient, the start point of the gradient
+	 * @param x
+	 * @param y
+	 */
+	public final native void setStartRadius(String x, String y) /*-{
+		var a = {};
+		a.x = x;
+		a.y = y;
+		this.startRadius = a;
+	}-*/;
+	
+	/**
+	 * For a radial gradient, the end point of the gradient
+	 * @param x
+	 * @param y
+	 */
+	public final native void setEndRadius(String x, String y) /*-{
+		var a = {};
+		a.x = x;
+		a.y = y;
+		this.endRadius = a;
+	}-*/;
+	
+	/**
+	 * If set to true to continue filling with the final color beyond the endPoint.
+	 * @return
+	 */
+	public final native boolean isBackfillEnd() /*-{
+		return this.backfillEnd;
+	}-*/;
+	
+	/**
+	 * Set to true to continue filling with the final color beyond the endPoint.
+	 * @param value
+	 */
+	public final native void setBackfillEnd(boolean value) /*-{
+		this.backfillEnd = value;
+	}-*/;
 }
