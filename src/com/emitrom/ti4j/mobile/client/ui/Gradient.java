@@ -11,14 +11,7 @@ import com.google.gwt.core.client.JsArray;
  */
 public class Gradient extends JavaScriptObject {
 	
-	protected Gradient() {
-		setAsLinear();
-		setStartPoint("0", "0");
-		setEndPoint("0", "0");
-		String[] colors = {"white"};
-		double[] offsets = {0};
-		setColors(colors, offsets);
-	}
+	protected Gradient() {}
 
 	/**
 	 * Set the gradient type as linear
@@ -87,14 +80,17 @@ public class Gradient extends JavaScriptObject {
 	 * @param colors		The array of color strings
 	 * @param offsets		The offsets
 	 */
-	public void setColors(String[] colors, double[] offsets) {
+	public final void setColors(String[] colors, double[] offsets) {
 		if (colors.length != offsets.length) {
 			return; //Misfit between colors and offsets array length
 		}
 		@SuppressWarnings("unchecked")
 		JsArray<JavaScriptObject> c = (JsArray<JavaScriptObject>) JavaScriptObject.createArray();
+		c.setLength(colors.length);
 		for (int i = 0; i < colors.length; ++i) {
-			c.set(i, createColorOffset(colors[i], offsets[i]));
+			JavaScriptObject newColor = createColorOffset(colors[i], offsets[i]);
+			c.set(i, newColor);
 		}
+		setColors(c);
 	}
 }
