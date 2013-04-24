@@ -8,5 +8,6 @@ For licensing questions, please contact us at licensing@emitrom.com
 http://www.emitrom.com/license
 -->
 <module>   
-    <inherits name="com.google.gwt.core.Core"/>   
+  <inherits name="com.google.gwt.core.Core"/>  
+  <source path='client'/> 
 </module>
