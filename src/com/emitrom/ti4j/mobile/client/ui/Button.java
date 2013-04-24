@@ -217,6 +217,26 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.systemButton = value;
     }-*/;
+    
+    /**
+     * @iOS only
+     * @see
+     * com.emitrom.ti4j.mobile.client.ui.iphone.SystemButtonStyle
+     */
+    public native int getButtonStyle() /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		return jso.style;
+    }-*/;
+    
+    /**
+     * @iOS only
+     * @see
+     * com.emitrom.ti4j.mobile.client.ui.iphone.SystemButtonStyle
+     */
+    public native void setButtonStyle(int value) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.style = value;
+    }-*/;
 
     /*
      * (non-Javadoc)
