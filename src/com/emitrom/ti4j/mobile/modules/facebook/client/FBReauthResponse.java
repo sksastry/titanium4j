@@ -4,9 +4,14 @@ import com.emitrom.ti4j.core.client.JsoHelper;
 import com.emitrom.ti4j.mobile.client.core.events.ErrorResponse;
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class FBDialogResponse extends ErrorResponse {
+/**
+ * Argument passed to the reauthorize callback when the request is completed or
+ * canceled.
+ * 
+ */
+public class FBReauthResponse extends ErrorResponse {
 
-    protected FBDialogResponse(JavaScriptObject obj) {
+    protected FBReauthResponse(JavaScriptObject obj) {
         super(obj);
     }
 
@@ -15,14 +20,6 @@ public class FBDialogResponse extends ErrorResponse {
      */
     public boolean isCancelled() {
         return JsoHelper.getAttributeAsBoolean(jsObj, "cancelled");
-    }
-
-    /**
-     * If successful, returns the JSON response containing the post_id of the
-     * new post. If the user canceled the dialog, the results is undefined.
-     */
-    public String getResult() {
-        return JsoHelper.getAttribute(jsObj, "result");
     }
 
 }
