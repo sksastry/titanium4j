@@ -3,6 +3,8 @@ package com.emitrom.ti4j.mobile.modules.gmap.client;
 import java.util.Arrays;
 import java.util.List;
 
+import com.emitrom.ti4j.mobile.client.core.handlers.EventHandler;
+import com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration;
 import com.emitrom.ti4j.mobile.client.ui.View;
 
 /**
@@ -172,6 +174,45 @@ public class GMapView extends View {
     public native void selectAnnotation(String value)/*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.selectAnnotation(value);
+    }-*/;
+
+    /**
+     * Fired when the map completes loading.
+     */
+    public void addCompleteHandler(EventHandler handler) {
+        this.addEventHandler("complete", handler);
+    }
+
+    /**
+     * Fired when the user interacts with a draggable annotation.
+     */
+    public native CallbackRegistration addPinchChangedDragStateHandler(PinchChangedDragStateHandler handler)/*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var listener = function(e) {
+			var eventObject = @com.emitrom.ti4j.mobile.modules.gmap.client.PinchChangedDragStateEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+			handler.@com.emitrom.ti4j.mobile.modules.gmap.client.PinchChangedDragStateHandler::onPinchChangedDragState(Lcom/emitrom/ti4j/mobile/modules/gmap/client/PinchChangedDragStateEvent;)(eventObject);
+		};
+		var name = @com.emitrom.ti4j.mobile.modules.gmap.client.PinchChangedDragStateEvent::EVENT_NAME;
+		var v = jso.addEventListener(name, listener);
+		var toReturn = @com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration::new(Lcom/emitrom/ti4j/mobile/client/ui/UIObject;Ljava/lang/String;Lcom/google/gwt/core/client/JavaScriptObject;)(this,name,listener);
+		return toReturn;
+
+    }-*/;
+
+    /**
+     * Fired when the mapping region changes.
+     */
+    public native CallbackRegistration addRegionChangedHandler(RegionChangedHandler handler)/*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var listener = function(e) {
+			var eventObject = @com.emitrom.ti4j.mobile.modules.gmap.client.RegionChangedEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+			handler.@com.emitrom.ti4j.mobile.modules.gmap.client.RegionChangedHandler::onRegionChanged(Lcom/emitrom/ti4j/mobile/modules/gmap/client/RegionChangedEvent;)(eventObject);
+		};
+		var name = @com.emitrom.ti4j.mobile.modules.gmap.client.RegionChangedEvent::EVENT_NAME;
+		var v = jso.addEventListener(name, listener);
+		var toReturn = @com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration::new(Lcom/emitrom/ti4j/mobile/client/ui/UIObject;Ljava/lang/String;Lcom/google/gwt/core/client/JavaScriptObject;)(this,name,listener);
+		return toReturn;
+
     }-*/;
 
 }
