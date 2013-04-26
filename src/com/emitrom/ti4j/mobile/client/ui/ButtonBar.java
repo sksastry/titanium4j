@@ -123,7 +123,7 @@ public class ButtonBar extends View {
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var listener = function(e) {
 			var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.ClickEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
-			handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.ClickHandler::onClick(Lcom/emitrom/ti4j/mobile/client/core/events/ui/ClickEvent;)(eventObject);
+			handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.ClickHandler::onClick(Lcom/emitrom/ti4j/mobile/client/core/events/ui/GMapClickEvent;)(eventObject);
 		};
 		var name = @com.emitrom.ti4j.mobile.client.core.events.ui.ClickEvent::EVENT_NAME;
 		var v = jso.addEventListener(name, listener);

@@ -49,7 +49,7 @@ import com.google.gwt.uibinder.rebind.model.OwnerClass;
  * will generate a piece of code like:
  *
  * <pre>
- *    ClickHandler handler0 = new ClickHandler() {
+ *    PinchChangedDragStateHandler handler0 = new PinchChangedDragStateHandler() {
  *      @Override
  *      public void onClick(DashboardItemClickEvent event) {
  *        owner.doClick(event);
@@ -184,7 +184,7 @@ class HandlerEvaluator {
       String boundMethod) throws UnableToCompleteException {
 
     // Retrieves the single method (usually 'onSomething') related to all
-    // handlers. Ex: onClick in ClickHandler, onBlur in BlurHandler ...
+    // handlers. Ex: onClick in PinchChangedDragStateHandler, onBlur in BlurHandler ...
     JMethod[] methods = handlerType.getMethods();
     if (methods.length != 1) {
       logger.die("'%s' has more than one method defined.",
@@ -254,7 +254,7 @@ class HandlerEvaluator {
    *
    * <pre>
    *   <b>Examples:</b>
-   *    - HandlerRegistration addClickHandler(ClickHandler handler)
+   *    - HandlerRegistration addClickHandler(PinchChangedDragStateHandler handler)
    *    - HandlerRegistration addMouseOverHandler(MouseOverHandler handler)
    *    - HandlerRegistration addSubmitCompleteHandler(
    *          FormPanel.SubmitCompleteHandler handler)
