@@ -15,6 +15,11 @@ public class ListItem extends ProxyObject {
         jsObj = JsoHelper.createObject();
     }
 
+    public ListItem(String title) {
+        this();
+        this.setTitle(title);
+    }
+
     protected ListItem(JavaScriptObject obj) {
         this.jsObj = obj;
     }

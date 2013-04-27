@@ -20,13 +20,23 @@ import com.google.gwt.core.client.JsArray;
  * by the item template.
  * 
  */
-public class ListDataItem extends ProxyObject {
+public class ListDataSet extends ProxyObject {
 
-    public ListDataItem() {
+    public ListDataSet() {
         jsObj = JsoHelper.createObject();
     }
 
-    protected ListDataItem(JavaScriptObject obj) {
+    public ListDataSet(ListItem... items) {
+        this();
+        this.setProperties(items);
+    }
+
+    public ListDataSet(List<ListItem> items) {
+        this();
+        this.setProperties(items);
+    }
+
+    protected ListDataSet(JavaScriptObject obj) {
         jsObj = obj;
     }
 
@@ -99,19 +109,19 @@ public class ListDataItem extends ProxyObject {
 		jso.template = value;
     }-*/;
 
-    static JavaScriptObject fromList(List<ListDataItem> values) {
+    static JavaScriptObject fromList(List<ListDataSet> values) {
         JsArray<JavaScriptObject> peers = JsArray.createArray().cast();
-        for (ListDataItem item : values) {
+        for (ListDataSet item : values) {
             peers.push(item.getJsObj());
         }
         return peers;
     }
 
-    static List<ListDataItem> fromJsArray(JavaScriptObject obj) {
-        List<ListDataItem> toReturn = new ArrayList<ListDataItem>();
+    static List<ListDataSet> fromJsArray(JavaScriptObject obj) {
+        List<ListDataSet> toReturn = new ArrayList<ListDataSet>();
         int size = JsoHelper.arrayLength(obj);
         for (int i = 0; i < size; i++) {
-            toReturn.add(new ListDataItem(JsoHelper.getValueFromJavaScriptObjectArray(obj, i)));
+            toReturn.add(new ListDataSet(JsoHelper.getValueFromJavaScriptObjectArray(obj, i)));
         }
         return toReturn;
     }
