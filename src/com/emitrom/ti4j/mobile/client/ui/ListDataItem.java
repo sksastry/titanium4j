@@ -1,7 +1,6 @@
 package com.emitrom.ti4j.mobile.client.ui;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import com.emitrom.ti4j.core.client.JsoHelper;
@@ -20,23 +19,18 @@ import com.google.gwt.core.client.JsArray;
  * by the item template.
  * 
  */
-public class ListDataSet extends ProxyObject {
+public class ListDataItem extends ProxyObject {
 
-    public ListDataSet() {
+    public ListDataItem() {
         jsObj = JsoHelper.createObject();
     }
 
-    public ListDataSet(ListItem... items) {
+    public ListDataItem(ListItem items) {
         this();
         this.setProperties(items);
     }
 
-    public ListDataSet(List<ListItem> items) {
-        this();
-        this.setProperties(items);
-    }
-
-    protected ListDataSet(JavaScriptObject obj) {
+    protected ListDataItem(JavaScriptObject obj) {
         jsObj = obj;
     }
 
@@ -49,29 +43,23 @@ public class ListDataSet extends ProxyObject {
      * templates), the values set in the list data item override the template's
      * properties.
      */
-    public void setProperties(ListItem... items) {
-        setProperties(Arrays.asList(items));
-    }
-
-    /**
-     * 
-     * Contains key-value pairs of view properties and their values that are
-     * applied to the ListItem.
-     * <p>
-     * If there are properties set in the ItemTemplate (not the children view
-     * templates), the values set in the list data item override the template's
-     * properties.
-     */
-    public native void setProperties(List<ListItem> values) /*-{
+    public native void setProperties(ListItem value) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso.properties = @com.emitrom.ti4j.mobile.client.ui.ListItem::fromList(Ljava/util/List;)(values);
+		jso.properties = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
-    public native List<ListItem> getProperties() /*-{
+    public native ListItem getProperties() /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.properties;
-		return @com.emitrom.ti4j.mobile.client.ui.ListItem::fromJsArray(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
+		return @com.emitrom.ti4j.mobile.client.ui.ListItem::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
+
+    /**
+     * Gets the LisItem in this DataSet
+     */
+    public ListItem getItem() {
+        return this.getProperties();
+    }
 
     /**
      * 
@@ -109,19 +97,19 @@ public class ListDataSet extends ProxyObject {
 		jso.template = value;
     }-*/;
 
-    static JavaScriptObject fromList(List<ListDataSet> values) {
+    static JavaScriptObject fromList(List<ListDataItem> values) {
         JsArray<JavaScriptObject> peers = JsArray.createArray().cast();
-        for (ListDataSet item : values) {
+        for (ListDataItem item : values) {
             peers.push(item.getJsObj());
         }
         return peers;
     }
 
-    static List<ListDataSet> fromJsArray(JavaScriptObject obj) {
-        List<ListDataSet> toReturn = new ArrayList<ListDataSet>();
+    static List<ListDataItem> fromJsArray(JavaScriptObject obj) {
+        List<ListDataItem> toReturn = new ArrayList<ListDataItem>();
         int size = JsoHelper.arrayLength(obj);
         for (int i = 0; i < size; i++) {
-            toReturn.add(new ListDataSet(JsoHelper.getValueFromJavaScriptObjectArray(obj, i)));
+            toReturn.add(new ListDataItem(JsoHelper.getValueFromJavaScriptObjectArray(obj, i)));
         }
         return toReturn;
     }

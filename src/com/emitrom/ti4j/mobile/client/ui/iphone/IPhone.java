@@ -1,22 +1,23 @@
 /**************************************************************************
-   IPhone.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+ * IPhone.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui.iphone;
 
 import com.emitrom.ti4j.mobile.client.core.TiFactory;
 import com.emitrom.ti4j.mobile.client.core.TiModule;
+import com.emitrom.ti4j.mobile.client.ui.Window;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
@@ -101,16 +102,26 @@ public class IPhone extends TiModule {
 		jso.statusBarStyle = value;
     }-*/;
 
-    public native JavaScriptObject createNavigationGroup() /*-{
+    native JavaScriptObject createNavigationGroup() /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.createNavigationGroup();
+    }-*/;
+
+    native JavaScriptObject createNavigationGroup(Window rootWindow) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso
+				.createNavigationGroup({
+					window : rootWindow.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
+				});
     }-*/;
 
     /**
      * Convenience method to hide the status bar
      * 
-     * @param animated boolean to indicate if the action should be animated
-     * @param animationStyle the animation style
+     * @param animated
+     *            boolean to indicate if the action should be animated
+     * @param animationStyle
+     *            the animation style
      */
     public native void hideStatusBar(boolean animated, int animationStyle) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
@@ -120,8 +131,10 @@ public class IPhone extends TiModule {
     /**
      * Convenience method to show the status bar
      * 
-     * @param animated boolean to indicate if the action should be animated
-     * @param animationStyle the animation style
+     * @param animated
+     *            boolean to indicate if the action should be animated
+     * @param animationStyle
+     *            the animation style
      */
     public native void showStatusBar(boolean animated, int animationStyle) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();

@@ -20,6 +20,7 @@ import com.emitrom.ti4j.mobile.client.core.TiModule;
 import com.emitrom.ti4j.mobile.client.core.Unit;
 import com.emitrom.ti4j.mobile.client.core.events.TiEventListener;
 import com.emitrom.ti4j.mobile.client.core.events.battery.BatteryEvent;
+import com.emitrom.ti4j.mobile.client.core.handlers.BatteryHandler;
 import com.google.gwt.core.client.GWT;
 
 /**
@@ -427,6 +428,13 @@ public class Platform extends TiModule {
     public void addBatteryHandler(TiEventListener<BatteryEvent> handler) {
         addEventListener(BatteryEvent.BATTERY, handler);
     }
+
+    public native void addBatteryHandler(BatteryHandler hanbler)/*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.addEventListener(function(e) {
+
+		});
+    }-*/;
 
     public static native final int BATTERY_STATE_CHARGING() /*-{
 		return Titanium.Platform.BATTERY_STATE_CHARGING;

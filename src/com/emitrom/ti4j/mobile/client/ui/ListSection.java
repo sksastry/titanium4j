@@ -21,7 +21,7 @@ public class ListSection extends ProxyObject {
         this.setHeaderTitle(headerTitle);
     }
 
-    public ListSection(String headerTitle, ListDataSet... items) {
+    public ListSection(String headerTitle, ListDataItem... items) {
         this();
         this.setHeaderTitle(headerTitle);
         this.setItems(items);
@@ -30,8 +30,12 @@ public class ListSection extends ProxyObject {
     public ListSection(String headerTitle, ListItem... items) {
         this();
         this.setHeaderTitle(headerTitle);
-        ListDataSet dataSet = new ListDataSet(items);
-        this.setItems(dataSet);
+        List<ListDataItem> data = new ArrayList<ListDataItem>();
+        for (ListItem item : items) {
+            ListDataItem dataSet = new ListDataItem(item);
+            data.add(dataSet);
+        }
+        this.setItems(data);
     }
 
     public ListSection(String headerTitle, String footerTitle) {
@@ -40,7 +44,7 @@ public class ListSection extends ProxyObject {
         this.setFooterTitle(footerTitle);
     }
 
-    public ListSection(String headerTitle, String footerTitle, ListDataSet... items) {
+    public ListSection(String headerTitle, String footerTitle, ListDataItem... items) {
         this();
         this.setHeaderTitle(headerTitle);
         this.setFooterTitle(footerTitle);
@@ -51,8 +55,12 @@ public class ListSection extends ProxyObject {
         this();
         this.setHeaderTitle(headerTitle);
         this.setFooterTitle(footerTitle);
-        ListDataSet dataSet = new ListDataSet(items);
-        this.setItems(dataSet);
+        List<ListDataItem> data = new ArrayList<ListDataItem>();
+        for (ListItem item : items) {
+            ListDataItem dataSet = new ListDataItem(item);
+            data.add(dataSet);
+        }
+        this.setItems(data);
     }
 
     protected ListSection(JavaScriptObject obj) {
@@ -82,43 +90,43 @@ public class ListSection extends ProxyObject {
     /**
      * Items of this list section.
      */
-    public void setItems(ListDataSet... dataItems) {
+    public void setItems(ListDataItem... dataItems) {
         setItems(Arrays.asList(dataItems));
     }
 
     /**
      * Items of this list section.
      */
-    public native void setItems(List<ListDataSet> values) /*-{
+    public native void setItems(List<ListDataItem> values) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso.items = @com.emitrom.ti4j.mobile.client.ui.ListDataSet::fromList(Ljava/util/List;)(values);
+		jso.items = @com.emitrom.ti4j.mobile.client.ui.ListDataItem::fromList(Ljava/util/List;)(values);
     }-*/;
 
     /**
      * Items of this list section.
      */
-    public native List<ListDataSet> getItems() /*-{
+    public native List<ListDataItem> getItems() /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.items;
-		return @com.emitrom.ti4j.mobile.client.ui.ListDataSet::fromJsArray(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
+		return @com.emitrom.ti4j.mobile.client.ui.ListDataItem::fromJsArray(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
 
-    public native void appendItems(List<ListDataSet> items) /*-{
+    public native void appendItems(List<ListDataItem> items) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		var obj = @com.emitrom.ti4j.mobile.client.ui.ListDataSet::fromJsArray(Lcom/google/gwt/core/client/JavaScriptObject;)(items);
+		var obj = @com.emitrom.ti4j.mobile.client.ui.ListDataItem::fromJsArray(Lcom/google/gwt/core/client/JavaScriptObject;)(items);
 		jso.appendItems(obj);
     }-*/;
 
-    public native void appendItems(List<ListDataSet> items, TableViewAnimation animation) /*-{
+    public native void appendItems(List<ListDataItem> items, TableViewAnimation animation) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		var obj = @com.emitrom.ti4j.mobile.client.ui.ListDataSet::fromJsArray(Lcom/google/gwt/core/client/JavaScriptObject;)(items);
+		var obj = @com.emitrom.ti4j.mobile.client.ui.ListDataItem::fromJsArray(Lcom/google/gwt/core/client/JavaScriptObject;)(items);
 		jso
 				.appendItems(
 						obj,
 						animation.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
-    public void appendItems(ListDataSet... dataItems) {
+    public void appendItems(ListDataItem... dataItems) {
         appendItems(Arrays.asList(dataItems));
     }
 
@@ -127,10 +135,10 @@ public class ListSection extends ProxyObject {
 		jso.deleteItemsAt(index, count);
     }-*/;
 
-    public native void getItemAt(int index) /*-{
+    public native ListDataItem getItemAt(int index) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.getItemAt(index);
-		return @com.emitrom.ti4j.mobile.client.ui.ListDataSet::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
+		return @com.emitrom.ti4j.mobile.client.ui.ListDataItem::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
 
     public native void deleteItemsAt(int index, int count, TableViewAnimation animation) /*-{
@@ -142,15 +150,15 @@ public class ListSection extends ProxyObject {
 						animation.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
-    public native void insertItemsAt(int index, List<ListDataSet> items) /*-{
+    public native void insertItemsAt(int index, List<ListDataItem> items) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		var obj = @com.emitrom.ti4j.mobile.client.ui.ListDataSet::fromJsArray(Lcom/google/gwt/core/client/JavaScriptObject;)(items);
+		var obj = @com.emitrom.ti4j.mobile.client.ui.ListDataItem::fromJsArray(Lcom/google/gwt/core/client/JavaScriptObject;)(items);
 		jso.insertItemsAt(index, obj);
     }-*/;
 
-    public native void insertItemsAt(int index, List<ListDataSet> items, TableViewAnimation animation) /*-{
+    public native void insertItemsAt(int index, List<ListDataItem> items, TableViewAnimation animation) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		var obj = @com.emitrom.ti4j.mobile.client.ui.ListDataSet::fromJsArray(Lcom/google/gwt/core/client/JavaScriptObject;)(items);
+		var obj = @com.emitrom.ti4j.mobile.client.ui.ListDataItem::fromJsArray(Lcom/google/gwt/core/client/JavaScriptObject;)(items);
 		jso
 				.insertItemsAt(
 						index,
@@ -158,19 +166,19 @@ public class ListSection extends ProxyObject {
 						animation.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
-    public void insertItemsAt(int index, ListDataSet... dataItems) {
+    public void insertItemsAt(int index, ListDataItem... dataItems) {
         insertItemsAt(index, Arrays.asList(dataItems));
     }
 
-    public native void replaceItemsAt(int index, int count, List<ListDataSet> items) /*-{
+    public native void replaceItemsAt(int index, int count, List<ListDataItem> items) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		var obj = @com.emitrom.ti4j.mobile.client.ui.ListDataSet::fromJsArray(Lcom/google/gwt/core/client/JavaScriptObject;)(items);
+		var obj = @com.emitrom.ti4j.mobile.client.ui.ListDataItem::fromJsArray(Lcom/google/gwt/core/client/JavaScriptObject;)(items);
 		jso.replaceItemsAt(index, count, obj);
     }-*/;
 
-    public native void replaceItemsAt(int index, int count, List<ListDataSet> items, TableViewAnimation animation) /*-{
+    public native void replaceItemsAt(int index, int count, List<ListDataItem> items, TableViewAnimation animation) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		var obj = @com.emitrom.ti4j.mobile.client.ui.ListDataSet::fromJsArray(Lcom/google/gwt/core/client/JavaScriptObject;)(items);
+		var obj = @com.emitrom.ti4j.mobile.client.ui.ListDataItem::fromJsArray(Lcom/google/gwt/core/client/JavaScriptObject;)(items);
 		jso
 				.replaceItemsAt(
 						index,
@@ -179,20 +187,20 @@ public class ListSection extends ProxyObject {
 						animation.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
-    public void replaceItemsAt(int index, int count, ListDataSet... dataItems) {
+    public void replaceItemsAt(int index, int count, ListDataItem... dataItems) {
         replaceItemsAt(index, count, Arrays.asList(dataItems));
     }
 
-    public native void updateItemAt(int index, ListDataSet item) /*-{
+    public native void updateItemAt(int index, ListDataItem item) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		var obj = @com.emitrom.ti4j.mobile.client.ui.ListDataSet::fromJsArray(Lcom/google/gwt/core/client/JavaScriptObject;)(items);
+		var obj = @com.emitrom.ti4j.mobile.client.ui.ListDataItem::fromJsArray(Lcom/google/gwt/core/client/JavaScriptObject;)(items);
 		jso.updateItemAt(index,
 				item.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
-    public native void updateItemAt(int index, ListDataSet item, TableViewAnimation animation) /*-{
+    public native void updateItemAt(int index, ListDataItem item, TableViewAnimation animation) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		var obj = @com.emitrom.ti4j.mobile.client.ui.ListDataSet::fromJsArray(Lcom/google/gwt/core/client/JavaScriptObject;)(items);
+		var obj = @com.emitrom.ti4j.mobile.client.ui.ListDataItem::fromJsArray(Lcom/google/gwt/core/client/JavaScriptObject;)(items);
 		jso
 				.updateItemAt(
 						index,

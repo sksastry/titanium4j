@@ -1,17 +1,18 @@
 /**************************************************************************
-   NavigationGroup.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+ * NavigationGroup.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom
+ * LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui.iphone;
 
@@ -32,14 +33,15 @@ import com.emitrom.ti4j.mobile.client.ui.Window;
  */
 public class NavigationGroup extends View {
 
-    public NavigationGroup() {
-        createPeer();
+    public NavigationGroup(Window rootWindow) {
+        create(rootWindow);
     }
 
     /**
      * Close a window and remove it from the navigation group
      * 
-     * @param window window to close
+     * @param window
+     *            window to close
      */
     public native void close(Window window) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
@@ -50,28 +52,31 @@ public class NavigationGroup extends View {
     /**
      * Close a window and remove it from the navigation group
      * 
-     * @param window window to close
-     * @param animate, indicates if the window should be closed animated
-     *            (default) or not.
+     * @param window
+     *            window to close
+     * @param animate
+     *            , indicates if the window should be closed animated (default)
+     *            or not.
      * */
 
     public native void close(Window window, boolean animate) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso
-				.close(
-						window.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
-						{
-							animated : animate
-						});
+		jso.close(
+				window.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
+				{
+					animated : animate
+				});
     }-*/;
 
     /**
      * Open a window within the navigation group
      * 
-     * @param window window to open within the tab group
-     * @param properties optional dictionary. the only current property
-     *            supported is `animated` which is a boolean to indicate if the
-     *            window should be opened animated (default) or not.
+     * @param window
+     *            window to open within the tab group
+     * @param properties
+     *            optional dictionary. the only current property supported is
+     *            `animated` which is a boolean to indicate if the window should
+     *            be opened animated (default) or not.
      */
     public native void open(Window window) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
@@ -82,23 +87,36 @@ public class NavigationGroup extends View {
     /**
      * Open a window within the navigation group
      * 
-     * @param window window to open within the tab group
-     * @param animate indicates if the window should be opened animated
-     *            (default) or not.
+     * @param window
+     *            window to open within the tab group
+     * @param animate
+     *            indicates if the window should be opened animated (default) or
+     *            not.
      */
     public native void open(Window window, boolean animate) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso
-				.open(
-						window.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
-						{
-							animated : animate
-						});
+		jso.open(
+				window.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
+				{
+					animated : animate
+				});
+    }-*/;
+
+    /**
+     * Window to add to this navigation group.
+     */
+    public native Window getWindow()/*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var obj = tjso.window;
+		return @com.emitrom.ti4j.mobile.client.ui.Window::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
 
     @Override
     public void createPeer() {
-        jsObj = IPhone.get().createNavigationGroup();
+        // jsObj = IPhone.get().createNavigationGroup();
     }
 
+    public void create(Window rootwindow) {
+        jsObj = IPhone.get().createNavigationGroup(rootwindow);
+    }
 }
