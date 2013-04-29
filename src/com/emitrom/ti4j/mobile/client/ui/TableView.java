@@ -25,6 +25,8 @@ import com.emitrom.ti4j.mobile.client.core.handlers.ui.TableRowClickHandler;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.TableRowDblClickHandler;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.TableRowDeleteHandler;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.TableRowDoubleTapHandler;
+import com.emitrom.ti4j.mobile.client.core.handlers.ui.TableViewDragEndHandler;
+import com.emitrom.ti4j.mobile.client.core.handlers.ui.TableViewDragStartHandler;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.TableViewHandler;
 import com.emitrom.ti4j.mobile.client.data.TableViewBaseModel;
 import com.emitrom.ti4j.mobile.client.ui.android.SearchView;
@@ -1063,6 +1065,34 @@ public class TableView extends View {
 
     }-*/;
 
+    public native CallbackRegistration addTableViewDragEndHandler(TableViewDragEndHandler handler)
+    /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var listener = function(e) {
+			var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.tableview.TableViewDragEndEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+			handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.TableViewDragEndHandler::onTableViewDragEnd(Lcom/emitrom/ti4j/mobile/client/core/events/ui/tableview/TableViewDragEndEvent;)(eventObject);
+		};
+		var name = @com.emitrom.ti4j.mobile.client.core.events.ui.tableview.TableViewDragEndEvent::EVENT_NAME;
+		var v = jso.addEventListener(name, listener);
+		var toReturn = @com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration::new(Lcom/emitrom/ti4j/mobile/client/ui/UIObject;Ljava/lang/String;Lcom/google/gwt/core/client/JavaScriptObject;)(this,name,listener);
+		return toReturn;
+
+    }-*/;
+
+    public native CallbackRegistration addTableViewDragStartHandler(TableViewDragStartHandler handler)
+    /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var listener = function(e) {
+			var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.tableview.TableViewDragStartEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+			handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.TableViewDragStartHandler::onTableViewDragStart(Lcom/emitrom/ti4j/mobile/client/core/events/ui/tableview/TableViewDragStartEvent;)(eventObject);
+		};
+		var name = @com.emitrom.ti4j.mobile.client.core.events.ui.tableview.TableViewDragStartEvent::EVENT_NAME;
+		var v = jso.addEventListener(name, listener);
+		var toReturn = @com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration::new(Lcom/emitrom/ti4j/mobile/client/ui/UIObject;Ljava/lang/String;Lcom/google/gwt/core/client/JavaScriptObject;)(this,name,listener);
+		return toReturn;
+
+    }-*/;
+
     @Deprecated
     public native void addDeleteHandler(TableViewHandler handler)/*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
@@ -1110,6 +1140,8 @@ public class TableView extends View {
 							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.TableViewHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/ui/tableview/TableViewEvent;)(eventObject);
 						});
     }-*/;
+
+    // TODO Finish Events
 
     @Override
     public void createPeer() {
