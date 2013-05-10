@@ -1,17 +1,17 @@
-/**************************************************************************
-   Button.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+/************************************************************************
+ * Button.java is part of Ti4j 3.1.0 Copyright 2013 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui;
 
@@ -102,8 +102,7 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
     /*
      * (non-Javadoc)
      * 
-     * @see
-     * com.emitrom.ti4j.mobile.client.ui.HasFont#setFont(com.emitrom.gwt4
+     * @see com.emitrom.ti4j.mobile.client.ui.HasFont#setFont(com.emitrom.gwt4
      * .ti.mobile.client.ui.style.Font)
      */
     @Override
@@ -217,21 +216,19 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.systemButton = value;
     }-*/;
-    
+
     /**
      * @iOS only
-     * @see
-     * com.emitrom.ti4j.mobile.client.ui.iphone.SystemButtonStyle
+     * @see com.emitrom.ti4j.mobile.client.ui.iphone.SystemButtonStyle
      */
     public native int getButtonStyle() /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.style;
     }-*/;
-    
+
     /**
      * @iOS only
-     * @see
-     * com.emitrom.ti4j.mobile.client.ui.iphone.SystemButtonStyle
+     * @see com.emitrom.ti4j.mobile.client.ui.iphone.SystemButtonStyle
      */
     public native void setButtonStyle(int value) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
@@ -253,8 +250,7 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
      * (non-Javadoc)
      * 
      * @see
-     * com.emitrom.ti4j.mobile.client.ui.HasLabel#setTitleId(java.lang.String
-     * )
+     * com.emitrom.ti4j.mobile.client.ui.HasLabel#setTitleId(java.lang.String )
      */
     @Override
     public native void setTitleId(String value) /*-{
@@ -265,8 +261,7 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
     /*
      * (non-Javadoc)
      * 
-     * @see
-     * com.emitrom.ti4j.mobile.client.ui.HasLabel#setTextAlign(com.emitrom
+     * @see com.emitrom.ti4j.mobile.client.ui.HasLabel#setTextAlign(com.emitrom
      * .gwt4.ti.mobile.client.ui.style.Position)
      */
     @Override
@@ -322,14 +317,14 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
         return new Button(proxy.getJsObj());
     }
 
-	@Override
-	public String getText() {
-		return getTitle();
-	}
+    @Override
+    public String getText() {
+        return getTitle();
+    }
 
-	@Override
-	public void setText(String text) {
-		setTitle(text);
-	}
+    @Override
+    public void setText(String text) {
+        setTitle(text);
+    }
 
 }

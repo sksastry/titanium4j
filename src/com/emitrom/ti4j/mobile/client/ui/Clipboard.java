@@ -1,17 +1,17 @@
-/**************************************************************************
-   Clipboard.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+/************************************************************************
+ * Clipboard.java is part of Ti4j 3.1.0 Copyright 2013 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui;
 
@@ -40,7 +40,8 @@ public class Clipboard extends TiModule {
      * Clear data of the given mime-type from the clipboard. if no mime-type is
      * given, clear all data from the clipboard.
      * 
-     * @param type (optional) The mime-type of the data to clear.
+     * @param type
+     *            (optional) The mime-type of the data to clear.
      */
     public static native void clearData(String type) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
@@ -59,7 +60,8 @@ public class Clipboard extends TiModule {
      * Get the data on the clipboard from the portion which contains data of the
      * given mime-type.
      * 
-     * @param type The mime-type of the data to get.
+     * @param type
+     *            The mime-type of the data to get.
      */
     public static native void getData(String type) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
@@ -78,7 +80,8 @@ public class Clipboard extends TiModule {
      * Return true if there is any content of the given mime-type on the
      * clipboard.
      * 
-     * @param type (optional) The mime-type of the data to check.
+     * @param type
+     *            (optional) The mime-type of the data to check.
      */
     public native boolean hasData(String type) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
@@ -98,8 +101,10 @@ public class Clipboard extends TiModule {
      * method will set data on the appropriate portion of the clipboard for the
      * given mime-type.
      * 
-     * @param type The mime-type of the data to set.
-     * @param data The new clipboard text.
+     * @param type
+     *            The mime-type of the data to set.
+     * @param data
+     *            The new clipboard text.
      */
     public native void setData(String type, Object data) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
@@ -110,7 +115,8 @@ public class Clipboard extends TiModule {
      * Set the text on the clipboard. this will overwrite the current contents
      * of the clipboard.
      * 
-     * @param text The new clipboard text. If the text is an empty string
+     * @param text
+     *            The new clipboard text. If the text is an empty string
      */
     public native void setText(String text) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();

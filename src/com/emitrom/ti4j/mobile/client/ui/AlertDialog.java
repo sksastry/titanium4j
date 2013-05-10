@@ -1,5 +1,5 @@
-/**************************************************************************
- * AlertDialog.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom LLC
+/************************************************************************
+ * AlertDialog.java is part of Ti4j 3.1.0 Copyright 2013 Emitrom LLC
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of

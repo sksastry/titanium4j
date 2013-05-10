@@ -1,17 +1,17 @@
-/**************************************************************************
-   DashboardEvent.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+/************************************************************************
+ * DashboardEvent.java is part of Ti4j 3.1.0 Copyright 2013 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.core.events.ui.dashboard;
 
@@ -25,54 +25,54 @@ import com.google.gwt.core.client.JsArray;
 
 public class DashboardEvent extends UIEvent {
 
-	public static final String MOVE = "move";
-	public static String CLICK = "click";
-	public static final String DELETE = "delete";
+    public static final String MOVE = "move";
+    public static String CLICK = "click";
+    public static final String DELETE = "delete";
 
-	protected DashboardEvent() {
+    protected DashboardEvent() {
 
-	}
+    }
 
-	private DashboardEvent(JavaScriptObject obj) {
-		jsObj = obj;
-	}
+    private DashboardEvent(JavaScriptObject obj) {
+        jsObj = obj;
+    }
 
-	/**
-	 * The pending data array in the new order
-	 */
-	public final ArrayList<DashboardItem> getItems() {
-		ArrayList<DashboardItem> items = new ArrayList<DashboardItem>();
-		JsArray<JavaScriptObject> values = _getItems();
-		for (int i = 0; i < values.length(); i++) {
-			items.add(new DashboardItem(values.get(i)));
-		}
-		return items;
-	}
+    /**
+     * The pending data array in the new order
+     */
+    public final ArrayList<DashboardItem> getItems() {
+        ArrayList<DashboardItem> items = new ArrayList<DashboardItem>();
+        JsArray<JavaScriptObject> values = _getItems();
+        for (int i = 0; i < values.length(); i++) {
+            items.add(new DashboardItem(values.get(i)));
+        }
+        return items;
+    }
 
-	private final native JsArray<JavaScriptObject> _getItems() /*-{
+    private final native JsArray<JavaScriptObject> _getItems() /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.items;
-	}-*/;
+    }-*/;
 
-	/**
-	 * The com.emitrom.ti4j.mobile.client.ui.DashboardItem that was moved
-	 */
-	public final native DashboardItem getItem() /*-{
+    /**
+     * The com.emitrom.ti4j.mobile.client.ui.DashboardItem that was moved
+     */
+    public final native DashboardItem getItem() /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.item;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.DashboardItem::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
-	}-*/;
+    }-*/;
 
-	/**
-	 * The location object with the properties x and y of where in the parent
-	 * view the click was
-	 */
-	public final native Point getLocation() /*-{
+    /**
+     * The location object with the properties x and y of where in the parent
+     * view the click was
+     */
+    public final native Point getLocation() /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.location;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.Point::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
-	}-*/;
+    }-*/;
 
 }

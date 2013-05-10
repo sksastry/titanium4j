@@ -1,17 +1,17 @@
-/**************************************************************************
-   RemoteServiceProxy.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+/************************************************************************
+ * RemoteServiceProxy.java is part of Ti4j 3.1.0 Copyright 2013 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.google.gwt.user.client.rpc.impl;
 
@@ -39,7 +39,7 @@ import com.google.gwt.user.client.rpc.impl.RequestCallbackAdapter.ResponseReader
  * 
  * For internal use only.
  */
-@SuppressWarnings({ "rawtypes", "unchecked","unused" })
+@SuppressWarnings({ "rawtypes", "unchecked", "unused" })
 public abstract class RemoteServiceProxy implements SerializationStreamFactory, ServiceDefTarget, HasRpcToken {
 
     /**
@@ -66,9 +66,9 @@ public abstract class RemoteServiceProxy implements SerializationStreamFactory, 
         /**
          * Finishes the serialization.
          */
-		public Request finish(AsyncCallback callback, ResponseReader responseHeader) throws SerializationException {
+        public Request finish(AsyncCallback callback, ResponseReader responseHeader) throws SerializationException {
             String payload = streamWriter.toString();
-			boolean toss = statsContext.isStatsAvailable()
+            boolean toss = statsContext.isStatsAvailable()
                             && statsContext.stats(statsContext.timeStat(fullServiceName, "requestSerialized"));
             return doInvoke(responseHeader, fullServiceName, statsContext, payload, callback);
         }
@@ -243,7 +243,8 @@ public abstract class RemoteServiceProxy implements SerializationStreamFactory, 
      * {@link com.google.gwt.user.client.rpc.SerializationStreamReader
      * SerializationStreamReader} that is ready for reading.
      * 
-     * @param encoded string that encodes the response of an RPC request
+     * @param encoded
+     *            string that encodes the response of an RPC request
      * @return {@link com.google.gwt.user.client.rpc.SerializationStreamReader
      *         SerializationStreamReader} that is ready for reading
      * @throws SerializationException
@@ -332,7 +333,8 @@ public abstract class RemoteServiceProxy implements SerializationStreamFactory, 
      * current service's {@link RpcToken} is of the type specified in
      * {@link RpcToken.RpcTokenImplementation} annotation.
      * 
-     * @param token currently set {@link RpcToken}.
+     * @param token
+     *            currently set {@link RpcToken}.
      */
     protected void checkRpcTokenType(RpcToken token) {
     }
@@ -347,12 +349,15 @@ public abstract class RemoteServiceProxy implements SerializationStreamFactory, 
      * Performs a remote service method invocation. This method is called by
      * generated proxy classes.
      * 
-     * @param <T> return type for the AsyncCallback
-     * @param responseReader instance used to read the return value of the
-     *            invocation
-     * @param requestData payload that encodes the addressing and arguments of
-     *            the RPC call
-     * @param callback callback handler
+     * @param <T>
+     *            return type for the AsyncCallback
+     * @param responseReader
+     *            instance used to read the return value of the invocation
+     * @param requestData
+     *            payload that encodes the addressing and arguments of the RPC
+     *            call
+     * @param callback
+     *            callback handler
      * 
      * @return a {@link Request} object that can be used to track the request
      */
@@ -381,12 +386,15 @@ public abstract class RemoteServiceProxy implements SerializationStreamFactory, 
      * RequestBuilder is intended to be returned through the asynchronous proxy
      * interface.
      * 
-     * @param <T> return type for the AsyncCallback
-     * @param responseReader instance used to read the return value of the
-     *            invocation
-     * @param requestData payload that encodes the addressing and arguments of
-     *            the RPC call
-     * @param callback callback handler
+     * @param <T>
+     *            return type for the AsyncCallback
+     * @param responseReader
+     *            instance used to read the return value of the invocation
+     * @param requestData
+     *            payload that encodes the addressing and arguments of the RPC
+     *            call
+     * @param callback
+     *            callback handler
      * 
      * @return a RequestBuilder object that is ready to have its
      *         {@link RequestBuilder#send()} method invoked.
@@ -402,12 +410,15 @@ public abstract class RemoteServiceProxy implements SerializationStreamFactory, 
     /**
      * Configures a RequestBuilder to send an RPC request.
      * 
-     * @param <T> return type for the AsyncCallback
-     * @param responseReader instance used to read the return value of the
-     *            invocation
-     * @param requestData payload that encodes the addressing and arguments of
-     *            the RPC call
-     * @param callback callback handler
+     * @param <T>
+     *            return type for the AsyncCallback
+     * @param responseReader
+     *            instance used to read the return value of the invocation
+     * @param requestData
+     *            payload that encodes the addressing and arguments of the RPC
+     *            call
+     * @param callback
+     *            callback handler
      * 
      * @return a RequestBuilder object that is ready to have its
      *         {@link RequestBuilder#send()} method invoked.

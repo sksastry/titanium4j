@@ -1,17 +1,17 @@
-/**************************************************************************
-   Locale.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+/************************************************************************
+ * Locale.java is part of Ti4j 3.1.0 Copyright 2013 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.locale;
 
@@ -86,7 +86,8 @@ public class Locale extends TiModule {
     /**
      * Format a telephone number according to the current locale.
      * 
-     * @param number the phone number to format
+     * @param number
+     *            the phone number to format
      */
     public static native String formatTelephoneNumber(String number) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
@@ -96,7 +97,8 @@ public class Locale extends TiModule {
     /**
      * Return a currency code for a given locale. (android only)
      * 
-     * @param locale the locale for which you want to the currency code, e.g.
+     * @param locale
+     *            the locale for which you want to the currency code, e.g.
      *            getCurrencyCode('en-US') -> 'USD'
      */
     public native String getCurrencyCode(String locale) /*-{
@@ -108,7 +110,8 @@ public class Locale extends TiModule {
      * Return a currency symbol for the given currency code. (android only)
      * 
      * @platforms android
-     * @param currencyCode the currency for which you want the symbol, e.g.
+     * @param currencyCode
+     *            the currency for which you want the symbol, e.g.
      *            getCurrencySymbol('USD') -> '$'
      */
     public native String getCurrencySymbol(String currencyCode) /*-{
@@ -120,7 +123,8 @@ public class Locale extends TiModule {
      * Return a currency symbol for the given locale. (android only)
      * 
      * @platforms android
-     * @param locale the locale whose currency symbol you want, e.g.
+     * @param locale
+     *            the locale whose currency symbol you want, e.g.
      *            getLocaleCurrencySymbol('en-US') -> '$'
      */
     public native String getLocaleCurrencySymbol(String locale) /*-{
@@ -131,7 +135,8 @@ public class Locale extends TiModule {
     /**
      * Return a localization string
      * 
-     * @param key the key to use when mapping into the localization file
+     * @param key
+     *            the key to use when mapping into the localization file
      */
     public native String getString(String key) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
@@ -141,8 +146,10 @@ public class Locale extends TiModule {
     /**
      * Return a localization string
      * 
-     * @param key the key to use when mapping into the localization file
-     * @param hint the text to use if no key found in the localization file
+     * @param key
+     *            the key to use when mapping into the localization file
+     * @param hint
+     *            the text to use if no key found in the localization file
      */
     public native String getString(String key, String hint) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
