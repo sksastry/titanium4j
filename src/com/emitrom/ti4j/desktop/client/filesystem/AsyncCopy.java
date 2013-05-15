@@ -1,5 +1,5 @@
 /************************************************************************
-  AsyncCopy.java is part of Titanium4j Desktop 1.2  Copyright 2012 Emitrom LLC
+  AsyncCopy.java is part of Ti4j 3.1.0  Copyright 2013 Emitrom LLC
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.

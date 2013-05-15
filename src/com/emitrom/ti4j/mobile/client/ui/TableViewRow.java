@@ -1,6 +1,5 @@
-/**************************************************************************
- * TableViewRow.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom
- * LLC
+/************************************************************************
+ * TableViewRow.java is part of Ti4j 3.1.0 Copyright 2013 Emitrom LLC
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -20,6 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.emitrom.ti4j.core.client.JsoHelper;
+import com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration;
+import com.emitrom.ti4j.mobile.client.core.handlers.ui.TableRowClickHandler;
 import com.emitrom.ti4j.mobile.client.ui.interfaces.HasTitle;
 import com.emitrom.ti4j.mobile.client.ui.style.Font;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -329,6 +330,20 @@ public class TableViewRow extends View implements HasTitle {
     public native void setTitle(String value) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.title = value;
+    }-*/;
+
+    public native CallbackRegistration addTableRowClickHandler(TableRowClickHandler handler)
+    /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var listener = function(e) {
+			var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.tableview.TableRowClickEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+			handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.TableRowClickHandler::onTableRowClick(Lcom/emitrom/ti4j/mobile/client/core/events/ui/tableview/TableRowClickEvent;)(eventObject);
+		};
+		var name = @com.emitrom.ti4j.mobile.client.core.events.ui.tableview.TableRowClickEvent::EVENT_NAME;
+		var v = jso.addEventListener(name, listener);
+		var toReturn = @com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration::new(Lcom/emitrom/ti4j/mobile/client/ui/UIObject;Ljava/lang/String;Lcom/google/gwt/core/client/JavaScriptObject;)(this,name,listener);
+		return toReturn;
+
     }-*/;
 
     static JavaScriptObject fromList(List<TableViewRow> values) {

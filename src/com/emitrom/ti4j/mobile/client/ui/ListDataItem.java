@@ -1,7 +1,21 @@
+/************************************************************************
+  ListDataItem.java is part of Ti4j 3.1.0  Copyright 2013 Emitrom LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+**************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import com.emitrom.ti4j.core.client.JsoHelper;
@@ -26,6 +40,11 @@ public class ListDataItem extends ProxyObject {
         jsObj = JsoHelper.createObject();
     }
 
+    public ListDataItem(ListItem items) {
+        this();
+        this.setProperties(items);
+    }
+
     protected ListDataItem(JavaScriptObject obj) {
         jsObj = obj;
     }
@@ -39,29 +58,23 @@ public class ListDataItem extends ProxyObject {
      * templates), the values set in the list data item override the template's
      * properties.
      */
-    public void setProperties(ListItem... items) {
-        setProperties(Arrays.asList(items));
-    }
-
-    /**
-     * 
-     * Contains key-value pairs of view properties and their values that are
-     * applied to the ListItem.
-     * <p>
-     * If there are properties set in the ItemTemplate (not the children view
-     * templates), the values set in the list data item override the template's
-     * properties.
-     */
-    public native void setProperties(List<ListItem> values) /*-{
+    public native void setProperties(ListItem value) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso.properties = @com.emitrom.ti4j.mobile.client.ui.ListItem::fromList(Ljava/util/List;)(values);
+		jso.properties = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
 
-    public native List<ListItem> getProperties() /*-{
+    public native ListItem getProperties() /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.properties;
-		return @com.emitrom.ti4j.mobile.client.ui.ListItem::fromJsArray(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
+		return @com.emitrom.ti4j.mobile.client.ui.ListItem::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
+
+    /**
+     * Gets the LisItem in this DataSet
+     */
+    public ListItem getItem() {
+        return this.getProperties();
+    }
 
     /**
      * 

@@ -1,17 +1,17 @@
-/**************************************************************************
-   TextField.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+/************************************************************************
+ * TextField.java is part of Ti4j 3.1.0 Copyright 2013 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui;
 
@@ -29,8 +29,8 @@ import com.google.gwt.user.client.ui.HasText;
 
 /**
  * * A TextField is created by the method
- * {@link com.emitrom.ti4j.mobile.client.ui.UI.createTextField}. the
- * TextField is a single line field.
+ * {@link com.emitrom.ti4j.mobile.client.ui.UI.createTextField}. the TextField
+ * is a single line field.
  * <p>
  * On iPhone, the borderStyle can be set with a constant from
  * com.emitrom.ti4j.mobile.client.ui.UI.
@@ -702,22 +702,25 @@ public class TextField extends View implements HasText {
 
     /**
      * Set whether the input field's text should be masked
-     * @param masked		True if the text should be masked
+     * 
+     * @param masked
+     *            True if the text should be masked
      */
     public native void setPasswordMask(boolean masked) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.passwordMask = masked;
     }-*/;
-    
+
     /**
      * Get whether the input field's text should be masked
-     * @return				True if the text is masked.
+     * 
+     * @return True if the text is masked.
      */
     public native boolean getPasswordMask() /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return (jso.passwordMask ? jso.passwordMask : false);
     }-*/;
-    
+
     @Override
     public void createPeer() {
         jsObj = UI.createTextField();
@@ -727,16 +730,15 @@ public class TextField extends View implements HasText {
         return new TextField(obj.getJsObj());
     }
 
-	@Override
-	public String getText() {
-		return getValue();
-	}
+    @Override
+    public String getText() {
+        return getValue();
+    }
 
-	@Override
-	public void setText(String text) {
-		setValue(text);
-	}
-	
+    @Override
+    public void setText(String text) {
+        setValue(text);
+    }
 
     /**
      * @return The color of the input text

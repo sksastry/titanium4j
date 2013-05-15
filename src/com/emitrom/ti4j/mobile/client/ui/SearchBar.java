@@ -1,23 +1,22 @@
-/**************************************************************************
-   SearchBar.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+/************************************************************************
+ * SearchBar.java is part of Ti4j 3.1.0 Copyright 2013 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui;
 
 import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.SearchBarHandler;
-import com.emitrom.ti4j.mobile.client.ui.style.Color;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
@@ -42,8 +41,7 @@ public class SearchBar extends View {
      * @return One of
      *         {@link com.emitrom.ti4j.mobile.client.ui.UI.TEXT_AUTOCAPITALIZATION_NONE}
      *         {@link com.emitrom.ti4j.mobile.client.ui.UI.TEXT_AUTOCAPITALIZATION_WORDS}
-     *         {@link com.emitrom.ti4j.mobile.client.ui.UI.TEXT_AUTOCAPICES}
-     *         or
+     *         {@link com.emitrom.ti4j.mobile.client.ui.UI.TEXT_AUTOCAPICES} or
      *         {@link com.emitrom.ti4j.mobile.client.ui.UI.TEXT_AUTOCAPITALIZATION_ALLl}
      *         to indicate how the field should be capitalized during typing.
      */
@@ -82,15 +80,6 @@ public class SearchBar extends View {
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.barColor = value;
     }-*/;
-
-    /**
-     * Sets the bar color
-     * 
-     * @param color, to color to be set
-     */
-    public void setBarColor(Color color) {
-        setBarColor(color.getRgb());
-    }
 
     /**
      * @return The text to show when the search bar field is not focused

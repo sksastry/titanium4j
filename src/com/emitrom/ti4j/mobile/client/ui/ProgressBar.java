@@ -1,5 +1,5 @@
-/**************************************************************************
- * ProgressBar.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom LLC
+/************************************************************************
+ * ProgressBar.java is part of Ti4j 3.1.0 Copyright 2013 Emitrom LLC
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -21,7 +21,6 @@ import com.emitrom.ti4j.mobile.client.ui.interfaces.HasExtremum;
 import com.emitrom.ti4j.mobile.client.ui.interfaces.HasFont;
 import com.emitrom.ti4j.mobile.client.ui.interfaces.HasStyle;
 import com.emitrom.ti4j.mobile.client.ui.interfaces.MessageElement;
-import com.emitrom.ti4j.mobile.client.ui.style.Color;
 import com.emitrom.ti4j.mobile.client.ui.style.Font;
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -54,15 +53,6 @@ public class ProgressBar extends View implements MessageElement, HasStyle, Color
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		jso.color = value;
     }-*/;
-
-    /**
-     * sets the color of the progress
-     * 
-     * @param color
-     */
-    public void setColor(Color color) {
-        setColor(color.getRgb());
-    }
 
     /**
      * @return The font object for the progress bar text

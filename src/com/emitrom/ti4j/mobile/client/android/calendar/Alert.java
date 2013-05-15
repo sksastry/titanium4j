@@ -1,5 +1,5 @@
-/**************************************************************************
- * Alert.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom LLC
+/************************************************************************
+ * Alert.java is part of Ti4j 3.1.0 Copyright 2013 Emitrom LLC
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -74,8 +74,8 @@ public class Alert extends EventDispatcher {
     }-*/;
 
     /**
-     * RecurrenceRule notice period in minutes, that determines how long prior to the
-     * event this alert should trigger.
+     * RecurrenceRule notice period in minutes, that determines how long prior
+     * to the event this alert should trigger.
      */
     public native int getMinutes() /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();

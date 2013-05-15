@@ -1,5 +1,5 @@
-/**************************************************************************
- * View.java is part of Titanium4j Mobile 3.0. Copyright 2012 Emitrom LLC
+/************************************************************************
+ * View.java is part of Ti4j 3.1.0 Copyright 2013 Emitrom LLC
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import com.emitrom.ti4j.core.client.Color;
 import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.blob.Blob;
 import com.emitrom.ti4j.mobile.client.core.Size;
@@ -52,7 +53,6 @@ import com.emitrom.ti4j.mobile.client.ui.interfaces.HasInteractionHandler;
 import com.emitrom.ti4j.mobile.client.ui.interfaces.HasUIHandler;
 import com.emitrom.ti4j.mobile.client.ui.interfaces.HasWidgets;
 import com.emitrom.ti4j.mobile.client.ui.ios.Matrix3D;
-import com.emitrom.ti4j.mobile.client.ui.style.Color;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
@@ -148,7 +148,7 @@ public class View extends UIObject implements HasWidgets, Animatable, HasAnchor,
     }-*/;
 
     public void setBackgroundColor(Color color) {
-        setBackgroundColor(color.getRgb());
+        setBackgroundColor(color.getValue());
     }
 
     /*
@@ -178,7 +178,7 @@ public class View extends UIObject implements HasWidgets, Animatable, HasAnchor,
     }-*/;
 
     public void setBackgroundDisabledColor(Color color) {
-        setBackgroundDisabledColor(color.getRgb());
+        setBackgroundDisabledColor(color.getValue());
     }
 
     /*
@@ -234,7 +234,7 @@ public class View extends UIObject implements HasWidgets, Animatable, HasAnchor,
     }-*/;
 
     public void setBackgroundFocusedColor(Color color) {
-        setBackgroundFocusedColor(color.getRgb());
+        setBackgroundFocusedColor(color.getValue());
     }
 
     /*
@@ -361,7 +361,7 @@ public class View extends UIObject implements HasWidgets, Animatable, HasAnchor,
     }-*/;
 
     public void setBackgroundSelectedColor(Color color) {
-        setBackgroundSelectedColor(color.getRgb());
+        setBackgroundSelectedColor(color.getValue());
     }
 
     /*
@@ -438,7 +438,7 @@ public class View extends UIObject implements HasWidgets, Animatable, HasAnchor,
     }-*/;
 
     public void setBorderColor(Color color) {
-        setBorderColor(color.getRgb());
+        setBorderColor(color.getValue());
     }
 
     /*

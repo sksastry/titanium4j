@@ -1,22 +1,22 @@
-/**************************************************************************
-   ImageView.java is part of Titanium4j Mobile 3.0.  Copyright 2012 Emitrom LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+/************************************************************************
+ * ImageView.java is part of Ti4j 3.1.0 Copyright 2013 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui;
 
-import com.emitrom.ti4j.mobile.client.blob.Blob;
 import com.emitrom.ti4j.core.client.ProxyObject;
+import com.emitrom.ti4j.mobile.client.blob.Blob;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.ImageActionHandler;
 import com.emitrom.ti4j.mobile.client.filesystem.File;
 import com.emitrom.ti4j.mobile.client.filesystem.FileSystem;
@@ -34,15 +34,15 @@ import com.google.gwt.resources.client.ImageResource;
  */
 public class ImageView extends View {
 
-	private ImageResource resource = null;
-	private boolean clipped = false;
-	private boolean pathIsDirectory = false;
-	private String path = "";
-	
+    private ImageResource resource = null;
+    private boolean clipped = false;
+    private boolean pathIsDirectory = false;
+    private String path = "";
+
     public ImageView() {
         createPeer();
     }
-    
+
     ImageView(JavaScriptObject proxy) {
         jsObj = proxy;
     }
@@ -161,35 +161,42 @@ public class ImageView extends View {
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.image = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
     }-*/;
-    
+
     /**
-     * Set the image of the image view, using an GWT image resource, the file's url.
-     * Clip is to clip it according to the detail in the image resource. 
-     * @param resource	The image resource
-     * @param url		The file's url
-     * @param clip		Whether to clip the image
+     * Set the image of the image view, using an GWT image resource, the file's
+     * url. Clip is to clip it according to the detail in the image resource.
+     * 
+     * @param resource
+     *            The image resource
+     * @param url
+     *            The file's url
+     * @param clip
+     *            Whether to clip the image
      */
     public void setImage(ImageResource resource, String url, boolean clip) {
-		File f = FileSystem.get().getFile(url);
-		if (f.exists()) {
-			if (!clip) {
-				setImage(f);
-			} else {
-				setImage(f.read(), resource);
-			}	
-		}
+        File f = FileSystem.get().getFile(url);
+        if (f.exists()) {
+            if (!clip) {
+                setImage(f);
+            } else {
+                setImage(f.read(), resource);
+            }
+        }
     }
-    
+
     /**
-     * Set the image of the image view according to a blob, and then clip it using
-     * a GWT image resource.
-     * @param blob		The blob
-     * @param resource	The resource
+     * Set the image of the image view according to a blob, and then clip it
+     * using a GWT image resource.
+     * 
+     * @param blob
+     *            The blob
+     * @param resource
+     *            The resource
      */
     public void setImage(Blob blob, ImageResource resource) {
-    	setImage(blob.imageAsCropped(resource.getLeft(), resource.getTop(), resource.getHeight(), resource.getWidth()));
+        setImage(blob.imageAsCropped(resource.getLeft(), resource.getTop(), resource.getHeight(), resource.getWidth()));
     }
-    
+
     /**
      * @return Array of images (either as string url, blob or file) to display
      *         in an animation
@@ -206,7 +213,8 @@ public class ImageView extends View {
 
     /**
      * 
-     * @param value , must be Blob or File
+     * @param value
+     *            , must be Blob or File
      */
     public native void setImages(JsArray<?> value) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
@@ -361,13 +369,12 @@ public class ImageView extends View {
     public static ImageView from(ProxyObject proxy) {
         return new ImageView(proxy.getJsObj());
     }
-    
 
     /*
      * (non-Javadoc)
      * 
-     * @see com.emitrom.ti4j.mobile.client.ui.HasBlob#toImage()
-     * Watch out as Android returns the actual Blob on blob.media
+     * @see com.emitrom.ti4j.mobile.client.ui.HasBlob#toImage() Watch out as
+     * Android returns the actual Blob on blob.media
      */
     @Override
     public native Blob toImage() /*-{
@@ -376,33 +383,31 @@ public class ImageView extends View {
 		var toReturn = @com.emitrom.ti4j.mobile.client.blob.Blob::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
-    
+
     private void setUpResourceImage() {
-    	if (path != null
-    			&& resource != null
-    			) {
-    		path = path + (pathIsDirectory ? resource.getSafeUri().asString().substring(4) : "");
-    		setImage(resource, path, clipped);
-    	}
+        if (path != null && resource != null) {
+            path = path + (pathIsDirectory ? resource.getSafeUri().asString().substring(4) : "");
+            setImage(resource, path, clipped);
+        }
     }
-    
+
     public void setPath(String path) {
-		this.path = path;
-		setUpResourceImage();
-	}
-    
+        this.path = path;
+        setUpResourceImage();
+    }
+
     public void setResource(ImageResource resource) {
-		this.resource = resource;
-		setUpResourceImage();
-	}
-    
+        this.resource = resource;
+        setUpResourceImage();
+    }
+
     public void setClipped(boolean clipped) {
-		this.clipped = clipped;
-		setUpResourceImage();
-	}
-    
+        this.clipped = clipped;
+        setUpResourceImage();
+    }
+
     public void setPathIsDirectory(boolean pathIsDirectory) {
-		this.pathIsDirectory = pathIsDirectory;
-		setUpResourceImage();
-	}
+        this.pathIsDirectory = pathIsDirectory;
+        setUpResourceImage();
+    }
 }

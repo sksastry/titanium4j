@@ -1,3 +1,18 @@
+/************************************************************************
+  ListSection.java is part of Ti4j 3.1.0  Copyright 2013 Emitrom LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+**************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui;
 
 import java.util.ArrayList;
@@ -16,18 +31,65 @@ public class ListSection extends ProxyObject {
         jsObj = createPeer();
     }
 
+    public ListSection(String headerTitle) {
+        this();
+        this.setHeaderTitle(headerTitle);
+    }
+
+    public ListSection(String headerTitle, ListDataItem... items) {
+        this();
+        this.setHeaderTitle(headerTitle);
+        this.setItems(items);
+    }
+
+    public ListSection(String headerTitle, ListItem... items) {
+        this();
+        this.setHeaderTitle(headerTitle);
+        List<ListDataItem> data = new ArrayList<ListDataItem>();
+        for (ListItem item : items) {
+            ListDataItem dataSet = new ListDataItem(item);
+            data.add(dataSet);
+        }
+        this.setItems(data);
+    }
+
+    public ListSection(String headerTitle, String footerTitle) {
+        this();
+        this.setHeaderTitle(headerTitle);
+        this.setFooterTitle(footerTitle);
+    }
+
+    public ListSection(String headerTitle, String footerTitle, ListDataItem... items) {
+        this();
+        this.setHeaderTitle(headerTitle);
+        this.setFooterTitle(footerTitle);
+        this.setItems(items);
+    }
+
+    public ListSection(String headerTitle, String footerTitle, ListItem... items) {
+        this();
+        this.setHeaderTitle(headerTitle);
+        this.setFooterTitle(footerTitle);
+        List<ListDataItem> data = new ArrayList<ListDataItem>();
+        for (ListItem item : items) {
+            ListDataItem dataSet = new ListDataItem(item);
+            data.add(dataSet);
+        }
+        this.setItems(data);
+    }
+
     protected ListSection(JavaScriptObject obj) {
         this.jsObj = obj;
     }
 
-    public native String getFooterStyle() /*-{
+    public native String getFooterTitle() /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		return jso.footerStyle;
+		return jso.footerTitle;
     }-*/;
 
-    public native void setFooterStyle(String value) /*-{
+    public native void setFooterTitle(String value) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso.footerStyle = value;
+		jso.footerTitle = value;
     }-*/;
 
     public native String getHeaderTitle() /*-{
@@ -35,7 +97,7 @@ public class ListSection extends ProxyObject {
 		return jso.headerTitle;
     }-*/;
 
-    public native void setHeaderTitle(boolean value) /*-{
+    public native void setHeaderTitle(String value) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.headerTitle = value;
     }-*/;
@@ -88,7 +150,7 @@ public class ListSection extends ProxyObject {
 		jso.deleteItemsAt(index, count);
     }-*/;
 
-    public native void getItemAt(int index) /*-{
+    public native ListDataItem getItemAt(int index) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.getItemAt(index);
 		return @com.emitrom.ti4j.mobile.client.ui.ListDataItem::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);

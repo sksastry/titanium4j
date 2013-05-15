@@ -1,18 +1,18 @@
-/*
- * Copyright 2009 Google Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
- */
+/************************************************************************
+  HandlerEvaluator.java is part of Ti4j 3.1.0  Copyright 2013 Emitrom LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+**************************************************************************/
 package com.google.gwt.uibinder.rebind;
 
 import com.google.gwt.core.ext.UnableToCompleteException;
@@ -40,7 +40,7 @@ import com.google.gwt.uibinder.rebind.model.OwnerClass;
  *     @UiField Label label;
  *
  *     @UiBinder({"label", "link"})
- *     public void doClick(ClickEvent e) {
+ *     public void doClick(DashboardItemClickEvent e) {
  *       // do something
  *     }
  *   }
@@ -49,9 +49,9 @@ import com.google.gwt.uibinder.rebind.model.OwnerClass;
  * will generate a piece of code like:
  *
  * <pre>
- *    ClickHandler handler0 = new ClickHandler() {
+ *    PinchChangedDragStateHandler handler0 = new PinchChangedDragStateHandler() {
  *      @Override
- *      public void onClick(ClickEvent event) {
+ *      public void onClick(DashboardItemClickEvent event) {
  *        owner.doClick(event);
  *      }
  *   });
@@ -184,14 +184,14 @@ class HandlerEvaluator {
       String boundMethod) throws UnableToCompleteException {
 
     // Retrieves the single method (usually 'onSomething') related to all
-    // handlers. Ex: onClick in ClickHandler, onBlur in BlurHandler ...
+    // handlers. Ex: onClick in PinchChangedDragStateHandler, onBlur in BlurHandler ...
     JMethod[] methods = handlerType.getMethods();
     if (methods.length != 1) {
       logger.die("'%s' has more than one method defined.",
           handlerType.getName());
     }
 
-    // Checks if the method has an Event as parameter. Ex: ClickEvent in
+    // Checks if the method has an Event as parameter. Ex: DashboardItemClickEvent in
     // onClick, BlurEvent in onBlur ...
     JParameter[] parameters = methods[0].getParameters();
     if (parameters.length != 1 || parameters[0].getType() != eventType) {
@@ -254,7 +254,7 @@ class HandlerEvaluator {
    *
    * <pre>
    *   <b>Examples:</b>
-   *    - HandlerRegistration addClickHandler(ClickHandler handler)
+   *    - HandlerRegistration addClickHandler(PinchChangedDragStateHandler handler)
    *    - HandlerRegistration addMouseOverHandler(MouseOverHandler handler)
    *    - HandlerRegistration addSubmitCompleteHandler(
    *          FormPanel.SubmitCompleteHandler handler)

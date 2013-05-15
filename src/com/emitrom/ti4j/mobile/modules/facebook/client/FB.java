@@ -1,6 +1,22 @@
+/************************************************************************
+  FB.java is part of Ti4j 3.1.0  Copyright 2013 Emitrom LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+**************************************************************************/
 package com.emitrom.ti4j.mobile.modules.facebook.client;
 
 import com.emitrom.ti4j.mobile.client.core.TiModule;
+import com.emitrom.ti4j.mobile.client.core.handlers.EventHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArrayString;
 import com.google.gwt.core.client.JsDate;
@@ -198,6 +214,121 @@ public class FB extends TiModule {
 			style : buttonStyle
 		});
 		return @com.emitrom.ti4j.mobile.modules.facebook.client.LoginButton::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
+    }-*/;
+
+    /**
+     * Opens a supported Facebook dialog.
+     * <p>
+     * For a list of dialogs, parameters, and response formats, see the official
+     * documentation for Facebook Dialogs. The callback is invoked when the
+     * dialog is closed, either because the user approved the action, or
+     * canceled the dialog.
+     * 
+     * @param action
+     * @param params
+     * @param callback
+     */
+    public native void dialog(String action, FBData params, FBDialogResponseHandler callback) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var fn = function(r) {
+			var response = @com.emitrom.ti4j.mobile.modules.facebook.client.FBDialogResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(r);
+			callback.@com.emitrom.ti4j.mobile.modules.facebook.client.FBDialogResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/modules/facebook/client/FBDialogResponse;)(response);
+		};
+		jso.dialog(action,
+				params.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
+				fn);
+    }-*/;
+
+    /**
+     * Makes a request to Facebook for additional permissions.
+     * 
+     * iOS 6's facebook login forbids minimum authorization to include write
+     * permissions. In order to make any write actions, the app must reauthorize
+     * asking for the additional permissions. If the application already has
+     * these permissions, there will be no user interaction.
+     * 
+     * @param permissions
+     * @param params
+     * @param callback
+     */
+    public native void reauthorize(JsArrayString permissions, String audience, FBReauthResponseHandler callback) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var fn = function(r) {
+			var response = @com.emitrom.ti4j.mobile.modules.facebook.client.FBReauthResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(r);
+			callback.@com.emitrom.ti4j.mobile.modules.facebook.client.FBReauthResponseHandler::onReauth(Lcom/emitrom/ti4j/mobile/modules/facebook/client/FBReauthResponse;)(response);
+		};
+		jso.reauthorize(permissions, audience, fn);
+    }-*/;
+
+    /**
+     * 
+     * Makes a request to the legacy Facebook REST API.
+     * 
+     * For details on API calls and responses, see the offical Facebook REST API
+     * documentation.
+     */
+    public native void request(String method, FBData params, FBRestResponseHandler callback) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var fn = function(r) {
+			var response = @com.emitrom.ti4j.mobile.modules.facebook.client.FBRestResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(r);
+			callback.@com.emitrom.ti4j.mobile.modules.facebook.client.FBRestResponseHandler::onResponse(Lcom/emitrom/ti4j/mobile/modules/facebook/client/FBRestResponse;)(response);
+		};
+		jso.request(method,
+				params.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
+				fn);
+    }-*/;
+
+    /**
+     * 
+     * Makes a Facebook Graph API request.
+     * <p>
+     * If the request requires user authorization, the user must be logged in,
+     * and your app must be authorized to make the request. You can check the
+     * loggedIn property to determine if the user is logged in.
+     * <p>
+     * Every Facebook object has an associated path. For example, "me" requests
+     * information about the current user.
+     * <p>
+     * For a complete list of Graph API methods, parameters and return types,
+     * see the official Facebook Graph API documentation.
+     */
+    public native void requestWithGraphPath(String path, FBData params, String httpMethod,
+                    FBGraphResponseHandler callback) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var fn = function(r) {
+			var response = @com.emitrom.ti4j.mobile.modules.facebook.client.FBGraphResponse::new(Lcom/google/gwt/core/client/JavaScriptObject;)(r);
+			callback.@com.emitrom.ti4j.mobile.modules.facebook.client.FBGraphResponseHandler::onGraphResponse(Lcom/emitrom/ti4j/mobile/modules/facebook/client/FBGraphResponse;)(response);
+		};
+		jso.requestWithGraphPath(method,
+				params.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()(),
+				fn);
+    }-*/;
+
+    /**
+     * Fired at session logout.
+     */
+    public void addLogoutHandler(EventHandler handler) {
+        this.addEventHandler("logout", handler);
+    }
+
+    /**
+     * Fired at session login.
+     */
+    public native void addLoginHandler(FBLoginHandler handler) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var fn = function(e) {
+			var event = @com.emitrom.ti4j.mobile.modules.facebook.client.FBLoginEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+			handler.@com.emitrom.ti4j.mobile.modules.facebook.client.FBLoginHandler::onLogin(Lcom/emitrom/ti4j/mobile/modules/facebook/client/FBLoginEvent;)(event);
+		};
+		jso.addEventListner('login', fn);
+    }-*/;
+
+    /**
+     * Clears the OAuth accessToken and logs out the user.
+     */
+    public native void logout() /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.logout();
     }-*/;
 
     private static native JavaScriptObject create()/*-{
