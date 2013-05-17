@@ -36,7 +36,7 @@ public class TiMobileLinker extends AbstractLinker {
 
     @Override
     public String getDescription() {
-        return "Gwt4Titanium Mobile Linker";
+        return "Titanium4j Mobile Linker";
     }
 
     public ArtifactSet link(TreeLogger logger, LinkerContext context, ArtifactSet artifacts)
