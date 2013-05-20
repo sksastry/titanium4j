@@ -34,6 +34,9 @@ import com.google.gwt.dev.util.DefaultTextOutput;
 @LinkerOrder(LinkerOrder.Order.PRE)
 public class TiMobileLinker extends AbstractLinker {
 
+    // private final String APP_COMPILATION_FILE_NAME =
+    // "applicationCompileDateTime.txt";
+
     @Override
     public String getDescription() {
         return "Titanium4j Mobile Linker";
@@ -44,6 +47,7 @@ public class TiMobileLinker extends AbstractLinker {
 
         ArtifactSet toReturn = new ArtifactSet(artifacts);
         DefaultTextOutput out = new DefaultTextOutput(true);
+        long compilationTime = System.currentTimeMillis();
         out.print("(function(){");
         out.newline();
 
@@ -77,7 +81,7 @@ public class TiMobileLinker extends AbstractLinker {
         out.newline();
         out.print("$strongName = '" + result.getStrongName() + "';");
         out.newline();
-        out.print("$ti4jCompilationDate = " + System.currentTimeMillis() + ";");
+        out.print("$ti4jCompilationDate = " + compilationTime + ";");
         out.newline();
         out.print("gwtOnLoad(null,'" + context.getModuleName() + "',null);");
         out.newline();
@@ -85,6 +89,9 @@ public class TiMobileLinker extends AbstractLinker {
         out.newline();
 
         toReturn.add(emitString(logger, out.toString(), context.getModuleName() + ".js"));
+        // toReturn.add(emitString(logger, Long.toString(compilationTime),
+        // APP_COMPILATION_FILE_NAME));
+
         return toReturn;
     }
 
