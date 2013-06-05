@@ -57,8 +57,20 @@ public class Toolbar extends View {
     private List<View> items;
 
     public Toolbar() {
-        createPeer();
-        items = new ArrayList<View>();
+        this(new ArrayList<View>());
+    }
+
+    public Toolbar(List<View> items) {
+        this.items = items;
+        JsArray<JavaScriptObject> peers = JsArray.createArray().cast();
+        for (View v : items) {
+            peers.push(v.getJsObj());
+        }
+        createPeer(peers);
+    }
+
+    public Toolbar(View... items) {
+        this(Arrays.asList(items));
     }
 
     @Override
@@ -223,5 +235,11 @@ public class Toolbar extends View {
         this.addItem(view);
         this.layout();
     }
+
+    native JavaScriptObject createPeer(JavaScriptObject children) /*-{
+		return Titanium.UI.iOS.createToolbar({
+			items : children
+		})
+    }-*/;
 
 }
