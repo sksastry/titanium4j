@@ -203,7 +203,7 @@ public class HTTPClient extends EventDispatcher {
         setOnReadyStateChange(callback.getJsoPeer());
     }
 
-    private native void setOnReadyStateChange(JavaScriptObject value) /*-{
+    private native void setOnReadyStateChange(JavaScriptObject callback) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.onreadystatechange = callback;
     }-*/;
@@ -218,7 +218,7 @@ public class HTTPClient extends EventDispatcher {
         setOnSendStream(callback.getJsoPeer());
     }
 
-    private native void setOnSendStream(JavaScriptObject value) /*-{
+    private native void setOnSendStream(JavaScriptObject callback) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.onsendstream = callback;
     }-*/;
