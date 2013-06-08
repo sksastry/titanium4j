@@ -1,18 +1,18 @@
 /************************************************************************
-  TiMobileLinker.java is part of Ti4j 3.1.0  Copyright 2013 Emitrom LLC
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
-**************************************************************************/
+ * TiMobileLinker.java is part of Ti4j 3.1.0 Copyright 2013 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ **************************************************************************/
 package com.emitrom.ti4j.mobile.linker;
 
 import java.util.Set;
@@ -34,9 +34,12 @@ import com.google.gwt.dev.util.DefaultTextOutput;
 @LinkerOrder(LinkerOrder.Order.PRE)
 public class TiMobileLinker extends AbstractLinker {
 
+    // private final String APP_COMPILATION_FILE_NAME =
+    // "applicationCompileDateTime.txt";
+
     @Override
     public String getDescription() {
-        return "Gwt4Titanium Mobile Linker";
+        return "Titanium4j Mobile Linker";
     }
 
     public ArtifactSet link(TreeLogger logger, LinkerContext context, ArtifactSet artifacts)
@@ -44,6 +47,7 @@ public class TiMobileLinker extends AbstractLinker {
 
         ArtifactSet toReturn = new ArtifactSet(artifacts);
         DefaultTextOutput out = new DefaultTextOutput(true);
+        long compilationTime = System.currentTimeMillis();
         out.print("(function(){");
         out.newline();
 
@@ -77,12 +81,17 @@ public class TiMobileLinker extends AbstractLinker {
         out.newline();
         out.print("$strongName = '" + result.getStrongName() + "';");
         out.newline();
+        out.print("$ti4jCompilationDate = " + compilationTime + ";");
+        out.newline();
         out.print("gwtOnLoad(null,'" + context.getModuleName() + "',null);");
         out.newline();
         out.print("})();");
         out.newline();
 
         toReturn.add(emitString(logger, out.toString(), context.getModuleName() + ".js"));
+        // toReturn.add(emitString(logger, Long.toString(compilationTime),
+        // APP_COMPILATION_FILE_NAME));
+
         return toReturn;
     }
 
