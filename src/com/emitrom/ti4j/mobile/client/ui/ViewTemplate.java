@@ -37,9 +37,9 @@ public class ViewTemplate extends ProxyObject {
         jsObj = obj;
     }
 
-    public native void setBindId(String event)/*-{
+    public native void setBindId(String value)/*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso.bindId = value
+		jso.bindId = value;
     }-*/;
 
     public native void setChildTemplate(List<ViewTemplate> values)/*-{
