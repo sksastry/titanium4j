@@ -8,8 +8,8 @@ For licensing questions, please contact us at licensing@emitrom.com
 http://www.emitrom.com/license
 -->
 <module>
-  <inherits name='com.emitrom.ti4j.mobile.Timobile'/>
+  <inherits name='com.emitrom.ti4j.mobile.Mobile'/>
   <set-property name="user.agent" value="safari,timobile" />
   <set-configuration-property name='xsiframe.failIfScriptTag' value='FALSE'/>
-   <add-linker name="xsiframe"/>
+  <add-linker name="xsiframe"/>
 </module>
