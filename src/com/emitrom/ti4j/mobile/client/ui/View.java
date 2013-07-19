@@ -534,6 +534,18 @@ public class View extends UIObject implements HasWidgets, Animatable, HasAnchor,
 		return jso.bottom;
     }-*/;
 
+    /**
+     * Sets the value of the bubbleParent property.
+     * 
+     * Set to TRUE by default.
+     * 
+     * @param bubbleParent TRUE to enable bubbling events to the proxy's parent. FALSE to prevent this.
+     */
+    public native void setBubbleParent(boolean bubbleParent) /*-{
+    	var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+    	jso.bubbleParent = bubbleParent;
+    }-*/;
+
     /*
      * (non-Javadoc)
      * 
