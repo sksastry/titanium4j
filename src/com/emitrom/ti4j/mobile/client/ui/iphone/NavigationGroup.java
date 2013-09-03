@@ -106,7 +106,7 @@ public class NavigationGroup extends View {
      */
     public native Window getWindow()/*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		var obj = tjso.window;
+		var obj = jso.window;
 		return @com.emitrom.ti4j.mobile.client.ui.Window::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
 
