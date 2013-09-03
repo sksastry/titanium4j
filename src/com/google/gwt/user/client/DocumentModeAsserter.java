@@ -1,24 +1,22 @@
 /************************************************************************
-  DocumentModeAsserter.java is part of Ti4j 3.1.0  Copyright 2013 Emitrom LLC
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
-**************************************************************************/
+ * DocumentModeAsserter.java is part of Ti4j 3.1.0 Copyright 2013 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ **************************************************************************/
 
 package com.google.gwt.user.client;
 
-import com.emitrom.ti4j.mobile.client.core.Utils;
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.core.client.GWT;
 
 /**
  * Helper class, which, during startup, asserts that the browser's current
@@ -85,56 +83,6 @@ public class DocumentModeAsserter implements EntryPoint {
 
     @Override
     public void onModuleLoad() {
-        if (Utils.isWebMode()) {
-            DocumentModeProperty impl = GWT.create(DocumentModeProperty.class);
-            Severity severity = impl.getDocumentModeSeverity();
-            if (severity == Severity.IGNORE) {
-                return;
-            }
-
-            String currentMode = "CSS1Compat";
-            String[] allowedModes = impl.getAllowedDocumentModes();
-            for (int i = 0; i < allowedModes.length; i++) {
-                if (allowedModes[i].equals(currentMode)) {
-                    return;
-                }
-            }
-
-            String message;
-            if (allowedModes.length == 1 && STANDARDS_MODE_CSS1_COMPAT.equals(allowedModes[0])
-                            && QUIRKS_MODE_BACK_COMPAT.equals(currentMode)) {
-                /*
-                 * GWT no longer supports Quirks Mode.
-                 */
-                message = "GWT no longer supports Quirks Mode (document.compatMode=' "
-                                + QUIRKS_MODE_BACK_COMPAT
-                                + "').<br>Make sure your application's host HTML page has a Standards Mode "
-                                + "(document.compatMode=' "
-                                + STANDARDS_MODE_CSS1_COMPAT
-                                + "') doctype,<br>e.g. by using &lt;!doctype html&gt; at the start of your application's HTML "
-                                + "page.<br><br>To continue using this unsupported rendering mode and risk layout problems, "
-                                + "suppress this message by adding<br>the following line to your*.gwt.xml module file:<br>"
-                                + "&nbsp;&nbsp;&lt;extend-configuration-property name=\"document.compatMode\" value=\""
-                                + currentMode + "\"/&gt;";
-            } else {
-                /*
-                 * Developer is doing something custom and have modified the
-                 * default document.compatMode configuration property settings
-                 * from DocumentMode.gwt.xml, so they're mostly on their own.
-                 */
-                message = "Your *.gwt.xml module configuration prohibits the use of the current doucment "
-                                + "rendering mode (document.compatMode=' " + currentMode
-                                + "').<br>Modify your application's host HTML page doctype, or update your custom "
-                                + "'document.compatMode' configuration property settings.";
-            }
-
-            if (severity == Severity.ERROR) {
-                throw new RuntimeException(message);
-            }
-
-            // Warning compiled out in Production Mode
-            GWT.log(message);
-        }
 
     }
 }

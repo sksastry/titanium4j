@@ -52,7 +52,10 @@ public class TiFactory {
     }-*/;
 
     public static native JavaScriptObject createCodec()/*-{
-		return Titanium.Codec;
+		Titanium.API.info('Creating CODEC');
+		var obj = Titanium.Codec;
+		Titanium.API.info('Creating CODEC done');
+		return obj;
     }-*/;
 
     public static native JavaScriptObject createNativeContactModule()/*-{

@@ -15,6 +15,7 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.codec;
 
+import com.emitrom.ti4j.mobile.client.api.API;
 import com.emitrom.ti4j.mobile.client.core.TiFactory;
 import com.emitrom.ti4j.mobile.client.core.TiModule;
 
@@ -24,7 +25,7 @@ import com.emitrom.ti4j.mobile.client.core.TiModule;
  */
 public class Codec extends TiModule {
 
-    private static Codec instance = null;
+    private static Codec instance;
 
     public static Codec get() {
         if (instance == null) {
@@ -37,9 +38,9 @@ public class Codec extends TiModule {
         createPeer();
     }
 
+    public static final String CODEC_CHARSET_UTF8 = CHARSET_UTF8();
     public static final String CODEC_CHARSET_ASCII = CHARSET_ASCII();
     public static final String CODEC_CHARSET_ISO_LATIN_1 = CHARSET_ISO_LATIN_1();
-    public static final String CODEC_CHARSET_UTF8 = CHARSET_UTF8();
     public static final String CODEC_CHARSET_UTF16 = CHARSET_UTF16();
     public static final String CODEC_CHARSET_UTF16BE = CHARSET_UTF16BE();
     public static final String CODEC_CHARSET_UTF16LE = CHARSET_UTF16LE();
@@ -72,9 +73,9 @@ public class Codec extends TiModule {
      * @return The position after the encoded number in 'dest'.
      */
     public native int encodeNumber(EncodeNumberSpec options) /*-{
-		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		return jso
+		var o = Titanium.Codec
 				.encodeNumber(options.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
+		return o;
     }-*/;
 
     /**
@@ -117,64 +118,98 @@ public class Codec extends TiModule {
     }-*/;
 
     public static native final String CHARSET_ASCII() /*-{
-		return Titanium.Codec.CHARSET_ASCII;
+		Titanium.API.info("Type CHARSET_ASCII ? : ");
+		Titanium.API.info("Type CHARSET_ASCII ? : " + Ti.Codec.CHARSET_ASCII);
+		return Titanium.Codec.CHARSET_ASCII ? Titanium.Codec.CHARSET_ASCII
+				: null;
     }-*/;
 
     public static native final String CHARSET_ISO_LATIN_1() /*-{
-		return Titanium.Codec.CHARSET_ISO_LATIN_1;
+		Titanium.API.info("Type CHARSET_ISO_LATIN_1 ? : ");
+		Titanium.API.info("Type CHARSET_ISO_LATIN_1 ? : "
+				+ Ti.Codec.CHARSET_ISO_LATIN_1);
+		return Titanium.Codec.CHARSET_ISO_LATIN_1 ? Titanium.Codec.CHARSET_ISO_LATIN_1
+				: null;
     }-*/;
 
     public static native final String CHARSET_UTF8() /*-{
-		return Titanium.Codec.CHARSET_UTF8;
+		Titanium.API.info("Type CHARSET_UTF8 ? : ");
+		Titanium.API.info("Type CHARSET_UTF8 ? : " + Ti.Codec.CHARSET_UTF8);
+		return Titanium.Codec.CHARSET_UTF8 ? Titanium.Codec.CHARSET_UTF8 : null;
     }-*/;
 
     public static native final String CHARSET_UTF16() /*-{
-		return Titanium.Codec.CHARSET_UTF16;
+		Titanium.API.info("Type CHARSET_UTF16 ? : ");
+		Titanium.API.info("Type CHARSET_UTF16 ? : " + Ti.Codec.CHARSET_UTF16);
+		return Titanium.Codec.CHARSET_UTF16 ? Titanium.Codec.CHARSET_UTF16
+				: null;
     }-*/;
 
     public static native final String CHARSET_UTF16BE() /*-{
-		return Titanium.Codec.CHARSET_UTF16BE;
+		Titanium.API.info("Type CHARSET_UTF16BE ? : ");
+		Titanium.API.info("Type CHARSET_UTF16BE ? : " + Ti.Codec.CHARSET_UTF16);
+		return Titanium.Codec.CHARSET_UTF16BE ? Titanium.Codec.CHARSET_UTF16BE
+				: null;
     }-*/;
 
     public static native final String CHARSET_UTF16LE() /*-{
-		return Titanium.Codec.CHARSET_UTF16LE;
+		return Titanium.Codec.CHARSET_UTF16LE ? Titanium.Codec.CHARSET_UTF16LE
+				: null;
     }-*/;
 
     public static native final String TYPE_BYTE() /*-{
-		return Titanium.Codec.TYPE_BYTE;
+		Titanium.API.info("Type Byte ? : ");
+		Titanium.API.info("Type Byte ? : " + Ti.Codec.TYPE_BYTE);
+		return Titanium.Codec.TYPE_BYTE ? Titanium.Codec.TYPE_BYTE : null;
     }-*/;
 
     public static native final String TYPE_SHORT() /*-{
-		return Titanium.Codec.TYPE_SHORT;
+		Titanium.API.info("Type TYPE_SHORT ? : ");
+		Titanium.API.info("Type TYPE_SHORT ? : " + Ti.Codec.TYPE_SHORT);
+		return Titanium.Codec.TYPE_SHORT ? Titanium.Codec.TYPE_SHORT : null;
     }-*/;
 
     public static native final String TYPE_INT() /*-{
-		return Titanium.Codec.TYPE_INT;
+		Titanium.API.info("Type TYPE_INT ? : ");
+		Titanium.API.info("Type TYPE_INT ? : " + Ti.Codec.TYPE_INT);
+		return Titanium.Codec.TYPE_INT ? Titanium.Codec.TYPE_INT : null;
     }-*/;
 
     public static native final String TYPE_FLOAT() /*-{
-		return Titanium.Codec.TYPE_FLOAT;
+		Titanium.API.info("Type TYPE_FLOAT ? : ");
+		Titanium.API.info("Type TYPE_FLOAT ? : " + Ti.Codec.TYPE_FLOAT);
+		return Titanium.Codec.TYPE_FLOAT ? Titanium.Codec.TYPE_FLOAT : null;
     }-*/;
 
     public static native final String TYPE_LONG() /*-{
-		return Titanium.Codec.TYPE_LONG;
+		Titanium.API.info("Type TYPE_LONG ? : ");
+		Titanium.API.info("Type TYPE_LONG ? : " + Ti.Codec.TYPE_FLOAT);
+		return Titanium.Codec.TYPE_LONG ? Titanium.Codec.TYPE_LONG : null;
     }-*/;
 
     public static native final String TYPE_DOUBLE() /*-{
-		return Titanium.Codec.TYPE_DOUBLE;
+		Titanium.API.info("Type TYPE_DOUBLE ? : ");
+		Titanium.API.info("Type TYPE_DOUBLE ? : " + Ti.Codec.TYPE_DOUBLE);
+		return Titanium.Codec.TYPE_DOUBLE ? Titanium.Codec.TYPE_DOUBLE : null;
     }-*/;
 
     public static native final int BIG_ENDIAN() /*-{
-		return Titanium.Codec.BIG_ENDIAN;
+		Titanium.API.info("Type BIG_ENDIAN ? : ");
+		Titanium.API.info("Type BIG_ENDIAN ? : " + Ti.Codec.BIG_ENDIAN);
+		return Titanium.Codec.BIG_ENDIAN ? Titanium.Codec.BIG_ENDIAN : 0;
     }-*/;
 
     public static native final int LITTLE_ENDIAN() /*-{
-		return Titanium.Codec.LITTLE_ENDIAN;
+		Titanium.API.info("Type LITTLE_ENDIAN ? : ");
+		Titanium.API.info("Type LITTLE_ENDIAN ? : " + Ti.Codec.LITTLE_ENDIAN);
+		return Titanium.Codec.LITTLE_ENDIAN ? Titanium.Codec.LITTLE_ENDIAN : 0;
     }-*/;
 
     @Override
     public void createPeer() {
+        API.get().info("Before creatiiiing");
         jsObj = TiFactory.createCodec();
+        API.get().info("Creaaaaated ? ");
     }
 
 }

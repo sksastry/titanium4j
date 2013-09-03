@@ -8,8 +8,12 @@ For licensing questions, please contact us at licensing@emitrom.com
 http://www.emitrom.com/license
 -->
 <module>
-  <inherits name='com.emitrom.ti4j.mobile.Mobile'/>
-  <set-property name="user.agent" value="safari,timobile" />
+ <inherits name='com.emitrom.ti4j.mobile.MobileCore'/>
+  
+ <define-linker name="ti4jMobileHybridLinker" class="com.emitrom.ti4j.mobile.hybrid.linker.TiMobileHybridLinker"/>
+    <add-linker name="ti4jMobileHybridLinker"/>
+    
+  <set-property name="user.agent" value="safari" />
   <set-configuration-property name='xsiframe.failIfScriptTag' value='FALSE'/>
   <add-linker name="xsiframe"/>
 </module>

@@ -8,14 +8,7 @@ For licensing questions, please contact us at licensing@emitrom.com
 http://www.emitrom.com/license
 -->
 <module>
-     <inherits name="com.google.gwt.core.Core"/>
-	 <inherits name="com.google.gwt.user.UserAgent"/>
-	 <inherits name="com.google.gwt.i18n.I18N"/>
-	 <inherits name="com.google.gwt.safehtml.SafeHtml" />
-	 <inherits name="com.google.gwt.json.JSON" />
-	 <inherits name='com.emitrom.ti4j.mobile.rpc.RPC'/>
-	 
-	 <inherits name='com.emitrom.ti4j.core.Core'/> 
+	 <inherits name='com.emitrom.ti4j.mobile.MobileCore'/> 
 
     <define-linker name="ti4jMobileLinker" class="com.emitrom.ti4j.mobile.linker.TiMobileLinker"/>
     <add-linker name="ti4jMobileLinker"/>
@@ -23,5 +16,7 @@ http://www.emitrom.com/license
     <!-- Expand the list of allowed user.agent values -->
     <extend-property name="user.agent" values="timobile"/>
     <set-configuration-property name="user.agent.runtimeWarning" value="false"/>
+    
+      <set-property name="user.agent" value="timobile" />
      
 </module>

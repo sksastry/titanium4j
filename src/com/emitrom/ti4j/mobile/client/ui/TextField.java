@@ -72,6 +72,16 @@ public class TextField extends View implements HasText {
 		jso.autocapitalization = value;
     }-*/;
 
+    public native void setAutoCorrect(boolean value) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.autocorrect = value;
+    }-*/;
+
+    public native boolean isAutoCorrect() /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		return jso.autocorrect;
+    }-*/;
+
     /**
      * @return The border style constant for the field
      */
@@ -449,7 +459,7 @@ public class TextField extends View implements HasText {
 
     public native void setTextAlign(String value) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso.textAlign = value.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.textAlign = value;
     }-*/;
 
     public void setTextAlign(Position position) {

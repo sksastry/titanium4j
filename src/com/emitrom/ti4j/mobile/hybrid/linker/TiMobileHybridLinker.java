@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  **************************************************************************/
-package com.emitrom.ti4j.mobile.linker;
+package com.emitrom.ti4j.mobile.hybrid.linker;
 
 import java.util.Set;
 
@@ -31,8 +31,8 @@ import com.google.gwt.dev.util.DefaultTextOutput;
  * Linker for Titaniumj Mobile. This linker removes unnecessary GWT stuff to
  * make the generated JS work inside Titanium
  */
-@LinkerOrder(LinkerOrder.Order.PRIMARY)
-public class TiMobileLinker extends AbstractLinker {
+@LinkerOrder(LinkerOrder.Order.PRE)
+public class TiMobileHybridLinker extends AbstractLinker {
 
     // private final String APP_COMPILATION_FILE_NAME =
     // "applicationCompileDateTime.txt";
