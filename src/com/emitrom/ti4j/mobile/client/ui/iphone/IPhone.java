@@ -104,15 +104,16 @@ public class IPhone extends TiModule {
 
     native JavaScriptObject createNavigationGroup() /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso.createNavigationGroup();
+		return jso.createNavigationGroup();
     }-*/;
 
     native JavaScriptObject createNavigationGroup(Window rootWindow) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso
+		var obj = jso
 				.createNavigationGroup({
 					window : rootWindow.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 				});
+		return obj;
     }-*/;
 
     /**
