@@ -48,8 +48,8 @@ public class Accelerometer extends TiModule {
     }
 
     /**
-     * Convenient method for
-     * <code>Acceterometer.addEventListener(UpdateEvent.UPDATE, listener);</code>
+     * Convenience method for
+     * <code>Accelerometer.addEventListener(UpdateEvent.UPDATE, listener);</code>
      * 
      * @param listener
      */
