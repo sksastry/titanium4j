@@ -1,18 +1,18 @@
 /************************************************************************
-  Picker.java is part of Ti4j 3.1.0  Copyright 2013 Emitrom LLC
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
-**************************************************************************/
+ * Picker.java is part of Ti4j 3.1.0 Copyright 2013 Emitrom LLC
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui;
 
 import java.util.ArrayList;
@@ -79,6 +79,7 @@ public class Picker extends View {
     }
 
     private native void _setColumns(JsArray<JavaScriptObject> value) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
 		jso.columns = value;
     }-*/;
 
@@ -257,28 +258,30 @@ public class Picker extends View {
     /**
      * Add an array of rows, a single row or a column to the picker
      * 
-     * @param data add an array of rows, a single row or a column to the picker
+     * @param data
+     *            add an array of rows, a single row or a column to the picker
      */
     public native void add(PickerRow row) /*-{
-		jso
-				.add(row.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()()
+		jso.add(row.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
      * Add an array of rows, a single row or a column to the picker
      * 
-     * @param data add an array of rows, a single row or a column to the picker
+     * @param data
+     *            add an array of rows, a single row or a column to the picker
      */
     public native void add(PickerColumn column) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso
-				.add(column.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
+		jso.add(column.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()());
     }-*/;
 
     /**
      * Get the selected row object for column
      * 
-     * @param index for the column index, return the row object or nil if not
+     * @param index
+     *            for the column index, return the row object or nil if not
      *            found
      */
     public native PickerRow getSelectedRow(int index) /*-{
@@ -291,7 +294,8 @@ public class Picker extends View {
     /**
      * Causes the picker to reload the values from the new column.
      * 
-     * @param column new column to load
+     * @param column
+     *            new column to load
      */
     public native void reloadColumn(PickerColumn column) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
@@ -302,9 +306,12 @@ public class Picker extends View {
     /**
      * Set the column's row to the selected state
      * 
-     * @param column the column index
-     * @param row the row index
-     * @param animated boolean to indicate if the selection should be animated
+     * @param column
+     *            the column index
+     * @param row
+     *            the row index
+     * @param animated
+     *            boolean to indicate if the selection should be animated
      *            (default) (optional)
      */
     public native void setSelectedRow(int column, int row, boolean animated) /*-{
