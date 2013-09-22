@@ -15,6 +15,7 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.core;
 
+import com.emitrom.ti4j.mobile.client.blob.Blob;
 import com.emitrom.ti4j.mobile.client.core.events.TiEvent;
 import com.emitrom.ti4j.mobile.client.core.events.TiEventListener;
 import com.google.gwt.core.client.JavaScriptObject;
