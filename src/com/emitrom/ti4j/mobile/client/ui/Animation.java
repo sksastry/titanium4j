@@ -174,6 +174,11 @@ public class Animation extends EventDispatcher {
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.left = value;
     }-*/;
+    
+    public native void setLeft(String value) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.left = value;
+    }-*/;
 
     /**
      * @return Value of the opacity property to change during animation
@@ -236,6 +241,11 @@ public class Animation extends EventDispatcher {
     }-*/;
 
     public native void setTop(double value) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.top = value;
+    }-*/;
+
+    public native void setTop(String value) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.top = value;
     }-*/;
