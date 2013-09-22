@@ -366,4 +366,26 @@ public class ScrollView extends View {
         return new ScrollView(proxy.getJsObj());
     }
 
+
+    /**
+     * Set whether the scrolling is enabled on this scroll view
+     * @param value		If true then scrolling is enabled
+     */
+    public native void setScrollingEnabled(boolean value) /*-{
+    	var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.scrollingEnabled = value;
+    }-*/;
+    
+    /**
+     * Get whether scrolling is enabled on this scroll view
+     * @return			True if scrolling is enabled
+     */
+    public native boolean isScrollingEnabled() /*-{
+    	var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var ret = jso.scrollingEnabled;
+		if (ret == undefined) {
+			ret = true;
+		}
+		return ret;
+    }-*/;
 }
