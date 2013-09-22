@@ -80,9 +80,15 @@ public class Utils {
      * @param str
      *            , the string to use for the input
      */
-    public static native String base64decode(String str) /*-{
-		return Titanium.Utils.base64decode(str);
+    public static native Blob base64decode(Blob b, String str) /*-{
+    	var a = Titanium.Utils.base64decode(str);
+    	b.@com.emitrom.ti4j.core.client.ProxyObject::setJsObj(Lcom/google/gwt/core/client/JavaScriptObject;)(a);
+    	return b;
     }-*/;
+    
+    public static Blob base64decode(String str) {
+    	return base64decode(new Blob(), str);
+    }
 
     /**
      * Encode a string into Base64
