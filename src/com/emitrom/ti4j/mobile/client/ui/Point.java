@@ -43,10 +43,10 @@ public class Point extends ProxyObject {
     }-*/;
 
     private static native JavaScriptObject create(double xCoordinate, double yCoordinate) /*-{
-		return {
-			x : xCoordinate,
-			y : xCoordinate
-		};
+    	var r = {};
+    	r.x = xCoordinate;
+    	r.y = yCoordinate;
+    	return r;
     }-*/;
 
     public native void setX(double value) /*-{
