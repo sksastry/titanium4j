@@ -17,11 +17,13 @@ package com.emitrom.ti4j.mobile.client.ui;
 
 import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.Unit;
+import com.emitrom.ti4j.mobile.client.core.events.ui.scrollview.ScrollViewEvent;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.ScaleHandler;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.ScrollViewDragEndHandler;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.ScrollViewDragStartHandler;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.ScrollViewScrollHandler;
+import com.emitrom.ti4j.mobile.client.platform.Platform;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
@@ -63,13 +65,34 @@ public class ScrollView extends View {
 		}
 	}
 	
+	private double androidXOffset = 0;
+	private double androidYOffset = 0;
+	
+	/**
+	 * On the Android platform, the contentOffset object is undefined.
+	 */
+	private void doAndroidWorkaround() {
+		if (Platform.get().isAndroid()) {
+			setContentOffset(new Point(0, 0));
+			addScrollHandler(new ScrollViewScrollHandler() {
+				
+				@Override
+				public void onScroll(ScrollViewEvent event) {
+					androidXOffset = event.getX();
+					androidYOffset = event.getY();
+				}
+			});
+		}
+	}
 	
     public ScrollView() {
         createPeer();
+        doAndroidWorkaround();
     }
 
     ScrollView(JavaScriptObject proxy) {
         jsObj = proxy;
+        doAndroidWorkaround();
     }
 
     /**
@@ -110,7 +133,16 @@ public class ScrollView extends View {
      * @return An object (with x and y properties) to indicate the offset of the
      *         content area
      */
-    public native Point getContentOffset() /*-{
+    public Point getContentOffset() {
+    	//Workaround on the undefined content offset on Android
+    	if (Platform.get().isAndroid()) {
+    		return new Point(androidXOffset, androidYOffset);
+    	} else {
+    		return _getContentOffset();
+    	}
+    }
+    
+    private native Point _getContentOffset() /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.contentOffset;
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.Point::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
@@ -366,4 +398,26 @@ public class ScrollView extends View {
         return new ScrollView(proxy.getJsObj());
     }
 
+
+    /**
+     * Set whether the scrolling is enabled on this scroll view
+     * @param value		If true then scrolling is enabled
+     */
+    public native void setScrollingEnabled(boolean value) /*-{
+    	var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.scrollingEnabled = value;
+    }-*/;
+    
+    /**
+     * Get whether scrolling is enabled on this scroll view
+     * @return			True if scrolling is enabled
+     */
+    public native boolean isScrollingEnabled() /*-{
+    	var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var ret = jso.scrollingEnabled;
+		if (ret == undefined) {
+			ret = true;
+		}
+		return ret;
+    }-*/;
 }
