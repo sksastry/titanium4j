@@ -180,5 +180,17 @@ public enum Color {
     public String getValue() {
         return this.m_value;
     }
+    
+    public int getRed() {
+    	return m_red;
+    }
+    
+    public int getGreen() {
+    	return m_green;
+    }
+    
+    public int getBlue() {
+    	return m_blue;
+    }
 
 }
