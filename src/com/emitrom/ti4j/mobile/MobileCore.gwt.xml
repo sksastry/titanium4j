@@ -1,0 +1,18 @@
+<!--
+This file is part of Titanium4j 
+
+Copyright (c) 2012 Emitrom LLC. All rights reserved.
+
+For licensing questions, please contact us at licensing@emitrom.com
+
+http://www.emitrom.com/license
+-->
+<module>
+     <inherits name="com.google.gwt.core.Core"/>
+	 <inherits name="com.google.gwt.user.UserAgent"/>
+	 <inherits name="com.google.gwt.i18n.I18N"/>
+	 <inherits name="com.google.gwt.safehtml.SafeHtml" />
+	 <inherits name="com.google.gwt.json.JSON" />
+	 <inherits name='com.emitrom.ti4j.mobile.rpc.RPC'/>	 
+	 <inherits name='com.emitrom.ti4j.core.Core'/> 
+</module>

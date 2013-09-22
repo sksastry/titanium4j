@@ -15,6 +15,7 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui;
 
+import com.emitrom.ti4j.core.client.Color;
 import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.ClickHandler;
 import com.emitrom.ti4j.mobile.client.ui.interfaces.HasColor;
@@ -72,6 +73,10 @@ public class Button extends View implements HasColor, HasFont, HasLabel, HasStyl
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.color = value;
     }-*/;
+
+    public void setColor(Color color) {
+        setColor(color.getValue());
+    }
 
     /**
      * @return Boolean that indicates if the button is enabled or not

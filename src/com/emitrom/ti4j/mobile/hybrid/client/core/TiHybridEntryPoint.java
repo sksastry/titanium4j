@@ -35,12 +35,12 @@ public abstract class TiHybridEntryPoint implements EntryPoint {
     }
 
     /**
-     * called for native mobile applications
+     * called from the native part of the mobile application
      */
     public abstract void onNativeLoad();
 
     /**
-     * called for mobile web application
+     * called from the web part of the mobile application
      */
     public abstract void onWebLoad();
 
