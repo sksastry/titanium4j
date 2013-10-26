@@ -506,7 +506,7 @@ public class TextArea extends View {
      */
     public native void blur() /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		so.blur();
+		jso.blur();
     }-*/;
 
     /**
