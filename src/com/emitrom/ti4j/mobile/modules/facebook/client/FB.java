@@ -64,7 +64,7 @@ public class FB extends TiModule {
      */
     private native void setAppId(String value) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso.appId = value;
+		jso.appid = value;
     }-*/;
 
     /**
@@ -134,7 +134,7 @@ public class FB extends TiModule {
      */
     public native boolean isLoggedIn() /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		return jso.loggedIn;
+		return jso.getLoggedIn();
     }-*/;
 
     /**
@@ -320,7 +320,7 @@ public class FB extends TiModule {
 			var event = @com.emitrom.ti4j.mobile.modules.facebook.client.FBLoginEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
 			handler.@com.emitrom.ti4j.mobile.modules.facebook.client.FBLoginHandler::onLogin(Lcom/emitrom/ti4j/mobile/modules/facebook/client/FBLoginEvent;)(event);
 		};
-		jso.addEventListner('login', fn);
+		jso.addEventListener('login', fn);
     }-*/;
 
     /**

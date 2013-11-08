@@ -231,6 +231,11 @@ public class Animation extends EventDispatcher {
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.right = value;
     }-*/;
+    
+    public native void setRight(String value) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.right = value;
+	}-*/;
 
     /**
      * @return Value of the top property to change during animation
