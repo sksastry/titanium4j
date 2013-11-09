@@ -26,7 +26,7 @@ import com.google.gwt.core.client.JsArrayString;
  * power cycles.
  * 
  */
-class Properties extends TiModule {
+public class Properties extends TiModule {
 
     private static final Properties INSTANCE = new Properties();
 
