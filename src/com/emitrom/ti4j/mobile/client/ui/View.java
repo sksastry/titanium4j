@@ -632,6 +632,28 @@ public class View extends UIObject implements HasWidgets, Animatable, HasAnchor,
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.height = value;
     }-*/;
+    
+
+    public native void setHeightAsAuto(boolean isAuto) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		if (isAuto) {
+			jso.height = 'auto';
+		}
+    }-*/; 
+    
+    public native void setHeightAsFill(boolean isFill) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		if (isFill) {
+			jso.height = Titanium.UI.FILL;
+		}
+    }-*/;
+
+    public native void setHeightAsSize(boolean isSize) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		if (isSize) {
+			jso.height = Titanium.UI.SIZE;
+		}
+    }-*/; 
 
     /*
      * (non-Javadoc)
@@ -1166,7 +1188,7 @@ public class View extends UIObject implements HasWidgets, Animatable, HasAnchor,
     public void setWidth(double value, Unit unit) {
         UI.get().setSizePropertyAsString(jsObj, "width", Double.toString(value), unit);
     }
-
+    
     private native void _setWidth(double value) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.width = value;
@@ -1191,6 +1213,27 @@ public class View extends UIObject implements HasWidgets, Animatable, HasAnchor,
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.width = value;
     }-*/;
+    
+    public native void setWidthAsAuto(boolean isAuto) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		if (isAuto) {
+			jso.width = 'auto';
+		}
+    }-*/; 
+    
+    public native void setWidthAsFill(boolean isFill) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		if (isFill) {
+			jso.width = Titanium.UI.FILL;
+		}
+    }-*/;
+
+    public native void setWidthAsSize(boolean isSize) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		if (isSize) {
+			jso.width = Titanium.UI.SIZE;
+		}
+    }-*/; 
 
     /*
      * (non-Javadoc)
