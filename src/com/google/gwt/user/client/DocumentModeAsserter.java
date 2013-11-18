@@ -71,16 +71,6 @@ public class DocumentModeAsserter implements EntryPoint {
      */
     public static final String PROPERTY_DOCUMENT_COMPATMODE_SEVERITY = "document.compatMode.severity";
 
-    /**
-     * Value of {@literal $doc.compatMode} in Quirks Mode, {@value} .
-     */
-    private static final String QUIRKS_MODE_BACK_COMPAT = "BackCompat";
-
-    /**
-     * Value of {@literal $doc.compatMode} in Standards Mode, {@value} .
-     */
-    private static final String STANDARDS_MODE_CSS1_COMPAT = "CSS1Compat";
-
     @Override
     public void onModuleLoad() {
 
