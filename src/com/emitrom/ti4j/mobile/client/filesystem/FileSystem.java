@@ -51,6 +51,15 @@ public class FileSystem extends TiModule {
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.applicationDataDirectory;
     }-*/;
+    
+    /**
+     * @return 	Read-only constant for iOS where your cached files are saved.
+     * 			Some use cases when trying to delete cached databases in the /database folder.
+     */
+    public native String getApplicationSupportDirectory() /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		return jso.applicationSupportDirectory;
+    }-*/;
 
     /**
      * @return Readonly constant where your application is located
