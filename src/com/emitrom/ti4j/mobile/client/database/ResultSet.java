@@ -15,6 +15,7 @@
  **************************************************************************/
 package com.emitrom.ti4j.mobile.client.database;
 
+import com.emitrom.ti4j.mobile.client.blob.Blob;
 import com.emitrom.ti4j.mobile.client.core.events.EventDispatcher;
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -121,6 +122,69 @@ public class ResultSet extends EventDispatcher {
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.fieldByName(name, type);
     }-*/;
+    
+    /**
+     * Retrieve a row string value by field name
+     * @param name		The field
+     * @return			The string value
+     */
+    public native String fieldAsString(String name) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		return jso.fieldByName(name, @com.emitrom.ti4j.mobile.client.database.Database::FIELD_TYPE_STRING);
+    }-*/;
+    
+    /**
+     * Retrieve a blob value by field name from result set
+     * @param name		The field
+     * @return			The blob value
+     */
+    public native Blob fieldAsBlob(String name) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		return @com.emitrom.ti4j.mobile.client.blob.Blob::new(Lcom/google/gwt/core/client/JavaScriptObject;)(jso.fieldByName(name));
+    }-*/;
+    
+    /**
+     * Retrieve a boolean value by field name from result set
+     * This asserts old SQLite behavior in that SQLite doesn't support BOOL values,
+     * but saves them as integers. This is not true with newer DBs, but true for Titanium.
+     * Anything larger than 0 is true
+     * @param name		The field
+     * @return			The boolean value
+     */
+    public native boolean fieldAsBoolean(String name) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		return (jso.fieldByName(name, @com.emitrom.ti4j.mobile.client.database.Database::FIELD_TYPE_INT) || 0) > 0;
+    }-*/;
+
+    /**
+     * Retrieve an integer value by field name from this result set
+     * @param name		The field name
+     * @return			The integer value
+     */
+    public native int fieldAsInt(String name) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		return jso.fieldByName(name, @com.emitrom.ti4j.mobile.client.database.Database::FIELD_TYPE_INT);
+    }-*/;
+    
+    /**
+     * Retrieve a double value by field name from this result set
+     * @param name		The field name
+     * @return			The double value
+     */
+    public native double fieldAsDouble(String name) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		return jso.fieldByName(name, @com.emitrom.ti4j.mobile.client.database.Database::FIELD_TYPE_DOUBLE);
+	}-*/;
+
+    /**
+     * Retrieve a float value by field name from this result set
+     * @param name		The field name
+     * @return			The float value
+     */
+    public native double fieldAsFloat(String name) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		return jso.fieldByName(name, @com.emitrom.ti4j.mobile.client.database.Database::FIELD_TYPE_FLOAT);
+	}-*/;
 
     /**
      * Return the number of columns in the result set
@@ -159,5 +223,5 @@ public class ResultSet extends EventDispatcher {
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.next();
     }-*/;
-
+    
 }
