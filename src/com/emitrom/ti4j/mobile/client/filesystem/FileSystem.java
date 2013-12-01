@@ -155,7 +155,7 @@ public class FileSystem extends TiModule {
 		return toReturn;
     }-*/;
 
-    public static native boolean isExternalStoragePresent() /*-{
+    public native boolean isExternalStoragePresent() /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.isExternalStoragePresent();
     }-*/;
