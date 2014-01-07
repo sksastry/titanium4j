@@ -159,6 +159,11 @@ public class FileSystem extends TiModule {
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.isExternalStoragePresent();
     }-*/;
+    
+    public native String getExternalStorageDirectory() /*-{
+    	var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		return jso.getExternalStorageDirectory();
+    }-*/;
 
     private static native final int MODE_APPEND() /*-{
 		return Titanium.Filesystem.MODE_APPEND;
