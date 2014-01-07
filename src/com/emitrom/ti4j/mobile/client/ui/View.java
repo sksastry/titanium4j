@@ -63,6 +63,22 @@ public class View extends UIObject implements HasWidgets, Animatable, HasAnchor,
                 HasBoxSize, HasBlob, Displayable, HasInteractionHandler, HasUIHandler, HasChildren,
                 HasWidgets.ForIsWidget {
 
+	public static enum ViewLayout {
+		COMPOSITE("composite"),
+		VERTICAL("vertical"),
+		HORIZONTAL("horizontal");
+		
+		private final String value;
+		
+		private ViewLayout(String value) {
+			this.value = value;
+		}
+		
+		public String getValue() {
+			return value;
+		}
+	}
+	
     public View() {
         createPeer();
     }
@@ -1771,6 +1787,26 @@ public class View extends UIObject implements HasWidgets, Animatable, HasAnchor,
     }-*/;
 
     /**
+     * Specifies how the view positions its children. One of: 'composite', 'vertical', or 'horizontal'.
+     * Default: 'composite'
+     * @param layout	The enum value ViewLayout
+     */
+    public void setLayout(ViewLayout layout) {
+    	setLayout(layout.getValue());
+    }
+    
+
+    /**
+     * Specifies how the view positions its children. One of: 'composite', 'vertical', or 'horizontal'.
+     * Default: 'composite'
+     * @param layout	The string value for the layout. One of: 'composite', 'vertical', or 'horizontal'.
+     */
+    public native void setLayout(String layout) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.layout = layout;
+    }-*/;
+    
+    /**
      * Translates a point from this view's coordinate system to another view's
      * coordinate system.
      * <p>
@@ -1807,6 +1843,7 @@ public class View extends UIObject implements HasWidgets, Animatable, HasAnchor,
      * To be notified when the layout pass completes, add a listener for the
      * postlayout event.
      */
+    @Deprecated
     public native void finishLayout()/*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.finishLayout();
@@ -1820,6 +1857,7 @@ public class View extends UIObject implements HasWidgets, Animatable, HasAnchor,
      * layout. This initiates a batch update mode where layout changes are
      * deferred.
      */
+    @Deprecated
     public native void startLayout()/*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.startLayout();
