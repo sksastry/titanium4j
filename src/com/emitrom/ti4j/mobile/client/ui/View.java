@@ -1906,6 +1906,46 @@ public class View extends UIObject implements HasWidgets, Animatable, HasAnchor,
 		return jso.children.length;
     }-*/;
 
+
+    public native void insertAt(View view, int index) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var element = view.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+    	var children = jso.children.slice(0);
+    	for (var i = 0; i < children.length; ++i) {
+    		jso.remove(children[i]);
+    	}
+    	if (index >= 0) {
+    		index = index > children.length ? children.length : index;
+    		var tmp = children.slice(0, index);
+    		tmp.push(element);
+    		var tmp2 = children.slice(index);
+    		children = tmp.concat(tmp2);
+    	}
+    	for (var i = 0; i < children.length; ++i) {
+    		jso.add(children[i]);
+    	}
+    }-*/;
+    
+    public native int getChildIndex(View view) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var element = view.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		for (var i = 0; i < jso.children.length; ++i) {
+			if (element === jso.children[i]) {
+				return i;
+			}
+		}
+		return -1;
+    }-*/;
+    
+    public void insertBefore(View beforeWhatView, View insertView) {
+    	insertAt(insertView, getChildIndex(beforeWhatView));
+    }
+    
+    public void insertAfter(View afterWhatView, View insertView) {
+    	insertAt(insertView, getChildIndex(afterWhatView)+1);
+    }
+    
+    
     protected void updateWith(JavaScriptObject obj) {
         jsObj = obj;
     }
