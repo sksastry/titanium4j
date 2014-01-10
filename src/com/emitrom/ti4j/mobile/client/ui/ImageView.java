@@ -59,12 +59,12 @@ public class ImageView extends View {
      * @return Allow image to scale (android)
      */
     public native boolean canScale() /*-{
-		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.canScale;
     }-*/;
 
     public native void setCanScale(boolean value) /*-{
-		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.canScale = value;
     }-*/;
 
@@ -74,12 +74,12 @@ public class ImageView extends View {
      * 
      */
     public native int getDecodeRetries() /*-{
-		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.decodeRetries;
     }-*/;
 
     public native void setDecodeRetries(int value) /*-{
-		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.decodeRetries = value;
     }-*/;
 
@@ -87,12 +87,12 @@ public class ImageView extends View {
      * @return Url to the default image to display while loading a remote image
      */
     public native String getDefaultImage() /*-{
-		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.defaultImage;
     }-*/;
 
     public native void setDefaultImage(String value) /*-{
-		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.defaultImage = value;
     }-*/;
 
@@ -100,12 +100,12 @@ public class ImageView extends View {
      * @return Amount of time in milliseconds to animate one cycle
      */
     public native double getDuration() /*-{
-		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.duration;
     }-*/;
 
     public native void setDuration(double value) /*-{
-		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.duration = value;
     }-*/;
 
@@ -115,12 +115,12 @@ public class ImageView extends View {
      * 
      */
     public native boolean enableZoomControls() /*-{
-		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.enableZoomControls;
     }-*/;
 
     public native void setEnableZoomControls(boolean value) /*-{
-		var jso = jso.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		jso.enableZoomControls = value;
     }-*/;
 

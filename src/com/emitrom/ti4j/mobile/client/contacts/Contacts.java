@@ -129,7 +129,7 @@ public class Contacts extends TiModule {
      * {@link com.emitrom.ti4j.mobile.client.contacts.Person} objects in the
      * contacts database
      */
-    public native void getAllPeople(int limit) /*-{
+    public native List<Person> getAllPeople(int limit) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.getAllPeople(limit);
 		return @com.emitrom.ti4j.mobile.client.contacts.Person::fromJsArray(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
