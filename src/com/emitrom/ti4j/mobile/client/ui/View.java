@@ -570,7 +570,7 @@ public class View extends UIObject implements HasWidgets, Animatable, HasAnchor,
     @Override
     public native Point getCenter() /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		var obj = jso.center;
+		var obj = jso.getCenter();
 		var toReturn = @com.emitrom.ti4j.mobile.client.ui.Point::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
 		return toReturn;
     }-*/;
@@ -617,12 +617,12 @@ public class View extends UIObject implements HasWidgets, Animatable, HasAnchor,
      * determine when layout is complete, add a listener for the postlayout
      * event.
      * 
-     * @return
+     * @return a Dimension object, with height,width,x and y properties
      */
-    public native Size getRect() /*-{
+    public native Dimension getRect() /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var obj = jso.rect;
-		return @com.emitrom.ti4j.mobile.client.core.Size::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
+		return @com.emitrom.ti4j.mobile.client.ui.Dimension::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
     }-*/;
 
     public native JavaScriptObject getRectangle() /*-{
@@ -1901,7 +1901,7 @@ public class View extends UIObject implements HasWidgets, Animatable, HasAnchor,
 		return jso.children[index];
     }-*/;
 
-    private native int getChildCount()/*-{
+    public native int getChildCount()/*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		return jso.children.length;
     }-*/;
