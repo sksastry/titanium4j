@@ -113,6 +113,64 @@ public class Utils {
     }-*/;
 
     /**
+     * Compute a sha1 hash algorithm against the input and return a hex-based
+     * string
+     * 
+     * @param str
+     *            , the string to use for the input
+     */
+    public static native String sha1(String str) /*-{
+		return Titanium.Utils.sha1(str);
+    }-*/;
+
+    /**
+     * Compute a sha256 hash algorithm against the input and return a hex-based
+     * string
+     * 
+     * @param str
+     *            , the string to use for the input
+     */
+    public static native String sha256(String str) /*-{
+		return Titanium.Utils.sha256(str);
+    }-*/;
+
+    /**
+     * Compute a MD5 hash algorithm against the input and return a hex-based
+     * string
+     * 
+     * @param blob
+     *            , the image Blob to use for the input
+     */
+    public static native String md5HexDigest(Blob blob) /*-{
+    	var jso = blob.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+	return Titanium.Utils.md5HexDigest(jso);
+    }-*/;
+
+    /**
+     * Compute a sha1 hash algorithm against the input and return a hex-based
+     * string
+     * 
+     * @param blob
+     *            , the image Blob to use for the input
+     */
+    public static native String sha1(Blob blob) /*-{
+	var jso = blob.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+	return Titanium.Utils.sha1(jso);
+    }-*/;
+
+    /**
+     * Compute a sha256 hash algorithm against the input and return a hex-based
+     * string
+     * 
+     * @param blob
+     *            , the image Blob to use for the input
+     */
+    public static native String sha256(Blob blob) /*-{
+	var jso = blob.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+	return Titanium.Utils.sha256(jso);
+    }-*/;
+
+    /**
      * Convenient method to detect if TiMobile is running in the browser
      * 
      * @return true if we are running in the regular browser
