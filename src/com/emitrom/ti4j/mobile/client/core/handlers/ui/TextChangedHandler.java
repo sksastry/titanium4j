@@ -1,5 +1,5 @@
 /************************************************************************
-  TextHandler.java is part of Ti4j 3.1.0  Copyright 2013 Emitrom LLC
+  TextChangeHandler.java is part of Ti4j 3.1.0  Copyright 2013 Emitrom LLC
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -15,9 +15,9 @@
 **************************************************************************/
 package com.emitrom.ti4j.mobile.client.core.handlers.ui;
 
-import com.emitrom.ti4j.mobile.client.core.events.ui.text.TextEvent;
+import com.emitrom.ti4j.mobile.client.core.events.ui.text.TextChangedEvent;
 import com.google.gwt.event.shared.EventHandler;
 
-public interface TextHandler extends EventHandler {
-    public void onEvent(TextEvent event);
+public interface TextChangedHandler extends EventHandler {
+	public void onChange(TextChangedEvent event);
 }
