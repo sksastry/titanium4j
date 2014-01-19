@@ -57,6 +57,23 @@ public class Android extends TiModule {
     public static final int ANDROID_UI_WEBVIEW_PLUGINS_OFF = WEBVIEW_PLUGINS_OFF();
     public static final int ANDROID_UI_WEBVIEW_PLUGINS_ON = WEBVIEW_PLUGINS_ON();
     public static final int ANDROID_UI_WEBVIEW_PLUGINS_ON_DEMAND = WEBVIEW_PLUGINS_ON_DEMAND();
+    
+    /*
+     * Animations specified in Android.R.anim
+     */
+    public static final int ANDROID_ANIM_ACCELERATE_DECELERATE_INTERPOLATOR = ACCELERATE_DECELERATE_INTERPOLATOR();
+    public static final int ANDROID_ANIM_ACCELERATE_INTERPOLATOR = ACCELERATE_INTERPOLATOR();
+    public static final int ANDROID_ANIM_ANTICIPATE_INTERPOLATOR = ANTICIPATE_INTERPOLATOR();
+    public static final int ANDROID_ANIM_ANTICIPATE_OVERSHOOT_INTERPOLATOR = ANTICIPATE_OVERSHOOT_INTERPOLATOR();
+    public static final int ANDROID_ANIM_BOUNCE_INTERPOLATOR = BOUNCE_INTERPOLATOR();
+    public static final int ANDROID_ANIM_CYCLE_INTERPOLATOR = CYCLE_INTERPOLATOR();
+    public static final int ANDROID_ANIM_DECELERATE_INTERPOLATOR = DECELERATE_INTERPOLATOR();
+    public static final int ANDROID_ANIM_FADE_IN = FADE_IN();
+    public static final int ANDROID_ANIM_FADE_OUT = FADE_OUT();
+    public static final int ANDROID_ANIM_LINEAR_INTERPOLATOR = LINEAR_INTERPOLATOR();
+    public static final int ANDROID_ANIM_OVERSHOOT_INTERPOLATOR = OVERSHOOT_INTERPOLATOR();
+    public static final int ANDROID_ANIM_SLIDE_IN_LEFT = SLIDE_IN_LEFT();
+    public static final int ANDROID_ANIM_SLIDE_OUT_RIGHT = SLIDE_OUT_RIGHT();
 
     private static Android instance = null;
 
@@ -263,5 +280,57 @@ public class Android extends TiModule {
     public void createPeer() {
         jsObj = TiFactory.createNativeAndroidUIModule();
     }
+
+    public static native final int ACCELERATE_DECELERATE_INTERPOLATOR() /*-{
+		return Titanium.Android.R.accelerate_decelerate_interpolator;
+	}-*/;
+    
+    public static native final int ACCELERATE_INTERPOLATOR() /*-{
+		return Titanium.Android.R.accelerate_interpolator;
+	}-*/;
+    
+    public static native final int ANTICIPATE_INTERPOLATOR() /*-{
+		return Titanium.Android.R.anticipate_interpolator;
+	}-*/;
+    
+    public static native final int ANTICIPATE_OVERSHOOT_INTERPOLATOR() /*-{
+		return Titanium.Android.R.anticipate_overshoot_interpolator;
+	}-*/;
+    
+    public static native final int BOUNCE_INTERPOLATOR() /*-{
+		return Titanium.Android.R.bounce_interpolator;
+	}-*/;
+    
+    public static native final int CYCLE_INTERPOLATOR() /*-{
+		return Titanium.Android.R.cycle_interpolator;
+	}-*/;
+    
+    public static native final int DECELERATE_INTERPOLATOR() /*-{
+		return Titanium.Android.R.decelerate_interpolator;
+	}-*/;
+    
+    public static native final int FADE_IN() /*-{
+		return Titanium.Android.R.fade_in;
+	}-*/;
+    
+    public static native final int FADE_OUT() /*-{
+		return Titanium.Android.R.fade_out;
+	}-*/;
+    
+    public static native final int LINEAR_INTERPOLATOR() /*-{
+		return Titanium.Android.R.linear_interpolator
+	}-*/;
+    
+    public static native final int OVERSHOOT_INTERPOLATOR() /*-{
+		return Titanium.Android.R.overshoot_interpolator;
+	}-*/;
+    
+    public static native final int SLIDE_IN_LEFT() /*-{
+		return Titanium.Android.R.slide_in_left;
+	}-*/;
+    
+    public static native final int SLIDE_OUT_RIGHT() /*-{
+		return Titanium.Android.R.slide_out_right;
+	}-*/;
 
 }

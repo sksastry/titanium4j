@@ -522,6 +522,22 @@ public class Window extends View {
 			animate : animated
 		});
     }-*/;
+    
+    /**
+     * Android only - opens up a window with animations. 
+     * Refer to com.emitrom.ti4j.mobile.client.ui.android.ANDROID_ANIM_* and
+     * http://developer.android.com/reference/android/R.anim.html
+     * for
+     * @param androidActivityEnterAnimation
+     * @param androidActivityExitAnimation
+     */
+    public native void open(int androidActivityEnterAnimation, int androidActivityExitAnimation) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.open({
+			activityEnterAnimation: androidActivityEnterAnimation,
+			activityExitAnimation: androidActivityExitAnimation
+		});
+    }-*/;
 
     /**
      * Open the window
