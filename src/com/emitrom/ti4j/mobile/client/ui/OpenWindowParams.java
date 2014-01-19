@@ -40,6 +40,13 @@ public class OpenWindowParams extends ProxyObject {
 	}-*/;
 	
 
+	/**
+	 * Android only
+	 * Set the activity enter animation, based on a text lookup on the Android.R.anim object
+	 * Refer to com.emitrom.ti4j.mobile.client.ui.android.Android for strings
+	 * @param val		Lookup value
+	 * @param system	Whether to look on Android.R or App.Android.R
+	 */
 	public native final void setActivityEnterAnimation(String val, boolean system) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
 		var anim;
@@ -55,29 +62,8 @@ public class OpenWindowParams extends ProxyObject {
 	 * Unset the activity enter animation value
 	 */
 	public native final void setActivityExitAnimation() /*-{
-		this.@com.emitrom.ti4j.mobile.client.ui.OpenWindowParams::setActivityExitAnimation(Ljava/lang/String;Z)(val,true);
-	}-*/;
-
-
-	public native final void setActivityExitAnimation(String val, boolean system) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		var anim;
-		if (system) {
-			anim = Titanium.Android.R.anim[system];
-		} else {
-			anim = Titanium.App.Android.R.anim[system];
-		}
-		jso.activityEnterAnimation = anim;
-	}-*/;
-
-	/** 
-	 * Android only
-	 * Set the activity enter animation value to a number based on a anim.R file 
-	 * @param val	Enter animation resource id
-	 */
-	public native final void setActivityExitAnimation(int val) /*-{
-		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso.activityExitAnimation = val;
+		delete jso.activityExitAnimation;
 	}-*/;
 
 	/**
@@ -87,11 +73,26 @@ public class OpenWindowParams extends ProxyObject {
 	 * @param val
 	 */
 	public native final void setActivityExitAnimation(String val) /*-{
-		var r = @com.emitrom.ti4j.mobile.client.android.R::get();
-		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso.activityExitAnimation = r.@com.emitrom.ti4j.mobile.client.android.R::getAnim(Ljava/lang/String;)(val);
+		this.@com.emitrom.ti4j.mobile.client.ui.OpenWindowParams::setActivityExitAnimation(Ljava/lang/String;Z)(val,true);
 	}-*/;
-	
+
+	/**
+	 * Android only
+	 * Set the activity exit animation, based on a text lookup on the Android.R.anim object
+	 * Refer to com.emitrom.ti4j.mobile.client.ui.android.Android for strings
+	 * @param val		Lookup value
+	 * @param system	Whether to look on Android.R or App.Android.R
+	 */
+	public native final void setActivityExitAnimation(String val, boolean system) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var anim;
+		if (system) {
+			anim = Titanium.Android.R.anim[system];
+		} else {
+			anim = Titanium.App.Android.R.anim[system];
+		}
+		jso.activityExitAnimation = anim;
+	}-*/;
 	
 	public native final void setAnimated(boolean val) /*-{
 		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
