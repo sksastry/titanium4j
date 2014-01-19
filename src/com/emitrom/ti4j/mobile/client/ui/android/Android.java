@@ -61,20 +61,21 @@ public class Android extends TiModule {
     /*
      * Animations specified in Android.R.anim
      */
-    public static final int ANDROID_ANIM_ACCELERATE_DECELERATE_INTERPOLATOR = ACCELERATE_DECELERATE_INTERPOLATOR();
-    public static final int ANDROID_ANIM_ACCELERATE_INTERPOLATOR = ACCELERATE_INTERPOLATOR();
-    public static final int ANDROID_ANIM_ANTICIPATE_INTERPOLATOR = ANTICIPATE_INTERPOLATOR();
-    public static final int ANDROID_ANIM_ANTICIPATE_OVERSHOOT_INTERPOLATOR = ANTICIPATE_OVERSHOOT_INTERPOLATOR();
-    public static final int ANDROID_ANIM_BOUNCE_INTERPOLATOR = BOUNCE_INTERPOLATOR();
-    public static final int ANDROID_ANIM_CYCLE_INTERPOLATOR = CYCLE_INTERPOLATOR();
-    public static final int ANDROID_ANIM_DECELERATE_INTERPOLATOR = DECELERATE_INTERPOLATOR();
-    public static final int ANDROID_ANIM_FADE_IN = FADE_IN();
-    public static final int ANDROID_ANIM_FADE_OUT = FADE_OUT();
-    public static final int ANDROID_ANIM_LINEAR_INTERPOLATOR = LINEAR_INTERPOLATOR();
-    public static final int ANDROID_ANIM_OVERSHOOT_INTERPOLATOR = OVERSHOOT_INTERPOLATOR();
-    public static final int ANDROID_ANIM_SLIDE_IN_LEFT = SLIDE_IN_LEFT();
-    public static final int ANDROID_ANIM_SLIDE_OUT_RIGHT = SLIDE_OUT_RIGHT();
 
+    public static final String ANDROID_ANIM_ACCELERATE_DECELERATE_INTERPOLATOR = "anim.accelerate_decelerate_interpolator";
+    public static final String ANDROID_ANIM_ACCELERATE_INTERPOLATOR = "anim.accelerate_interpolator";
+    public static final String ANDROID_ANIM_ANTICIPATE_INTERPOLATOR = "anim.anticipate_interpolator";
+    public static final String ANDROID_ANIM_ANTICIPATE_OVERSHOOT_INTERPOLATOR = "anim.anticipate_overshoot_interpolator";
+    public static final String ANDROID_ANIM_BOUNCE_INTERPOLATOR = "anim.bounce_interpolator";
+    public static final String ANDROID_ANIM_CYCLE_INTERPOLATOR = "anim.cycle_interpolator";
+    public static final String ANDROID_ANIM_DECELERATE_INTERPOLATOR = "anim.decelerate_interpolator";
+    public static final String ANDROID_ANIM_FADE_IN = "anim.fade_in";
+    public static final String ANDROID_ANIM_FADE_OUT = "anim.fade_out";
+    public static final String ANDROID_ANIM_LINEAR_INTERPOLATOR = "anim.linear_interpolator";
+    public static final String ANDROID_ANIM_OVERSHOOT_INTERPOLATOR = "anim.overshoot_interpolator";
+    public static final String ANDROID_ANIM_SLIDE_IN_LEFT = "anim.slide_in_left";
+    public static final String ANDROID_ANIM_SLIDE_OUT_RIGHT = "anim.slide_out_right";
+    
     private static Android instance = null;
 
     public static Android get() {
@@ -280,57 +281,5 @@ public class Android extends TiModule {
     public void createPeer() {
         jsObj = TiFactory.createNativeAndroidUIModule();
     }
-
-    public static native final int ACCELERATE_DECELERATE_INTERPOLATOR() /*-{
-		return Titanium.Android.R.anim.accelerate_decelerate_interpolator;
-	}-*/;
-    
-    public static native final int ACCELERATE_INTERPOLATOR() /*-{
-		return Titanium.Android.R.anim.accelerate_interpolator;
-	}-*/;
-    
-    public static native final int ANTICIPATE_INTERPOLATOR() /*-{
-		return Titanium.Android.R.anim.anticipate_interpolator;
-	}-*/;
-    
-    public static native final int ANTICIPATE_OVERSHOOT_INTERPOLATOR() /*-{
-		return Titanium.Android.R.anim.anticipate_overshoot_interpolator;
-	}-*/;
-    
-    public static native final int BOUNCE_INTERPOLATOR() /*-{
-		return Titanium.Android.R.anim.bounce_interpolator;
-	}-*/;
-    
-    public static native final int CYCLE_INTERPOLATOR() /*-{
-		return Titanium.Android.R.anim.cycle_interpolator;
-	}-*/;
-    
-    public static native final int DECELERATE_INTERPOLATOR() /*-{
-		return Titanium.Android.R.anim.decelerate_interpolator;
-	}-*/;
-    
-    public static native final int FADE_IN() /*-{
-		return Titanium.Android.R.anim.fade_in;
-	}-*/;
-    
-    public static native final int FADE_OUT() /*-{
-		return Titanium.Android.R.anim.fade_out;
-	}-*/;
-    
-    public static native final int LINEAR_INTERPOLATOR() /*-{
-		return Titanium.Android.R.anim.linear_interpolator
-	}-*/;
-    
-    public static native final int OVERSHOOT_INTERPOLATOR() /*-{
-		return Titanium.Android.R.anim.overshoot_interpolator;
-	}-*/;
-    
-    public static native final int SLIDE_IN_LEFT() /*-{
-		return Titanium.Android.R.anim.slide_in_left;
-	}-*/;
-    
-    public static native final int SLIDE_OUT_RIGHT() /*-{
-		return Titanium.Android.R.anim.slide_out_right;
-	}-*/;
 
 }

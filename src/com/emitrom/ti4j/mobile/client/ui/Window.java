@@ -546,6 +546,17 @@ public class Window extends View {
     }-*/;
     
     /**
+     * Opens up a window
+     * @param params	Parameters contain display properties
+     */
+    public native void open(OpenWindowParams params) /*-{
+    	var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+    	var paramsJso = params.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso
+				.open(paramsJso);
+    }-*/;
+    
+    /**
      * Open the window
      * 
      * @param options
