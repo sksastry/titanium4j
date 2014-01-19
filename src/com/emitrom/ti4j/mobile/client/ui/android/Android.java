@@ -282,55 +282,55 @@ public class Android extends TiModule {
     }
 
     public static native final int ACCELERATE_DECELERATE_INTERPOLATOR() /*-{
-		return Titanium.Android.R.accelerate_decelerate_interpolator;
+		return Titanium.Android.R.anim.accelerate_decelerate_interpolator;
 	}-*/;
     
     public static native final int ACCELERATE_INTERPOLATOR() /*-{
-		return Titanium.Android.R.accelerate_interpolator;
+		return Titanium.Android.R.anim.accelerate_interpolator;
 	}-*/;
     
     public static native final int ANTICIPATE_INTERPOLATOR() /*-{
-		return Titanium.Android.R.anticipate_interpolator;
+		return Titanium.Android.R.anim.anticipate_interpolator;
 	}-*/;
     
     public static native final int ANTICIPATE_OVERSHOOT_INTERPOLATOR() /*-{
-		return Titanium.Android.R.anticipate_overshoot_interpolator;
+		return Titanium.Android.R.anim.anticipate_overshoot_interpolator;
 	}-*/;
     
     public static native final int BOUNCE_INTERPOLATOR() /*-{
-		return Titanium.Android.R.bounce_interpolator;
+		return Titanium.Android.R.anim.bounce_interpolator;
 	}-*/;
     
     public static native final int CYCLE_INTERPOLATOR() /*-{
-		return Titanium.Android.R.cycle_interpolator;
+		return Titanium.Android.R.anim.cycle_interpolator;
 	}-*/;
     
     public static native final int DECELERATE_INTERPOLATOR() /*-{
-		return Titanium.Android.R.decelerate_interpolator;
+		return Titanium.Android.R.anim.decelerate_interpolator;
 	}-*/;
     
     public static native final int FADE_IN() /*-{
-		return Titanium.Android.R.fade_in;
+		return Titanium.Android.R.anim.fade_in;
 	}-*/;
     
     public static native final int FADE_OUT() /*-{
-		return Titanium.Android.R.fade_out;
+		return Titanium.Android.R.anim.fade_out;
 	}-*/;
     
     public static native final int LINEAR_INTERPOLATOR() /*-{
-		return Titanium.Android.R.linear_interpolator
+		return Titanium.Android.R.anim.linear_interpolator
 	}-*/;
     
     public static native final int OVERSHOOT_INTERPOLATOR() /*-{
-		return Titanium.Android.R.overshoot_interpolator;
+		return Titanium.Android.R.anim.overshoot_interpolator;
 	}-*/;
     
     public static native final int SLIDE_IN_LEFT() /*-{
-		return Titanium.Android.R.slide_in_left;
+		return Titanium.Android.R.anim.slide_in_left;
 	}-*/;
     
     public static native final int SLIDE_OUT_RIGHT() /*-{
-		return Titanium.Android.R.slide_out_right;
+		return Titanium.Android.R.anim.slide_out_right;
 	}-*/;
 
 }
