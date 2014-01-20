@@ -522,7 +522,40 @@ public class Window extends View {
 			animate : animated
 		});
     }-*/;
-
+    
+    /**
+     * Android only - opens up a window with animations. 
+     * Refer to com.emitrom.ti4j.mobile.client.ui.android.ANDROID_ANIM_* and
+     * http://developer.android.com/reference/android/R.anim.html
+     * Any negatives in the parameters causes the parameter to be ignored.
+     * @param androidActivityEnterAnimation 	The activity open animation
+     * @param androidActivityExitAnimation		The previous activity close animation
+     */
+    public native void open(int androidActivityEnterAnimation, int androidActivityExitAnimation) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var anim = {};
+		if (androidActivityEnterAnimation >= 0) {
+			anim.activityEnterAnimation= androidActivityEnterAnimation;
+		}
+		
+		if (androidActivityExitAnimation >= 0) {
+			anim.activityExitAnimation= androidActivityExitAnimation;
+		}
+		
+		jso.open(anim);
+    }-*/;
+    
+    /**
+     * Opens up a window
+     * @param params	Parameters contain display properties
+     */
+    public native void open(OpenWindowParams params) /*-{
+    	var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+    	var paramsJso = params.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso
+				.open(paramsJso);
+    }-*/;
+    
     /**
      * Open the window
      * 

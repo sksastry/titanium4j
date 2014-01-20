@@ -15,10 +15,12 @@
 **************************************************************************/
 package com.emitrom.ti4j.mobile.client.ui.interfaces;
 
+import com.emitrom.ti4j.mobile.client.core.handlers.ui.BlurHandler;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.ClickHandler;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.DoubleClickHandler;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.DoubleTapHandler;
+import com.emitrom.ti4j.mobile.client.core.handlers.ui.FocusHandler;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.InteractionHandler;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.LongClickHandler;
 import com.emitrom.ti4j.mobile.client.core.handlers.ui.LongPressHandler;
@@ -223,5 +225,29 @@ public interface HasInteractionHandler {
 		return toReturn;
 						
 	}-*/;
+
+    public CallbackRegistration addFocusHandler(FocusHandler handler)/*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var listener = function(e) {
+			var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.FocusEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+			handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.FocusHandler::onFocus(Lcom/emitrom/ti4j/mobile/client/core/events/ui/FocusEvent;)(eventObject);
+		};
+		var name = @com.emitrom.ti4j.mobile.client.core.events.ui.FocusEvent::EVENT_NAME;
+		var v = jso.addEventListener(name, listener);
+		var toReturn = @com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration::new(Lcom/emitrom/ti4j/mobile/client/ui/UIObject;Ljava/lang/String;Lcom/google/gwt/core/client/JavaScriptObject;)(this,name,listener);
+		return toReturn;
+    }-*/;
+    
+    public CallbackRegistration addBlurHandler(BlurHandler handler)/*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var listener = function(e) {
+			var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.BlurEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+			handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.BlurHandler::onBlur(Lcom/emitrom/ti4j/mobile/client/core/events/ui/BlurEvent;)(eventObject);
+		};
+		var name = @com.emitrom.ti4j.mobile.client.core.events.ui.BlurEvent::EVENT_NAME;
+		var v = jso.addEventListener(name, listener);
+		var toReturn = @com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration::new(Lcom/emitrom/ti4j/mobile/client/ui/UIObject;Ljava/lang/String;Lcom/google/gwt/core/client/JavaScriptObject;)(this,name,listener);
+		return toReturn;
+    }-*/;
 
 }

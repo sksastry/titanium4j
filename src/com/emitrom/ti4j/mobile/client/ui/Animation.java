@@ -308,6 +308,11 @@ public class Animation extends EventDispatcher {
 		jso.width = value;
     }-*/;
 
+    public native void setWidth(String value) /*-{
+		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		jso.width = value;
+    }-*/;
+
     /**
      * @return Value of the zindex property to change during animation
      */

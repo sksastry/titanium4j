@@ -57,7 +57,25 @@ public class Android extends TiModule {
     public static final int ANDROID_UI_WEBVIEW_PLUGINS_OFF = WEBVIEW_PLUGINS_OFF();
     public static final int ANDROID_UI_WEBVIEW_PLUGINS_ON = WEBVIEW_PLUGINS_ON();
     public static final int ANDROID_UI_WEBVIEW_PLUGINS_ON_DEMAND = WEBVIEW_PLUGINS_ON_DEMAND();
+    
+    /*
+     * Animations specified in Android.R.anim
+     */
 
+    public static final String ANDROID_ANIM_ACCELERATE_DECELERATE_INTERPOLATOR = "anim.accelerate_decelerate_interpolator";
+    public static final String ANDROID_ANIM_ACCELERATE_INTERPOLATOR = "anim.accelerate_interpolator";
+    public static final String ANDROID_ANIM_ANTICIPATE_INTERPOLATOR = "anim.anticipate_interpolator";
+    public static final String ANDROID_ANIM_ANTICIPATE_OVERSHOOT_INTERPOLATOR = "anim.anticipate_overshoot_interpolator";
+    public static final String ANDROID_ANIM_BOUNCE_INTERPOLATOR = "anim.bounce_interpolator";
+    public static final String ANDROID_ANIM_CYCLE_INTERPOLATOR = "anim.cycle_interpolator";
+    public static final String ANDROID_ANIM_DECELERATE_INTERPOLATOR = "anim.decelerate_interpolator";
+    public static final String ANDROID_ANIM_FADE_IN = "anim.fade_in";
+    public static final String ANDROID_ANIM_FADE_OUT = "anim.fade_out";
+    public static final String ANDROID_ANIM_LINEAR_INTERPOLATOR = "anim.linear_interpolator";
+    public static final String ANDROID_ANIM_OVERSHOOT_INTERPOLATOR = "anim.overshoot_interpolator";
+    public static final String ANDROID_ANIM_SLIDE_IN_LEFT = "anim.slide_in_left";
+    public static final String ANDROID_ANIM_SLIDE_OUT_RIGHT = "anim.slide_out_right";
+    
     private static Android instance = null;
 
     public static Android get() {

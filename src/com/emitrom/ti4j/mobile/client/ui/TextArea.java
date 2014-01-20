@@ -19,7 +19,9 @@ import java.util.ArrayList;
 
 import com.emitrom.ti4j.core.client.ProxyObject;
 import com.emitrom.ti4j.mobile.client.core.Unit;
-import com.emitrom.ti4j.mobile.client.core.handlers.ui.TextHandler;
+import com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration;
+import com.emitrom.ti4j.mobile.client.core.handlers.ui.TextChangedHandler;
+import com.emitrom.ti4j.mobile.client.core.handlers.ui.TextReturnHandler;
 import com.emitrom.ti4j.mobile.client.ui.style.Font;
 import com.emitrom.ti4j.mobile.client.ui.style.Position;
 import com.google.gwt.core.client.JavaScriptObject;
@@ -525,50 +527,30 @@ public class TextArea extends View {
 		return jso.hasText();
     }-*/;
 
-    public native void addBlurHandler(TextHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso
-				.addEventListener(
-						@com.emitrom.ti4j.mobile.client.core.events.ui.text.TextEvent::BLUR,
-						function(e) {
-							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.text.TextEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
-							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.TextHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/ui/text/TextEvent;)(eventObject);
-						});
+    public native CallbackRegistration addChangeHandler(TextChangedHandler handler)/*-{
+    	var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var listener = function(e) {
+			var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.text.TextChangedEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+			handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.TextChangedHandler::onChange(Lcom/emitrom/ti4j/mobile/client/core/events/ui/text/TextChangedEvent;)(eventObject);
+		};
+		var name = @com.emitrom.ti4j.mobile.client.core.events.ui.text.TextChangedEvent::EVENT_NAME;
+		var v = jso.addEventListener(name, listener);
+		var toReturn = @com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration::new(Lcom/emitrom/ti4j/mobile/client/ui/UIObject;Ljava/lang/String;Lcom/google/gwt/core/client/JavaScriptObject;)(this,name,listener);
+		return toReturn;
     }-*/;
-
-    public native void addChangeHandler(TextHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso
-				.addEventListener(
-						@com.emitrom.ti4j.mobile.client.core.events.ui.text.TextEvent::CHANGE,
-						function(e) {
-							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.text.TextEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
-							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.TextHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/ui/text/TextEvent;)(eventObject);
-						});
-    }-*/;
-
-    public native void addFocusHandler(TextHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso
-				.addEventListener(
-						@com.emitrom.ti4j.mobile.client.core.events.ui.text.TextEvent::FOCUS,
-						function(e) {
-							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.text.TextEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
-							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.TextHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/ui/text/TextEvent;)(eventObject);
-						});
-    }-*/;
-
-    public native void addReturnHandler(TextHandler handler)/*-{
-		var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
-		jso
-				.addEventListener(
-						@com.emitrom.ti4j.mobile.client.core.events.ui.text.TextEvent::RETURN,
-						function(e) {
-							var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.text.TextEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
-							handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.TextHandler::onEvent(Lcom/emitrom/ti4j/mobile/client/core/events/ui/text/TextEvent;)(eventObject);
-						});
-    }-*/;
-
+    
+    public native CallbackRegistration addReturnHandler(TextReturnHandler handler)/*-{
+    	var jso = this.@com.emitrom.ti4j.core.client.ProxyObject::getJsObj()();
+		var listener = function(e) {
+			var eventObject = @com.emitrom.ti4j.mobile.client.core.events.ui.text.TextReturnEvent::new(Lcom/google/gwt/core/client/JavaScriptObject;)(e);
+			handler.@com.emitrom.ti4j.mobile.client.core.handlers.ui.TextReturnHandler::onReturn(Lcom/emitrom/ti4j/mobile/client/core/events/ui/text/TextReturnEvent;)(eventObject);
+		};
+		var name = @com.emitrom.ti4j.mobile.client.core.events.ui.text.TextReturnEvent::EVENT_NAME;
+		var v = jso.addEventListener(name, listener);
+		var toReturn = @com.emitrom.ti4j.mobile.client.core.handlers.ui.CallbackRegistration::new(Lcom/emitrom/ti4j/mobile/client/ui/UIObject;Ljava/lang/String;Lcom/google/gwt/core/client/JavaScriptObject;)(this,name,listener);
+		return toReturn;
+    }-*/;    
+    
     @Override
     public void createPeer() {
         jsObj = UI.createTextArea();
