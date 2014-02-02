@@ -23,6 +23,8 @@ public class StatusBar {
 
     public static final int DEFAULT = DEFAULT();
     public static final int GRAY = GRAY();
+    public static final int GREY = GREY();
+    public static final int LIGHT_CONTENT = LIGHT_CONTENT();
     public static final int OPAQUE_BLACK = OPAQUE_BLACK();
     public static final int TRANSLUCENT_BLACK = TRANSLUCENT_BLACK();
 
@@ -35,6 +37,14 @@ public class StatusBar {
 
     private static native final int GRAY() /*-{
 		return Titanium.UI.iPhone.StatusBar.GRAY;
+    }-*/;
+
+    private static native final int GREY() /*-{
+		return Titanium.UI.iPhone.StatusBar.GREY;
+    }-*/;
+    
+    private static native final int LIGHT_CONTENT() /*-{
+		return Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT;
     }-*/;
 
     private static native final int OPAQUE_BLACK() /*-{
